@@ -49,6 +49,7 @@
             birhdayLabel = new Label();
             surnameLabel = new Label();
             redactionButton = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             SuspendLayout();
@@ -91,6 +92,7 @@
             CollapseButton.TabIndex = 38;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -107,6 +109,7 @@
             CloseButton.TabIndex = 37;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -278,12 +281,29 @@
             redactionButton.FlatStyle = FlatStyle.Flat;
             redactionButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             redactionButton.ForeColor = Color.White;
-            redactionButton.Location = new Point(103, 425);
+            redactionButton.Location = new Point(103, 392);
             redactionButton.Name = "redactionButton";
             redactionButton.Size = new Size(264, 40);
             redactionButton.TabIndex = 84;
             redactionButton.Text = "Редактировать";
             redactionButton.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Fuchsia;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe Print", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(172, 449);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 29);
+            button1.TabIndex = 85;
+            button1.Text = "Назад";
+            button1.UseVisualStyleBackColor = false;
             // 
             // EditingForm
             // 
@@ -291,6 +311,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(470, 477);
+            Controls.Add(button1);
             Controls.Add(redactionButton);
             Controls.Add(numberLabel);
             Controls.Add(emailLabel);
@@ -335,12 +356,13 @@
         private Label cityField;
         private Label birhdayField;
         private Label surnameField;
-        private Label nameField;
         private Label sexLabel;
         private Label cityLabel;
         private Label nameLabel;
         private Label birhdayLabel;
         private Label surnameLabel;
         private Button redactionButton;
+        private Button button1;
+        public Label nameField;
     }
 }

@@ -45,7 +45,7 @@
             BirhdayFields = new TextBox();
             surnameLabel = new Label();
             surnameField = new TextBox();
-            loginButton = new Button();
+            registrButton = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             SuspendLayout();
@@ -88,6 +88,7 @@
             CollapseButton.TabIndex = 43;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -104,6 +105,7 @@
             CloseButton.TabIndex = 42;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -159,7 +161,9 @@
             cityField.Name = "cityField";
             cityField.Size = new Size(297, 29);
             cityField.TabIndex = 53;
-            cityField.Text = "Введите город...";
+            cityField.Text = "Введите город проживания...";
+            cityField.Enter += cityField_Enter;
+            cityField.Leave += cityField_Leave;
             // 
             // cityLabel
             // 
@@ -189,6 +193,8 @@
             nameField.Size = new Size(297, 29);
             nameField.TabIndex = 50;
             nameField.Text = "Введите имя...";
+            nameField.Enter += nameField_Enter;
+            nameField.Leave += nameField_Leave;
             // 
             // BirhdayLabel
             // 
@@ -208,6 +214,8 @@
             BirhdayFields.Size = new Size(297, 29);
             BirhdayFields.TabIndex = 48;
             BirhdayFields.Text = "Введите дату рождения...";
+            BirhdayFields.Enter += BirhdayFields_Enter;
+            BirhdayFields.Leave += BirhdayFields_Leave;
             // 
             // surnameLabel
             // 
@@ -227,23 +235,26 @@
             surnameField.Size = new Size(297, 29);
             surnameField.TabIndex = 46;
             surnameField.Text = "Введите фамилию...";
+            surnameField.Enter += surnameField_Enter;
+            surnameField.Leave += surnameField_Leave;
             // 
-            // loginButton
+            // registrButton
             // 
-            loginButton.BackColor = Color.Fuchsia;
-            loginButton.BackgroundImageLayout = ImageLayout.None;
-            loginButton.FlatAppearance.BorderSize = 0;
-            loginButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            loginButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            loginButton.FlatStyle = FlatStyle.Flat;
-            loginButton.Font = new Font("Segoe Print", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            loginButton.ForeColor = Color.White;
-            loginButton.Location = new Point(95, 394);
-            loginButton.Name = "loginButton";
-            loginButton.Size = new Size(224, 58);
-            loginButton.TabIndex = 57;
-            loginButton.Text = "Готово";
-            loginButton.UseVisualStyleBackColor = false;
+            registrButton.BackColor = Color.Fuchsia;
+            registrButton.BackgroundImageLayout = ImageLayout.None;
+            registrButton.FlatAppearance.BorderSize = 0;
+            registrButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            registrButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            registrButton.FlatStyle = FlatStyle.Flat;
+            registrButton.Font = new Font("Segoe Print", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            registrButton.ForeColor = Color.White;
+            registrButton.Location = new Point(95, 394);
+            registrButton.Name = "registrButton";
+            registrButton.Size = new Size(224, 58);
+            registrButton.TabIndex = 57;
+            registrButton.Text = "Готово";
+            registrButton.UseVisualStyleBackColor = false;
+            registrButton.Click += registrButton_Click;
             // 
             // RegistrForm2
             // 
@@ -251,7 +262,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(423, 474);
-            Controls.Add(loginButton);
+            Controls.Add(registrButton);
             Controls.Add(sexWomenButton);
             Controls.Add(sexMenButtun);
             Controls.Add(sexLabel);
@@ -295,6 +306,6 @@
         private TextBox BirhdayFields;
         private Label surnameLabel;
         private TextBox surnameField;
-        private Button loginButton;
+        private Button registrButton;
     }
 }

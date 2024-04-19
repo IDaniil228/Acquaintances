@@ -75,6 +75,7 @@
             CloseButton.TabIndex = 22;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // CollapseButton
             // 
@@ -92,6 +93,7 @@
             CollapseButton.TabIndex = 24;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // label1
             // 
@@ -139,6 +141,8 @@
             passwordField.Size = new Size(326, 32);
             passwordField.TabIndex = 27;
             passwordField.Text = "Введите пароль...";
+            passwordField.Enter += passwordField_Enter;
+            passwordField.Leave += passwordField_Leave;
             // 
             // loginLabel
             // 
@@ -158,6 +162,8 @@
             loginField.Size = new Size(326, 32);
             loginField.TabIndex = 25;
             loginField.Text = "Введите логин...";
+            loginField.Enter += loginField_Enter;
+            loginField.Leave += loginField_Leave;
             // 
             // loginButton
             // 
@@ -175,6 +181,7 @@
             loginButton.TabIndex = 32;
             loginButton.Text = "Войти";
             loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginButton_Click;
             // 
             // registrButton
             // 
@@ -191,6 +198,7 @@
             registrButton.TabIndex = 33;
             registrButton.Text = "Зарегистрироваться";
             registrButton.UseVisualStyleBackColor = false;
+            registrButton.Click += registrButton_Click;
             // 
             // boyPhoto
             // 

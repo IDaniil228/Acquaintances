@@ -16,5 +16,32 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
+        public User user;
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CollapseButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeAccount_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form = new Form1();
+            form.Show();
+        }
+
+        private void redactionButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditingForm editingForm = new EditingForm();
+            editingForm.nameField.Text = user.Name;
+            editingForm.Show();
+
+        }
     }
 }

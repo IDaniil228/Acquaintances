@@ -42,7 +42,7 @@
             closeAccount = new Button();
             panel1 = new Panel();
             button5 = new Button();
-            Photo = new PictureBox();
+            photoField = new PictureBox();
             redactionButton = new Button();
             numberLabel = new Label();
             emailLabel = new Label();
@@ -63,7 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)photoField).BeginInit();
             SuspendLayout();
             // 
             // girlPhoto
@@ -104,6 +104,7 @@
             CollapseButton.TabIndex = 38;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -120,6 +121,7 @@
             CloseButton.TabIndex = 37;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -226,11 +228,12 @@
             closeAccount.TabIndex = 46;
             closeAccount.Text = "Выход";
             closeAccount.UseVisualStyleBackColor = false;
+            closeAccount.Click += closeAccount_Click;
             // 
             // panel1
             // 
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(Photo);
+            panel1.Controls.Add(photoField);
             panel1.Controls.Add(redactionButton);
             panel1.Controls.Add(numberLabel);
             panel1.Controls.Add(emailLabel);
@@ -270,15 +273,15 @@
             button5.Text = "Изменить";
             button5.UseVisualStyleBackColor = false;
             // 
-            // Photo
+            // photoField
             // 
-            Photo.Image = (Image)resources.GetObject("Photo.Image");
-            Photo.Location = new Point(6, 69);
-            Photo.Name = "Photo";
-            Photo.Size = new Size(155, 149);
-            Photo.SizeMode = PictureBoxSizeMode.StretchImage;
-            Photo.TabIndex = 72;
-            Photo.TabStop = false;
+            photoField.Image = (Image)resources.GetObject("photoField.Image");
+            photoField.Location = new Point(6, 69);
+            photoField.Name = "photoField";
+            photoField.Size = new Size(155, 149);
+            photoField.SizeMode = PictureBoxSizeMode.StretchImage;
+            photoField.TabIndex = 72;
+            photoField.TabStop = false;
             // 
             // redactionButton
             // 
@@ -296,6 +299,7 @@
             redactionButton.TabIndex = 71;
             redactionButton.Text = "Редактировать";
             redactionButton.UseVisualStyleBackColor = false;
+            redactionButton.Click += redactionButton_Click;
             // 
             // numberLabel
             // 
@@ -487,7 +491,7 @@
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)photoField).EndInit();
             ResumeLayout(false);
         }
 
@@ -522,7 +526,7 @@
         private ComboBox comboBox1;
         private Label label1;
         private Button button5;
-        private PictureBox Photo;
         private Button redactionButton;
+        public PictureBox photoField;
     }
 }
