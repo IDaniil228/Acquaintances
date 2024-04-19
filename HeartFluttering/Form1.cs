@@ -47,6 +47,7 @@ namespace HeartFluttering
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+
             if (choice.Text.Equals("Пользователь"))
             {
                 if (loginField.Text == string.Empty || loginField.Text.Equals("Введите логин..."))
@@ -204,8 +205,12 @@ namespace HeartFluttering
                         }
                         administratorForm.Show();
                     }
+
                 }
+
+
             }
+
         }
 
         private void registrButton_Click(object sender, EventArgs e)

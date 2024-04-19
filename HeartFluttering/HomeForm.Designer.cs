@@ -192,7 +192,7 @@
             button1.Name = "button1";
             button1.Size = new Size(196, 43);
             button1.TabIndex = 44;
-            button1.Text = "Рекомендации";
+            button1.Text = "Поиск пары";
             button1.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -209,7 +209,7 @@
             button4.Name = "button4";
             button4.Size = new Size(196, 43);
             button4.TabIndex = 45;
-            button4.Text = "Рекомендации";
+            button4.Text = "Уведомления";
             button4.UseVisualStyleBackColor = false;
             // 
             // closeAccount

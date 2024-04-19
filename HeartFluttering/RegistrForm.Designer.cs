@@ -49,9 +49,9 @@
             nameLabel = new Label();
             nameField = new TextBox();
             BirhdayLabel = new Label();
-            BirhdayFields = new TextBox();
             surnameLabel = new Label();
             surnameField = new TextBox();
+            BirhdayFields = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             SuspendLayout();
@@ -296,17 +296,6 @@
             BirhdayLabel.TabIndex = 60;
             BirhdayLabel.Text = "Дата рождения";
             // 
-            // BirhdayFields
-            // 
-            BirhdayFields.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            BirhdayFields.Location = new Point(467, 248);
-            BirhdayFields.Name = "BirhdayFields";
-            BirhdayFields.Size = new Size(297, 29);
-            BirhdayFields.TabIndex = 59;
-            BirhdayFields.Text = "Введите дату рождения...";
-            BirhdayFields.Enter += BirhdayFields_Enter;
-            BirhdayFields.Leave += BirhdayFields_Leave;
-            // 
             // surnameLabel
             // 
             surnameLabel.AutoSize = true;
@@ -328,12 +317,21 @@
             surnameField.Enter += surnameField_Enter;
             surnameField.Leave += surnameField_Leave;
             // 
+            // BirhdayFields
+            // 
+            BirhdayFields.CalendarFont = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            BirhdayFields.Location = new Point(467, 248);
+            BirhdayFields.Name = "BirhdayFields";
+            BirhdayFields.Size = new Size(297, 23);
+            BirhdayFields.TabIndex = 68;
+            // 
             // RegistrForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(811, 450);
+            Controls.Add(BirhdayFields);
             Controls.Add(sexWomenButton);
             Controls.Add(sexMenButton);
             Controls.Add(sexLabel);
@@ -342,7 +340,6 @@
             Controls.Add(nameLabel);
             Controls.Add(nameField);
             Controls.Add(BirhdayLabel);
-            Controls.Add(BirhdayFields);
             Controls.Add(surnameLabel);
             Controls.Add(surnameField);
             Controls.Add(loginButton);
@@ -388,8 +385,8 @@
         private Label nameLabel;
         private TextBox nameField;
         private Label BirhdayLabel;
-        private TextBox BirhdayFields;
         private Label surnameLabel;
         private TextBox surnameField;
+        public DateTimePicker BirhdayFields;
     }
 }

@@ -29,5 +29,7 @@ public partial class User
 
     public string Id { get; set; } = null!;
 
+    public string? AnotherAccounts { get; set; }
+
     public virtual Account IdNavigation { get; set; } = null!;
 }

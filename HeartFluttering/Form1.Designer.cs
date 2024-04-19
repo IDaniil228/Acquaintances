@@ -63,9 +63,10 @@
             // CloseButton
             // 
             CloseButton.BackColor = Color.Fuchsia;
+            CloseButton.CausesValidation = false;
             CloseButton.FlatAppearance.BorderSize = 0;
-            CloseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CloseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
@@ -167,7 +168,7 @@
             // 
             // loginButton
             // 
-            loginButton.BackColor = Color.Fuchsia;
+            loginButton.BackColor = Color.Magenta;
             loginButton.BackgroundImageLayout = ImageLayout.None;
             loginButton.FlatAppearance.BorderSize = 0;
             loginButton.FlatAppearance.MouseDownBackColor = Color.Transparent;

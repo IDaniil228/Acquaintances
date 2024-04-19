@@ -102,6 +102,7 @@ namespace HeartFluttering
 
         private void registrButton_Click(object sender, EventArgs e)
         {
+            /*
             if(nameField.Text == string.Empty)
             {
                 MessageBox.Show("Поле для имени обязательно для заполнения");
@@ -119,6 +120,7 @@ namespace HeartFluttering
                 user.Id = registrForm.account.Id;
                 MessageBox.Show(user.Id);
             }
+            */
         }
     }
 }

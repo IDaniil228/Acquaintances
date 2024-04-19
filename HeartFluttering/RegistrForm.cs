@@ -17,7 +17,7 @@ namespace HeartFluttering
             InitializeComponent();
         }
 
-        public Account account;
+        //public Account account;
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -152,6 +152,7 @@ namespace HeartFluttering
                 cityField.Text = "Введите город проживания...";
             }
         }
+        
         private Account dataAuthorization(string login, string password)
         {
             Hash hash = new Hash();
@@ -161,8 +162,10 @@ namespace HeartFluttering
             account.Password = hash.CalculateMD5Hash(password);
             return account;
         }
+        
         private void loginButton_Click(object sender, EventArgs e)
         {
+            
             if (LoginField.Text == string.Empty)
             {
                 MessageBox.Show("Поле для логина обязательно для заполнения");
@@ -225,15 +228,59 @@ namespace HeartFluttering
                 context.Accounts.Add(account);
                 User user = new User();
                 user.IdUsers = Guid.NewGuid().ToString();
+                foreach(char letter in nameField.Text)
+                {
+                    if (!Char.IsLetter(letter))
+                    {
+                        MessageBox.Show("Вашем имени должны быть только буквы");
+                        return;
+                    }
+                }
                 user.Name = nameField.Text;
+
+                foreach (char letter in surnameField.Text)
+                {
+                    if(!Char.IsLetter(letter)) 
+                    {
+                        MessageBox.Show("Вашей фамилии должны быть только буквы");
+                        return;
+                    }
+                }
                 user.Surname = surnameField.Text;
-                user.DateOfBirth = BirhdayFields.Text;
+
+                DateTime time = BirhdayFields.Value;
+
+                int yearOld = time.Year;
+                int yearNow = DateTime.Now.Year;
+                if((yearNow - yearOld) < 18)
+                {
+                    MessageBox.Show("Вы ещё слишком молоды");
+                    return;
+                }
+                if((yearNow - yearOld) > 100)
+                {
+                    MessageBox.Show("Вам не может быть столько много лет");
+                    return;
+                }
+                DateTime birth = new DateTime(time.Year, time.Month, time.Day);
+                user.DateOfBirth = birth.ToString();
+
+                AllCities Allcities = new AllCities();
+                List<string> cities = new List<string>();
+                foreach(string city in cities)
+                {
+                    if (!cityField.Text.ToLower().Equals(city.ToLower()))
+                    {
+                        MessageBox.Show("Такого города не существует");
+                        return;
+                    }
+                }
                 user.City = cityField.Text;
                 if (sexMenButton.Checked)
                 {
                     user.Sex = 1;
                 }
-                else
+                if (sexWomenButton.Checked)
                 {
                     user.Sex = 0;
                 }
@@ -245,6 +292,9 @@ namespace HeartFluttering
                 Form1 form = new Form1();
                 form.Show();
             }
+            
         }
+            
     }
+            
 }
