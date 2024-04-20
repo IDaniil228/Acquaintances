@@ -47,7 +47,6 @@ namespace HeartFluttering
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //
             if (choice.Text.Equals("Пользователь"))
             {
                 if (loginField.Text == string.Empty || loginField.Text.Equals("Введите логин..."))
@@ -171,7 +170,7 @@ namespace HeartFluttering
                 }
 
             }
-            else
+            else if(choice.Text.Equals("Администратор"))
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
@@ -181,6 +180,7 @@ namespace HeartFluttering
                     if(account == null)
                     {
                         MessageBox.Show("Неверно введены логин или пароль");
+                        return;
                     }
                     string id = account.Id;
                     using (var context2 = new AcquaintanceSqlContext())
@@ -199,6 +199,11 @@ namespace HeartFluttering
                 }
 
 
+            }
+            else
+            {
+                MessageBox.Show("Выберите аккаунт пользователя или администратора");
+                return;
             }
 
         }

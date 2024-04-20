@@ -36,15 +36,16 @@
             nameField = new Label();
             nameLabel = new Label();
             panel2 = new Panel();
-            likeAccount = new PictureBox();
+            homeButton = new Button();
+            changeFiltersButton = new Button();
             nextAccount = new PictureBox();
-            button1 = new Button();
-            button5 = new Button();
+            likeAccount = new PictureBox();
+            startButton = new Button();
             ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nextAccount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
             SuspendLayout();
             // 
             // Photo
@@ -73,12 +74,11 @@
             // 
             BirhdayField.BackColor = Color.FromArgb(255, 230, 255);
             BirhdayField.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            BirhdayField.ForeColor = Color.Gray;
+            BirhdayField.ForeColor = Color.Black;
             BirhdayField.Location = new Point(130, 60);
             BirhdayField.Name = "BirhdayField";
             BirhdayField.Size = new Size(235, 24);
             BirhdayField.TabIndex = 49;
-            BirhdayField.Text = "Возраст";
             // 
             // BirhdayLabel
             // 
@@ -94,12 +94,11 @@
             // 
             nameField.BackColor = Color.FromArgb(255, 230, 255);
             nameField.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            nameField.ForeColor = Color.Gray;
+            nameField.ForeColor = Color.Black;
             nameField.Location = new Point(130, 19);
             nameField.Name = "nameField";
             nameField.Size = new Size(235, 24);
             nameField.TabIndex = 47;
-            nameField.Text = "Имя";
             // 
             // nameLabel
             // 
@@ -113,75 +112,95 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(startButton);
+            panel2.Controls.Add(homeButton);
+            panel2.Controls.Add(changeFiltersButton);
             panel2.Controls.Add(nextAccount);
             panel2.Controls.Add(likeAccount);
             panel2.Location = new Point(1, 402);
             panel2.Name = "panel2";
-            panel2.Size = new Size(411, 93);
+            panel2.Size = new Size(411, 122);
             panel2.TabIndex = 75;
             // 
-            // likeAccount
+            // homeButton
             // 
-            likeAccount.Image = (Image)resources.GetObject("likeAccount.Image");
-            likeAccount.Location = new Point(12, 9);
-            likeAccount.Name = "likeAccount";
-            likeAccount.Size = new Size(87, 72);
-            likeAccount.SizeMode = PictureBoxSizeMode.StretchImage;
-            likeAccount.TabIndex = 3;
-            likeAccount.TabStop = false;
+            homeButton.BackColor = Color.Fuchsia;
+            homeButton.BackgroundImageLayout = ImageLayout.None;
+            homeButton.FlatAppearance.BorderSize = 0;
+            homeButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            homeButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            homeButton.FlatStyle = FlatStyle.Flat;
+            homeButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            homeButton.ForeColor = Color.White;
+            homeButton.Location = new Point(130, 88);
+            homeButton.Name = "homeButton";
+            homeButton.Size = new Size(144, 31);
+            homeButton.TabIndex = 6;
+            homeButton.Text = "Мой профиль";
+            homeButton.UseVisualStyleBackColor = false;
+            // 
+            // changeFiltersButton
+            // 
+            changeFiltersButton.BackColor = Color.Fuchsia;
+            changeFiltersButton.BackgroundImageLayout = ImageLayout.None;
+            changeFiltersButton.FlatAppearance.BorderSize = 0;
+            changeFiltersButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            changeFiltersButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            changeFiltersButton.FlatStyle = FlatStyle.Flat;
+            changeFiltersButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            changeFiltersButton.ForeColor = Color.White;
+            changeFiltersButton.Location = new Point(101, 47);
+            changeFiltersButton.Name = "changeFiltersButton";
+            changeFiltersButton.Size = new Size(200, 35);
+            changeFiltersButton.TabIndex = 5;
+            changeFiltersButton.Text = "Изменить фильтры";
+            changeFiltersButton.UseVisualStyleBackColor = false;
             // 
             // nextAccount
             // 
             nextAccount.Image = (Image)resources.GetObject("nextAccount.Image");
-            nextAccount.Location = new Point(303, 9);
+            nextAccount.Location = new Point(307, 28);
             nextAccount.Name = "nextAccount";
             nextAccount.Size = new Size(98, 72);
             nextAccount.SizeMode = PictureBoxSizeMode.StretchImage;
             nextAccount.TabIndex = 4;
             nextAccount.TabStop = false;
+            nextAccount.Visible = false;
             // 
-            // button1
+            // likeAccount
             // 
-            button1.BackColor = Color.Fuchsia;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(101, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 35);
-            button1.TabIndex = 5;
-            button1.Text = "Изменить фильтры";
-            button1.UseVisualStyleBackColor = false;
+            likeAccount.Image = (Image)resources.GetObject("likeAccount.Image");
+            likeAccount.Location = new Point(12, 28);
+            likeAccount.Name = "likeAccount";
+            likeAccount.Size = new Size(87, 72);
+            likeAccount.SizeMode = PictureBoxSizeMode.StretchImage;
+            likeAccount.TabIndex = 3;
+            likeAccount.TabStop = false;
+            likeAccount.Visible = false;
             // 
-            // button5
+            // startButton
             // 
-            button5.BackColor = Color.Fuchsia;
-            button5.BackgroundImageLayout = ImageLayout.None;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(152, 50);
-            button5.Name = "button5";
-            button5.Size = new Size(98, 31);
-            button5.TabIndex = 6;
-            button5.Text = "Назад";
-            button5.UseVisualStyleBackColor = false;
+            startButton.BackColor = Color.Fuchsia;
+            startButton.BackgroundImageLayout = ImageLayout.None;
+            startButton.FlatAppearance.BorderSize = 0;
+            startButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            startButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            startButton.FlatStyle = FlatStyle.Flat;
+            startButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            startButton.ForeColor = Color.White;
+            startButton.Location = new Point(152, 10);
+            startButton.Name = "startButton";
+            startButton.Size = new Size(98, 31);
+            startButton.TabIndex = 7;
+            startButton.Text = "Начать";
+            startButton.UseVisualStyleBackColor = false;
             // 
             // PhotoUserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(414, 495);
+            ClientSize = new Size(414, 525);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(Photo);
@@ -192,8 +211,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)nextAccount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
             ResumeLayout(false);
         }
 
@@ -206,9 +225,10 @@
         private Label nameField;
         private Label nameLabel;
         private Panel panel2;
-        private Button button5;
-        private Button button1;
+        private Button homeButton;
+        private Button changeFiltersButton;
         private PictureBox nextAccount;
         private PictureBox likeAccount;
+        private Button startButton;
     }
 }

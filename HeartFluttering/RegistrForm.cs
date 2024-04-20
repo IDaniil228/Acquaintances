@@ -196,6 +196,11 @@ namespace HeartFluttering
                 MessageBox.Show("Поле для фамилии обязательно для заполнения");
                 return;
             }
+            if(cityField.Text == string.Empty)
+            {
+                MessageBox.Show("Поле для города обязательно для заполнения");
+                return;
+            }
             using (var context = new AcquaintanceSqlContext())
             {
                 var accounts = context.Accounts;

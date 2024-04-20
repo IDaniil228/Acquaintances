@@ -108,6 +108,7 @@
             // 
             // choice
             // 
+            choice.DropDownStyle = ComboBoxStyle.DropDownList;
             choice.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             choice.FormattingEnabled = true;
             choice.Items.AddRange(new object[] { "Пользователь", "Администратор " });
@@ -223,7 +224,7 @@
             girlPhoto.TabIndex = 35;
             girlPhoto.TabStop = false;
             // 
-            // Form1
+            // AuthorizationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -244,7 +245,7 @@
             Controls.Add(CloseButton);
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "AuthorizationForm";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();

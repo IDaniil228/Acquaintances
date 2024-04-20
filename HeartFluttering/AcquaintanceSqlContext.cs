@@ -42,6 +42,7 @@ public partial class AcquaintanceSqlContext : DbContext
         modelBuilder.Entity<User>(entity =>
         {
             entity.Property(e => e.Sex).HasColumnType("INTEGER (0, 1)");
+            entity.Property(e => e.Status).HasColumnType("INTEGER (0, 1)");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.User)
                 .HasForeignKey<User>(d => d.Id)

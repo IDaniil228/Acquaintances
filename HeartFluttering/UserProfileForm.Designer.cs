@@ -35,6 +35,7 @@
             CloseButton = new Button();
             entryLabel = new Label();
             panel1 = new Panel();
+            button2 = new Button();
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
@@ -51,7 +52,6 @@
             loginLabel = new Label();
             Photo = new PictureBox();
             label1 = new Label();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
@@ -90,7 +90,7 @@
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
-            CollapseButton.Location = new Point(512, 0);
+            CollapseButton.Location = new Point(513, 0);
             CollapseButton.Name = "CollapseButton";
             CollapseButton.Size = new Size(35, 23);
             CollapseButton.TabIndex = 48;
@@ -121,7 +121,7 @@
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Location = new Point(0, 0);
             entryLabel.Name = "entryLabel";
-            entryLabel.Size = new Size(579, 88);
+            entryLabel.Size = new Size(581, 88);
             entryLabel.TabIndex = 46;
             entryLabel.Text = "Трепетание сердца";
             entryLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -149,6 +149,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(579, 372);
             panel1.TabIndex = 51;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Fuchsia;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 330);
+            button2.Name = "button2";
+            button2.Size = new Size(149, 39);
+            button2.TabIndex = 70;
+            button2.Text = "Назад";
+            button2.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -317,29 +334,12 @@
             label1.TabIndex = 54;
             label1.Text = "Профиль";
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Fuchsia;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 330);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 39);
-            button2.TabIndex = 70;
-            button2.Text = "Назад";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // UserProfileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(579, 463);
+            ClientSize = new Size(581, 463);
             Controls.Add(panel1);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);

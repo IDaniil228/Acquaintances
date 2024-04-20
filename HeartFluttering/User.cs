@@ -31,5 +31,9 @@ public partial class User
 
     public string? AnotherAccounts { get; set; }
 
+    public int? Status { get; set; }
+
+    public string? Notifications { get; set; }
+
     public virtual Account IdNavigation { get; set; } = null!;
 }
