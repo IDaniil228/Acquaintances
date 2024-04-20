@@ -257,14 +257,14 @@ namespace HeartFluttering
                 }
                 DateTime birth = new DateTime(time.Year, time.Month, time.Day);
                 person.DateOfBirth = birth.ToString();
-                /*
+
                 AllCities Allcities = new AllCities();
                 if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
                 {
                     MessageBox.Show("Такого города не существует");
                     return;
                 }
-                */
+
                 person.City = cityField.Text;
 
                 if (sexMenButton.Checked)
