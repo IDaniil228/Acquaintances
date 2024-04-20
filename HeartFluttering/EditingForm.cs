@@ -264,7 +264,7 @@ namespace HeartFluttering
                     MessageBox.Show("Такого города не существует");
                     return;
                 }
-
+                //
                 person.City = cityField.Text;
 
                 if (sexMenButton.Checked)
