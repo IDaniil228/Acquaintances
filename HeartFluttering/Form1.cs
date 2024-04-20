@@ -64,31 +64,27 @@ namespace HeartFluttering
                 {
                     Hash hash = new Hash();
                     string password = hash.CalculateMD5Hash(passwordField.Text);
-                    var account = context.Accounts.Where(r => r.Login.Equals(loginField.Text) && r.Password.Equals(password));
-                    List<Account> list = new List<Account>();
-                    foreach (Account account1 in account)
-                    {
-                        list.Add(account1);
-                    }
-                    if (list.Count == 0)
+                    var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginField.Text) && r.Password.Equals(password));
+                    if(account == null)
                     {
                         MessageBox.Show("Вы ввели неверно логин или пароль");
                         return;
                     }
-                    string id = list[0].Id;
+                    
+                    string id = account.Id;
                     using (var context2 = new AcquaintanceSqlContext())
                     {
-                        var person = context2.Users.Where(r => r.Id.Equals(id));
+                        var person = context2.Users.FirstOrDefault(r => r.Id.Equals(id));
+                        if(person == null)
+                        {
+                            MessageBox.Show("Не удалось найти пользователя");
+                            return;
+                        }
                         this.Hide();
                         HomeForm homeForm = new HomeForm();
-                        List<User> users = new List<User>();
-                        foreach (User user in person)
+                        if (person.Name != null)
                         {
-                            users.Add(user);
-                        }
-                        if (users[0].Name != null)
-                        {
-                            homeForm.nameField.Text = users[0].Name;
+                            homeForm.nameField.Text = person.Name;
                             homeForm.nameField.ForeColor = Color.Black;
                         }
                         else
@@ -96,9 +92,9 @@ namespace HeartFluttering
                             homeForm.nameField.Text = "Не заполнено";
                         }
 
-                        if (users[0].Surname != null)
+                        if (person.Surname != null)
                         {
-                            homeForm.surnameField.Text = users[0].Surname;
+                            homeForm.surnameField.Text = person.Surname;
                             homeForm.surnameField.ForeColor = Color.Black;
                         }
                         else
@@ -106,9 +102,9 @@ namespace HeartFluttering
                             homeForm.surnameField.Text = "Не заполнено";
                         }
 
-                        if (users[0].DateOfBirth != null)
+                        if (person.DateOfBirth != null)
                         {
-                            homeForm.BirhdayField.Text = users[0].DateOfBirth.ToString();
+                            homeForm.BirhdayField.Text = person.DateOfBirth.ToString();
                             homeForm.BirhdayField.ForeColor = Color.Black;
                         }
                         else
@@ -116,9 +112,9 @@ namespace HeartFluttering
                             homeForm.BirhdayField.Text = "Не заполнено";
                         }
 
-                        if (users[0].City != null)
+                        if (person.City != null)
                         {
-                            homeForm.cityField.Text = users[0].City;
+                            homeForm.cityField.Text = person.City;
                             homeForm.cityField.ForeColor = Color.Black;
                         }
                         else
@@ -126,9 +122,9 @@ namespace HeartFluttering
                             homeForm.cityField.Text = "Не заполнено";
                         }
 
-                        if (users[0].Sex != null)
+                        if (person.Sex != null)
                         {
-                            if (users[0].Sex == 1)
+                            if (person.Sex == 1)
                             {
                                 homeForm.sexField.Text = "Мужской";
                                 homeForm.sexField.ForeColor = Color.Black;
@@ -144,9 +140,9 @@ namespace HeartFluttering
                             homeForm.sexField.Text = "Не заполнено";
                         }
 
-                        if (users[0].Mail != null)
+                        if (person.Mail != null)
                         {
-                            homeForm.emailField.Text = users[0].Mail;
+                            homeForm.emailField.Text = person.Mail;
                             homeForm.emailField.ForeColor = Color.Black;
                         }
                         else
@@ -154,22 +150,22 @@ namespace HeartFluttering
                             homeForm.emailField.Text = "Не заполнено";
                         }
 
-                        if (users[0].Number != null)
+                        if (person.Number != null)
                         {
-                            homeForm.numberField.Text = users[0].Number;
+                            homeForm.numberField.Text = person.Number;
                             homeForm.numberField.ForeColor = Color.Black;
                         }
                         else
                         {
-                            homeForm.numberField.Text = users[0].Number;
+                            homeForm.numberField.Text = person.Number;
                         }
 
-                        if (users[0].Photo != null)
+                        if (person.Photo != null)
                         {
-                            MemoryStream memoryStream = new MemoryStream(users[0].Photo);
+                            MemoryStream memoryStream = new MemoryStream(person.Photo);
                             homeForm.photoField.Image = Image.FromStream(memoryStream);
                         }
-                        homeForm.user = users[0];
+                        CurrentUser.currentUser = person;
                         homeForm.Show();
                     }
                 }
@@ -181,18 +177,12 @@ namespace HeartFluttering
                 {
                     Hash hash = new Hash();
                     string password = hash.CalculateMD5Hash(passwordField.Text);
-                    var account = context.Accounts.Where(r => r.Login.Equals(loginField.Text) && r.Password.Equals(password));
-                    List<Account> list = new List<Account>();
-                    foreach (Account account1 in account)
+                    var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginField.Text) && r.Password.Equals(password));
+                    if(account == null)
                     {
-                        list.Add(account1);
+                        MessageBox.Show("Неверно введены логин или пароль");
                     }
-                    if (list.Count == 0)
-                    {
-                        MessageBox.Show("Вы ввели неверно логин или пароль");
-                        return;
-                    }
-                    string id = list[0].Id;
+                    string id = account.Id;
                     using (var context2 = new AcquaintanceSqlContext())
                     {
                         var admin = context2.Administrators.Where(r => r.Id.Equals(id));

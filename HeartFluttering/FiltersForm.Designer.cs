@@ -35,17 +35,17 @@
             CloseButton = new Button();
             entryLabel = new Label();
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            FiltersButton = new Button();
+            FinalAgeField = new TextBox();
             label4 = new Label();
             label1 = new Label();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            sexWomenButton = new RadioButton();
+            sexMenButton = new RadioButton();
             label3 = new Label();
-            textBox2 = new TextBox();
+            cityField = new TextBox();
             label2 = new Label();
             passwondLabel = new Label();
-            passwordFields = new TextBox();
-            loginButton = new Button();
+            InitialAgeField = new TextBox();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
@@ -89,6 +89,7 @@
             CollapseButton.TabIndex = 43;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -105,6 +106,7 @@
             CloseButton.TabIndex = 42;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -121,29 +123,47 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(loginButton);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(FiltersButton);
+            panel1.Controls.Add(FinalAgeField);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(radioButton2);
-            panel1.Controls.Add(radioButton1);
+            panel1.Controls.Add(sexWomenButton);
+            panel1.Controls.Add(sexMenButton);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(cityField);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(passwondLabel);
-            panel1.Controls.Add(passwordFields);
+            panel1.Controls.Add(InitialAgeField);
             panel1.Location = new Point(0, 91);
             panel1.Name = "panel1";
             panel1.Size = new Size(472, 320);
             panel1.TabIndex = 46;
             // 
-            // textBox1
+            // FiltersButton
             // 
-            textBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox1.Location = new Point(292, 64);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(85, 29);
-            textBox1.TabIndex = 74;
+            FiltersButton.BackColor = Color.Fuchsia;
+            FiltersButton.BackgroundImageLayout = ImageLayout.None;
+            FiltersButton.FlatAppearance.BorderSize = 0;
+            FiltersButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FiltersButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FiltersButton.FlatStyle = FlatStyle.Flat;
+            FiltersButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FiltersButton.ForeColor = Color.White;
+            FiltersButton.Location = new Point(105, 268);
+            FiltersButton.Name = "FiltersButton";
+            FiltersButton.Size = new Size(255, 49);
+            FiltersButton.TabIndex = 75;
+            FiltersButton.Text = "Установить";
+            FiltersButton.UseVisualStyleBackColor = false;
+            FiltersButton.Click += FiltersButton_Click;
+            // 
+            // FinalAgeField
+            // 
+            FinalAgeField.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FinalAgeField.Location = new Point(292, 64);
+            FinalAgeField.Name = "FinalAgeField";
+            FinalAgeField.Size = new Size(85, 29);
+            FinalAgeField.TabIndex = 74;
             // 
             // label4
             // 
@@ -165,29 +185,29 @@
             label1.TabIndex = 72;
             label1.Text = "От";
             // 
-            // radioButton2
+            // sexWomenButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            radioButton2.Location = new Point(302, 208);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(47, 27);
-            radioButton2.TabIndex = 71;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Ж";
-            radioButton2.UseVisualStyleBackColor = true;
+            sexWomenButton.AutoSize = true;
+            sexWomenButton.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            sexWomenButton.Location = new Point(302, 208);
+            sexWomenButton.Name = "sexWomenButton";
+            sexWomenButton.Size = new Size(47, 27);
+            sexWomenButton.TabIndex = 71;
+            sexWomenButton.TabStop = true;
+            sexWomenButton.Text = "Ж";
+            sexWomenButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // sexMenButton
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            radioButton1.Location = new Point(240, 208);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(46, 27);
-            radioButton1.TabIndex = 70;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "M";
-            radioButton1.UseVisualStyleBackColor = true;
+            sexMenButton.AutoSize = true;
+            sexMenButton.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            sexMenButton.Location = new Point(240, 208);
+            sexMenButton.Name = "sexMenButton";
+            sexMenButton.Size = new Size(46, 27);
+            sexMenButton.TabIndex = 70;
+            sexMenButton.TabStop = true;
+            sexMenButton.Text = "M";
+            sexMenButton.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -199,14 +219,13 @@
             label3.TabIndex = 69;
             label3.Text = "Выберите пол";
             // 
-            // textBox2
+            // cityField
             // 
-            textBox2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox2.Location = new Point(90, 150);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(297, 29);
-            textBox2.TabIndex = 68;
-            textBox2.Text = "Введите город...";
+            cityField.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            cityField.Location = new Point(90, 150);
+            cityField.Name = "cityField";
+            cityField.Size = new Size(297, 29);
+            cityField.TabIndex = 68;
             // 
             // label2
             // 
@@ -228,30 +247,13 @@
             passwondLabel.TabIndex = 66;
             passwondLabel.Text = "Возраст";
             // 
-            // passwordFields
+            // InitialAgeField
             // 
-            passwordFields.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            passwordFields.Location = new Point(136, 64);
-            passwordFields.Name = "passwordFields";
-            passwordFields.Size = new Size(85, 29);
-            passwordFields.TabIndex = 65;
-            // 
-            // loginButton
-            // 
-            loginButton.BackColor = Color.Fuchsia;
-            loginButton.BackgroundImageLayout = ImageLayout.None;
-            loginButton.FlatAppearance.BorderSize = 0;
-            loginButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            loginButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            loginButton.FlatStyle = FlatStyle.Flat;
-            loginButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            loginButton.ForeColor = Color.White;
-            loginButton.Location = new Point(105, 268);
-            loginButton.Name = "loginButton";
-            loginButton.Size = new Size(255, 49);
-            loginButton.TabIndex = 75;
-            loginButton.Text = "Установить";
-            loginButton.UseVisualStyleBackColor = false;
+            InitialAgeField.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            InitialAgeField.Location = new Point(136, 64);
+            InitialAgeField.Name = "InitialAgeField";
+            InitialAgeField.Size = new Size(85, 29);
+            InitialAgeField.TabIndex = 65;
             // 
             // FiltersForm
             // 
@@ -283,16 +285,16 @@
         private Button CloseButton;
         private Label entryLabel;
         private Panel panel1;
-        private Button loginButton;
-        private TextBox textBox1;
+        private Button FiltersButton;
+        private TextBox FinalAgeField;
         private Label label4;
         private Label label1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton sexWomenButton;
+        private RadioButton sexMenButton;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox cityField;
         private Label label2;
         private Label passwondLabel;
-        private TextBox passwordFields;
+        private TextBox InitialAgeField;
     }
 }

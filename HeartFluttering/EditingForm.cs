@@ -139,6 +139,9 @@ namespace HeartFluttering
         {
             this.Hide();
             HomeForm homeForm = new HomeForm();
+            homeForm.ShowDialog();
+            CurrentUser.currentUser = user;
+            /*
             if (user.Name != null)
             {
                 homeForm.nameField.Text = user.Name;
@@ -198,8 +201,7 @@ namespace HeartFluttering
                 MemoryStream memoryStream = new MemoryStream(user.Photo);
                 homeForm.photoField.Image = Image.FromStream(memoryStream);
             }
-            homeForm.user = user;
-            homeForm.Show();
+            */
         }
 
         private void redactionButton_Click(object sender, EventArgs e)
@@ -211,7 +213,7 @@ namespace HeartFluttering
                 {
                     MessageBox.Show("Пользователь не найден");
                     return;
-                }//  Where(r => r.Id.Equals(user.Id));
+                }
                 if (nameField.Text == string.Empty)
                 {
                     MessageBox.Show("Поле для имени должно быть заполнено");
@@ -287,32 +289,12 @@ namespace HeartFluttering
                     }
                 }
                 person.Number = number;
-
+                
                 HomeForm homeForm = new HomeForm();
-                homeForm.nameField.Text = person.Name;
-                homeForm.surnameField.Text = person.Surname;
-                homeForm.BirhdayField.Text = person.DateOfBirth;
-                homeForm.cityField.Text = person.City;
-                if(person.Sex == 1)
-                {
-                    homeForm.sexField.Text = "Мужской";
-                }
-                else
-                {
-                    homeForm.sexField.Text = "Женский";
-                }
-                homeForm.emailField.Text = person.Mail;
-                homeForm.numberField.Text = person.Number;
-
-                if (person.Photo != null)
-                {
-                    MemoryStream memoryStream = new MemoryStream(user.Photo);
-                    homeForm.photoField.Image = Image.FromStream(memoryStream);
-                }
-                homeForm.user = person;
+                CurrentUser.currentUser = person;
                 context.SaveChanges();
                 this.Hide();
-                homeForm.Show();
+                homeForm.ShowDialog();
             }
         }
     }

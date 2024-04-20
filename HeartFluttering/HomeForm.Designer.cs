@@ -41,7 +41,7 @@
             button4 = new Button();
             closeAccount = new Button();
             panel1 = new Panel();
-            button5 = new Button();
+            redactionPhotoButton = new Button();
             photoField = new PictureBox();
             redactionButton = new Button();
             numberLabel = new Label();
@@ -232,7 +232,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(redactionPhotoButton);
             panel1.Controls.Add(photoField);
             panel1.Controls.Add(redactionButton);
             panel1.Controls.Add(numberLabel);
@@ -256,22 +256,23 @@
             panel1.Size = new Size(577, 363);
             panel1.TabIndex = 47;
             // 
-            // button5
+            // redactionPhotoButton
             // 
-            button5.BackColor = Color.Fuchsia;
-            button5.BackgroundImageLayout = ImageLayout.None;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(6, 224);
-            button5.Name = "button5";
-            button5.Size = new Size(155, 30);
-            button5.TabIndex = 73;
-            button5.Text = "Изменить";
-            button5.UseVisualStyleBackColor = false;
+            redactionPhotoButton.BackColor = Color.Fuchsia;
+            redactionPhotoButton.BackgroundImageLayout = ImageLayout.None;
+            redactionPhotoButton.FlatAppearance.BorderSize = 0;
+            redactionPhotoButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            redactionPhotoButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            redactionPhotoButton.FlatStyle = FlatStyle.Flat;
+            redactionPhotoButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            redactionPhotoButton.ForeColor = Color.White;
+            redactionPhotoButton.Location = new Point(6, 224);
+            redactionPhotoButton.Name = "redactionPhotoButton";
+            redactionPhotoButton.Size = new Size(155, 30);
+            redactionPhotoButton.TabIndex = 73;
+            redactionPhotoButton.Text = "Изменить";
+            redactionPhotoButton.UseVisualStyleBackColor = false;
+            redactionPhotoButton.Click += redactionPhotoButton_Click;
             // 
             // photoField
             // 
@@ -325,78 +326,71 @@
             // 
             numberField.BackColor = Color.FromArgb(255, 230, 255);
             numberField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numberField.ForeColor = Color.Gray;
+            numberField.ForeColor = Color.Black;
             numberField.Location = new Point(330, 276);
             numberField.Name = "numberField";
             numberField.Size = new Size(235, 24);
             numberField.TabIndex = 68;
-            numberField.Text = "Номер телефона";
             // 
             // emailField
             // 
             emailField.BackColor = Color.FromArgb(255, 230, 255);
             emailField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            emailField.ForeColor = Color.Gray;
+            emailField.ForeColor = Color.Black;
             emailField.Location = new Point(330, 238);
             emailField.Name = "emailField";
             emailField.Size = new Size(235, 24);
             emailField.TabIndex = 67;
-            emailField.Text = "Почта";
             // 
             // sexField
             // 
             sexField.BackColor = Color.FromArgb(255, 230, 255);
             sexField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            sexField.ForeColor = Color.Gray;
+            sexField.ForeColor = Color.Black;
             sexField.Location = new Point(330, 202);
             sexField.Name = "sexField";
             sexField.Size = new Size(235, 24);
             sexField.TabIndex = 66;
-            sexField.Text = "Пол";
             // 
             // cityField
             // 
             cityField.BackColor = Color.FromArgb(255, 230, 255);
             cityField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            cityField.ForeColor = Color.Gray;
+            cityField.ForeColor = Color.Black;
             cityField.Location = new Point(330, 166);
             cityField.Name = "cityField";
             cityField.Size = new Size(235, 24);
             cityField.TabIndex = 65;
-            cityField.Text = "Город";
             // 
             // BirhdayField
             // 
             BirhdayField.BackColor = Color.FromArgb(255, 230, 255);
             BirhdayField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            BirhdayField.ForeColor = Color.Gray;
+            BirhdayField.ForeColor = Color.Black;
             BirhdayField.Location = new Point(330, 130);
             BirhdayField.Name = "BirhdayField";
             BirhdayField.Size = new Size(235, 24);
             BirhdayField.TabIndex = 64;
-            BirhdayField.Text = "Дата рождения";
             // 
             // surnameField
             // 
             surnameField.BackColor = Color.FromArgb(255, 230, 255);
             surnameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            surnameField.ForeColor = Color.Gray;
+            surnameField.ForeColor = Color.Black;
             surnameField.Location = new Point(330, 95);
             surnameField.Name = "surnameField";
             surnameField.Size = new Size(235, 24);
             surnameField.TabIndex = 63;
-            surnameField.Text = "Фамилия";
             // 
             // nameField
             // 
             nameField.BackColor = Color.FromArgb(255, 230, 255);
             nameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            nameField.ForeColor = Color.Gray;
+            nameField.ForeColor = Color.Black;
             nameField.Location = new Point(330, 60);
             nameField.Name = "nameField";
             nameField.Size = new Size(235, 24);
             nameField.TabIndex = 62;
-            nameField.Text = "Имя";
             // 
             // sexLabel
             // 
@@ -487,6 +481,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeForm";
             Text = "HomeForm";
+            Load += HomeForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             panel1.ResumeLayout(false);
@@ -525,7 +520,7 @@
         private Label surnameLabel;
         private ComboBox comboBox1;
         private Label label1;
-        private Button button5;
+        private Button redactionPhotoButton;
         private Button redactionButton;
         public PictureBox photoField;
     }
