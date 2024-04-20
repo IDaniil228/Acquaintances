@@ -289,7 +289,7 @@ namespace HeartFluttering
                 context.SaveChanges();
                 MessageBox.Show("Регистрация прошла успешно");
                 this.Hide();
-                Form1 form = new Form1();
+                AuthorizationForm form = new AuthorizationForm();
                 form.Show();
             }
             

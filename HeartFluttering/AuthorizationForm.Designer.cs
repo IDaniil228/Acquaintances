@@ -1,6 +1,6 @@
 ﻿namespace HeartFluttering
 {
-    partial class Form1
+    partial class AuthorizationForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
             entryLabel = new Label();
             CloseButton = new Button();
             CollapseButton = new Button();
