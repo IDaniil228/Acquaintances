@@ -38,6 +38,7 @@ namespace HeartFluttering
 
         private void redactionButton_Click(object sender, EventArgs e)
         {
+            //
             this.Hide();
             EditingForm editingForm = new EditingForm();
             editingForm.nameField.Text = CurrentUser.currentUser.Name;
