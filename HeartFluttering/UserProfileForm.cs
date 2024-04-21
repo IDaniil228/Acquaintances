@@ -29,17 +29,72 @@ namespace HeartFluttering
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            RecommenForm recommenForm = new RecommenForm();
-            recommenForm.ShowDialog();
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
+                CurrentUsers.currentUsers = sortedUsers;
+                DataTable table = new DataTable();
+                table.Columns.Add("Место", typeof(int));
+                table.Columns.Add("Имя", typeof(string));
+                table.Columns.Add("Фамилия", typeof(string));
+                table.Columns.Add("Лайки", typeof(int));
+                for (int i = 0; i < sortedUsers.Count; i++)
+                {
+                    table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
+                }
+                RecommenForm recommenForm = new RecommenForm();
+                RecommenTable.thisTable = table;
+                this.Hide();
+                recommenForm.Show();
+            }
+        }
+        private void backButton2_Click(object sender, EventArgs e)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                List<User> anotherUsers = new List<User>();
+                if (CurrentUser.currentUser.AnotherAccounts != null)
+                {
+                    foreach (string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                    {
+                        var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
+                        if (favoritesUsers != null)
+                        {
+                            anotherUsers.Add(favoritesUsers);
+                        }
+                    }
+                }
+                CurrentUsers.currentUsers = anotherUsers;
+                DataTable table = new DataTable();
+                table.Columns.Add("Номер", typeof(int));
+                table.Columns.Add("Имя", typeof(string));
+                table.Columns.Add("Фамилия", typeof(string));
+                table.Columns.Add("Лайки", typeof(int));
+                for (int i = 0; i < anotherUsers.Count; i++)
+                {
+                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                }
+                ChosenOneForm chosenOneForm = new ChosenOneForm();
+                FavoritesTable.favoritTable = table;
+                this.Hide();
+                chosenOneForm.Show();
+            }
         }
         private void likeAccount_Click(object sender, EventArgs e)
         {
-            using(var context = new AcquaintanceSqlContext())
+            using (var context = new AcquaintanceSqlContext())
             {
                 var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
                 var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
-
+                if(currUsers.AnotherAccounts != null)
+                {
+                    if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
+                    {
+                        MessageBox.Show("Этот пользователь уже был оценён вами");
+                        return;
+                    }
+                }
                 if (currUsers == null)
                 {
                     MessageBox.Show("Ошибка в добавлении пользователя");
@@ -69,6 +124,7 @@ namespace HeartFluttering
                 anotherUser.Likes++;
                 CurrentUser.currentUser = currUsers;
                 context.SaveChanges();
+                MessageBox.Show("Данный пользователь был добавлен в избранное");
             }
         }
         private void UserProfileForm_Load(object sender, EventArgs e)
@@ -91,6 +147,51 @@ namespace HeartFluttering
             {
                 MemoryStream memoryStream = new MemoryStream(thisUsers.Photo);
                 Photo.Image = Image.FromStream(memoryStream);
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
+                if (currUsers == null)
+                {
+                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    return;
+                }
+                if (anotherUser == null)
+                {
+                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    return;
+                }
+                if(currUsers.AnotherAccounts != null)
+                {
+                    if (currUsers.AnotherAccounts.Equals(anotherUser.IdUsers))
+                    {
+                        currUsers.AnotherAccounts = null;
+                    }
+                    else
+                    {
+                        currUsers.AnotherAccounts = currUsers.AnotherAccounts.Replace($"{anotherUser.IdUsers}" + ",", "").Replace("," + $"{anotherUser.IdUsers}", "").Replace($"{anotherUser.IdUsers}", "");
+                    }
+                }
+                if(anotherUser.Notifications != null)
+                {
+                    if (anotherUser.Notifications.Equals(currUsers.IdUsers))
+                    {
+                        anotherUser.Notifications = null;
+                    }
+                    else
+                    {
+                        anotherUser.Notifications = anotherUser.Notifications.Replace($"{currUsers.IdUsers}" + ",", "").Replace("," + $"{currUsers.IdUsers}", "").Replace($"{currUsers.IdUsers}", "");
+                    }
+                }
+                anotherUser.Likes--;
+                CurrentUser.currentUser = currUsers;
+                context.SaveChanges();
+                MessageBox.Show("Данный пользователь удалён");
             }
         }
     }

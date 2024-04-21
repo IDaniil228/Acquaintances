@@ -50,6 +50,8 @@ namespace HeartFluttering
                     form.likeAccount.Visible = true;
                 }
                 form.thisUsers = selectedUser;
+                form.backButton.Enabled = true;
+                form.backButton.Visible = true;
                 this.Hide();
                 form.ShowDialog();
             }

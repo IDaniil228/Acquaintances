@@ -34,9 +34,10 @@
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
-            listUsers = new ListView();
+            listUsers = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
             SuspendLayout();
             // 
             // girlPhoto
@@ -77,6 +78,7 @@
             CollapseButton.TabIndex = 38;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -93,6 +95,7 @@
             CloseButton.TabIndex = 37;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -109,12 +112,14 @@
             // 
             // listUsers
             // 
-            listUsers.Location = new Point(0, 91);
+            listUsers.AllowUserToAddRows = false;
+            listUsers.BackgroundColor = Color.White;
+            listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listUsers.Location = new Point(0, 83);
             listUsers.Name = "listUsers";
-            listUsers.Size = new Size(402, 359);
-            listUsers.TabIndex = 41;
-            listUsers.UseCompatibleStateImageBehavior = false;
-            listUsers.View = View.List;
+            listUsers.Size = new Size(403, 367);
+            listUsers.TabIndex = 47;
+            listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
             // ChosenOneForm
             // 
@@ -131,8 +136,10 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ChosenOneForm";
             Text = "ChosenOneForm";
+            Load += ChosenOneForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();
             ResumeLayout(false);
         }
 
@@ -143,6 +150,6 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
-        private ListView listUsers;
+        public DataGridView listUsers;
     }
 }

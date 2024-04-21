@@ -35,6 +35,8 @@
             CloseButton = new Button();
             entryLabel = new Label();
             panel1 = new Panel();
+            backButton2 = new Button();
+            deleteButton = new Button();
             likeAccount = new PictureBox();
             backButton = new Button();
             label14 = new Label();
@@ -132,6 +134,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(backButton2);
+            panel1.Controls.Add(deleteButton);
             panel1.Controls.Add(likeAccount);
             panel1.Controls.Add(backButton);
             panel1.Controls.Add(label14);
@@ -155,6 +159,46 @@
             panel1.Size = new Size(581, 372);
             panel1.TabIndex = 51;
             // 
+            // backButton2
+            // 
+            backButton2.BackColor = Color.Fuchsia;
+            backButton2.BackgroundImageLayout = ImageLayout.None;
+            backButton2.Enabled = false;
+            backButton2.FlatAppearance.BorderSize = 0;
+            backButton2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            backButton2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton2.FlatStyle = FlatStyle.Flat;
+            backButton2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            backButton2.ForeColor = Color.White;
+            backButton2.Location = new Point(3, 330);
+            backButton2.Name = "backButton2";
+            backButton2.Size = new Size(149, 39);
+            backButton2.TabIndex = 73;
+            backButton2.Text = "Назад";
+            backButton2.UseVisualStyleBackColor = false;
+            backButton2.Visible = false;
+            backButton2.Click += backButton2_Click;
+            // 
+            // deleteButton
+            // 
+            deleteButton.BackColor = Color.Fuchsia;
+            deleteButton.BackgroundImageLayout = ImageLayout.None;
+            deleteButton.Enabled = false;
+            deleteButton.FlatAppearance.BorderSize = 0;
+            deleteButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            deleteButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            deleteButton.FlatStyle = FlatStyle.Flat;
+            deleteButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            deleteButton.ForeColor = Color.White;
+            deleteButton.Location = new Point(432, 333);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(149, 39);
+            deleteButton.TabIndex = 72;
+            deleteButton.Text = "Удалить";
+            deleteButton.UseVisualStyleBackColor = false;
+            deleteButton.Visible = false;
+            deleteButton.Click += deleteButton_Click;
+            // 
             // likeAccount
             // 
             likeAccount.Enabled = false;
@@ -172,6 +216,7 @@
             // 
             backButton.BackColor = Color.Fuchsia;
             backButton.BackgroundImageLayout = ImageLayout.None;
+            backButton.Enabled = false;
             backButton.FlatAppearance.BorderSize = 0;
             backButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
             backButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -184,6 +229,7 @@
             backButton.TabIndex = 70;
             backButton.Text = "Назад";
             backButton.UseVisualStyleBackColor = false;
+            backButton.Visible = false;
             backButton.Click += backButton_Click;
             // 
             // label14
@@ -210,7 +256,7 @@
             // 
             numberField.BackColor = Color.FromArgb(255, 230, 255);
             numberField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numberField.ForeColor = Color.Gray;
+            numberField.ForeColor = Color.Black;
             numberField.Location = new Point(343, 280);
             numberField.Name = "numberField";
             numberField.Size = new Size(235, 24);
@@ -220,7 +266,7 @@
             // 
             mailField.BackColor = Color.FromArgb(255, 230, 255);
             mailField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            mailField.ForeColor = Color.Gray;
+            mailField.ForeColor = Color.Black;
             mailField.Location = new Point(343, 242);
             mailField.Name = "mailField";
             mailField.Size = new Size(235, 24);
@@ -230,7 +276,7 @@
             // 
             selField.BackColor = Color.FromArgb(255, 230, 255);
             selField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            selField.ForeColor = Color.Gray;
+            selField.ForeColor = Color.Black;
             selField.Location = new Point(343, 206);
             selField.Name = "selField";
             selField.Size = new Size(235, 24);
@@ -240,7 +286,7 @@
             // 
             cityField.BackColor = Color.FromArgb(255, 230, 255);
             cityField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            cityField.ForeColor = Color.Gray;
+            cityField.ForeColor = Color.Black;
             cityField.Location = new Point(343, 170);
             cityField.Name = "cityField";
             cityField.Size = new Size(235, 24);
@@ -250,7 +296,7 @@
             // 
             birthdayField.BackColor = Color.FromArgb(255, 230, 255);
             birthdayField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            birthdayField.ForeColor = Color.Gray;
+            birthdayField.ForeColor = Color.Black;
             birthdayField.Location = new Point(343, 134);
             birthdayField.Name = "birthdayField";
             birthdayField.Size = new Size(235, 24);
@@ -260,7 +306,7 @@
             // 
             surnameField.BackColor = Color.FromArgb(255, 230, 255);
             surnameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            surnameField.ForeColor = Color.Gray;
+            surnameField.ForeColor = Color.Black;
             surnameField.Location = new Point(343, 99);
             surnameField.Name = "surnameField";
             surnameField.Size = new Size(235, 24);
@@ -270,7 +316,7 @@
             // 
             nameField.BackColor = Color.FromArgb(255, 230, 255);
             nameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            nameField.ForeColor = Color.Gray;
+            nameField.ForeColor = Color.Black;
             nameField.Location = new Point(343, 64);
             nameField.Name = "nameField";
             nameField.Size = new Size(235, 24);
@@ -379,7 +425,6 @@
         private Button CloseButton;
         private Label entryLabel;
         private Panel panel1;
-        private Button backButton;
         private Label label14;
         private Label label13;
         private Label numberField;
@@ -399,5 +444,8 @@
         public PictureBox likeAccount;
         private Label nameField;
         private PictureBox pictureBox1;
+        public Button deleteButton;
+        public Button backButton;
+        public Button backButton2;
     }
 }

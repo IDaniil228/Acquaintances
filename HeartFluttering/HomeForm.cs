@@ -170,7 +170,36 @@ namespace HeartFluttering
 
         private void favoritesButton_Click(object sender, EventArgs e)
         {
-
+            using (var context = new AcquaintanceSqlContext())
+            {
+                List<User> anotherUsers = new List<User>();
+                if (CurrentUser.currentUser.AnotherAccounts != null)
+                { 
+                    foreach(string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                    {
+                        var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
+                        if(favoritesUsers != null)
+                        {
+                            anotherUsers.Add(favoritesUsers);
+                        }
+                    }
+                }
+                CurrentUsers.currentUsers = anotherUsers;
+                DataTable table = new DataTable();
+                table.Columns.Add("Номер", typeof(int));
+                table.Columns.Add("Имя", typeof(string));
+                table.Columns.Add("Фамилия", typeof(string));
+                table.Columns.Add("Лайки", typeof(int));
+                for (int i = 0; i < anotherUsers.Count; i++)
+                {
+                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                }
+                ChosenOneForm chosenOneForm = new ChosenOneForm();
+                chosenOneForm.listUsers.DataSource = table;
+                FavoritesTable.favoritTable = table;
+                this.Hide();
+                chosenOneForm.Show();
+            }
         }
     }
 }
