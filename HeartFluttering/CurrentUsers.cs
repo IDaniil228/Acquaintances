@@ -8,6 +8,6 @@ namespace HeartFluttering
 {
     public static class CurrentUsers
     {
-        public static List<User> currentUsers;
+        public static List<User>? currentUsers;
     }
 }

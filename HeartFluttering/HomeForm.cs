@@ -38,7 +38,6 @@ namespace HeartFluttering
 
         private void redactionButton_Click(object sender, EventArgs e)
         {
-            //
             this.Hide();
             EditingForm editingForm = new EditingForm();
             editingForm.nameField.Text = CurrentUser.currentUser.Name;
@@ -82,7 +81,6 @@ namespace HeartFluttering
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            
             nameField.Text = CurrentUser.currentUser.Name;
             surnameField.Text = CurrentUser.currentUser.Surname;
             BirhdayField.Text = CurrentUser.currentUser.DateOfBirth;
@@ -137,6 +135,18 @@ namespace HeartFluttering
                 person.Photo = CurrentUser.currentUser.Photo;
                 context.SaveChanges();
             }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FiltersForm filtersForm = new FiltersForm();
+            filtersForm.ShowDialog();
+        }
+
+        private void recommendButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

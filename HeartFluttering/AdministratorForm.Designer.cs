@@ -37,6 +37,7 @@
             entryLabel = new Label();
             usersLabel = new Label();
             panel1 = new Panel();
+            deleteAccountButton = new Button();
             comboBox1 = new ComboBox();
             numberLabel = new Label();
             emailLabel = new Label();
@@ -56,7 +57,6 @@
             profileLabel = new Label();
             textBox1 = new TextBox();
             listView1 = new ListView();
-            deleteAccountButton = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
@@ -173,6 +173,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(596, 342);
             panel1.TabIndex = 49;
+            // 
+            // deleteAccountButton
+            // 
+            deleteAccountButton.BackColor = Color.Fuchsia;
+            deleteAccountButton.BackgroundImageLayout = ImageLayout.None;
+            deleteAccountButton.FlatAppearance.BorderSize = 0;
+            deleteAccountButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            deleteAccountButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            deleteAccountButton.FlatStyle = FlatStyle.Flat;
+            deleteAccountButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            deleteAccountButton.ForeColor = Color.White;
+            deleteAccountButton.Location = new Point(0, 308);
+            deleteAccountButton.Name = "deleteAccountButton";
+            deleteAccountButton.Size = new Size(252, 34);
+            deleteAccountButton.TabIndex = 73;
+            deleteAccountButton.Text = "Заблокировать аккаунт";
+            deleteAccountButton.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
@@ -354,7 +371,7 @@
             textBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             textBox1.Location = new Point(12, 143);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 29);
+            textBox1.Size = new Size(270, 29);
             textBox1.TabIndex = 50;
             // 
             // listView1
@@ -364,23 +381,6 @@
             listView1.Size = new Size(287, 251);
             listView1.TabIndex = 51;
             listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // deleteAccountButton
-            // 
-            deleteAccountButton.BackColor = Color.Fuchsia;
-            deleteAccountButton.BackgroundImageLayout = ImageLayout.None;
-            deleteAccountButton.FlatAppearance.BorderSize = 0;
-            deleteAccountButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            deleteAccountButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            deleteAccountButton.FlatStyle = FlatStyle.Flat;
-            deleteAccountButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            deleteAccountButton.ForeColor = Color.White;
-            deleteAccountButton.Location = new Point(0, 308);
-            deleteAccountButton.Name = "deleteAccountButton";
-            deleteAccountButton.Size = new Size(252, 34);
-            deleteAccountButton.TabIndex = 73;
-            deleteAccountButton.Text = "Заблокировать аккаунт";
-            deleteAccountButton.UseVisualStyleBackColor = false;
             // 
             // AdministratorForm
             // 

@@ -34,7 +34,7 @@
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
-            list = new ListView();
+            listUsers = new ListView();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             SuspendLayout();
@@ -107,14 +107,14 @@
             entryLabel.Text = "Избранное";
             entryLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // list
+            // listUsers
             // 
-            list.Location = new Point(0, 91);
-            list.Name = "list";
-            list.Size = new Size(402, 359);
-            list.TabIndex = 41;
-            list.UseCompatibleStateImageBehavior = false;
-            list.View = View.List;
+            listUsers.Location = new Point(0, 91);
+            listUsers.Name = "listUsers";
+            listUsers.Size = new Size(402, 359);
+            listUsers.TabIndex = 41;
+            listUsers.UseCompatibleStateImageBehavior = false;
+            listUsers.View = View.List;
             // 
             // ChosenOneForm
             // 
@@ -122,7 +122,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(403, 450);
-            Controls.Add(list);
+            Controls.Add(listUsers);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
@@ -143,6 +143,6 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
-        private ListView list;
+        private ListView listUsers;
     }
 }

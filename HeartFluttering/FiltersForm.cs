@@ -30,17 +30,17 @@ namespace HeartFluttering
 
         private void FiltersButton_Click(object sender, EventArgs e)
         {
-            if(InitialAgeField.Text == null)
+            if (InitialAgeField.Text == string.Empty)
             {
                 MessageBox.Show("Заполните поле для фильтрации возраста");
                 return;
             }
-            if(FinalAgeField.Text == null)
+            if (FinalAgeField.Text == string.Empty)
             {
                 MessageBox.Show("Заполните поле для фильтрации возраста");
                 return;
             }
-            if(InitialAgeField.Text != null)
+            if (InitialAgeField.Text != null)
             {
                 foreach (char symbol in InitialAgeField.Text)
                 {
@@ -62,29 +62,30 @@ namespace HeartFluttering
             }
             int FinalAge = Convert.ToInt32(FinalAgeField.Text);
             AllCities allCities = new AllCities();
-            if(cityField.Text != null)
+            if (cityField.Text != string.Empty)
             {
                 if (!allCities.getCities().Contains(cityField.Text.ToLower()))
                 {
-                    MessageBox.Show("Такого города не существует");
+                    MessageBox.Show("Такого города не сущеcтвует");
                     return;
                 }
             }
             int age = FinalAge - InitialAge;
-            if(age < 0)
+            if (age < 0)
             {
                 MessageBox.Show("Возраст не может быть отрицательным");
                 return;
             }
-            if(sexMenButton.Checked == false && sexWomenButton.Checked == false)
+            if (sexMenButton.Checked == false && sexWomenButton.Checked == false)
             {
                 MessageBox.Show("Выберите пол");
                 return;
             }
             //string city = cityField.Text.ToLower();
+            List<User> currentUsers = new List<User>();
 
-
-            if(cityField.Text == null && sexMenButton.Checked == true)
+            PhotoUserForm photoUserForm = new PhotoUserForm();
+            if (cityField.Text == string.Empty && sexMenButton.Checked == true)
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
@@ -93,10 +94,27 @@ namespace HeartFluttering
                     {
                         try
                         {
-                            if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                            (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                            if(CurrentUser.currentUser.AnotherAccounts == null)
                             {
-                                CurrentUsers.currentUsers.Add(user);
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
+                            }
+                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
+                            {
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
                             }
                         }
                         catch (Exception ex)
@@ -105,9 +123,12 @@ namespace HeartFluttering
                             return;
                         }
                     }
+                    photoUserForm.currentUsers = currentUsers;
+                    this.Hide();
+                    photoUserForm.Show();
                 }
             }
-            if (cityField.Text == null && sexWomenButton.Checked == true)
+            if (cityField.Text == string.Empty && sexWomenButton.Checked == true)
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
@@ -116,10 +137,27 @@ namespace HeartFluttering
                     {
                         try
                         {
-                            if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                            (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                            if (CurrentUser.currentUser.AnotherAccounts == null)
                             {
-                                CurrentUsers.currentUsers.Add(user);
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                     (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
+                            }
+                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
+                            {
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                     (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
                             }
                         }
                         catch (Exception ex)
@@ -128,9 +166,12 @@ namespace HeartFluttering
                             return;
                         }
                     }
+                    photoUserForm.currentUsers = currentUsers;
+                    this.Hide();
+                    photoUserForm.Show();
                 }
             }
-            if(cityField.Text != null && sexMenButton.Checked == true)
+            if (cityField.Text != string.Empty && sexMenButton.Checked == true)
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
@@ -139,10 +180,27 @@ namespace HeartFluttering
                     {
                         try
                         {
-                            if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                            (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                            if (CurrentUser.currentUser.AnotherAccounts == null)
                             {
-                                CurrentUsers.currentUsers.Add(user);
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
+                            }
+                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
+                            {
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
                             }
                         }
                         catch (Exception ex)
@@ -152,8 +210,11 @@ namespace HeartFluttering
                         }
                     }
                 }
+                photoUserForm.currentUsers = currentUsers;
+                this.Hide();
+                photoUserForm.Show();
             }
-            if(cityField.Text != null && sexWomenButton.Checked == true)
+            if (cityField.Text != string.Empty && sexWomenButton.Checked == true)
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
@@ -162,10 +223,27 @@ namespace HeartFluttering
                     {
                         try
                         {
-                            if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                            (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                            if (CurrentUser.currentUser.AnotherAccounts == null)
                             {
-                                CurrentUsers.currentUsers.Add(user);
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
+                            }
+                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
+                            {
+                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                {
+                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
+                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    {
+                                        currentUsers.Add(user);
+                                    }
+                                }
                             }
                         }
                         catch (Exception ex)
@@ -175,7 +253,15 @@ namespace HeartFluttering
                         }
                     }
                 }
+                photoUserForm.currentUsers = currentUsers;
+                this.Hide();
+                photoUserForm.Show();
             }
+        }
+
+        private void FiltersForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

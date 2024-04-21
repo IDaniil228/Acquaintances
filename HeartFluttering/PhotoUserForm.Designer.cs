@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhotoUserForm));
-            Photo = new PictureBox();
+            photoField = new PictureBox();
             panel1 = new Panel();
             BirhdayField = new Label();
             BirhdayLabel = new Label();
             nameField = new Label();
             nameLabel = new Label();
             panel2 = new Panel();
+            likeAccount = new PictureBox();
+            startButton = new Button();
             homeButton = new Button();
             changeFiltersButton = new Button();
             nextAccount = new PictureBox();
-            likeAccount = new PictureBox();
-            startButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)photoField).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nextAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nextAccount).BeginInit();
             SuspendLayout();
             // 
-            // Photo
+            // photoField
             // 
-            Photo.Image = (Image)resources.GetObject("Photo.Image");
-            Photo.Location = new Point(1, 1);
-            Photo.Name = "Photo";
-            Photo.Size = new Size(411, 299);
-            Photo.SizeMode = PictureBoxSizeMode.StretchImage;
-            Photo.TabIndex = 73;
-            Photo.TabStop = false;
+            photoField.Image = (Image)resources.GetObject("photoField.Image");
+            photoField.Location = new Point(1, 1);
+            photoField.Name = "photoField";
+            photoField.Size = new Size(411, 299);
+            photoField.SizeMode = PictureBoxSizeMode.StretchImage;
+            photoField.TabIndex = 73;
+            photoField.TabStop = false;
             // 
             // panel1
             // 
@@ -112,71 +112,28 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(likeAccount);
             panel2.Controls.Add(startButton);
             panel2.Controls.Add(homeButton);
             panel2.Controls.Add(changeFiltersButton);
             panel2.Controls.Add(nextAccount);
-            panel2.Controls.Add(likeAccount);
             panel2.Location = new Point(1, 402);
             panel2.Name = "panel2";
             panel2.Size = new Size(411, 122);
             panel2.TabIndex = 75;
             // 
-            // homeButton
-            // 
-            homeButton.BackColor = Color.Fuchsia;
-            homeButton.BackgroundImageLayout = ImageLayout.None;
-            homeButton.FlatAppearance.BorderSize = 0;
-            homeButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            homeButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            homeButton.FlatStyle = FlatStyle.Flat;
-            homeButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            homeButton.ForeColor = Color.White;
-            homeButton.Location = new Point(130, 88);
-            homeButton.Name = "homeButton";
-            homeButton.Size = new Size(144, 31);
-            homeButton.TabIndex = 6;
-            homeButton.Text = "Мой профиль";
-            homeButton.UseVisualStyleBackColor = false;
-            // 
-            // changeFiltersButton
-            // 
-            changeFiltersButton.BackColor = Color.Fuchsia;
-            changeFiltersButton.BackgroundImageLayout = ImageLayout.None;
-            changeFiltersButton.FlatAppearance.BorderSize = 0;
-            changeFiltersButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            changeFiltersButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            changeFiltersButton.FlatStyle = FlatStyle.Flat;
-            changeFiltersButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            changeFiltersButton.ForeColor = Color.White;
-            changeFiltersButton.Location = new Point(101, 47);
-            changeFiltersButton.Name = "changeFiltersButton";
-            changeFiltersButton.Size = new Size(200, 35);
-            changeFiltersButton.TabIndex = 5;
-            changeFiltersButton.Text = "Изменить фильтры";
-            changeFiltersButton.UseVisualStyleBackColor = false;
-            // 
-            // nextAccount
-            // 
-            nextAccount.Image = (Image)resources.GetObject("nextAccount.Image");
-            nextAccount.Location = new Point(307, 28);
-            nextAccount.Name = "nextAccount";
-            nextAccount.Size = new Size(98, 72);
-            nextAccount.SizeMode = PictureBoxSizeMode.StretchImage;
-            nextAccount.TabIndex = 4;
-            nextAccount.TabStop = false;
-            nextAccount.Visible = false;
-            // 
             // likeAccount
             // 
+            likeAccount.Enabled = false;
             likeAccount.Image = (Image)resources.GetObject("likeAccount.Image");
-            likeAccount.Location = new Point(12, 28);
+            likeAccount.Location = new Point(0, 28);
             likeAccount.Name = "likeAccount";
-            likeAccount.Size = new Size(87, 72);
+            likeAccount.Size = new Size(98, 72);
             likeAccount.SizeMode = PictureBoxSizeMode.StretchImage;
-            likeAccount.TabIndex = 3;
+            likeAccount.TabIndex = 8;
             likeAccount.TabStop = false;
             likeAccount.Visible = false;
+            likeAccount.Click += likeAccount_Click;
             // 
             // startButton
             // 
@@ -194,6 +151,56 @@
             startButton.TabIndex = 7;
             startButton.Text = "Начать";
             startButton.UseVisualStyleBackColor = false;
+            startButton.Click += startButton_Click;
+            // 
+            // homeButton
+            // 
+            homeButton.BackColor = Color.Fuchsia;
+            homeButton.BackgroundImageLayout = ImageLayout.None;
+            homeButton.FlatAppearance.BorderSize = 0;
+            homeButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            homeButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            homeButton.FlatStyle = FlatStyle.Flat;
+            homeButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            homeButton.ForeColor = Color.White;
+            homeButton.Location = new Point(130, 88);
+            homeButton.Name = "homeButton";
+            homeButton.Size = new Size(144, 31);
+            homeButton.TabIndex = 6;
+            homeButton.Text = "Мой профиль";
+            homeButton.UseVisualStyleBackColor = false;
+            homeButton.Click += homeButton_Click;
+            // 
+            // changeFiltersButton
+            // 
+            changeFiltersButton.BackColor = Color.Fuchsia;
+            changeFiltersButton.BackgroundImageLayout = ImageLayout.None;
+            changeFiltersButton.FlatAppearance.BorderSize = 0;
+            changeFiltersButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            changeFiltersButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            changeFiltersButton.FlatStyle = FlatStyle.Flat;
+            changeFiltersButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            changeFiltersButton.ForeColor = Color.White;
+            changeFiltersButton.Location = new Point(101, 47);
+            changeFiltersButton.Name = "changeFiltersButton";
+            changeFiltersButton.Size = new Size(200, 35);
+            changeFiltersButton.TabIndex = 5;
+            changeFiltersButton.Text = "Изменить фильтры";
+            changeFiltersButton.UseVisualStyleBackColor = false;
+            changeFiltersButton.Click += changeFiltersButton_Click;
+            // 
+            // nextAccount
+            // 
+            nextAccount.Enabled = false;
+            nextAccount.Image = (Image)resources.GetObject("nextAccount.Image");
+            nextAccount.Location = new Point(307, 28);
+            nextAccount.Name = "nextAccount";
+            nextAccount.Size = new Size(98, 72);
+            nextAccount.SizeMode = PictureBoxSizeMode.StretchImage;
+            nextAccount.TabIndex = 4;
+            nextAccount.TabStop = false;
+            nextAccount.Visible = false;
+            nextAccount.Click += nextAccount_Click;
             // 
             // PhotoUserForm
             // 
@@ -203,22 +210,22 @@
             ClientSize = new Size(414, 525);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(Photo);
+            Controls.Add(photoField);
             FormBorderStyle = FormBorderStyle.None;
             Name = "PhotoUserForm";
             Text = "PhotoUserForm";
-            ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)photoField).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)nextAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nextAccount).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox Photo;
+        private PictureBox photoField;
         private Panel panel1;
         private Label BirhdayField;
         private Label BirhdayLabel;
@@ -228,7 +235,7 @@
         private Button homeButton;
         private Button changeFiltersButton;
         private PictureBox nextAccount;
-        private PictureBox likeAccount;
         private Button startButton;
+        public PictureBox likeAccount;
     }
 }

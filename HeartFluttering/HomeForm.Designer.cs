@@ -35,9 +35,9 @@
             CloseButton = new Button();
             entryLabel = new Label();
             label2 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            button1 = new Button();
+            favoritesButton = new Button();
+            recommendButton = new Button();
+            searchButton = new Button();
             button4 = new Button();
             closeAccount = new Button();
             panel1 = new Panel();
@@ -144,56 +144,58 @@
             label2.Size = new Size(10, 363);
             label2.TabIndex = 41;
             // 
-            // button2
+            // favoritesButton
             // 
-            button2.BackColor = Color.Fuchsia;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(7, 120);
-            button2.Name = "button2";
-            button2.Size = new Size(196, 43);
-            button2.TabIndex = 42;
-            button2.Text = "Избранное";
-            button2.UseVisualStyleBackColor = false;
+            favoritesButton.BackColor = Color.Fuchsia;
+            favoritesButton.BackgroundImageLayout = ImageLayout.None;
+            favoritesButton.FlatAppearance.BorderSize = 0;
+            favoritesButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            favoritesButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            favoritesButton.FlatStyle = FlatStyle.Flat;
+            favoritesButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            favoritesButton.ForeColor = Color.White;
+            favoritesButton.Location = new Point(7, 120);
+            favoritesButton.Name = "favoritesButton";
+            favoritesButton.Size = new Size(196, 43);
+            favoritesButton.TabIndex = 42;
+            favoritesButton.Text = "Избранное";
+            favoritesButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // recommendButton
             // 
-            button3.BackColor = Color.Fuchsia;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(7, 183);
-            button3.Name = "button3";
-            button3.Size = new Size(196, 43);
-            button3.TabIndex = 43;
-            button3.Text = "Рекомендации";
-            button3.UseVisualStyleBackColor = false;
+            recommendButton.BackColor = Color.Fuchsia;
+            recommendButton.BackgroundImageLayout = ImageLayout.None;
+            recommendButton.FlatAppearance.BorderSize = 0;
+            recommendButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            recommendButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            recommendButton.FlatStyle = FlatStyle.Flat;
+            recommendButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            recommendButton.ForeColor = Color.White;
+            recommendButton.Location = new Point(7, 183);
+            recommendButton.Name = "recommendButton";
+            recommendButton.Size = new Size(196, 43);
+            recommendButton.TabIndex = 43;
+            recommendButton.Text = "Рекомендации";
+            recommendButton.UseVisualStyleBackColor = false;
+            recommendButton.Click += recommendButton_Click;
             // 
-            // button1
+            // searchButton
             // 
-            button1.BackColor = Color.Fuchsia;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(7, 243);
-            button1.Name = "button1";
-            button1.Size = new Size(196, 43);
-            button1.TabIndex = 44;
-            button1.Text = "Поиск пары";
-            button1.UseVisualStyleBackColor = false;
+            searchButton.BackColor = Color.Fuchsia;
+            searchButton.BackgroundImageLayout = ImageLayout.None;
+            searchButton.FlatAppearance.BorderSize = 0;
+            searchButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            searchButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            searchButton.FlatStyle = FlatStyle.Flat;
+            searchButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            searchButton.ForeColor = Color.White;
+            searchButton.Location = new Point(7, 243);
+            searchButton.Name = "searchButton";
+            searchButton.Size = new Size(196, 43);
+            searchButton.TabIndex = 44;
+            searchButton.Text = "Поиск пары";
+            searchButton.UseVisualStyleBackColor = false;
+            searchButton.Click += searchButton_Click;
             // 
             // button4
             // 
@@ -469,9 +471,9 @@
             Controls.Add(panel1);
             Controls.Add(closeAccount);
             Controls.Add(button4);
-            Controls.Add(button1);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(searchButton);
+            Controls.Add(recommendButton);
+            Controls.Add(favoritesButton);
             Controls.Add(label2);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
@@ -498,9 +500,9 @@
         private Button CloseButton;
         private Label entryLabel;
         private Label label2;
-        private Button button2;
-        private Button button3;
-        private Button button1;
+        private Button favoritesButton;
+        private Button recommendButton;
+        private Button searchButton;
         private Button button4;
         private Button closeAccount;
         private Panel panel1;

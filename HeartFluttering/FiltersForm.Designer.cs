@@ -116,7 +116,7 @@
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Location = new Point(0, 0);
             entryLabel.Name = "entryLabel";
-            entryLabel.Size = new Size(472, 88);
+            entryLabel.Size = new Size(472, 98);
             entryLabel.TabIndex = 41;
             entryLabel.Text = "Фильтры";
             entryLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -270,6 +270,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FiltersForm";
             Text = "FiltersForm";
+            Load += FiltersForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             panel1.ResumeLayout(false);
