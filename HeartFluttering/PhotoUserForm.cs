@@ -84,8 +84,8 @@ namespace HeartFluttering
             {
                 using(var context = new AcquaintanceSqlContext())
                 {
-                    var currUsers = context.Users.FirstOrDefault(r => r.Id.Equals(CurrentUser.currentUser.Id));
-                    var anotherUser = context.Users.FirstOrDefault(r => r.Id.Equals(currentUsers[count].Id));
+                    var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(currentUsers[count].IdUsers));
 
                     if(currUsers == null)
                     {

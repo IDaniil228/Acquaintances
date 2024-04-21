@@ -35,16 +35,17 @@
             CloseButton = new Button();
             entryLabel = new Label();
             panel1 = new Panel();
-            button2 = new Button();
+            likeAccount = new PictureBox();
+            backButton = new Button();
             label14 = new Label();
             label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
+            numberField = new Label();
+            mailField = new Label();
+            selField = new Label();
+            cityField = new Label();
+            birthdayField = new Label();
+            surnameField = new Label();
+            nameField = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -55,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
             SuspendLayout();
             // 
@@ -96,6 +98,7 @@
             CollapseButton.TabIndex = 48;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -112,6 +115,7 @@
             CloseButton.TabIndex = 47;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -128,16 +132,17 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(likeAccount);
+            panel1.Controls.Add(backButton);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
+            panel1.Controls.Add(numberField);
+            panel1.Controls.Add(mailField);
+            panel1.Controls.Add(selField);
+            panel1.Controls.Add(cityField);
+            panel1.Controls.Add(birthdayField);
+            panel1.Controls.Add(surnameField);
+            panel1.Controls.Add(nameField);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label5);
@@ -147,25 +152,39 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 91);
             panel1.Name = "panel1";
-            panel1.Size = new Size(579, 372);
+            panel1.Size = new Size(581, 372);
             panel1.TabIndex = 51;
             // 
-            // button2
+            // likeAccount
             // 
-            button2.BackColor = Color.Fuchsia;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 330);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 39);
-            button2.TabIndex = 70;
-            button2.Text = "Назад";
-            button2.UseVisualStyleBackColor = false;
+            likeAccount.Enabled = false;
+            likeAccount.Image = (Image)resources.GetObject("likeAccount.Image");
+            likeAccount.Location = new Point(513, 318);
+            likeAccount.Name = "likeAccount";
+            likeAccount.Size = new Size(63, 54);
+            likeAccount.SizeMode = PictureBoxSizeMode.StretchImage;
+            likeAccount.TabIndex = 71;
+            likeAccount.TabStop = false;
+            likeAccount.Visible = false;
+            likeAccount.Click += likeAccount_Click;
+            // 
+            // backButton
+            // 
+            backButton.BackColor = Color.Fuchsia;
+            backButton.BackgroundImageLayout = ImageLayout.None;
+            backButton.FlatAppearance.BorderSize = 0;
+            backButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            backButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton.FlatStyle = FlatStyle.Flat;
+            backButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            backButton.ForeColor = Color.White;
+            backButton.Location = new Point(3, 330);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(149, 39);
+            backButton.TabIndex = 70;
+            backButton.Text = "Назад";
+            backButton.UseVisualStyleBackColor = false;
+            backButton.Click += backButton_Click;
             // 
             // label14
             // 
@@ -187,82 +206,75 @@
             label13.TabIndex = 68;
             label13.Text = "Почта";
             // 
-            // label12
+            // numberField
             // 
-            label12.BackColor = Color.FromArgb(255, 230, 255);
-            label12.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label12.ForeColor = Color.Gray;
-            label12.Location = new Point(343, 280);
-            label12.Name = "label12";
-            label12.Size = new Size(235, 24);
-            label12.TabIndex = 67;
-            label12.Text = "Номер телефона";
+            numberField.BackColor = Color.FromArgb(255, 230, 255);
+            numberField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            numberField.ForeColor = Color.Gray;
+            numberField.Location = new Point(343, 280);
+            numberField.Name = "numberField";
+            numberField.Size = new Size(235, 24);
+            numberField.TabIndex = 67;
             // 
-            // label11
+            // mailField
             // 
-            label11.BackColor = Color.FromArgb(255, 230, 255);
-            label11.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label11.ForeColor = Color.Gray;
-            label11.Location = new Point(343, 242);
-            label11.Name = "label11";
-            label11.Size = new Size(235, 24);
-            label11.TabIndex = 66;
-            label11.Text = "Почта";
+            mailField.BackColor = Color.FromArgb(255, 230, 255);
+            mailField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            mailField.ForeColor = Color.Gray;
+            mailField.Location = new Point(343, 242);
+            mailField.Name = "mailField";
+            mailField.Size = new Size(235, 24);
+            mailField.TabIndex = 66;
             // 
-            // label10
+            // selField
             // 
-            label10.BackColor = Color.FromArgb(255, 230, 255);
-            label10.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label10.ForeColor = Color.Gray;
-            label10.Location = new Point(343, 206);
-            label10.Name = "label10";
-            label10.Size = new Size(235, 24);
-            label10.TabIndex = 65;
-            label10.Text = "Пол";
+            selField.BackColor = Color.FromArgb(255, 230, 255);
+            selField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            selField.ForeColor = Color.Gray;
+            selField.Location = new Point(343, 206);
+            selField.Name = "selField";
+            selField.Size = new Size(235, 24);
+            selField.TabIndex = 65;
             // 
-            // label9
+            // cityField
             // 
-            label9.BackColor = Color.FromArgb(255, 230, 255);
-            label9.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label9.ForeColor = Color.Gray;
-            label9.Location = new Point(343, 170);
-            label9.Name = "label9";
-            label9.Size = new Size(235, 24);
-            label9.TabIndex = 64;
-            label9.Text = "Город";
+            cityField.BackColor = Color.FromArgb(255, 230, 255);
+            cityField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            cityField.ForeColor = Color.Gray;
+            cityField.Location = new Point(343, 170);
+            cityField.Name = "cityField";
+            cityField.Size = new Size(235, 24);
+            cityField.TabIndex = 64;
             // 
-            // label8
+            // birthdayField
             // 
-            label8.BackColor = Color.FromArgb(255, 230, 255);
-            label8.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label8.ForeColor = Color.Gray;
-            label8.Location = new Point(343, 134);
-            label8.Name = "label8";
-            label8.Size = new Size(235, 24);
-            label8.TabIndex = 63;
-            label8.Text = "Дата рождения";
+            birthdayField.BackColor = Color.FromArgb(255, 230, 255);
+            birthdayField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            birthdayField.ForeColor = Color.Gray;
+            birthdayField.Location = new Point(343, 134);
+            birthdayField.Name = "birthdayField";
+            birthdayField.Size = new Size(235, 24);
+            birthdayField.TabIndex = 63;
             // 
-            // label7
+            // surnameField
             // 
-            label7.BackColor = Color.FromArgb(255, 230, 255);
-            label7.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label7.ForeColor = Color.Gray;
-            label7.Location = new Point(343, 99);
-            label7.Name = "label7";
-            label7.Size = new Size(235, 24);
-            label7.TabIndex = 62;
-            label7.Text = "Фамилия";
+            surnameField.BackColor = Color.FromArgb(255, 230, 255);
+            surnameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            surnameField.ForeColor = Color.Gray;
+            surnameField.Location = new Point(343, 99);
+            surnameField.Name = "surnameField";
+            surnameField.Size = new Size(235, 24);
+            surnameField.TabIndex = 62;
             // 
-            // label6
+            // nameField
             // 
-            label6.BackColor = Color.FromArgb(255, 230, 255);
-            label6.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label6.ForeColor = Color.Gray;
-            label6.Location = new Point(343, 64);
-            label6.Name = "label6";
-            label6.Size = new Size(235, 24);
-            label6.TabIndex = 61;
-            label6.Text = "Имя";
+            nameField.BackColor = Color.FromArgb(255, 230, 255);
+            nameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            nameField.ForeColor = Color.Gray;
+            nameField.Location = new Point(343, 64);
+            nameField.Name = "nameField";
+            nameField.Size = new Size(235, 24);
+            nameField.TabIndex = 61;
             // 
             // label3
             // 
@@ -349,10 +361,12 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "UserProfileForm";
             Text = "UserProfileForm";
+            Load += UserProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
             ResumeLayout(false);
         }
@@ -365,15 +379,15 @@
         private Button CloseButton;
         private Label entryLabel;
         private Panel panel1;
-        private Button button2;
+        private Button backButton;
         private Label label14;
         private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
+        private Label numberField;
+        private Label mailField;
+        private Label selField;
+        private Label cityField;
+        private Label birthdayField;
+        private Label surnameField;
         private Label label6;
         private Label label3;
         private Label label4;
@@ -382,5 +396,8 @@
         private Label loginLabel;
         private PictureBox Photo;
         private Label label1;
+        public PictureBox likeAccount;
+        private Label nameField;
+        private PictureBox pictureBox1;
     }
 }

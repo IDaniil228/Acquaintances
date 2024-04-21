@@ -160,6 +160,7 @@
             favoritesButton.TabIndex = 42;
             favoritesButton.Text = "Избранное";
             favoritesButton.UseVisualStyleBackColor = false;
+            favoritesButton.Click += favoritesButton_Click;
             // 
             // recommendButton
             // 

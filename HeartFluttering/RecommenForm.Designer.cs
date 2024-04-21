@@ -34,9 +34,10 @@
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
-            listView1 = new ListView();
+            listUsers = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
             SuspendLayout();
             // 
             // girlPhoto
@@ -77,6 +78,7 @@
             CollapseButton.TabIndex = 43;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -93,6 +95,7 @@
             CloseButton.TabIndex = 42;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -107,14 +110,16 @@
             entryLabel.Text = "Рекомендации";
             entryLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // listView1
+            // listUsers
             // 
-            listView1.BackColor = Color.White;
-            listView1.Location = new Point(0, 91);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(423, 359);
-            listView1.TabIndex = 46;
-            listView1.UseCompatibleStateImageBehavior = false;
+            listUsers.AllowUserToAddRows = false;
+            listUsers.BackgroundColor = Color.White;
+            listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listUsers.Location = new Point(0, 91);
+            listUsers.Name = "listUsers";
+            listUsers.Size = new Size(423, 358);
+            listUsers.TabIndex = 46;
+            listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
             // RecommenForm
             // 
@@ -122,7 +127,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(423, 450);
-            Controls.Add(listView1);
+            Controls.Add(listUsers);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
@@ -131,8 +136,10 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "RecommenForm";
             Text = "RecommenForm";
+            Load += RecommenForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();
             ResumeLayout(false);
         }
 
@@ -143,6 +150,6 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
-        private ListView listView1;
+        public DataGridView listUsers;
     }
 }

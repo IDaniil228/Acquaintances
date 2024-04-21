@@ -146,6 +146,30 @@ namespace HeartFluttering
 
         private void recommendButton_Click(object sender, EventArgs e)
         {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
+                CurrentUsers.currentUsers = sortedUsers;
+                DataTable table = new DataTable();
+                table.Columns.Add("Место", typeof(int));
+                table.Columns.Add("Имя", typeof(string));
+                table.Columns.Add("Фамилия", typeof(string));
+                table.Columns.Add("Лайки", typeof(int));
+                for (int i = 0; i < sortedUsers.Count; i++)
+                {
+                    table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
+                }
+                RecommenForm recommenForm = new RecommenForm();
+                recommenForm.listUsers.DataSource = table;
+                RecommenTable.thisTable = table;
+                this.Hide();
+                recommenForm.Show();
+            }
+        }
+
+        private void favoritesButton_Click(object sender, EventArgs e)
+        {
 
         }
     }
