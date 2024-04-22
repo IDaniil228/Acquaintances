@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace HeartFluttering
 {
-    public static class FavoritesTable
+    public static class NotificationTable
     {
-        public static DataTable? favoritTable;
+        public static DataTable? notificationTable;
     }
 }

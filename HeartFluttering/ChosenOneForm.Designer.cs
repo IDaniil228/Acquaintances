@@ -35,6 +35,7 @@
             CloseButton = new Button();
             entryLabel = new Label();
             listUsers = new DataGridView();
+            registrButton = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
@@ -72,7 +73,7 @@
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
-            CollapseButton.Location = new Point(335, 0);
+            CollapseButton.Location = new Point(334, 0);
             CollapseButton.Name = "CollapseButton";
             CollapseButton.Size = new Size(35, 23);
             CollapseButton.TabIndex = 38;
@@ -105,7 +106,7 @@
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Location = new Point(0, 0);
             entryLabel.Name = "entryLabel";
-            entryLabel.Size = new Size(403, 88);
+            entryLabel.Size = new Size(402, 88);
             entryLabel.TabIndex = 36;
             entryLabel.Text = "Избранное";
             entryLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -117,16 +118,34 @@
             listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             listUsers.Location = new Point(0, 83);
             listUsers.Name = "listUsers";
-            listUsers.Size = new Size(403, 367);
+            listUsers.Size = new Size(403, 358);
             listUsers.TabIndex = 47;
             listUsers.CellDoubleClick += listUsers_CellDoubleClick;
+            // 
+            // registrButton
+            // 
+            registrButton.BackColor = Color.Fuchsia;
+            registrButton.BackgroundImageLayout = ImageLayout.None;
+            registrButton.FlatAppearance.BorderSize = 0;
+            registrButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            registrButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            registrButton.FlatStyle = FlatStyle.Flat;
+            registrButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            registrButton.ForeColor = Color.White;
+            registrButton.Location = new Point(134, 439);
+            registrButton.Name = "registrButton";
+            registrButton.Size = new Size(130, 34);
+            registrButton.TabIndex = 58;
+            registrButton.Text = "Назад";
+            registrButton.UseVisualStyleBackColor = false;
             // 
             // ChosenOneForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(403, 450);
+            ClientSize = new Size(402, 472);
+            Controls.Add(registrButton);
             Controls.Add(listUsers);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
@@ -151,5 +170,6 @@
         private Button CloseButton;
         private Label entryLabel;
         public DataGridView listUsers;
+        private Button registrButton;
     }
 }

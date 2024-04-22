@@ -38,7 +38,7 @@
             favoritesButton = new Button();
             recommendButton = new Button();
             searchButton = new Button();
-            button4 = new Button();
+            notificationButton = new Button();
             closeAccount = new Button();
             panel1 = new Panel();
             redactionPhotoButton = new Button();
@@ -198,22 +198,23 @@
             searchButton.UseVisualStyleBackColor = false;
             searchButton.Click += searchButton_Click;
             // 
-            // button4
+            // notificationButton
             // 
-            button4.BackColor = Color.Fuchsia;
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(7, 304);
-            button4.Name = "button4";
-            button4.Size = new Size(196, 43);
-            button4.TabIndex = 45;
-            button4.Text = "Уведомления";
-            button4.UseVisualStyleBackColor = false;
+            notificationButton.BackColor = Color.Fuchsia;
+            notificationButton.BackgroundImageLayout = ImageLayout.None;
+            notificationButton.FlatAppearance.BorderSize = 0;
+            notificationButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            notificationButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            notificationButton.FlatStyle = FlatStyle.Flat;
+            notificationButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            notificationButton.ForeColor = Color.White;
+            notificationButton.Location = new Point(7, 304);
+            notificationButton.Name = "notificationButton";
+            notificationButton.Size = new Size(196, 43);
+            notificationButton.TabIndex = 45;
+            notificationButton.Text = "Уведомления";
+            notificationButton.UseVisualStyleBackColor = false;
+            notificationButton.Click += notificationButton_Click;
             // 
             // closeAccount
             // 
@@ -471,7 +472,7 @@
             ClientSize = new Size(796, 451);
             Controls.Add(panel1);
             Controls.Add(closeAccount);
-            Controls.Add(button4);
+            Controls.Add(notificationButton);
             Controls.Add(searchButton);
             Controls.Add(recommendButton);
             Controls.Add(favoritesButton);
@@ -504,7 +505,7 @@
         private Button favoritesButton;
         private Button recommendButton;
         private Button searchButton;
-        private Button button4;
+        private Button notificationButton;
         private Button closeAccount;
         private Panel panel1;
         private Label numberLabel;

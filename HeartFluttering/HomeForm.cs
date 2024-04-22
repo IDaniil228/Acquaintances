@@ -174,11 +174,11 @@ namespace HeartFluttering
             {
                 List<User> anotherUsers = new List<User>();
                 if (CurrentUser.currentUser.AnotherAccounts != null)
-                { 
-                    foreach(string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                {
+                    foreach (string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
                     {
                         var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
-                        if(favoritesUsers != null)
+                        if (favoritesUsers != null)
                         {
                             anotherUsers.Add(favoritesUsers);
                         }
@@ -199,6 +199,40 @@ namespace HeartFluttering
                 FavoritesTable.favoritTable = table;
                 this.Hide();
                 chosenOneForm.Show();
+            }
+        }
+
+        private void notificationButton_Click(object sender, EventArgs e)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                List<User> anotherUsers = new List<User>();
+                if (CurrentUser.currentUser.Notifications != null)
+                {
+                    foreach (string idUser in CurrentUser.currentUser.Notifications.Split(','))
+                    {
+                        var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
+                        if (favoritesUsers != null)
+                        {
+                            anotherUsers.Add(favoritesUsers);
+                        }
+                    }
+                }
+                CurrentUsers.currentUsers = anotherUsers;
+                DataTable table = new DataTable();
+                table.Columns.Add("Номер", typeof(int));
+                table.Columns.Add("Имя", typeof(string));
+                table.Columns.Add("Фамилия", typeof(string));
+                table.Columns.Add("Лайки", typeof(int));
+                for (int i = 0; i < anotherUsers.Count; i++)
+                {
+                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                }
+                NotificationForm notificationForm = new NotificationForm();
+                notificationForm.listUsers.DataSource = table;
+                NotificationTable.notificationTable = table;
+                this.Hide();
+                notificationForm.Show();
             }
         }
     }

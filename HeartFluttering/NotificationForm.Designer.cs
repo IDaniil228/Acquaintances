@@ -1,6 +1,6 @@
 ﻿namespace HeartFluttering
 {
-    partial class RecommenForm
+    partial class NotificationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecommenForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotificationForm));
             girlPhoto = new PictureBox();
             boyPhoto = new PictureBox();
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
-            listUsers = new DataGridView();
             registrButton = new Button();
+            listUsers = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
@@ -73,7 +73,7 @@
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
-            CollapseButton.Location = new Point(357, 0);
+            CollapseButton.Location = new Point(355, 0);
             CollapseButton.Name = "CollapseButton";
             CollapseButton.Size = new Size(35, 23);
             CollapseButton.TabIndex = 43;
@@ -108,19 +108,8 @@
             entryLabel.Name = "entryLabel";
             entryLabel.Size = new Size(423, 88);
             entryLabel.TabIndex = 41;
-            entryLabel.Text = "Рекомендации";
+            entryLabel.Text = "Уведомления";
             entryLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // listUsers
-            // 
-            listUsers.AllowUserToAddRows = false;
-            listUsers.BackgroundColor = Color.White;
-            listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            listUsers.Location = new Point(0, 91);
-            listUsers.Name = "listUsers";
-            listUsers.Size = new Size(423, 343);
-            listUsers.TabIndex = 46;
-            listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
             // registrButton
             // 
@@ -132,30 +121,40 @@
             registrButton.FlatStyle = FlatStyle.Flat;
             registrButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             registrButton.ForeColor = Color.White;
-            registrButton.Location = new Point(139, 433);
+            registrButton.Location = new Point(143, 440);
             registrButton.Name = "registrButton";
             registrButton.Size = new Size(130, 34);
-            registrButton.TabIndex = 58;
+            registrButton.TabIndex = 57;
             registrButton.Text = "Назад";
             registrButton.UseVisualStyleBackColor = false;
             // 
-            // RecommenForm
+            // listUsers
+            // 
+            listUsers.BackgroundColor = Color.White;
+            listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listUsers.Location = new Point(0, 91);
+            listUsers.Name = "listUsers";
+            listUsers.Size = new Size(423, 351);
+            listUsers.TabIndex = 58;
+            listUsers.CellDoubleClick += listUsers_CellDoubleClick;
+            // 
+            // NotificationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(423, 465);
-            Controls.Add(registrButton);
+            ClientSize = new Size(423, 474);
             Controls.Add(listUsers);
+            Controls.Add(registrButton);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
             Controls.Add(CloseButton);
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "RecommenForm";
-            Text = "RecommenForm";
-            Load += RecommenForm_Load;
+            Name = "NotificationForm";
+            Text = "RegistrForm2";
+            Load += NotificationForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();
@@ -169,7 +168,7 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
-        public DataGridView listUsers;
         private Button registrButton;
+        public DataGridView listUsers;
     }
 }

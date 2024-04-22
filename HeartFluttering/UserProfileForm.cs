@@ -81,13 +81,45 @@ namespace HeartFluttering
                 chosenOneForm.Show();
             }
         }
+        private void backButton3_Click(object sender, EventArgs e)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                List<User> anotherUsers = new List<User>();
+                if (CurrentUser.currentUser.Notifications != null)
+                {
+                    foreach (string idUser in CurrentUser.currentUser.Notifications.Split(','))
+                    {
+                        var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
+                        if (favoritesUsers != null)
+                        {
+                            anotherUsers.Add(favoritesUsers);
+                        }
+                    }
+                }
+                CurrentUsers.currentUsers = anotherUsers;
+                DataTable table = new DataTable();
+                table.Columns.Add("Номер", typeof(int));
+                table.Columns.Add("Имя", typeof(string));
+                table.Columns.Add("Фамилия", typeof(string));
+                table.Columns.Add("Лайки", typeof(int));
+                for (int i = 0; i < anotherUsers.Count; i++)
+                {
+                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                }
+                NotificationForm notificationForm = new NotificationForm();
+                NotificationTable.notificationTable = table;
+                this.Hide();
+                notificationForm.Show();
+            }
+        }
         private void likeAccount_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
             {
                 var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
                 var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
-                if(currUsers.AnotherAccounts != null)
+                if (currUsers.AnotherAccounts != null)
                 {
                     if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
                     {
@@ -166,7 +198,7 @@ namespace HeartFluttering
                     MessageBox.Show("Ошибка в добавлении пользователя");
                     return;
                 }
-                if(currUsers.AnotherAccounts != null)
+                if (currUsers.AnotherAccounts != null)
                 {
                     if (currUsers.AnotherAccounts.Equals(anotherUser.IdUsers))
                     {
@@ -177,7 +209,7 @@ namespace HeartFluttering
                         currUsers.AnotherAccounts = currUsers.AnotherAccounts.Replace($"{anotherUser.IdUsers}" + ",", "").Replace("," + $"{anotherUser.IdUsers}", "").Replace($"{anotherUser.IdUsers}", "");
                     }
                 }
-                if(anotherUser.Notifications != null)
+                if (anotherUser.Notifications != null)
                 {
                     if (anotherUser.Notifications.Equals(currUsers.IdUsers))
                     {

@@ -55,11 +55,14 @@
             loginLabel = new Label();
             Photo = new PictureBox();
             label1 = new Label();
+            backButton3 = new Button();
+            likeAccount2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)likeAccount2).BeginInit();
             SuspendLayout();
             // 
             // girlPhoto
@@ -134,6 +137,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(likeAccount2);
+            panel1.Controls.Add(backButton3);
             panel1.Controls.Add(backButton2);
             panel1.Controls.Add(deleteButton);
             panel1.Controls.Add(likeAccount);
@@ -392,6 +397,38 @@
             label1.TabIndex = 54;
             label1.Text = "Профиль";
             // 
+            // backButton3
+            // 
+            backButton3.BackColor = Color.Fuchsia;
+            backButton3.BackgroundImageLayout = ImageLayout.None;
+            backButton3.Enabled = false;
+            backButton3.FlatAppearance.BorderSize = 0;
+            backButton3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            backButton3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton3.FlatStyle = FlatStyle.Flat;
+            backButton3.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            backButton3.ForeColor = Color.White;
+            backButton3.Location = new Point(3, 330);
+            backButton3.Name = "backButton3";
+            backButton3.Size = new Size(149, 39);
+            backButton3.TabIndex = 74;
+            backButton3.Text = "Назад";
+            backButton3.UseVisualStyleBackColor = false;
+            backButton3.Visible = false;
+            backButton3.Click += backButton3_Click;
+            // 
+            // likeAccount2
+            // 
+            likeAccount2.Enabled = false;
+            likeAccount2.Image = (Image)resources.GetObject("likeAccount2.Image");
+            likeAccount2.Location = new Point(513, 318);
+            likeAccount2.Name = "likeAccount2";
+            likeAccount2.Size = new Size(63, 54);
+            likeAccount2.SizeMode = PictureBoxSizeMode.StretchImage;
+            likeAccount2.TabIndex = 75;
+            likeAccount2.TabStop = false;
+            likeAccount2.Visible = false;
+            // 
             // UserProfileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -414,6 +451,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)likeAccount2).EndInit();
             ResumeLayout(false);
         }
 
@@ -447,5 +485,7 @@
         public Button deleteButton;
         public Button backButton;
         public Button backButton2;
+        public PictureBox likeAccount2;
+        public Button backButton3;
     }
 }

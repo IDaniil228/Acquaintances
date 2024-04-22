@@ -86,7 +86,14 @@ namespace HeartFluttering
                 {
                     var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
                     var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(currentUsers[count].IdUsers));
-
+                    if(currUsers.AnotherAccounts != null)
+                    {
+                        if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
+                        {
+                            MessageBox.Show("Этот пользователь уже был оценён вами");
+                            return;
+                        }
+                    }
                     if(currUsers == null)
                     {
                         MessageBox.Show("Ошибка в добавлении пользователя");
