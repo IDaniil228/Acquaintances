@@ -55,5 +55,12 @@ namespace HeartFluttering
         {
             listUsers.DataSource = FavoritesTable.favoritTable;
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeForm homeForm = new HomeForm();
+            homeForm.ShowDialog();
+        }
     }
 }

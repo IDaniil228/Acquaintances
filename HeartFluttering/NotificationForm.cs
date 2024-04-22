@@ -38,16 +38,25 @@ namespace HeartFluttering
                 UserProfileForm form = new UserProfileForm();
                 if (CurrentUser.currentUser.Notifications != null)
                 {
-                    if (!CurrentUser.currentUser.Notifications.Split(',').Contains(selectedUser.IdUsers))
+                    if (CurrentUser.currentUser.Notifications.Split(',').Contains(selectedUser.IdUsers))
                     {
-                        form.likeAccount2.Enabled = true;
-                        form.likeAccount2.Visible = true;
+                        if (CurrentUser.currentUser.AnotherAccounts != null)
+                        {
+                            foreach (string anotheracc in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                            {
+                                if (!CurrentUser.currentUser.Notifications.Equals(anotheracc))
+                                {
+                                    form.likeAccount2.Enabled = true;
+                                    form.likeAccount2.Visible = true;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            form.likeAccount2.Enabled = true;
+                            form.likeAccount2.Visible = true;
+                        }
                     }
-                }
-                if (CurrentUser.currentUser.Notifications == null)
-                {
-                    form.likeAccount2.Enabled = true;
-                    form.likeAccount2.Visible = true;
                 }
                 form.thisUsers = selectedUser;
                 form.backButton3.Enabled = true;
@@ -60,6 +69,13 @@ namespace HeartFluttering
         private void NotificationForm_Load(object sender, EventArgs e)
         {
             listUsers.DataSource = NotificationTable.notificationTable;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeForm homeForm = new HomeForm();
+            homeForm.ShowDialog();
         }
     }
 }

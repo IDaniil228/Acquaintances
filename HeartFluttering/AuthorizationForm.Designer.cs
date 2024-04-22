@@ -111,7 +111,7 @@
             choice.DropDownStyle = ComboBoxStyle.DropDownList;
             choice.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             choice.FormattingEnabled = true;
-            choice.Items.AddRange(new object[] { "Пользователь", "Администратор " });
+            choice.Items.AddRange(new object[] { "Пользователь", "Администратор" });
             choice.Location = new Point(49, 147);
             choice.Name = "choice";
             choice.Size = new Size(326, 31);

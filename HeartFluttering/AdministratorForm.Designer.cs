@@ -55,12 +55,13 @@
             surnameLabel = new Label();
             Photo = new PictureBox();
             profileLabel = new Label();
-            textBox1 = new TextBox();
-            listView1 = new ListView();
+            searchLine = new TextBox();
+            listUsers = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -109,6 +110,7 @@
             CollapseButton.TabIndex = 44;
             CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
+            CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
@@ -125,6 +127,7 @@
             CloseButton.TabIndex = 43;
             CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
@@ -190,6 +193,7 @@
             deleteAccountButton.TabIndex = 73;
             deleteAccountButton.Text = "Заблокировать аккаунт";
             deleteAccountButton.UseVisualStyleBackColor = false;
+            deleteAccountButton.Click += deleteAccountButton_Click;
             // 
             // comboBox1
             // 
@@ -223,78 +227,71 @@
             // 
             numberField.BackColor = Color.FromArgb(255, 230, 255);
             numberField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numberField.ForeColor = Color.Gray;
+            numberField.ForeColor = Color.Black;
             numberField.Location = new Point(349, 281);
             numberField.Name = "numberField";
             numberField.Size = new Size(235, 24);
             numberField.TabIndex = 69;
-            numberField.Text = "Номер телефона";
             // 
             // emailField
             // 
             emailField.BackColor = Color.FromArgb(255, 230, 255);
             emailField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            emailField.ForeColor = Color.Gray;
+            emailField.ForeColor = Color.Black;
             emailField.Location = new Point(349, 243);
             emailField.Name = "emailField";
             emailField.Size = new Size(235, 24);
             emailField.TabIndex = 68;
-            emailField.Text = "Почта";
             // 
             // sexField
             // 
             sexField.BackColor = Color.FromArgb(255, 230, 255);
             sexField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            sexField.ForeColor = Color.Gray;
+            sexField.ForeColor = Color.Black;
             sexField.Location = new Point(349, 207);
             sexField.Name = "sexField";
             sexField.Size = new Size(235, 24);
             sexField.TabIndex = 67;
-            sexField.Text = "Пол";
             // 
             // cityField
             // 
             cityField.BackColor = Color.FromArgb(255, 230, 255);
             cityField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            cityField.ForeColor = Color.Gray;
+            cityField.ForeColor = Color.Black;
             cityField.Location = new Point(349, 171);
             cityField.Name = "cityField";
             cityField.Size = new Size(235, 24);
             cityField.TabIndex = 66;
-            cityField.Text = "Город";
             // 
             // birhdayField
             // 
             birhdayField.BackColor = Color.FromArgb(255, 230, 255);
             birhdayField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            birhdayField.ForeColor = Color.Gray;
+            birhdayField.ForeColor = Color.Black;
             birhdayField.Location = new Point(349, 135);
             birhdayField.Name = "birhdayField";
             birhdayField.Size = new Size(235, 24);
             birhdayField.TabIndex = 65;
-            birhdayField.Text = "Дата рождения";
             // 
             // surnameField
             // 
             surnameField.BackColor = Color.FromArgb(255, 230, 255);
             surnameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            surnameField.ForeColor = Color.Gray;
+            surnameField.ForeColor = Color.Black;
             surnameField.Location = new Point(349, 100);
             surnameField.Name = "surnameField";
             surnameField.Size = new Size(235, 24);
             surnameField.TabIndex = 64;
-            surnameField.Text = "Фамилия";
             // 
             // nameField
             // 
             nameField.BackColor = Color.FromArgb(255, 230, 255);
             nameField.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            nameField.ForeColor = Color.Gray;
+            nameField.ForeColor = Color.Black;
             nameField.Location = new Point(349, 65);
             nameField.Name = "nameField";
             nameField.Size = new Size(235, 24);
             nameField.TabIndex = 63;
-            nameField.Text = "Имя";
             // 
             // sexLabel
             // 
@@ -366,21 +363,26 @@
             profileLabel.TabIndex = 56;
             profileLabel.Text = "Профиль";
             // 
-            // textBox1
+            // searchLine
             // 
-            textBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox1.Location = new Point(12, 143);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 29);
-            textBox1.TabIndex = 50;
+            searchLine.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            searchLine.Location = new Point(0, 143);
+            searchLine.Name = "searchLine";
+            searchLine.Size = new Size(287, 29);
+            searchLine.TabIndex = 50;
+            searchLine.TextChanged += searchLine_TextChanged;
             // 
-            // listView1
+            // listUsers
             // 
-            listView1.Location = new Point(0, 178);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(287, 251);
-            listView1.TabIndex = 51;
-            listView1.UseCompatibleStateImageBehavior = false;
+            listUsers.AllowUserToAddRows = false;
+            listUsers.BackgroundColor = Color.White;
+            listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listUsers.Location = new Point(0, 173);
+            listUsers.Name = "listUsers";
+            listUsers.ReadOnly = true;
+            listUsers.Size = new Size(287, 256);
+            listUsers.TabIndex = 59;
+            listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
             // AdministratorForm
             // 
@@ -388,8 +390,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(895, 428);
-            Controls.Add(listView1);
-            Controls.Add(textBox1);
+            Controls.Add(listUsers);
+            Controls.Add(searchLine);
             Controls.Add(panel1);
             Controls.Add(usersLabel);
             Controls.Add(label2);
@@ -401,11 +403,13 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdministratorForm";
             Text = "AdministratorForm";
+            Load += AdministratorForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -438,7 +442,7 @@
         private Label surnameLabel;
         private PictureBox Photo;
         private Label profileLabel;
-        private TextBox textBox1;
-        private ListView listView1;
+        private TextBox searchLine;
+        public DataGridView listUsers;
     }
 }

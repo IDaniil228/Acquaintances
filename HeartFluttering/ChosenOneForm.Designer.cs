@@ -35,7 +35,7 @@
             CloseButton = new Button();
             entryLabel = new Label();
             listUsers = new DataGridView();
-            registrButton = new Button();
+            backButton = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
@@ -122,22 +122,23 @@
             listUsers.TabIndex = 47;
             listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
-            // registrButton
+            // backButton
             // 
-            registrButton.BackColor = Color.Fuchsia;
-            registrButton.BackgroundImageLayout = ImageLayout.None;
-            registrButton.FlatAppearance.BorderSize = 0;
-            registrButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            registrButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            registrButton.FlatStyle = FlatStyle.Flat;
-            registrButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            registrButton.ForeColor = Color.White;
-            registrButton.Location = new Point(134, 439);
-            registrButton.Name = "registrButton";
-            registrButton.Size = new Size(130, 34);
-            registrButton.TabIndex = 58;
-            registrButton.Text = "Назад";
-            registrButton.UseVisualStyleBackColor = false;
+            backButton.BackColor = Color.Fuchsia;
+            backButton.BackgroundImageLayout = ImageLayout.None;
+            backButton.FlatAppearance.BorderSize = 0;
+            backButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            backButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton.FlatStyle = FlatStyle.Flat;
+            backButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            backButton.ForeColor = Color.White;
+            backButton.Location = new Point(134, 439);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(130, 34);
+            backButton.TabIndex = 58;
+            backButton.Text = "Назад";
+            backButton.UseVisualStyleBackColor = false;
+            backButton.Click += backButton_Click;
             // 
             // ChosenOneForm
             // 
@@ -145,7 +146,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(402, 472);
-            Controls.Add(registrButton);
+            Controls.Add(backButton);
             Controls.Add(listUsers);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
@@ -170,6 +171,6 @@
         private Button CloseButton;
         private Label entryLabel;
         public DataGridView listUsers;
-        private Button registrButton;
+        private Button backButton;
     }
 }

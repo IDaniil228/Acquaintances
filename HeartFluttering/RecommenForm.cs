@@ -36,7 +36,7 @@ namespace HeartFluttering
                 int position = (int)selectedRow.Cells["Место"].Value;
                 User selectedUser = CurrentUsers.currentUsers[position - 1];
                 UserProfileForm form = new UserProfileForm();
-                if(CurrentUser.currentUser.AnotherAccounts != null)
+                if (CurrentUser.currentUser.AnotherAccounts != null)
                 {
                     if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
                     {
@@ -44,7 +44,7 @@ namespace HeartFluttering
                         form.likeAccount.Visible = true;
                     }
                 }
-                if(CurrentUser.currentUser.AnotherAccounts == null)
+                if (CurrentUser.currentUser.AnotherAccounts == null)
                 {
                     form.likeAccount.Enabled = true;
                     form.likeAccount.Visible = true;
@@ -60,6 +60,13 @@ namespace HeartFluttering
         private void RecommenForm_Load(object sender, EventArgs e)
         {
             listUsers.DataSource = RecommenTable.thisTable;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeForm homeForm = new HomeForm();
+            homeForm.ShowDialog();
         }
     }
 }

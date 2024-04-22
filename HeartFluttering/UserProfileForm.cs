@@ -159,6 +159,52 @@ namespace HeartFluttering
                 MessageBox.Show("Данный пользователь был добавлен в избранное");
             }
         }
+        private void likeAccount2_Click(object sender, EventArgs e)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
+                if (currUsers.AnotherAccounts != null)
+                {
+                    if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
+                    {
+                        MessageBox.Show("Этот пользователь уже был оценён вами");
+                        return;
+                    }
+                }
+                if (currUsers == null)
+                {
+                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    return;
+                }
+                if (anotherUser == null)
+                {
+                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    return;
+                }
+                if (currUsers.AnotherAccounts == null)
+                {
+                    currUsers.AnotherAccounts = anotherUser.IdUsers;
+                }
+                else
+                {
+                    currUsers.AnotherAccounts += "," + anotherUser.IdUsers;
+                }
+                if (anotherUser.Notifications == null)
+                {
+                    anotherUser.Notifications = currUsers.IdUsers;
+                }
+                else
+                {
+                    anotherUser.Notifications += "," + currUsers.IdUsers;
+                }
+                anotherUser.Likes++;
+                CurrentUser.currentUser = currUsers;
+                context.SaveChanges();
+                MessageBox.Show("Данный пользователь был добавлен в избранное");
+            }
+        }
         private void UserProfileForm_Load(object sender, EventArgs e)
         {
             nameField.Text = thisUsers.Name;
