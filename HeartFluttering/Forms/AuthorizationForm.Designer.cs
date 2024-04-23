@@ -100,6 +100,7 @@
             LanguageComboBox.FormattingEnabled = true;
             LanguageComboBox.Items.AddRange(new object[] { resources.GetString("LanguageComboBox.Items"), resources.GetString("LanguageComboBox.Items1") });
             LanguageComboBox.Name = "LanguageComboBox";
+            LanguageComboBox.SelectedIndexChanged += LanguageComboBox_SelectedIndexChanged;
             // 
             // passwondLabel
             // 
@@ -182,6 +183,7 @@
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AuthorizationForm";
+            Load += AuthorizationForm_Load;
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ResumeLayout(false);
