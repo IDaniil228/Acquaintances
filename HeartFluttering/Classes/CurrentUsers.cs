@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeartFluttering
+namespace HeartFluttering.Classes
 {
-    public static class CurrentUser
+    public static class CurrentUsers
     {
-        public static User? currentUser;
+        public static List<User>? currentUsers;
     }
 }

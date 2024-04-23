@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeartFluttering
+namespace HeartFluttering.Classes
 {
-    public static class CurrentUsers
+    public static class RecommenTable
     {
-        public static List<User>? currentUsers;
+        public static DataTable thisTable;
     }
 }

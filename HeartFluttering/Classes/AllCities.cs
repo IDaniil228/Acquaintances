@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace HeartFluttering
+namespace HeartFluttering.Classes
 {
     public class AllCities
     {
@@ -33,7 +33,7 @@ namespace HeartFluttering
             return cities;
         }
         */
-        
+
         List<string> cities = new List<string>() {"абаза",
 "абакан",
 "абдулино",
@@ -1154,7 +1154,7 @@ namespace HeartFluttering
 
         public List<string> getCities()
         {
-            return cities; 
+            return cities;
         }
     }
 }

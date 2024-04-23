@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HeartFluttering;
+namespace HeartFluttering.Classes;
 
 public partial class Administrator
 {

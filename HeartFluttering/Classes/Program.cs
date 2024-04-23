@@ -1,7 +1,7 @@
 using NLog.Config;
 using NLog;
 
-namespace HeartFluttering
+namespace HeartFluttering.Classes
 {
     internal static class Program
     {

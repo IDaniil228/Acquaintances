@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeartFluttering
+namespace HeartFluttering.Classes
 {
     public static class NotificationTable
     {

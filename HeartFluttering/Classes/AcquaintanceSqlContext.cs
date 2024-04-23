@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace HeartFluttering;
+namespace HeartFluttering.Classes;
 
 public partial class AcquaintanceSqlContext : DbContext
 {

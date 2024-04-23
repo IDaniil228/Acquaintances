@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using HeartFluttering.Classes;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,7 @@ namespace HeartFluttering
             {
                 DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
                 int position = (int)selectedRow.Cells["Место"].Value;
-                User selectedUser = CurrentUsers.currentUsers[position - 1];
+                Classes.User selectedUser = CurrentUsers.currentUsers[position - 1];
                 UserProfileForm form = new UserProfileForm();
                 if (CurrentUser.currentUser.AnotherAccounts != null)
                 {

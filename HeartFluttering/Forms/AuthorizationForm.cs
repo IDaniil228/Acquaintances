@@ -1,3 +1,4 @@
+using HeartFluttering.Classes;
 using NLog;
 
 namespace HeartFluttering
