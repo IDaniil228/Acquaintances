@@ -1,7 +1,10 @@
+using NLog;
+
 namespace HeartFluttering
 {
     public partial class AuthorizationForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public AuthorizationForm()
         {
             InitializeComponent();
@@ -250,6 +253,8 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            //
+            logger.Debug("Выход из приложения");
             Application.Exit();
         }
     }
