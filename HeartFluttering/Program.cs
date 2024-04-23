@@ -1,3 +1,6 @@
+using NLog.Config;
+using NLog;
+
 namespace HeartFluttering
 {
     internal static class Program
@@ -8,6 +11,7 @@ namespace HeartFluttering
         [STAThread]
         static void Main()
         {
+            LogManager.Configuration = new XmlLoggingConfiguration("../../../../HeartFluttering/NLog.config");
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
