@@ -14,7 +14,7 @@ namespace HeartFluttering
 {
     public partial class AdministratorForm : Form
     {
-        //
+        
         private int position = 1;
         private string warning = "Такого пользователя не существует";
         public AdministratorForm()
