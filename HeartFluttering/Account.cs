@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace HeartFluttering;
 
-public partial class Account
+public partial class Accountъ
 {
-    // локализатион
+    // локализатион и что-то
     public string Id { get; set; } = null!;
 
     public string Login { get; set; } = null!;
