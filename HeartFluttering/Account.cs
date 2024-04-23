@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HeartFluttering;
 
-public partial class Accountъ
+public partial class Account
 {
     // локализатион и что-тоо
     // что-то еще
