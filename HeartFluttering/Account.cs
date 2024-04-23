@@ -6,6 +6,7 @@ namespace HeartFluttering;
 public partial class Accountъ
 {
     // локализатион и что-тоо
+    // что-то еще
     public string Id { get; set; } = null!;
 
     public string Login { get; set; } = null!;
