@@ -83,8 +83,8 @@
             CollapseButton.Anchor = AnchorStyles.Bottom;
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
-            CollapseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CollapseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
@@ -172,8 +172,8 @@
             loginButton.BackColor = Color.Magenta;
             loginButton.BackgroundImageLayout = ImageLayout.None;
             loginButton.FlatAppearance.BorderSize = 0;
-            loginButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            loginButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            loginButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            loginButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             loginButton.FlatStyle = FlatStyle.Flat;
             loginButton.Font = new Font("Segoe Print", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             loginButton.ForeColor = Color.White;
@@ -189,8 +189,6 @@
             // 
             registrButton.BackColor = Color.Transparent;
             registrButton.FlatAppearance.BorderSize = 0;
-            registrButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            registrButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
             registrButton.FlatStyle = FlatStyle.Flat;
             registrButton.Font = new Font("Segoe Print", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             registrButton.ForeColor = Color.Purple;

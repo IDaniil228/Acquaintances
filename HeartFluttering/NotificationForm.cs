@@ -17,7 +17,11 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

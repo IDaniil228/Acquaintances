@@ -92,8 +92,8 @@
             CollapseButton.Anchor = AnchorStyles.Bottom;
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
-            CollapseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CollapseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
@@ -109,8 +109,8 @@
             // 
             CloseButton.BackColor = Color.Fuchsia;
             CloseButton.FlatAppearance.BorderSize = 0;
-            CloseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CloseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
@@ -183,8 +183,8 @@
             backButton3.BackgroundImageLayout = ImageLayout.None;
             backButton3.Enabled = false;
             backButton3.FlatAppearance.BorderSize = 0;
-            backButton3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            backButton3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton3.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            backButton3.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             backButton3.FlatStyle = FlatStyle.Flat;
             backButton3.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             backButton3.ForeColor = Color.White;
@@ -203,8 +203,8 @@
             backButton2.BackgroundImageLayout = ImageLayout.None;
             backButton2.Enabled = false;
             backButton2.FlatAppearance.BorderSize = 0;
-            backButton2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            backButton2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton2.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            backButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             backButton2.FlatStyle = FlatStyle.Flat;
             backButton2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             backButton2.ForeColor = Color.White;
@@ -223,8 +223,8 @@
             deleteButton.BackgroundImageLayout = ImageLayout.None;
             deleteButton.Enabled = false;
             deleteButton.FlatAppearance.BorderSize = 0;
-            deleteButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            deleteButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            deleteButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            deleteButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             deleteButton.FlatStyle = FlatStyle.Flat;
             deleteButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             deleteButton.ForeColor = Color.White;
@@ -256,8 +256,8 @@
             backButton.BackgroundImageLayout = ImageLayout.None;
             backButton.Enabled = false;
             backButton.FlatAppearance.BorderSize = 0;
-            backButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            backButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             backButton.FlatStyle = FlatStyle.Flat;
             backButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             backButton.ForeColor = Color.White;

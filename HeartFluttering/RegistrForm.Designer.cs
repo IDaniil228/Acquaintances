@@ -83,8 +83,8 @@
             CollapseButton.Anchor = AnchorStyles.Bottom;
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
-            CollapseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CollapseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
@@ -100,8 +100,8 @@
             // 
             CloseButton.BackColor = Color.Fuchsia;
             CloseButton.FlatAppearance.BorderSize = 0;
-            CloseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CloseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
@@ -197,8 +197,8 @@
             loginButton.BackColor = Color.Fuchsia;
             loginButton.BackgroundImageLayout = ImageLayout.None;
             loginButton.FlatAppearance.BorderSize = 0;
-            loginButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            loginButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            loginButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            loginButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             loginButton.FlatStyle = FlatStyle.Flat;
             loginButton.Font = new Font("Segoe Print", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             loginButton.ForeColor = Color.White;

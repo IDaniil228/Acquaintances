@@ -140,8 +140,8 @@
             startButton.BackColor = Color.Fuchsia;
             startButton.BackgroundImageLayout = ImageLayout.None;
             startButton.FlatAppearance.BorderSize = 0;
-            startButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            startButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            startButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            startButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             startButton.FlatStyle = FlatStyle.Flat;
             startButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             startButton.ForeColor = Color.White;
@@ -158,8 +158,8 @@
             homeButton.BackColor = Color.Fuchsia;
             homeButton.BackgroundImageLayout = ImageLayout.None;
             homeButton.FlatAppearance.BorderSize = 0;
-            homeButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            homeButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            homeButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            homeButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             homeButton.FlatStyle = FlatStyle.Flat;
             homeButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             homeButton.ForeColor = Color.White;
@@ -176,8 +176,8 @@
             changeFiltersButton.BackColor = Color.Fuchsia;
             changeFiltersButton.BackgroundImageLayout = ImageLayout.None;
             changeFiltersButton.FlatAppearance.BorderSize = 0;
-            changeFiltersButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            changeFiltersButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            changeFiltersButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            changeFiltersButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             changeFiltersButton.FlatStyle = FlatStyle.Flat;
             changeFiltersButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             changeFiltersButton.ForeColor = Color.White;

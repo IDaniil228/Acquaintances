@@ -16,17 +16,29 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Просмотр пользователя по двойному клику по таблице
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -50,12 +62,20 @@ namespace HeartFluttering
                 form.ShowDialog();
             }
         }
-
+        /// <summary>
+        /// Обновление таблицы пользователей, которые находятся в избранных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChosenOneForm_Load(object sender, EventArgs e)
         {
             listUsers.DataSource = FavoritesTable.favoritTable;
         }
-
+        /// <summary>
+        /// Кнопка для перехода в главную форму
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();

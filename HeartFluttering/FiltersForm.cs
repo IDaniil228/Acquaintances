@@ -17,17 +17,29 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Кнопка закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка скрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Кнопка для установка фильтров
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FiltersButton_Click(object sender, EventArgs e)
         {
             if (InitialAgeField.Text == string.Empty)

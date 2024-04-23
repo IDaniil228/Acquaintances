@@ -8,7 +8,11 @@ namespace HeartFluttering
             loginField.ForeColor = Color.Gray;
             passwordField.ForeColor = Color.Gray;
         }
-
+        /// <summary>
+        /// При нажатии на строку логина, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loginField_Enter(object sender, EventArgs e)
         {
             if (loginField.Text.Equals("Введите логин..."))
@@ -17,7 +21,11 @@ namespace HeartFluttering
                 loginField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки логина, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loginField_Leave(object sender, EventArgs e)
         {
             if (loginField.Text.Equals(string.Empty))
@@ -26,7 +34,11 @@ namespace HeartFluttering
                 loginField.Text = "Введите логин...";
             }
         }
-
+        /// <summary>
+        /// При нажатии на строку пароля, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void passwordField_Enter(object sender, EventArgs e)
         {
             if (passwordField.Text.Equals("Введите пароль..."))
@@ -35,7 +47,11 @@ namespace HeartFluttering
                 passwordField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки пароля, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void passwordField_Leave(object sender, EventArgs e)
         {
             if (passwordField.Text.Equals(string.Empty))
@@ -44,7 +60,11 @@ namespace HeartFluttering
                 passwordField.Text = "Введите пароль...";
             }
         }
-
+        /// <summary>
+        /// Данная кнопка позволяется войти в аккаунт для пользователя или администратора 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (choice.Text.Equals("Пользователь"))
@@ -203,19 +223,31 @@ namespace HeartFluttering
             }
 
         }
-
+        /// <summary>
+        /// Перекидывает на форму регистрации пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void registrButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             RegistrForm form = new RegistrForm();
             form.Show();
         }
-
+        /// <summary>
+        /// Конпка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

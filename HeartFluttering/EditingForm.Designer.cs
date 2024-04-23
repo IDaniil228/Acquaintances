@@ -82,8 +82,8 @@
             CollapseButton.Anchor = AnchorStyles.Bottom;
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
-            CollapseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CollapseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
@@ -99,8 +99,8 @@
             // 
             CloseButton.BackColor = Color.Fuchsia;
             CloseButton.FlatAppearance.BorderSize = 0;
-            CloseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CloseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
@@ -200,8 +200,8 @@
             redactionButton.BackColor = Color.Fuchsia;
             redactionButton.BackgroundImageLayout = ImageLayout.None;
             redactionButton.FlatAppearance.BorderSize = 0;
-            redactionButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            redactionButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            redactionButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            redactionButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             redactionButton.FlatStyle = FlatStyle.Flat;
             redactionButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             redactionButton.ForeColor = Color.White;
@@ -218,8 +218,8 @@
             backButton.BackColor = Color.Fuchsia;
             backButton.BackgroundImageLayout = ImageLayout.None;
             backButton.FlatAppearance.BorderSize = 0;
-            backButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            backButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             backButton.FlatStyle = FlatStyle.Flat;
             backButton.Font = new Font("Segoe Print", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             backButton.ForeColor = Color.White;
