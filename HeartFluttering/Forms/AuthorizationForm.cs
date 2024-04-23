@@ -99,34 +99,48 @@ namespace HeartFluttering
                     MessageBox.Show("Пустое поле для пароля");
                     return;
                 }
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
-                    if(account == null)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        MessageBox.Show("Вы ввели неверно логин или пароль");
-                        return;
-                    }
-                    using (var context2 = new AcquaintanceSqlContext())
-                    {
-                        var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if(person == null)
+                        var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
+                        if (account == null)
                         {
-                            MessageBox.Show("Не удалось найти пользователя");
+                            MessageBox.Show("Вы ввели неверно логин или пароль");
                             return;
                         }
-                        if(account != null && person == null)
+                        try
                         {
-                            MessageBox.Show("Вы не можете войти через пользователя");
-                            return;
+                            using (var context2 = new AcquaintanceSqlContext())
+                            {
+                                var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
+                                if (person == null)
+                                {
+                                    MessageBox.Show("Не удалось найти пользователя");
+                                    return;
+                                }
+                                if (account != null && person == null)
+                                {
+                                    MessageBox.Show("Вы не можете войти через пользователя");
+                                    return;
+                                }
+                                this.Hide();
+                                HomeForm homeForm = new HomeForm();
+                                CurrentUser.currentUser = person;
+                                homeForm.Show();
+                            }
                         }
-                        this.Hide();
-                        HomeForm homeForm = new HomeForm();
-                        CurrentUser.currentUser = person;
-                        homeForm.Show();
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключении базы данных");
+                }
             }
             else if(choice.Text.Equals("Администратор"))
             {
