@@ -137,10 +137,10 @@ namespace HeartFluttering
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            CurrentUser.currentUser = user;
             this.Hide();
             HomeForm homeForm = new HomeForm();
             homeForm.ShowDialog();
-            CurrentUser.currentUser = user;
             /*
             if (user.Name != null)
             {
@@ -214,12 +214,12 @@ namespace HeartFluttering
                     MessageBox.Show("Пользователь не найден");
                     return;
                 }
-                if (nameField.Text == string.Empty)
+                if (nameField.Text == string.Empty && nameField.Text.Equals("Не заполнено..."))
                 {
                     MessageBox.Show("Поле для имени должно быть заполнено");
                     return;
                 }
-                if (surnameField.Text == string.Empty)
+                if (surnameField.Text == string.Empty && surnameField.Text.Equals("Не заполнено..."))
                 {
                     MessageBox.Show("Поле для фамилии должно быть заполнено");
                 }
@@ -257,14 +257,17 @@ namespace HeartFluttering
                 }
                 DateTime birth = new DateTime(time.Year, time.Month, time.Day);
                 person.DateOfBirth = birth.ToString();
-                ///
+                if(cityField.Text == string.Empty && cityField.Text.Equals("Не заполнено..."))
+                {
+                    MessageBox.Show("Поле для города должно быть заполнено");
+                }
                 AllCities Allcities = new AllCities();
                 if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
                 {
                     MessageBox.Show("Такого города не существует");
                     return;
                 }
-                //
+               
                 person.City = cityField.Text;
 
                 if (sexMenButton.Checked)
@@ -275,18 +278,28 @@ namespace HeartFluttering
                 {
                     person.Sex = 0;
                 }
+                if(emailField.Text == string.Empty && emailField.Text.Equals("Не заполнено..."))
+                {
+                    person.Mail = null;
+                }
                 person.Mail = emailField.Text;
                 string number = numberField.Text;
-                foreach (char numb in number)
+                if (number != string.Empty && numberField.Text.Equals("Не заполнено..."))
                 {
-                    if (!Char.IsNumber(numb))
+                    foreach (char numb in number)
                     {
-                        MessageBox.Show("В номере телефона не должно быть букв");
-                        return;
+                        if (!Char.IsNumber(numb))
+                        {
+                            MessageBox.Show("В номере телефона не должно быть букв");
+                            return;
+                        }
                     }
                 }
+                else
+                {
+                    person.Number = null;
+                }
                 person.Number = number;
-                
                 HomeForm homeForm = new HomeForm();
                 CurrentUser.currentUser = person;
                 context.SaveChanges();

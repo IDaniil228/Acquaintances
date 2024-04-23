@@ -69,22 +69,25 @@ namespace HeartFluttering
                         MessageBox.Show("Вы ввели неверно логин или пароль");
                         return;
                     }
-                    
-                    string id = account.Id;
                     using (var context2 = new AcquaintanceSqlContext())
                     {
-                        var person = context2.Users.FirstOrDefault(r => r.Id.Equals(id));
+                        var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
                         if(person == null)
                         {
                             MessageBox.Show("Не удалось найти пользователя");
                             return;
                         }
+                        if(account != null && person == null)
+                        {
+                            MessageBox.Show("Вы не можете войти через пользователя");
+                            return;
+                        }
                         this.Hide();
                         HomeForm homeForm = new HomeForm();
+                        /*
                         if (person.Name != null)
                         {
                             homeForm.nameField.Text = person.Name;
-                            homeForm.nameField.ForeColor = Color.Black;
                         }
                         else
                         {
@@ -94,7 +97,6 @@ namespace HeartFluttering
                         if (person.Surname != null)
                         {
                             homeForm.surnameField.Text = person.Surname;
-                            homeForm.surnameField.ForeColor = Color.Black;
                         }
                         else
                         {
@@ -104,7 +106,6 @@ namespace HeartFluttering
                         if (person.DateOfBirth != null)
                         {
                             homeForm.BirhdayField.Text = person.DateOfBirth.ToString();
-                            homeForm.BirhdayField.ForeColor = Color.Black;
                         }
                         else
                         {
@@ -114,7 +115,6 @@ namespace HeartFluttering
                         if (person.City != null)
                         {
                             homeForm.cityField.Text = person.City;
-                            homeForm.cityField.ForeColor = Color.Black;
                         }
                         else
                         {
@@ -126,12 +126,10 @@ namespace HeartFluttering
                             if (person.Sex == 1)
                             {
                                 homeForm.sexField.Text = "Мужской";
-                                homeForm.sexField.ForeColor = Color.Black;
                             }
                             else
                             {
                                 homeForm.sexField.Text = "Женский";
-                                homeForm.sexField.ForeColor = Color.Black;
                             }
                         }
                         else
@@ -142,7 +140,6 @@ namespace HeartFluttering
                         if (person.Mail != null)
                         {
                             homeForm.emailField.Text = person.Mail;
-                            homeForm.emailField.ForeColor = Color.Black;
                         }
                         else
                         {
@@ -152,7 +149,6 @@ namespace HeartFluttering
                         if (person.Number != null)
                         {
                             homeForm.numberField.Text = person.Number;
-                            homeForm.numberField.ForeColor = Color.Black;
                         }
                         else
                         {
@@ -164,6 +160,7 @@ namespace HeartFluttering
                             MemoryStream memoryStream = new MemoryStream(person.Photo);
                             homeForm.photoField.Image = Image.FromStream(memoryStream);
                         }
+                        */
                         CurrentUser.currentUser = person;
                         homeForm.Show();
                     }
@@ -182,17 +179,16 @@ namespace HeartFluttering
                         MessageBox.Show("Неверно введены логин или пароль");
                         return;
                     }
-                    string id = account.Id;
                     using (var context2 = new AcquaintanceSqlContext())
                     {
-                        var admin = context2.Administrators.Where(r => r.Id.Equals(id));
+                        var admin = context2.Administrators.FirstOrDefault(r => r.Id.Equals(account.Id));
+                        if(account != null && admin == null)
+                        {
+                            MessageBox.Show("Вы не можете войти через администратора");
+                            return;
+                        }
                         this.Hide();
                         AdministratorForm administratorForm = new AdministratorForm();
-                        List<Administrator> admins = new List<Administrator>();
-                        foreach (Administrator administrator in admin)
-                        {
-                            admins.Add(administrator);
-                        }
                         administratorForm.Show();
                     }
 

@@ -186,19 +186,24 @@ namespace HeartFluttering
                 MessageBox.Show("Пароли должны совпадать");
                 return;
             }
-            if (nameField.Text == string.Empty)
+            if (nameField.Text == string.Empty || nameField.Text.Equals("Введите имя..."))
             {
                 MessageBox.Show("Поле для имени обязательно для заполнения");
                 return;
             }
-            if (surnameField.Text == string.Empty)
+            if (surnameField.Text == string.Empty || surnameField.Text.Equals("Введите фамилию..."))
             {
                 MessageBox.Show("Поле для фамилии обязательно для заполнения");
                 return;
             }
-            if(cityField.Text == string.Empty)
+            if(cityField.Text == string.Empty || cityField.Text.Equals("Введите город проживания..."))
             {
                 MessageBox.Show("Поле для города обязательно для заполнения");
+                return;
+            }
+            if(sexMenButton.Checked == false && sexWomenButton.Checked == false)
+            {
+                MessageBox.Show("Поле для пола обязательно для заполнения");
                 return;
             }
             using (var context = new AcquaintanceSqlContext())
@@ -220,10 +225,6 @@ namespace HeartFluttering
                         return;
                     }
                 }
-                //account = dataAuthorization(LoginField.Text, passwordField.Text);
-                //RegistrForm2 registrForm2 = new RegistrForm2();
-                //this.Hide();
-                //registrForm2.Show();
                 Account account = new Account();
                 Hash hash = new Hash();
                 string guid = Guid.NewGuid().ToString();
@@ -271,15 +272,15 @@ namespace HeartFluttering
                 user.DateOfBirth = birth.ToString();
 
                 AllCities Allcities = new AllCities();
-                List<string> cities = new List<string>();
-                foreach(string city in cities)
+                if (cityField.Text != string.Empty)
                 {
-                    if (!cityField.Text.ToLower().Equals(city.ToLower()))
+                    if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
                     {
-                        MessageBox.Show("Такого города не существует");
+                        MessageBox.Show("Такого города не сущеcтвует");
                         return;
                     }
                 }
+
                 user.City = cityField.Text;
                 if (sexMenButton.Checked)
                 {
@@ -297,9 +298,6 @@ namespace HeartFluttering
                 AuthorizationForm form = new AuthorizationForm();
                 form.Show();
             }
-            
-        }
-            
-    }
-            
+        }  
+    }     
 }
