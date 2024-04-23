@@ -253,6 +253,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            //
             logger.Debug("Выход из приложения");
             Application.Exit();
         }
