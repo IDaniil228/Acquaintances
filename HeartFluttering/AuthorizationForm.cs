@@ -64,6 +64,22 @@ namespace HeartFluttering
             }
         }
         /// <summary>
+        /// Метод, который возвращает данные пользователя по логину и пароля
+        /// </summary>
+        /// <param name="loginUsers"></param>
+        /// <param name="passwordUsers"></param>
+        /// <returns></returns>
+        private Account UserAuthorization(string loginUsers, string passwordUsers)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                Hash hash = new Hash();
+                string password = hash.CalculateMD5Hash(passwordUsers);
+                var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginUsers) && r.Password.Equals(password));
+                return account;
+            }
+        }
+        /// <summary>
         /// Данная кнопка позволяется войти в аккаунт для пользователя или администратора 
         /// </summary>
         /// <param name="sender"></param>
@@ -84,9 +100,7 @@ namespace HeartFluttering
                 }
                 using (var context = new AcquaintanceSqlContext())
                 {
-                    Hash hash = new Hash();
-                    string password = hash.CalculateMD5Hash(passwordField.Text);
-                    var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginField.Text) && r.Password.Equals(password));
+                    var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
                     if(account == null)
                     {
                         MessageBox.Show("Вы ввели неверно логин или пароль");
@@ -107,83 +121,6 @@ namespace HeartFluttering
                         }
                         this.Hide();
                         HomeForm homeForm = new HomeForm();
-                        /*
-                        if (person.Name != null)
-                        {
-                            homeForm.nameField.Text = person.Name;
-                        }
-                        else
-                        {
-                            homeForm.nameField.Text = "Не заполнено";
-                        }
-
-                        if (person.Surname != null)
-                        {
-                            homeForm.surnameField.Text = person.Surname;
-                        }
-                        else
-                        {
-                            homeForm.surnameField.Text = "Не заполнено";
-                        }
-
-                        if (person.DateOfBirth != null)
-                        {
-                            homeForm.BirhdayField.Text = person.DateOfBirth.ToString();
-                        }
-                        else
-                        {
-                            homeForm.BirhdayField.Text = "Не заполнено";
-                        }
-
-                        if (person.City != null)
-                        {
-                            homeForm.cityField.Text = person.City;
-                        }
-                        else
-                        {
-                            homeForm.cityField.Text = "Не заполнено";
-                        }
-
-                        if (person.Sex != null)
-                        {
-                            if (person.Sex == 1)
-                            {
-                                homeForm.sexField.Text = "Мужской";
-                            }
-                            else
-                            {
-                                homeForm.sexField.Text = "Женский";
-                            }
-                        }
-                        else
-                        {
-                            homeForm.sexField.Text = "Не заполнено";
-                        }
-
-                        if (person.Mail != null)
-                        {
-                            homeForm.emailField.Text = person.Mail;
-                        }
-                        else
-                        {
-                            homeForm.emailField.Text = "Не заполнено";
-                        }
-
-                        if (person.Number != null)
-                        {
-                            homeForm.numberField.Text = person.Number;
-                        }
-                        else
-                        {
-                            homeForm.numberField.Text = person.Number;
-                        }
-
-                        if (person.Photo != null)
-                        {
-                            MemoryStream memoryStream = new MemoryStream(person.Photo);
-                            homeForm.photoField.Image = Image.FromStream(memoryStream);
-                        }
-                        */
                         CurrentUser.currentUser = person;
                         homeForm.Show();
                     }
@@ -194,9 +131,7 @@ namespace HeartFluttering
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
-                    Hash hash = new Hash();
-                    string password = hash.CalculateMD5Hash(passwordField.Text);
-                    var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginField.Text) && r.Password.Equals(password));
+                    var account = UserAuthorization(loginField.Text, passwordField.Text);
                     if(account == null)
                     {
                         MessageBox.Show("Неверно введены логин или пароль");
@@ -214,10 +149,7 @@ namespace HeartFluttering
                         AdministratorForm administratorForm = new AdministratorForm();
                         administratorForm.Show();
                     }
-
                 }
-
-
             }
             else
             {

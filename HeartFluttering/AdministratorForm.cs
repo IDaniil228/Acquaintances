@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace HeartFluttering
 {
     public partial class AdministratorForm : Form
     {
+        private int position = 1;
+        private string warning = "Такого пользователя не существует";
         public AdministratorForm()
         {
             InitializeComponent();
@@ -43,12 +46,8 @@ namespace HeartFluttering
         {
             using (var context = new AcquaintanceSqlContext())
             {
-                int position = 1;
                 var users = context.Users;
-                DataTable table = new DataTable();
-                table.Columns.Add("Номер", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
+                DataTable table = AdministratorTable.GetDataTable();
                 foreach (var user in users)
                 {
                     table.Rows.Add((position), user.Name, user.Surname);
@@ -76,7 +75,7 @@ namespace HeartFluttering
                 }
                 else
                 {
-                    MessageBox.Show("Такого пользователя не существует");
+                    MessageBox.Show(warning);
                     return;
                 }
                 if (selectedUser != null)
@@ -115,10 +114,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void searchLine_TextChanged(object sender, EventArgs e)
         {
-            DataTable table = new DataTable();
-            table.Columns.Add("Номер", typeof(int));
-            table.Columns.Add("Имя", typeof(string));
-            table.Columns.Add("Фамилия", typeof(string));
+            DataTable table = AdministratorTable.GetDataTable();
             using (var context = new AcquaintanceSqlContext())
             {
                 string usersNames = searchLine.Text;
@@ -144,6 +140,46 @@ namespace HeartFluttering
             }
         }
         /// <summary>
+        /// Метод, который возвращает пользователя по его ID
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <returns></returns>
+        private User GettingUserById(string idUser)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                if(CurrentUser.currentUser != null)
+                {
+                    var user = context.Users.FirstOrDefault(r => idUser.Equals(r.IdUsers));
+                    return user;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        /// <summary>
+        /// Метод который возвращает аккаунт по ID пользователя
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        private Account GettingAccountById(User user)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                if(CurrentUser.currentUser != null)
+                {
+                    var account = context.Accounts.FirstOrDefault(r => r.Id.Equals(user.Id));
+                    return account;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        /// <summary>
         /// Конпка для удалении пользователя
         /// </summary>
         /// <param name="sender"></param>
@@ -154,16 +190,16 @@ namespace HeartFluttering
             {
                 if(CurrentUser.currentUser != null)
                 {
-                    var user = context.Users.FirstOrDefault(r => CurrentUser.currentUser.IdUsers.Equals(r.IdUsers));
+                    var user = GettingUserById(CurrentUser.currentUser.IdUsers);
                     if (user == null)
                     {
-                        MessageBox.Show("Такого пользователя не существует");
+                        MessageBox.Show(warning);
                         return;
                     }
-                    var account = context.Accounts.FirstOrDefault(r => r.Id.Equals(user.Id));
+                    var account = GettingAccountById(user);
                     if (account == null)
                     {
-                        MessageBox.Show("Такого аккаунта не существует");
+                        MessageBox.Show(warning);
                         return;
                     }
                     context.Remove(user);
@@ -173,15 +209,11 @@ namespace HeartFluttering
                 }
                 else
                 {
-                    MessageBox.Show("Такого пользователя не существует");
+                    MessageBox.Show(warning);
                     return;
                 }
-                int position = 1;
                 var users = context.Users;
-                DataTable table = new DataTable();
-                table.Columns.Add("Номер", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
+                DataTable table = AdministratorTable.GetDataTable();
                 foreach (var user in users)
                 {
                     table.Rows.Add((position), user.Name, user.Surname);
