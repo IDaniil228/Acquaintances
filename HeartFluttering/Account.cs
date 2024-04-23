@@ -5,6 +5,7 @@ namespace HeartFluttering;
 
 public partial class Account
 {
+    // Что-то
     public string Id { get; set; } = null!;
 
     public string Login { get; set; } = null!;
