@@ -93,8 +93,8 @@
             CollapseButton.Anchor = AnchorStyles.Bottom;
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
-            CollapseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CollapseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
@@ -110,8 +110,8 @@
             // 
             CloseButton.BackColor = Color.Fuchsia;
             CloseButton.FlatAppearance.BorderSize = 0;
-            CloseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CloseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
@@ -149,8 +149,8 @@
             favoritesButton.BackColor = Color.Fuchsia;
             favoritesButton.BackgroundImageLayout = ImageLayout.None;
             favoritesButton.FlatAppearance.BorderSize = 0;
-            favoritesButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            favoritesButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            favoritesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            favoritesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             favoritesButton.FlatStyle = FlatStyle.Flat;
             favoritesButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             favoritesButton.ForeColor = Color.White;
@@ -167,8 +167,8 @@
             recommendButton.BackColor = Color.Fuchsia;
             recommendButton.BackgroundImageLayout = ImageLayout.None;
             recommendButton.FlatAppearance.BorderSize = 0;
-            recommendButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            recommendButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            recommendButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            recommendButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             recommendButton.FlatStyle = FlatStyle.Flat;
             recommendButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             recommendButton.ForeColor = Color.White;
@@ -185,8 +185,8 @@
             searchButton.BackColor = Color.Fuchsia;
             searchButton.BackgroundImageLayout = ImageLayout.None;
             searchButton.FlatAppearance.BorderSize = 0;
-            searchButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            searchButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            searchButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            searchButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             searchButton.FlatStyle = FlatStyle.Flat;
             searchButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             searchButton.ForeColor = Color.White;
@@ -203,8 +203,8 @@
             notificationButton.BackColor = Color.Fuchsia;
             notificationButton.BackgroundImageLayout = ImageLayout.None;
             notificationButton.FlatAppearance.BorderSize = 0;
-            notificationButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            notificationButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            notificationButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            notificationButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             notificationButton.FlatStyle = FlatStyle.Flat;
             notificationButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             notificationButton.ForeColor = Color.White;
@@ -221,8 +221,8 @@
             closeAccount.BackColor = Color.Fuchsia;
             closeAccount.BackgroundImageLayout = ImageLayout.None;
             closeAccount.FlatAppearance.BorderSize = 0;
-            closeAccount.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            closeAccount.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            closeAccount.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            closeAccount.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             closeAccount.FlatStyle = FlatStyle.Flat;
             closeAccount.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             closeAccount.ForeColor = Color.White;
@@ -265,8 +265,8 @@
             redactionPhotoButton.BackColor = Color.Fuchsia;
             redactionPhotoButton.BackgroundImageLayout = ImageLayout.None;
             redactionPhotoButton.FlatAppearance.BorderSize = 0;
-            redactionPhotoButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            redactionPhotoButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            redactionPhotoButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            redactionPhotoButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             redactionPhotoButton.FlatStyle = FlatStyle.Flat;
             redactionPhotoButton.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             redactionPhotoButton.ForeColor = Color.White;
@@ -293,8 +293,8 @@
             redactionButton.BackColor = Color.Fuchsia;
             redactionButton.BackgroundImageLayout = ImageLayout.None;
             redactionButton.FlatAppearance.BorderSize = 0;
-            redactionButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            redactionButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            redactionButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            redactionButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             redactionButton.FlatStyle = FlatStyle.Flat;
             redactionButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             redactionButton.ForeColor = Color.White;

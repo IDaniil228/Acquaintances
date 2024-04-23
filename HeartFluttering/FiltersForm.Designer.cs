@@ -78,8 +78,8 @@
             CollapseButton.Anchor = AnchorStyles.Bottom;
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
-            CollapseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CollapseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CollapseButton.FlatStyle = FlatStyle.Flat;
             CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
@@ -95,8 +95,8 @@
             // 
             CloseButton.BackColor = Color.Fuchsia;
             CloseButton.FlatAppearance.BorderSize = 0;
-            CloseButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            CloseButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
@@ -144,8 +144,8 @@
             FiltersButton.BackColor = Color.Fuchsia;
             FiltersButton.BackgroundImageLayout = ImageLayout.None;
             FiltersButton.FlatAppearance.BorderSize = 0;
-            FiltersButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            FiltersButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FiltersButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            FiltersButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
             FiltersButton.FlatStyle = FlatStyle.Flat;
             FiltersButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FiltersButton.ForeColor = Color.White;

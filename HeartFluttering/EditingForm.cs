@@ -17,17 +17,29 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// При нажатии на строку имени, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nameField_Enter(object sender, EventArgs e)
         {
             if (nameField.Text.Equals("Не заполнено..."))
@@ -36,7 +48,11 @@ namespace HeartFluttering
                 nameField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки имени, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nameField_Leave(object sender, EventArgs e)
         {
             if (nameField.Text.Equals(string.Empty))
@@ -45,7 +61,11 @@ namespace HeartFluttering
                 nameField.Text = "Не заполнено...";
             }
         }
-
+        /// <summary>
+        /// При нажатии на строку фамилии, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void surnameField_Enter(object sender, EventArgs e)
         {
             if (surnameField.Text.Equals("Не заполнено..."))
@@ -54,7 +74,11 @@ namespace HeartFluttering
                 surnameField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки фамилии, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void surnameField_Leave(object sender, EventArgs e)
         {
             if (surnameField.Text.Equals(string.Empty))
@@ -63,7 +87,11 @@ namespace HeartFluttering
                 surnameField.Text = "Не заполнено...";
             }
         }
-
+        /// <summary>
+        /// При нажатии на строку даты рождения, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void birhdayField_Enter(object sender, EventArgs e)
         {
             if (birhdayField.Text.Equals("Не заполнено..."))
@@ -72,7 +100,11 @@ namespace HeartFluttering
                 birhdayField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки даты рождения, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void birhdayField_Leave(object sender, EventArgs e)
         {
             if (birhdayField.Text.Equals(string.Empty))
@@ -81,7 +113,11 @@ namespace HeartFluttering
                 birhdayField.Text = "Не заполнено...";
             }
         }
-
+        /// <summary>
+        /// При нажатии на строку города, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cityField_Enter(object sender, EventArgs e)
         {
             if (cityField.Text.Equals("Не заполнено..."))
@@ -90,7 +126,11 @@ namespace HeartFluttering
                 cityField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки города, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cityField_Leave(object sender, EventArgs e)
         {
             if (cityField.Text.Equals(string.Empty))
@@ -99,6 +139,11 @@ namespace HeartFluttering
                 cityField.Text = "Не заполнено...";
             }
         }
+        /// <summary>
+        /// При нажатии на строку почты, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void emailField_Enter(object sender, EventArgs e)
         {
             if (emailField.Text.Equals("Не заполнено..."))
@@ -107,7 +152,11 @@ namespace HeartFluttering
                 emailField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки почты, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void emailField_Leave(object sender, EventArgs e)
         {
             if (emailField.Text.Equals(string.Empty))
@@ -116,7 +165,11 @@ namespace HeartFluttering
                 emailField.Text = "Не заполнено...";
             }
         }
-
+        /// <summary>
+        /// При нажатии на строку номера телефона, подсказка пропадает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numberField_Enter(object sender, EventArgs e)
         {
             if (numberField.Text.Equals("Не заполнено..."))
@@ -125,7 +178,11 @@ namespace HeartFluttering
                 numberField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки номера телефона, подсказка появляется
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numberField_Leave(object sender, EventArgs e)
         {
             if (numberField.Text.Equals(string.Empty))
@@ -134,7 +191,11 @@ namespace HeartFluttering
                 numberField.Text = "Не заполнено...";
             }
         }
-
+        /// <summary>
+        /// Возвращения на главную форму
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, EventArgs e)
         {
             CurrentUser.currentUser = user;
@@ -203,7 +264,11 @@ namespace HeartFluttering
             }
             */
         }
-
+        /// <summary>
+        /// Кнопка для редактирования пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void redactionButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -284,7 +349,7 @@ namespace HeartFluttering
                 }
                 person.Mail = emailField.Text;
                 string number = numberField.Text;
-                if (number != string.Empty && numberField.Text.Equals("Не заполнено..."))
+                if (number != string.Empty)
                 {
                     foreach (char numb in number)
                     {

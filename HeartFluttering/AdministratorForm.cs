@@ -16,16 +16,29 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Кнопка закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        /// <summary>
+        /// Загрузка данных в форму для админа
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AdministratorForm_Load(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -45,6 +58,11 @@ namespace HeartFluttering
                 listUsers.DataSource = table;
             }
         }
+        /// <summary>
+        /// По двойному клику, высвечивается профиль пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -90,7 +108,11 @@ namespace HeartFluttering
                 CurrentUser.currentUser = selectedUser;
             }
         }
-
+        /// <summary>
+        /// Строка поиска по имени и фамилии
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchLine_TextChanged(object sender, EventArgs e)
         {
             DataTable table = new DataTable();
@@ -107,11 +129,11 @@ namespace HeartFluttering
                     {
                         if (users[i].Name != null && users[i].Surname != null)
                         {
-                            if (users[i].Name.StartsWith(usersNames) && usersNames != string.Empty)
+                            if (users[i].Name.StartsWith(usersNames))
                             {
                                 table.Rows.Add((i + 1), users[i].Name, users[i].Surname);
                             }
-                            else if (users[i].Surname.StartsWith(usersNames) && usersNames != string.Empty)
+                            else if (users[i].Surname.StartsWith(usersNames))
                             {
                                 table.Rows.Add((i + 1), users[i].Name, users[i].Surname);
                             }
@@ -121,7 +143,11 @@ namespace HeartFluttering
                 listUsers.DataSource = table;
             }
         }
-
+        /// <summary>
+        /// Конпка для удалении пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void deleteAccountButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -134,7 +160,14 @@ namespace HeartFluttering
                         MessageBox.Show("Такого пользователя не существует");
                         return;
                     }
+                    var account = context.Accounts.FirstOrDefault(r => r.Id.Equals(user.Id));
+                    if (account == null)
+                    {
+                        MessageBox.Show("Такого аккаунта не существует");
+                        return;
+                    }
                     context.Remove(user);
+                    context.Remove(account);
                     context.SaveChanges();
                     MessageBox.Show("Данный пользователь был удалён");
                 }

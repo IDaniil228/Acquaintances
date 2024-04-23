@@ -18,24 +18,40 @@ namespace HeartFluttering
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Кнопка для выхода из аккаунта
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void closeAccount_Click(object sender, EventArgs e)
         {
             this.Hide();
             AuthorizationForm form = new AuthorizationForm();
             form.Show();
         }
-
+        /// <summary>
+        /// Кнопка для открытия редактировния
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void redactionButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -78,7 +94,11 @@ namespace HeartFluttering
             editingForm.user = CurrentUser.currentUser;
             editingForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Кнопка для загрузке данных в главном профиле
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HomeForm_Load(object sender, EventArgs e)
         {
             nameField.Text = CurrentUser.currentUser.Name;
@@ -101,7 +121,11 @@ namespace HeartFluttering
                 photoField.Image = Image.FromStream(memoryStream);
             }
         }
-
+        /// <summary>
+        /// Кнопка для замены фотографии пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void redactionPhotoButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -136,14 +160,22 @@ namespace HeartFluttering
                 context.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// Кнопка для открытии фильтров
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             FiltersForm filtersForm = new FiltersForm();
             filtersForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Кнопка для открытия рекомендации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void recommendButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -167,7 +199,11 @@ namespace HeartFluttering
                 recommenForm.Show();
             }
         }
-
+        /// <summary>
+        /// Кнопка для просмотра пользователей, которые были добавлены в избранное
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void favoritesButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -201,7 +237,11 @@ namespace HeartFluttering
                 chosenOneForm.Show();
             }
         }
-
+        /// <summary>
+        /// Кнопка просмотра уведомлений
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void notificationButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
