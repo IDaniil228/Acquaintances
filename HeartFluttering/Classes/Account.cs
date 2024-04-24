@@ -13,6 +13,6 @@ public partial class Account
     public string Password { get; set; } = null!;
 
     public virtual Administrator? Administrator { get; set; }
-
+    //оКЕЙ
     public virtual User? User { get; set; }
 }
