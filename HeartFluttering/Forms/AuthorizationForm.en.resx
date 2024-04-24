@@ -117,13 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LanguageComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="entryLabel.Text" xml:space="preserve">
+    <value>Log in</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 35</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Log in as</value>
+  </data>
+  <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 120</value>
+  </data>
   <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 28</value>
+    <value>140, 28</value>
+  </data>
+  <data name="passwondLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 35</value>
+  </data>
+  <data name="passwondLabel.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="passwordField.Text" xml:space="preserve">
+    <value>Enter password...</value>
+  </data>
+  <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 35</value>
+  </data>
+  <data name="loginLabel.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="loginField.Text" xml:space="preserve">
+    <value>Enter login...</value>
+  </data>
+  <data name="loginButton.Text" xml:space="preserve">
+    <value>Log in </value>
+  </data>
+  <data name="registrButton.Text" xml:space="preserve">
+    <value>Sign up</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1006,6 +1038,9 @@
         gf6z63sQBESIF7gG7p3bLeALKBSh0g6wGwGvglMgDFAoFPEzDpwFrM1sW73BbBH4DrBxGM7+gUBJAOfB
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 28</value>
   </data>
   <data name="girlPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2032,7 +2067,7 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Вход</value>
+  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 28</value>
   </data>
 </root>
