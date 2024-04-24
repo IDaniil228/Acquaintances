@@ -105,7 +105,7 @@ namespace HeartFluttering
                 using (var context = new AcquaintanceSqlContext())
                 {
                     var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
-                    if (account == null)
+                    if(account == null)
                     {
                         MessageBox.Show("Вы ввели неверно логин или пароль");
                         return;
@@ -113,12 +113,12 @@ namespace HeartFluttering
                     using (var context2 = new AcquaintanceSqlContext())
                     {
                         var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if (person == null)
+                        if(person == null)
                         {
                             MessageBox.Show("Не удалось найти пользователя");
                             return;
                         }
-                        if (account != null && person == null)
+                        if(account != null && person == null)
                         {
                             MessageBox.Show("Вы не можете войти через пользователя");
                             return;
@@ -131,12 +131,12 @@ namespace HeartFluttering
                 }
 
             }
-            else if (choice.Text.Equals("Администратор"))
+            else if(choice.Text.Equals("Администратор"))
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
                     var account = UserAuthorization(loginField.Text, passwordField.Text);
-                    if (account == null)
+                    if(account == null)
                     {
                         MessageBox.Show("Неверно введены логин или пароль");
                         return;
@@ -144,7 +144,7 @@ namespace HeartFluttering
                     using (var context2 = new AcquaintanceSqlContext())
                     {
                         var admin = context2.Administrators.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if (account != null && admin == null)
+                        if(account != null && admin == null)
                         {
                             MessageBox.Show("Вы не можете войти через администратора");
                             return;
