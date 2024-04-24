@@ -17,7 +17,7 @@ namespace HeartFluttering
             passwordField.ForeColor = Color.Gray;
         }
         /// <summary>
-        /// При нажатии на строку логина, подсказка пропадает
+        /// ГЏГ°ГЁ Г­Г Г¦Г ГІГЁГЁ Г­Г  Г±ГІГ°Г®ГЄГі Г«Г®ГЈГЁГ­Г , ГЇГ®Г¤Г±ГЄГ Г§ГЄГ  ГЇГ°Г®ГЇГ Г¤Г ГҐГІ
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -30,7 +30,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// При отжатии строки логина, подсказка появляется
+        /// ГЏГ°ГЁ Г®ГІГ¦Г ГІГЁГЁ Г±ГІГ°Г®ГЄГЁ Г«Г®ГЈГЁГ­Г , ГЇГ®Г¤Г±ГЄГ Г§ГЄГ  ГЇГ®ГїГўГ«ГїГҐГІГ±Гї
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -43,7 +43,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// При нажатии на строку пароля, подсказка пропадает
+        /// ГЏГ°ГЁ Г­Г Г¦Г ГІГЁГЁ Г­Г  Г±ГІГ°Г®ГЄГі ГЇГ Г°Г®Г«Гї, ГЇГ®Г¤Г±ГЄГ Г§ГЄГ  ГЇГ°Г®ГЇГ Г¤Г ГҐГІ
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -56,7 +56,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// При отжатии строки пароля, подсказка появляется
+        /// ГЏГ°ГЁ Г®ГІГ¦Г ГІГЁГЁ Г±ГІГ°Г®ГЄГЁ ГЇГ Г°Г®Г«Гї, ГЇГ®Г¤Г±ГЄГ Г§ГЄГ  ГЇГ®ГїГўГ«ГїГҐГІГ±Гї
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -69,7 +69,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Метод, который возвращает данные пользователя по логину и пароля
+        /// ГЊГҐГІГ®Г¤, ГЄГ®ГІГ®Г°Г»Г© ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г¤Г Г­Г­Г»ГҐ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї ГЇГ® Г«Г®ГЈГЁГ­Гі ГЁ ГЇГ Г°Г®Г«Гї
         /// </summary>
         /// <param name="loginUsers"></param>
         /// <param name="passwordUsers"></param>
@@ -85,7 +85,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Данная кнопка позволяется войти в аккаунт для пользователя или администратора 
+        /// Г„Г Г­Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГЇГ®Г§ГўГ®Г«ГїГҐГІГ±Гї ГўГ®Г©ГІГЁ Гў Г ГЄГЄГ ГіГ­ГІ Г¤Г«Гї ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї ГЁГ«ГЁ Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°Г  
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -103,11 +103,11 @@ namespace HeartFluttering
                     MessageBox.Show(Inscriptions.MessageEmptyPassword);
                     return;
                 }
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
-                    if(account == null)
+                    using (var context = new AcquaintanceSqlContext())
                     {
+
                         MessageBox.Show(Inscriptions.MessageWrongData);
                         return;
                     }
@@ -117,20 +117,51 @@ namespace HeartFluttering
                         if(person == null)
                         {
                             MessageBox.Show(Inscriptions.MessageNotFoundUser);
+
+                        var account = UserAuthorization(loginField.Text, passwordField.Text);//ГЊГҐГІГ®Г¤ Г¤Г«Гї ГЇГ°Г®ГўГҐГ°ГЄГЁ Г«Г®ГЈГЁГ­Г  ГЁ ГЇГ Г°Г®Г«Гї
+                        if (account == null)
+                        {
+                            MessageBox.Show("Г‚Г» ГўГўГҐГ«ГЁ Г­ГҐГўГҐГ°Г­Г® Г«Г®ГЈГЁГ­ ГЁГ«ГЁ ГЇГ Г°Г®Г«Гј");
+
                             return;
                         }
-                        if(account != null && person == null)
+                        try
                         {
+
                             MessageBox.Show(Inscriptions.MessageCantEnterLikeUser);
                             return;
+
+                            using (var context2 = new AcquaintanceSqlContext())
+                            {
+                                var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
+                                if (person == null)
+                                {
+                                    MessageBox.Show("ГЌГҐ ГіГ¤Г Г«Г®Г±Гј Г­Г Г©ГІГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї");
+                                    return;
+                                }
+                                if (account != null && person == null)
+                                {
+                                    MessageBox.Show("Г‚Г» Г­ГҐ Г¬Г®Г¦ГҐГІГҐ ГўГ®Г©ГІГЁ Г·ГҐГ°ГҐГ§ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї");
+                                    return;
+                                }
+                                this.Hide();
+                                HomeForm homeForm = new HomeForm();
+                                CurrentUser.currentUser = person;
+                                homeForm.Show();
+                            }
                         }
-                        this.Hide();
-                        HomeForm homeForm = new HomeForm();
-                        CurrentUser.currentUser = person;
-                        homeForm.Show();
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+
+                        }
                     }
                 }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("ГЋГёГЁГЎГЄГ  Гў ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГЁ ГЎГ Г§Г» Г¤Г Г­Г­Г»Гµ");
+                }
             }
             else if(choice.Text.Equals(Inscriptions.Admin))
             {
@@ -164,7 +195,7 @@ namespace HeartFluttering
 
         }
         /// <summary>
-        /// Перекидывает на форму регистрации пользователя
+        /// ГЏГҐГ°ГҐГЄГЁГ¤Г»ГўГ ГҐГІ Г­Г  ГґГ®Г°Г¬Гі Г°ГҐГЈГЁГ±ГІГ°Г Г¶ГЁГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -175,7 +206,7 @@ namespace HeartFluttering
             form.Show();
         }
         /// <summary>
-        /// Конпка для сворачивания приложения
+        /// ГЉГ®Г­ГЇГЄГ  Г¤Г«Гї Г±ГўГ®Г°Г Г·ГЁГўГ Г­ГЁГї ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -184,17 +215,17 @@ namespace HeartFluttering
             this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
-        /// Кнопка для закрытия приложения
+        /// ГЉГ­Г®ГЇГЄГ  Г¤Г«Гї Г§Г ГЄГ°Г»ГІГЁГї ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            logger.Debug("Выход из приложения");
+            logger.Debug("Г‚Г»ГµГ®Г¤ ГЁГ§ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї");
             Application.Exit();
         }
         /// <summary>
-        /// Загрузка окна авторизации
+        /// Г‡Г ГЈГ°ГіГ§ГЄГ  Г®ГЄГ­Г  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
