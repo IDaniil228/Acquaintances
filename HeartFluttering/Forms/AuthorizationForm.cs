@@ -103,72 +103,41 @@ namespace HeartFluttering
                     MessageBox.Show(Inscriptions.MessageEmptyPassword);
                     return;
                 }
-                try
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    using (var context = new AcquaintanceSqlContext())
+                    var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
+                    if (account == null)
                     {
-
                         MessageBox.Show(Inscriptions.MessageWrongData);
                         return;
                     }
                     using (var context2 = new AcquaintanceSqlContext())
                     {
                         var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if(person == null)
+                        if (person == null)
                         {
                             MessageBox.Show(Inscriptions.MessageNotFoundUser);
-
-                        var account = UserAuthorization(loginField.Text, passwordField.Text);//Ìåòîä äëÿ ïðîâåðêè ëîãèíà è ïàðîëÿ
-                        if (account == null)
-                        {
-                            MessageBox.Show("Âû ââåëè íåâåðíî ëîãèí èëè ïàðîëü");
-
                             return;
                         }
-                        try
+                        if (account != null && person == null)
                         {
-
                             MessageBox.Show(Inscriptions.MessageCantEnterLikeUser);
                             return;
-
-                            using (var context2 = new AcquaintanceSqlContext())
-                            {
-                                var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
-                                if (person == null)
-                                {
-                                    MessageBox.Show("Íå óäàëîñü íàéòè ïîëüçîâàòåëÿ");
-                                    return;
-                                }
-                                if (account != null && person == null)
-                                {
-                                    MessageBox.Show("Âû íå ìîæåòå âîéòè ÷åðåç ïîëüçîâàòåëÿ");
-                                    return;
-                                }
-                                this.Hide();
-                                HomeForm homeForm = new HomeForm();
-                                CurrentUser.currentUser = person;
-                                homeForm.Show();
-                            }
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-
-                        }
+                        this.Hide();
+                        HomeForm homeForm = new HomeForm();
+                        CurrentUser.currentUser = person;
+                        homeForm.Show();
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    logger.Fatal("Îøèáêà â ïîäêëþ÷åíèè áàçû äàííûõ");
-                }
+
             }
-            else if(choice.Text.Equals(Inscriptions.Admin))
+            else if (choice.Text.Equals(Inscriptions.Admin))
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
                     var account = UserAuthorization(loginField.Text, passwordField.Text);
-                    if(account == null)
+                    if (account == null)
                     {
                         MessageBox.Show(Inscriptions.MessageWrongData);
                         return;
@@ -176,7 +145,7 @@ namespace HeartFluttering
                     using (var context2 = new AcquaintanceSqlContext())
                     {
                         var admin = context2.Administrators.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if(account != null && admin == null)
+                        if (account != null && admin == null)
                         {
                             MessageBox.Show(Inscriptions.MessageCantEnterLikeAdmin);
                             return;
