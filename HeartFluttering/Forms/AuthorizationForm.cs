@@ -15,9 +15,10 @@ namespace HeartFluttering
             InitializeComponent();
             loginField.ForeColor = Color.Gray;
             passwordField.ForeColor = Color.Gray;
+            logger.Info("Инициализация данных");
         }
         /// <summary>
-        /// Ïðè íàæàòèè íà ñòðîêó ëîãèíà, ïîäñêàçêà ïðîïàäàåò
+        /// При нажатии строку логина, подсказка убирает
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -30,7 +31,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Ïðè îòæàòèè ñòðîêè ëîãèíà, ïîäñêàçêà ïîÿâëÿåòñÿ
+        /// При отжатии строки логина, появляется подсказка, если строка была пустой
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -43,7 +44,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Ïðè íàæàòèè íà ñòðîêó ïàðîëÿ, ïîäñêàçêà ïðîïàäàåò
+        /// При нажатии строку пароля, подсказка убирает
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -56,7 +57,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Ïðè îòæàòèè ñòðîêè ïàðîëÿ, ïîäñêàçêà ïîÿâëÿåòñÿ
+        /// При отжатии строки пароля, появляется подсказка, если строка была пустой
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -69,23 +70,33 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Ìåòîä, êîòîðûé âîçâðàùàåò äàííûå ïîëüçîâàòåëÿ ïî ëîãèíó è ïàðîëÿ
+        /// ÌМетод, который возвращает аккаунт по логину и паролю
         /// </summary>
         /// <param name="loginUsers"></param>
         /// <param name="passwordUsers"></param>
         /// <returns></returns>
         private Account UserAuthorization(string loginUsers, string passwordUsers)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                Hash hash = new Hash();
-                string password = hash.CalculateMD5Hash(passwordUsers);
-                var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginUsers) && r.Password.Equals(password));
-                return account;
+                using (var context = new AcquaintanceSqlContext())
+                {
+                    Hash hash = new Hash();
+                    string password = hash.CalculateMD5Hash(passwordUsers);
+                    var account = context.Accounts.FirstOrDefault(r => r.Login.Equals(loginUsers) && r.Password.Equals(password));
+                    logger.Info($"Получение аккаунта по логину: {loginUsers} и паролю: {password}");
+                    return account;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
+                return null;
             }
         }
         /// <summary>
-        /// Äàííàÿ êíîïêà ïîçâîëÿåòñÿ âîéòè â àêêàóíò äëÿ ïîëüçîâàòåëÿ èëè àäìèíèñòðàòîðà 
+        /// Метод для входа пользователя или админа в аккаунт
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -103,57 +114,86 @@ namespace HeartFluttering
                     MessageBox.Show(Inscriptions.MessageEmptyPassword);
                     return;
                 }
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
-                    if (account == null)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        MessageBox.Show(Inscriptions.MessageWrongData);
-                        return;
-                    }
-                    using (var context2 = new AcquaintanceSqlContext())
-                    {
-                        var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if (person == null)
+                        var account = UserAuthorization(loginField.Text, passwordField.Text);
+                        logger.Info("Получение аккаунта по логину и паролю");
+                        if (account == null)
                         {
-                            MessageBox.Show(Inscriptions.MessageNotFoundUser);
+                            MessageBox.Show(Inscriptions.MessageWrongData);
                             return;
                         }
-                        if (account != null && person == null)
+                        try
                         {
-                            MessageBox.Show(Inscriptions.MessageCantEnterLikeUser);
-                            return;
+                            using (var context2 = new AcquaintanceSqlContext())
+                            {
+                                var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
+                                logger.Info("Получение пользователя по данным аккаунта");
+                                if (person == null)
+                                {
+                                    MessageBox.Show(Inscriptions.MessageNotFoundUser);
+                                    return;
+                                }
+                                if (account != null && person == null)
+                                {
+                                    MessageBox.Show(Inscriptions.MessageCantEnterLikeUser);
+                                    return;
+                                }
+                                this.Hide();
+                                HomeForm homeForm = new HomeForm();
+                                CurrentUser.currentUser = person;
+                                logger.Trace("Открытия главной формы");
+                                homeForm.Show();
+                            }
                         }
-                        this.Hide();
-                        HomeForm homeForm = new HomeForm();
-                        CurrentUser.currentUser = person;
-                        homeForm.Show();
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            logger.Fatal("Ошибка подключения к базе данных");
+                        }
                     }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка подключения к базе данных");
                 }
 
             }
             else if (choice.Text.Equals(Inscriptions.Admin))
             {
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var account = UserAuthorization(loginField.Text, passwordField.Text);
-                    if (account == null)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        MessageBox.Show(Inscriptions.MessageWrongData);
-                        return;
-                    }
-                    using (var context2 = new AcquaintanceSqlContext())
-                    {
-                        var admin = context2.Administrators.FirstOrDefault(r => r.Id.Equals(account.Id));
-                        if (account != null && admin == null)
+                        var account = UserAuthorization(loginField.Text, passwordField.Text);
+                        logger.Info("Получение аккаунта по логину и паролю");
+                        if (account == null)
                         {
-                            MessageBox.Show(Inscriptions.MessageCantEnterLikeAdmin);
+                            MessageBox.Show(Inscriptions.MessageWrongData);
                             return;
                         }
-                        this.Hide();
-                        AdministratorForm administratorForm = new AdministratorForm();
-                        administratorForm.Show();
+                        using (var context2 = new AcquaintanceSqlContext())
+                        {
+                            var admin = context2.Administrators.FirstOrDefault(r => r.Id.Equals(account.Id));
+                            logger.Info("Получение администратора по данным аккаунта");
+                            if (account != null && admin == null)
+                            {
+                                MessageBox.Show(Inscriptions.MessageCantEnterLikeAdmin);
+                                return;
+                            }
+                            this.Hide();
+                            AdministratorForm administratorForm = new AdministratorForm();
+                            administratorForm.Show();
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка подключения к базе данных");
                 }
             }
             else
@@ -164,7 +204,7 @@ namespace HeartFluttering
 
         }
         /// <summary>
-        /// Ïåðåêèäûâàåò íà ôîðìó ðåãèñòðàöèè ïîëüçîâàòåëÿ
+        /// Кнопка для регистрации пользователя
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -172,34 +212,37 @@ namespace HeartFluttering
         {
             this.Hide();
             RegistrForm form = new RegistrForm();
+            logger.Trace("Открытие формы регистрации");
             form.Show();
         }
         /// <summary>
-        /// Êîíïêà äëÿ ñâîðà÷èâàíèÿ ïðèëîæåíèÿ
+        /// Сворачивание приложения
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачивание приложения");
             this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
-        /// Êíîïêà äëÿ çàêðûòèÿ ïðèëîæåíèÿ
+        /// Закрытие приложения
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            logger.Debug("Âûõîä èç ïðèëîæåíèÿ");
+            logger.Debug("Закрытие приложения");
             Application.Exit();
         }
         /// <summary>
-        /// Çàãðóçêà îêíà àâòîðèçàöèè
+        /// Загрузка данных в форму
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
+            logger.Debug("Загрузка данных");
             choice.Items.Add(Inscriptions.User);
             choice.Items.Add(Inscriptions.Admin);
             loginField.Text = Inscriptions.Login;

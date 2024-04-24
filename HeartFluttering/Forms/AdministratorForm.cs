@@ -10,17 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
 using User = HeartFluttering.Classes.User;
+using NLog;
 
 namespace HeartFluttering
 {
     public partial class AdministratorForm : Form
     {
-        
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private int position = 1;
         private string warning = "Такого пользователя не существует";
         public AdministratorForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
         /// <summary>
         /// Кнопка закрытия приложения
@@ -29,6 +31,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Закрытие приложения");
             Application.Exit();
         }
         /// <summary>
@@ -38,6 +41,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачивание приложения");
             this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
