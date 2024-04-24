@@ -114,7 +114,7 @@ namespace HeartFluttering
                     MessageBox.Show(Inscriptions.MessageEmptyPassword);
                     return;
                 }
-                //
+                
                 try
                 {
                     using (var context = new AcquaintanceSqlContext())
