@@ -117,52 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Admin" xml:space="preserve">
-    <value>Администратор</value>
+  <data name="Account" xml:space="preserve">
+    <value>Аккаунт с таким логином уже существует</value>
   </data>
-  <data name="Birthday" xml:space="preserve">
-    <value>Введите день рождение</value>
+  <data name="CityField" xml:space="preserve">
+    <value>Поле для города обязательно для заполнения</value>
   </data>
-  <data name="City" xml:space="preserve">
-    <value>Введите город</value>
+  <data name="CityIsNotExists" xml:space="preserve">
+    <value>Такого города не сущеcтвует</value>
   </data>
-  <data name="Login" xml:space="preserve">
-    <value>Введите логин</value>
+  <data name="Done" xml:space="preserve">
+    <value>Регистрация прошла успешно</value>
   </data>
-  <data name="MessageCantEnterLikeAdmin" xml:space="preserve">
-    <value>Вы не можете войти как администратора</value>
+  <data name="LettersInName" xml:space="preserve">
+    <value>В вашем имени должны быть только буквы</value>
   </data>
-  <data name="MessageCantEnterLikeUser" xml:space="preserve">
-    <value>Вы не можете войти как пользователя</value>
+  <data name="LettersInSurname" xml:space="preserve">
+    <value>В вашей фамилии должны быть только буквы</value>
   </data>
-  <data name="MessageChooseRole" xml:space="preserve">
-    <value>Выберите аккаунт пользователя или администратора</value>
+  <data name="LoginField" xml:space="preserve">
+    <value>Поле для логина обязательно для заполнения</value>
   </data>
-  <data name="MessageEmptyLogin" xml:space="preserve">
-    <value>Пустое поле для логина</value>
+  <data name="MatchingPassword" xml:space="preserve">
+    <value>Пароли должны совпадать</value>
   </data>
-  <data name="MessageEmptyPassword" xml:space="preserve">
-    <value>Пустое поля для пароля</value>
+  <data name="NameField" xml:space="preserve">
+    <value>Поле для имени обязательно для заполнения</value>
   </data>
-  <data name="MessageNotFoundUser" xml:space="preserve">
-    <value>Не удалось найти пользователя</value>
-  </data>
-  <data name="MessageWrongData" xml:space="preserve">
-    <value>Вы ввели неверно логин или пароль</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Введите имя</value>
+  <data name="Old" xml:space="preserve">
+    <value>Вам не может быть столько много лет</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Введите пароль</value>
+    <value>Аккаунт с таким паролем уже существует</value>
   </data>
-  <data name="Repeat password" xml:space="preserve">
-    <value>Повторите пароль</value>
+  <data name="PasswordField" xml:space="preserve">
+    <value>Поле для пароля обязательно для заполнения</value>
   </data>
-  <data name="Surname" xml:space="preserve">
-    <value>Введите фамилию</value>
+  <data name="RepeatPasswordField" xml:space="preserve">
+    <value>Поле для повторного пароля обязательно для заполнения</value>
   </data>
-  <data name="User" xml:space="preserve">
-    <value>Пользователь</value>
+  <data name="SexField" xml:space="preserve">
+    <value>Поле для пола обязательно для заполнения</value>
+  </data>
+  <data name="SurnameFiald" xml:space="preserve">
+    <value>Поле для фамилии обязательно для заполнения</value>
+  </data>
+  <data name="Youth" xml:space="preserve">
+    <value>Вы ещё слишком молоды</value>
   </data>
 </root>

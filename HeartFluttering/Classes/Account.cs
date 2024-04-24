@@ -9,10 +9,10 @@ public partial class Account
     public string Id { get; set; } = null!;
 
     public string Login { get; set; } = null!;
-    //нгпрлоилдтотj
+
     public string Password { get; set; } = null!;
 
     public virtual Administrator? Administrator { get; set; }
-    //оКЕЙ
+
     public virtual User? User { get; set; }
 }

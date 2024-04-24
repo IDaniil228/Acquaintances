@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization;
+using HeartFluttering.Resources.Localization.RegistrForm;
 
 namespace HeartFluttering
 {
@@ -31,7 +33,7 @@ namespace HeartFluttering
         }
         private void LoginField_Enter(object sender, EventArgs e)
         {
-            if (LoginField.Text.Equals("Введите логин..."))
+            if (LoginField.Text.Equals(Inscriptions.Login))
             {
                 LoginField.Text = string.Empty;
                 LoginField.ForeColor = Color.Black;
@@ -43,13 +45,13 @@ namespace HeartFluttering
             if (LoginField.Text.Equals(string.Empty))
             {
                 LoginField.ForeColor = Color.Gray;
-                LoginField.Text = "Введите логин...";
+                LoginField.Text = Inscriptions.Login;
             }
         }
 
         private void passwordField_Enter(object sender, EventArgs e)
         {
-            if (passwordField.Text.Equals("Введите пароль..."))
+            if (passwordField.Text.Equals(Inscriptions.Password))
             {
                 passwordField.Text = string.Empty;
                 passwordField.ForeColor = Color.Black;
@@ -61,13 +63,13 @@ namespace HeartFluttering
             if (passwordField.Text.Equals(string.Empty))
             {
                 passwordField.ForeColor = Color.Gray;
-                passwordField.Text = "Введите пароль...";
+                passwordField.Text = Inscriptions.Password;
             }
         }
 
         private void password2Field_Enter(object sender, EventArgs e)
         {
-            if (password2Field.Text.Equals("Введите повторно пароль..."))
+            if (password2Field.Text.Equals(Inscriptions.Repeat_password))
             {
                 password2Field.Text = string.Empty;
                 password2Field.ForeColor = Color.Black;
@@ -79,12 +81,12 @@ namespace HeartFluttering
             if (password2Field.Text.Equals(string.Empty))
             {
                 password2Field.ForeColor = Color.Gray;
-                password2Field.Text = "Введите повторно пароль...";
+                password2Field.Text = Inscriptions.Repeat_password;
             }
         }
         private void nameField_Enter(object sender, EventArgs e)
         {
-            if (nameField.Text.Equals("Введите имя..."))
+            if (nameField.Text.Equals(Inscriptions.Name))
             {
                 nameField.Text = string.Empty;
                 nameField.ForeColor = Color.Black;
@@ -96,13 +98,13 @@ namespace HeartFluttering
             if (nameField.Text.Equals(string.Empty))
             {
                 nameField.ForeColor = Color.Gray;
-                nameField.Text = "Введите имя...";
+                nameField.Text = Inscriptions.Name;
             }
         }
 
         private void surnameField_Enter(object sender, EventArgs e)
         {
-            if (surnameField.Text.Equals("Введите фамилию..."))
+            if (surnameField.Text.Equals(Inscriptions.Surname))
             {
                 surnameField.Text = string.Empty;
                 surnameField.ForeColor = Color.Black;
@@ -114,13 +116,13 @@ namespace HeartFluttering
             if (surnameField.Text.Equals(string.Empty))
             {
                 surnameField.ForeColor = Color.Gray;
-                surnameField.Text = "Введите фамилию...";
+                surnameField.Text = Inscriptions.Surname;
             }
         }
 
         private void BirhdayFields_Enter(object sender, EventArgs e)
         {
-            if (BirhdayFields.Text.Equals("Введите дату рождения..."))
+            if (BirhdayFields.Text.Equals(Inscriptions.Birthday))
             {
                 BirhdayFields.Text = string.Empty;
                 BirhdayFields.ForeColor = Color.Black;
@@ -132,13 +134,13 @@ namespace HeartFluttering
             if (BirhdayFields.Text.Equals(string.Empty))
             {
                 BirhdayFields.ForeColor = Color.Gray;
-                BirhdayFields.Text = "Введите дату рождения...";
+                BirhdayFields.Text = Inscriptions.Birthday;
             }
         }
 
         private void cityField_Enter(object sender, EventArgs e)
         {
-            if (cityField.Text.Equals("Введите город проживания..."))
+            if (cityField.Text.Equals(Inscriptions.City))
             {
                 cityField.Text = string.Empty;
                 cityField.ForeColor = Color.Black;
@@ -150,10 +152,10 @@ namespace HeartFluttering
             if (cityField.Text.Equals(string.Empty))
             {
                 cityField.ForeColor = Color.Gray;
-                cityField.Text = "Введите город проживания...";
+                cityField.Text = Inscriptions.City;
             }
         }
-        
+
         private Account dataAuthorization(string login, string password)
         {
             Hash hash = new Hash();
@@ -163,48 +165,48 @@ namespace HeartFluttering
             account.Password = hash.CalculateMD5Hash(password);
             return account;
         }
-        
+
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
+
             if (LoginField.Text == string.Empty)
             {
-                MessageBox.Show("Поле для логина обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.LoginField);
                 return;
             }
             if (passwordField.Text == string.Empty)
             {
-                MessageBox.Show("Поле для пароля обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.PasswordField);
                 return;
             }
             if (password2Field.Text == string.Empty)
             {
-                MessageBox.Show("Поле для повторного пароля обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.RepeatPasswordField);
                 return;
             }
             if (passwordField.Text != password2Field.Text)
             {
-                MessageBox.Show("Пароли должны совпадать");
+                MessageBox.Show(InscriptionsSignUp.MatchingPassword);
                 return;
             }
-            if (nameField.Text == string.Empty || nameField.Text.Equals("Введите имя..."))
+            if (nameField.Text == string.Empty || nameField.Text.Equals(Inscriptions.Name))
             {
-                MessageBox.Show("Поле для имени обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.NameField);
                 return;
             }
-            if (surnameField.Text == string.Empty || surnameField.Text.Equals("Введите фамилию..."))
+            if (surnameField.Text == string.Empty || surnameField.Text.Equals(Inscriptions.Surname))
             {
-                MessageBox.Show("Поле для фамилии обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.SurnameFiald);
                 return;
             }
-            if(cityField.Text == string.Empty || cityField.Text.Equals("Введите город проживания..."))
+            if (cityField.Text == string.Empty || cityField.Text.Equals(Inscriptions.City))
             {
-                MessageBox.Show("Поле для города обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.CityField);
                 return;
             }
-            if(sexMenButton.Checked == false && sexWomenButton.Checked == false)
+            if (sexMenButton.Checked == false && sexWomenButton.Checked == false)
             {
-                MessageBox.Show("Поле для пола обязательно для заполнения");
+                MessageBox.Show(InscriptionsSignUp.SexField);
                 return;
             }
             using (var context = new AcquaintanceSqlContext())
@@ -214,7 +216,7 @@ namespace HeartFluttering
                 {
                     if (LoginField.Text.Equals(login.Login))
                     {
-                        MessageBox.Show("Аккаунт с таким пользователем уже существует");
+                        MessageBox.Show(InscriptionsSignUp.Account);
                         return;
                     }
                 }
@@ -222,7 +224,7 @@ namespace HeartFluttering
                 {
                     if (passwordField.Text.Equals(password.Password))
                     {
-                        MessageBox.Show("Аккаунт с таким паролем уже существует");
+                        MessageBox.Show(InscriptionsSignUp.Password);
                         return;
                     }
                 }
@@ -235,11 +237,11 @@ namespace HeartFluttering
                 context.Accounts.Add(account);
                 User user = new User();
                 user.IdUsers = Guid.NewGuid().ToString();
-                foreach(char letter in nameField.Text)
+                foreach (char letter in nameField.Text)
                 {
                     if (!Char.IsLetter(letter))
                     {
-                        MessageBox.Show("Вашем имени должны быть только буквы");
+                        MessageBox.Show(InscriptionsSignUp.LettersInName);
                         return;
                     }
                 }
@@ -247,9 +249,9 @@ namespace HeartFluttering
 
                 foreach (char letter in surnameField.Text)
                 {
-                    if(!Char.IsLetter(letter)) 
+                    if (!Char.IsLetter(letter))
                     {
-                        MessageBox.Show("Вашей фамилии должны быть только буквы");
+                        MessageBox.Show(InscriptionsSignUp.LettersInSurname);
                         return;
                     }
                 }
@@ -259,14 +261,14 @@ namespace HeartFluttering
 
                 int yearOld = time.Year;
                 int yearNow = DateTime.Now.Year;
-                if((yearNow - yearOld) < 18)
+                if ((yearNow - yearOld) < 18)
                 {
-                    MessageBox.Show("Вы ещё слишком молоды");
+                    MessageBox.Show(InscriptionsSignUp.Youth);
                     return;
                 }
-                if((yearNow - yearOld) > 100)
+                if ((yearNow - yearOld) > 120)
                 {
-                    MessageBox.Show("Вам не может быть столько много лет");
+                    MessageBox.Show(InscriptionsSignUp.Old);
                     return;
                 }
                 DateTime birth = new DateTime(time.Year, time.Month, time.Day);
@@ -277,7 +279,7 @@ namespace HeartFluttering
                 {
                     if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
                     {
-                        MessageBox.Show("Такого города не сущеcтвует");
+                        MessageBox.Show(InscriptionsSignUp.CityIsNotExists);
                         return;
                     }
                 }
@@ -294,11 +296,11 @@ namespace HeartFluttering
                 user.Id = guid.ToString();
                 context.Users.Add(user);
                 context.SaveChanges();
-                MessageBox.Show("Регистрация прошла успешно");
+                MessageBox.Show(InscriptionsSignUp.Done);
                 this.Hide();
                 AuthorizationForm form = new AuthorizationForm();
                 form.Show();
             }
-        }  
-    }     
+        }
+    }
 }

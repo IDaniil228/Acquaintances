@@ -2025,4 +2025,28 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="LoginField.Text" xml:space="preserve">
+    <value>Введите логин</value>
+  </data>
+  <data name="password2Field.Text" xml:space="preserve">
+    <value>Повторите пароль</value>
+  </data>
+  <data name="passwordField.Text" xml:space="preserve">
+    <value>Введите пароль</value>
+  </data>
+  <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>792, 457</value>
+  </data>
+  <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>721, 457</value>
+  </data>
+  <data name="cityField.Text" xml:space="preserve">
+    <value>Введите город</value>
+  </data>
+  <data name="nameField.Text" xml:space="preserve">
+    <value>Введите имя</value>
+  </data>
+  <data name="surnameField.Text" xml:space="preserve">
+    <value>Введите фамилию</value>
+  </data>
 </root>

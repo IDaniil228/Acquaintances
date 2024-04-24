@@ -70,6 +70,24 @@ namespace HeartFluttering.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Введите день рождение.
+        /// </summary>
+        internal static string Birthday {
+            get {
+                return ResourceManager.GetString("Birthday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите город.
+        /// </summary>
+        internal static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Введите логин.
         /// </summary>
         internal static string Login {
@@ -142,11 +160,38 @@ namespace HeartFluttering.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Введите имя.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Введите пароль.
         /// </summary>
         internal static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Повторите пароль.
+        /// </summary>
+        internal static string Repeat_password {
+            get {
+                return ResourceManager.GetString("Repeat password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите фамилию.
+        /// </summary>
+        internal static string Surname {
+            get {
+                return ResourceManager.GetString("Surname", resourceCulture);
             }
         }
         

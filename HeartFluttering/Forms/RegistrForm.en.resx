@@ -2040,10 +2040,16 @@
   <data name="loginLabel.Text" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="LoginField.Text" xml:space="preserve">
+    <value>Enter login</value>
+  </data>
   <data name="passwordLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 35</value>
   </data>
   <data name="passwordLabel2.Text" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="password2Field.Text" xml:space="preserve">
     <value>Repeat password</value>
   </data>
   <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
@@ -2051,6 +2057,12 @@
   </data>
   <data name="passwordLabel.Text" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="passwordField.Text" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+  <data name="loginButton.Text" xml:space="preserve">
+    <value>Sign up</value>
   </data>
   <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>814, 457</value>
@@ -2070,6 +2082,9 @@
   <data name="sexLabel.Text" xml:space="preserve">
     <value>Сhoose a gender</value>
   </data>
+  <data name="cityField.Text" xml:space="preserve">
+    <value>Enter city</value>
+  </data>
   <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 31</value>
   </data>
@@ -2082,6 +2097,9 @@
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="nameField.Text" xml:space="preserve">
+    <value>Enter name</value>
+  </data>
   <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 31</value>
   </data>
@@ -2093,5 +2111,8 @@
   </data>
   <data name="surnameLabel.Text" xml:space="preserve">
     <value>Surname</value>
+  </data>
+  <data name="surnameField.Text" xml:space="preserve">
+    <value>Enter surname</value>
   </data>
 </root>

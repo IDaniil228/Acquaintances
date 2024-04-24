@@ -117,51 +117,162 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="passwordLabel.Text" xml:space="preserve">
-    <value>Пароль</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="surnameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="password2Field.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="passwordLabel2.Text" xml:space="preserve">
-    <value>Повторный пароль</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="loginButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;surnameField.Name" xml:space="preserve">
-    <value>surnameField</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="sexMenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 35</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;passwordLabel2.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 137</value>
-  </data>
-  <data name="&gt;&gt;cityLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;passwordField.Name" xml:space="preserve">
     <value>passwordField</value>
   </data>
-  <data name="&gt;&gt;BirhdayFields.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 216</value>
   </data>
-  <data name="sexWomenButton.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;girlPhoto.Name" xml:space="preserve">
+    <value>girlPhoto</value>
+  </data>
+  <data name="&gt;&gt;CloseButton.Name" xml:space="preserve">
+    <value>CloseButton</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Name" xml:space="preserve">
+    <value>passwordLabel</value>
+  </data>
+  <data name="&gt;&gt;loginLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cityField.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="nameField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;girlPhoto.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="nameField.Text" xml:space="preserve">
+    <value>Введите имя...</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;passwordField.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;surnameField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loginLabel.Name" xml:space="preserve">
+    <value>loginLabel</value>
+  </data>
+  <data name="&gt;&gt;CollapseButton.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="BirhdayFields.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="passwordLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 295</value>
+  </data>
+  <data name="&gt;&gt;CloseButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="passwordLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 275</value>
+  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 25</value>
+  </data>
+  <data name="&gt;&gt;password2Field.Name" xml:space="preserve">
+    <value>password2Field</value>
+  </data>
+  <data name="cityField.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="CollapseButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Black, 9pt, style=Bold</value>
+  </data>
+  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 92</value>
+  </data>
+  <data name="&gt;&gt;CloseButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BirhdayLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sexWomenButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt</value>
+  </data>
+  <data name="cityLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt, style=Bold</value>
+  </data>
+  <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>707, 459</value>
+  </data>
+  <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 457</value>
+  </data>
+  <data name="passwordLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;sexWomenButton.Name" xml:space="preserve">
+    <value>sexWomenButton</value>
+  </data>
+  <data name="passwordField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt</value>
+  </data>
+  <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 59</value>
+  </data>
+  <data name="&gt;&gt;loginLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CloseButton.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 25</value>
+  </data>
+  <data name="surnameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="sexMenButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 35</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="loginButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="CollapseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="BirhdayFields.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;surnameField.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;boyPhoto.Name" xml:space="preserve">
+    <value>boyPhoto</value>
+  </data>
+  <data name="sexLabel.Text" xml:space="preserve">
+    <value>Выберите пол</value>
+  </data>
+  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="loginLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="password2Field.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt</value>
+  </data>
+  <data name="nameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1045,290 +1156,467 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;sexLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 25</value>
+  <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
-  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 35</value>
-  </data>
-  <data name="&gt;&gt;cityLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;sexMenButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="sexWomenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 35</value>
-  </data>
-  <data name="LoginField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="loginButton.Text" xml:space="preserve">
-    <value>Зарегистрироваться</value>
-  </data>
-  <data name="&gt;&gt;CollapseButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sexLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;loginLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>927, 117</value>
-  </data>
-  <data name="entryLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe Print, 36pt</value>
-  </data>
-  <data name="surnameField.Text" xml:space="preserve">
-    <value>Введите фамилию...</value>
-  </data>
-  <data name="passwordLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;entryLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;passwordLabel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sexWomenButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="sexLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt, style=Bold</value>
-  </data>
-  <data name="CollapseButton.Text" xml:space="preserve">
-    <value>—</value>
-  </data>
-  <data name="CollapseButton.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
   </data>
   <data name="passwordLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>275, 35</value>
   </data>
-  <data name="BirhdayFields.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 331</value>
+  <data name="boyPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
   </data>
-  <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 216</value>
+  <data name="&gt;&gt;entryLabel.Name" xml:space="preserve">
+    <value>entryLabel</value>
   </data>
-  <data name="&gt;&gt;LoginField.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>RegistrForm</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel.Name" xml:space="preserve">
-    <value>passwordLabel</value>
-  </data>
-  <data name="surnameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;BirhdayLabel.Name" xml:space="preserve">
-    <value>BirhdayLabel</value>
-  </data>
-  <data name="&gt;&gt;boyPhoto.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="sexWomenButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;BirhdayLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 409</value>
-  </data>
-  <data name="passwordLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;sexLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 59</value>
-  </data>
-  <data name="cityField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="loginLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="surnameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;BirhdayFields.Name" xml:space="preserve">
     <value>BirhdayFields</value>
   </data>
-  <data name="&gt;&gt;passwordLabel2.Name" xml:space="preserve">
-    <value>passwordLabel2</value>
-  </data>
-  <data name="&gt;&gt;loginButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LoginField.Text" xml:space="preserve">
-    <value>Введите логин...</value>
-  </data>
-  <data name="password2Field.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 38</value>
-  </data>
-  <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 31</value>
-  </data>
-  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 35</value>
-  </data>
-  <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;sexLabel.Name" xml:space="preserve">
-    <value>sexLabel</value>
-  </data>
-  <data name="nameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;loginButton.Name" xml:space="preserve">
-    <value>loginButton</value>
-  </data>
-  <data name="surnameField.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 14.25pt</value>
-  </data>
-  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>851, 0</value>
-  </data>
-  <data name="passwordLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="password2Field.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;cityField.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 35</value>
-  </data>
-  <data name="sexMenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="entryLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="LoginField.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="passwordLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 373</value>
-  </data>
-  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 31</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel2.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;loginLabel.Name" xml:space="preserve">
-    <value>loginLabel</value>
-  </data>
-  <data name="surnameField.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 313</value>
-  </data>
-  <data name="&gt;&gt;LoginField.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="BirhdayLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="loginLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="&gt;&gt;passwordField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LoginField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sexWomenButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 31</value>
-  </data>
-  <data name="&gt;&gt;sexWomenButton.Name" xml:space="preserve">
-    <value>sexWomenButton</value>
-  </data>
-  <data name="&gt;&gt;BirhdayLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;surnameField.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>696, 25</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="BirhdayFields.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
+  <data name="boyPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="&gt;&gt;nameField.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 457</value>
+  <data name="LoginField.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
-  <data name="&gt;&gt;BirhdayLabel.Parent" xml:space="preserve">
+  <data name="sexLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 35</value>
+  </data>
+  <data name="&gt;&gt;loginLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;BirhdayFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cityField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>927, 600</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;sexLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;sexLabel.Name" xml:space="preserve">
+    <value>sexLabel</value>
   </data>
-  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="CloseButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Black, 9pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;girlPhoto.Type" xml:space="preserve">
+  <data name="entryLabel.Text" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="&gt;&gt;password2Field.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="BirhdayFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 27</value>
+  </data>
+  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 275</value>
+  </data>
+  <data name="CloseButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;boyPhoto.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
+  <data name="&gt;&gt;CollapseButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="CollapseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="CloseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="&gt;&gt;sexMenButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;sexWomenButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="sexMenButton.Text" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="passwordField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 38</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 31</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 173</value>
+  </data>
+  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 35</value>
+  </data>
+  <data name="cityLabel.Text" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel2.Name" xml:space="preserve">
+    <value>passwordLabel2</value>
+  </data>
+  <data name="BirhdayFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 331</value>
   </data>
   <data name="&gt;&gt;loginButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CloseButton.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;LoginField.Name" xml:space="preserve">
-    <value>LoginField</value>
-  </data>
-  <data name="BirhdayFields.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt</value>
+  <data name="entryLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="&gt;&gt;nameField.Name" xml:space="preserve">
     <value>nameField</value>
   </data>
-  <data name="CloseButton.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+  <data name="LoginField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 38</value>
   </data>
-  <data name="BirhdayLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt, style=Bold</value>
+  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>887, 0</value>
+  </data>
+  <data name="BirhdayLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="sexWomenButton.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="passwordLabel2.Text" xml:space="preserve">
+    <value>Повторный пароль</value>
+  </data>
+  <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 35</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="passwordLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="passwordLabel.Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="loginLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="loginButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;girlPhoto.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="LoginField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt</value>
+  </data>
+  <data name="sexMenButton.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;password2Field.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;boyPhoto.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="surnameField.Text" xml:space="preserve">
+    <value>Введите фамилию...</value>
+  </data>
+  <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 313</value>
+  </data>
+  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>927, 117</value>
+  </data>
+  <data name="&gt;&gt;surnameField.Name" xml:space="preserve">
+    <value>surnameField</value>
+  </data>
+  <data name="&gt;&gt;BirhdayLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;surnameField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nameField.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="passwordField.Text" xml:space="preserve">
+    <value>Введите пароль...</value>
+  </data>
+  <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>778, 459</value>
+  </data>
+  <data name="surnameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 92</value>
+  </data>
+  <data name="sexWomenButton.Text" xml:space="preserve">
+    <value>Ж</value>
+  </data>
+  <data name="&gt;&gt;surnameLabel.Name" xml:space="preserve">
+    <value>surnameLabel</value>
+  </data>
+  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 31</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>RegistrForm</value>
+  </data>
+  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 31</value>
+  </data>
+  <data name="entryLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 252</value>
+  </data>
+  <data name="&gt;&gt;entryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="entryLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="&gt;&gt;BirhdayFields.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="&gt;&gt;CollapseButton.Name" xml:space="preserve">
+    <value>CollapseButton</value>
+  </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>851, 0</value>
+  </data>
+  <data name="&gt;&gt;boyPhoto.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="loginButton.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;nameField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="passwordLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="surnameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt, style=Bold</value>
+  </data>
+  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 35</value>
+  </data>
+  <data name="&gt;&gt;sexMenButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 137</value>
+  </data>
+  <data name="passwordLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 373</value>
+  </data>
+  <data name="LoginField.Text" xml:space="preserve">
+    <value>Введите логин...</value>
+  </data>
+  <data name="&gt;&gt;surnameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;cityField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sexWomenButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 35</value>
+  </data>
+  <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 31</value>
+  </data>
+  <data name="CollapseButton.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 173</value>
+  </data>
+  <data name="&gt;&gt;girlPhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BirhdayLabel.Name" xml:space="preserve">
+    <value>BirhdayLabel</value>
+  </data>
+  <data name="&gt;&gt;LoginField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BirhdayLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;sexMenButton.Name" xml:space="preserve">
+    <value>sexMenButton</value>
+  </data>
+  <data name="&gt;&gt;CollapseButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="loginLabel.Text" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="sexLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="loginButton.Text" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="sexMenButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="passwordField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;LoginField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BirhdayFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;entryLabel.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="BirhdayLabel.Text" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 31</value>
+  </data>
+  <data name="CollapseButton.Text" xml:space="preserve">
+    <value>—</value>
+  </data>
+  <data name="&gt;&gt;LoginField.Name" xml:space="preserve">
+    <value>LoginField</value>
+  </data>
+  <data name="surnameLabel.Text" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 31</value>
+  </data>
+  <data name="password2Field.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 38</value>
+  </data>
+  <data name="&gt;&gt;loginButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 35</value>
+  </data>
+  <data name="sexMenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="surnameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 31</value>
+  </data>
+  <data name="&gt;&gt;sexLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cityField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14.25pt</value>
+  </data>
+  <data name="sexMenButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;sexWomenButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sexWomenButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cityField.Name" xml:space="preserve">
+    <value>cityField</value>
+  </data>
+  <data name="&gt;&gt;password2Field.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="sexLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt, style=Bold</value>
+  </data>
+  <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 373</value>
+  </data>
+  <data name="&gt;&gt;passwordField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="loginLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;passwordField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;surnameLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cityLabel.Name" xml:space="preserve">
+    <value>cityLabel</value>
+  </data>
+  <data name="&gt;&gt;entryLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cityField.Text" xml:space="preserve">
+    <value>Введите город проживания...</value>
+  </data>
+  <data name="loginButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 15.75pt</value>
+  </data>
+  <data name="password2Field.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="sexWomenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>Имя</value>
   </data>
   <data name="girlPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2355,406 +2643,118 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;surnameField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="loginButton.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;password2Field.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="BirhdayLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;girlPhoto.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="girlPhoto.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="LoginField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 38</value>
-  </data>
-  <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 252</value>
-  </data>
-  <data name="loginButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe Print, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;CloseButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;sexMenButton.Name" xml:space="preserve">
-    <value>sexMenButton</value>
-  </data>
-  <data name="loginLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt, style=Bold</value>
-  </data>
-  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 92</value>
-  </data>
-  <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>778, 459</value>
-  </data>
-  <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 373</value>
-  </data>
-  <data name="&gt;&gt;loginLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;surnameLabel.Name" xml:space="preserve">
-    <value>surnameLabel</value>
-  </data>
-  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="entryLabel.Text" xml:space="preserve">
-    <value>Регистрация</value>
-  </data>
-  <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 173</value>
-  </data>
-  <data name="&gt;&gt;cityField.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="sexMenButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;password2Field.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nameField.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cityLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="entryLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;nameField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nameField.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="&gt;&gt;surnameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 525</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
-    <value>nameLabel</value>
-  </data>
-  <data name="surnameLabel.Text" xml:space="preserve">
-    <value>Фамилия</value>
-  </data>
-  <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 35</value>
-  </data>
-  <data name="LoginField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 212</value>
-  </data>
-  <data name="sexWomenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;girlPhoto.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="passwordLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt, style=Bold</value>
-  </data>
-  <data name="CloseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Black, 9pt, style=Bold</value>
-  </data>
-  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>887, 0</value>
-  </data>
-  <data name="cityField.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="surnameField.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 14.25pt</value>
   </data>
-  <data name="&gt;&gt;boyPhoto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CloseButton.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
-  <data name="LoginField.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt</value>
+  <data name="&gt;&gt;loginButton.Name" xml:space="preserve">
+    <value>loginButton</value>
   </data>
-  <data name="&gt;&gt;girlPhoto.Name" xml:space="preserve">
-    <value>girlPhoto</value>
+  <data name="&gt;&gt;sexLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cityField.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 31</value>
-  </data>
-  <data name="&gt;&gt;cityField.Name" xml:space="preserve">
-    <value>cityField</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cityLabel.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="passwordField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="surnameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>927, 600</value>
-  </data>
-  <data name="BirhdayFields.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="loginLabel.Text" xml:space="preserve">
-    <value>Логин</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;entryLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="CollapseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Black, 9pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;entryLabel.Name" xml:space="preserve">
-    <value>entryLabel</value>
-  </data>
-  <data name="&gt;&gt;sexWomenButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BirhdayLabel.Text" xml:space="preserve">
-    <value>Дата рождения</value>
-  </data>
-  <data name="boyPhoto.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="sexMenButton.Text" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="&gt;&gt;surnameLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="passwordField.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
-  <data name="&gt;&gt;passwordField.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BirhdayLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="sexMenButton.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="&gt;&gt;CollapseButton.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="sexMenButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cityLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;boyPhoto.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CloseButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sexMenButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;CollapseButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;sexMenButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;password2Field.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="passwordField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 38</value>
-  </data>
-  <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 31</value>
-  </data>
-  <data name="passwordLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;CloseButton.Name" xml:space="preserve">
-    <value>CloseButton</value>
-  </data>
-  <data name="&gt;&gt;surnameLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="nameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;cityLabel.Name" xml:space="preserve">
-    <value>cityLabel</value>
-  </data>
-  <data name="sexWomenButton.Text" xml:space="preserve">
-    <value>Ж</value>
-  </data>
-  <data name="nameLabel.Text" xml:space="preserve">
-    <value>Имя</value>
-  </data>
-  <data name="passwordField.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt</value>
-  </data>
-  <data name="CloseButton.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;surnameField.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="password2Field.Text" xml:space="preserve">
-    <value>Введите повторно пароль...</value>
-  </data>
-  <data name="cityLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>RegistrForm</value>
-  </data>
-  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 35</value>
-  </data>
-  <data name="sexLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="nameField.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 14.25pt</value>
-  </data>
-  <data name="girlPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cityLabel.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BirhdayLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 15.75pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;loginLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BirhdayFields.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 31</value>
-  </data>
-  <data name="sexLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="passwordField.Text" xml:space="preserve">
-    <value>Введите пароль...</value>
-  </data>
-  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;entryLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CollapseButton.Name" xml:space="preserve">
-    <value>CollapseButton</value>
-  </data>
-  <data name="boyPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="password2Field.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 15.75pt</value>
-  </data>
-  <data name="cityField.Text" xml:space="preserve">
-    <value>Введите город проживания...</value>
-  </data>
-  <data name="&gt;&gt;cityField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>707, 459</value>
-  </data>
-  <data name="CloseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="nameField.Text" xml:space="preserve">
-    <value>Введите имя...</value>
-  </data>
-  <data name="sexLabel.Text" xml:space="preserve">
-    <value>Выберите пол</value>
-  </data>
-  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="loginButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;boyPhoto.Name" xml:space="preserve">
-    <value>boyPhoto</value>
-  </data>
-  <data name="surnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 31</value>
+  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
+    <value>nameLabel</value>
   </data>
   <data name="passwordLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 18pt, style=Bold</value>
   </data>
-  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 173</value>
-  </data>
-  <data name="entryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="sexWomenButton.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="cityLabel.Text" xml:space="preserve">
-    <value>Город</value>
-  </data>
-  <data name="entryLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="BirhdayFields.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 27</value>
-  </data>
-  <data name="&gt;&gt;passwordField.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 295</value>
-  </data>
   <data name="&gt;&gt;passwordLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 92</value>
+  <data name="BirhdayFields.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 20.25pt</value>
   </data>
-  <data name="&gt;&gt;password2Field.Name" xml:space="preserve">
-    <value>password2Field</value>
+  <data name="cityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="surnameField.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="entryLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 36pt</value>
+  </data>
+  <data name="sexWomenButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RegistrForm</value>
+  </data>
+  <data name="cityLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="girlPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;LoginField.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;surnameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="password2Field.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 412</value>
   </data>
+  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>534, 409</value>
+  </data>
+  <data name="password2Field.Text" xml:space="preserve">
+    <value>Введите повторно пароль...</value>
+  </data>
+  <data name="password2Field.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="nameField.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="girlPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;cityLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LoginField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="entryLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;cityField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sexMenButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LoginField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 212</value>
+  </data>
+  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 525</value>
+  </data>
+  <data name="surnameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>en</value>
   </metadata>
 </root>

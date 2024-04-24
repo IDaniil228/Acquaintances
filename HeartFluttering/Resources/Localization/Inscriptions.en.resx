@@ -120,6 +120,12 @@
   <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
+  <data name="Birthday" xml:space="preserve">
+    <value>Enter birthday</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Enter city</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Enter login</value>
   </data>
@@ -144,8 +150,17 @@
   <data name="MessageWrongData" xml:space="preserve">
     <value>You entered the wrong username or password</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Enter name</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Enter password</value>
+  </data>
+  <data name="Repeat password" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Enter surname</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>User</value>
