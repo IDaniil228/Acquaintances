@@ -89,7 +89,6 @@
             resources.ApplyResources(choice, "choice");
             choice.DropDownStyle = ComboBoxStyle.DropDownList;
             choice.FormattingEnabled = true;
-            choice.Items.AddRange(new object[] { resources.GetString("choice.Items"), resources.GetString("choice.Items1") });
             choice.Name = "choice";
             // 
             // LanguageComboBox
@@ -110,6 +109,7 @@
             // passwordField
             // 
             resources.ApplyResources(passwordField, "passwordField");
+            passwordField.ForeColor = Color.Gray;
             passwordField.Name = "passwordField";
             passwordField.Enter += passwordField_Enter;
             passwordField.Leave += passwordField_Leave;
@@ -122,6 +122,7 @@
             // loginField
             // 
             resources.ApplyResources(loginField, "loginField");
+            loginField.ForeColor = Color.Gray;
             loginField.Name = "loginField";
             loginField.Enter += loginField_Enter;
             loginField.Leave += loginField_Leave;

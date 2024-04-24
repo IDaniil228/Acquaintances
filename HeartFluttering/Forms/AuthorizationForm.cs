@@ -1,4 +1,5 @@
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization;
 using NLog;
 using System.Drawing.Text;
 
@@ -22,7 +23,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void loginField_Enter(object sender, EventArgs e)
         {
-            if (loginField.Text.Equals("Введите логин..."))
+            if (loginField.Text.Equals(Inscriptions.Login))
             {
                 loginField.Text = string.Empty;
                 loginField.ForeColor = Color.Black;
@@ -38,7 +39,7 @@ namespace HeartFluttering
             if (loginField.Text.Equals(string.Empty))
             {
                 loginField.ForeColor = Color.Gray;
-                loginField.Text = "Введите логин...";
+                loginField.Text = Inscriptions.Login;
             }
         }
         /// <summary>
@@ -48,7 +49,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void passwordField_Enter(object sender, EventArgs e)
         {
-            if (passwordField.Text.Equals("Введите пароль..."))
+            if (passwordField.Text.Equals(Inscriptions.Password))
             {
                 passwordField.Text = string.Empty;
                 passwordField.ForeColor = Color.Black;
@@ -64,7 +65,7 @@ namespace HeartFluttering
             if (passwordField.Text.Equals(string.Empty))
             {
                 passwordField.ForeColor = Color.Gray;
-                passwordField.Text = "Введите пароль...";
+                passwordField.Text = Inscriptions.Password;
             }
         }
         /// <summary>
@@ -90,16 +91,16 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (choice.Text.Equals("Пользователь"))
+            if (choice.Text.Equals(Inscriptions.User))
             {
-                if (loginField.Text == string.Empty || loginField.Text.Equals("Введите логин..."))
+                if (loginField.Text == string.Empty || loginField.Text.Equals(Inscriptions.Login))
                 {
-                    MessageBox.Show("Пустое поле для логина");
+                    MessageBox.Show(Inscriptions.MessageEmptyLogin);
                     return;
                 }
-                if (passwordField.Text == string.Empty || passwordField.Text.Equals("Введите пароль..."))
+                if (passwordField.Text == string.Empty || passwordField.Text.Equals(Inscriptions.Password))
                 {
-                    MessageBox.Show("Пустое поле для пароля");
+                    MessageBox.Show(Inscriptions.MessageEmptyPassword);
                     return;
                 }
                 using (var context = new AcquaintanceSqlContext())
@@ -107,7 +108,7 @@ namespace HeartFluttering
                     var account = UserAuthorization(loginField.Text, passwordField.Text);//Метод для проверки логина и пароля
                     if(account == null)
                     {
-                        MessageBox.Show("Вы ввели неверно логин или пароль");
+                        MessageBox.Show(Inscriptions.MessageWrongData);
                         return;
                     }
                     using (var context2 = new AcquaintanceSqlContext())
@@ -115,12 +116,12 @@ namespace HeartFluttering
                         var person = context2.Users.FirstOrDefault(r => r.Id.Equals(account.Id));
                         if(person == null)
                         {
-                            MessageBox.Show("Не удалось найти пользователя");
+                            MessageBox.Show(Inscriptions.MessageNotFoundUser);
                             return;
                         }
                         if(account != null && person == null)
                         {
-                            MessageBox.Show("Вы не можете войти через пользователя");
+                            MessageBox.Show(Inscriptions.MessageCantEnterLikeUser);
                             return;
                         }
                         this.Hide();
@@ -131,14 +132,14 @@ namespace HeartFluttering
                 }
 
             }
-            else if(choice.Text.Equals("Администратор"))
+            else if(choice.Text.Equals(Inscriptions.Admin))
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
                     var account = UserAuthorization(loginField.Text, passwordField.Text);
                     if(account == null)
                     {
-                        MessageBox.Show("Неверно введены логин или пароль");
+                        MessageBox.Show(Inscriptions.MessageWrongData);
                         return;
                     }
                     using (var context2 = new AcquaintanceSqlContext())
@@ -146,7 +147,7 @@ namespace HeartFluttering
                         var admin = context2.Administrators.FirstOrDefault(r => r.Id.Equals(account.Id));
                         if(account != null && admin == null)
                         {
-                            MessageBox.Show("Вы не можете войти через администратора");
+                            MessageBox.Show(Inscriptions.MessageCantEnterLikeAdmin);
                             return;
                         }
                         this.Hide();
@@ -157,7 +158,7 @@ namespace HeartFluttering
             }
             else
             {
-                MessageBox.Show("Выберите аккаунт пользователя или администратора");
+                MessageBox.Show(Inscriptions.MessageChooseRole);
                 return;
             }
 
@@ -189,7 +190,6 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            //
             logger.Debug("Выход из приложения");
             Application.Exit();
         }
@@ -200,6 +200,10 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
+            choice.Items.Add(Inscriptions.User);
+            choice.Items.Add(Inscriptions.Admin);
+            loginField.Text = Inscriptions.Login;
+            passwordField.Text = Inscriptions.Password;
             flag = false;
             LanguageComboBox.SelectedIndex = 0;
         }
@@ -225,7 +229,11 @@ namespace HeartFluttering
             InitializeComponent();
             flag = false;
             LanguageComboBox.SelectedIndex = currentIndex;
-            
+            loginField.Text = Inscriptions.Login;
+            passwordField.Text = Inscriptions.Password;
+            choice.Items.Clear();
+            choice.Items.Add(Inscriptions.User);
+            choice.Items.Add(Inscriptions.Admin);
         }
     }
 }
