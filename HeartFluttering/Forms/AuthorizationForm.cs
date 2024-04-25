@@ -249,7 +249,16 @@ namespace HeartFluttering
             loginField.Text = Inscriptions.Login;
             passwordField.Text = Inscriptions.Password;
             flag = false;
-            LanguageComboBox.SelectedIndex = 0;
+            if (EnterLike.Text == "Log in as")
+            {
+                LanguageComboBox.SelectedIndex = 1;
+            }
+            else 
+            {
+                LanguageComboBox.SelectedIndex = 0;
+            }
+            
+
         }
 
         private void LanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)

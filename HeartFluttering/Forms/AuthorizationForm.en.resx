@@ -121,10 +121,13 @@
     <value>Log in</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 35</value>
+  <data name="EnterLike.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="EnterLike.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 35</value>
+  </data>
+  <data name="EnterLike.Text" xml:space="preserve">
     <value>Log in as</value>
   </data>
   <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">

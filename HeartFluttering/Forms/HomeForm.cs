@@ -276,5 +276,10 @@ namespace HeartFluttering
                 notificationForm.Show();
             }
         }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -124,7 +124,7 @@
     <value>Enter birthday</value>
   </data>
   <data name="City" xml:space="preserve">
-    <value>Enter city</value>
+    <value>Enter city (in Russian)</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Enter login</value>

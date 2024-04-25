@@ -2083,7 +2083,7 @@
     <value>Сhoose a gender</value>
   </data>
   <data name="cityField.Text" xml:space="preserve">
-    <value>Enter city</value>
+    <value>Enter city (in Russian)</value>
   </data>
   <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 31</value>

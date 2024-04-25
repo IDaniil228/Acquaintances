@@ -32,7 +32,7 @@
             entryLabel = new Label();
             CloseButton = new Button();
             CollapseButton = new Button();
-            label1 = new Label();
+            EnterLike = new Label();
             choice = new ComboBox();
             LanguageComboBox = new ComboBox();
             passwondLabel = new Label();
@@ -79,10 +79,10 @@
             CollapseButton.UseVisualStyleBackColor = false;
             CollapseButton.Click += CollapseButton_Click;
             // 
-            // label1
+            // EnterLike
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.Name = "label1";
+            resources.ApplyResources(EnterLike, "EnterLike");
+            EnterLike.Name = "EnterLike";
             // 
             // choice
             // 
@@ -172,7 +172,7 @@
             Controls.Add(boyPhoto);
             Controls.Add(registrButton);
             Controls.Add(loginButton);
-            Controls.Add(label1);
+            Controls.Add(EnterLike);
             Controls.Add(choice);
             Controls.Add(LanguageComboBox);
             Controls.Add(passwondLabel);
@@ -196,7 +196,7 @@
         private Label entryLabel;
         private Button CloseButton;
         private Button CollapseButton;
-        private Label label1;
+        private Label EnterLike;
         private ComboBox choice;
         private ComboBox LanguageComboBox;
         private Label passwondLabel;
