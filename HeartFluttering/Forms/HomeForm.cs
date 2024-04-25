@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization.ChooseOneForm;
 
 
 namespace HeartFluttering
@@ -185,10 +186,10 @@ namespace HeartFluttering
                 var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
                 CurrentUsers.currentUsers = sortedUsers;
                 DataTable table = new DataTable();
-                table.Columns.Add("Место", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
-                table.Columns.Add("Лайки", typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                 for (int i = 0; i < sortedUsers.Count; i++)
                 {
                     table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
@@ -223,10 +224,10 @@ namespace HeartFluttering
                 }
                 CurrentUsers.currentUsers = anotherUsers;
                 DataTable table = new DataTable();
-                table.Columns.Add("Номер", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
-                table.Columns.Add("Лайки", typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                 for (int i = 0; i < anotherUsers.Count; i++)
                 {
                     table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
@@ -261,10 +262,10 @@ namespace HeartFluttering
                 }
                 CurrentUsers.currentUsers = anotherUsers;
                 DataTable table = new DataTable();
-                table.Columns.Add("Номер", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
-                table.Columns.Add("Лайки", typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                 for (int i = 0; i < anotherUsers.Count; i++)
                 {
                     table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);

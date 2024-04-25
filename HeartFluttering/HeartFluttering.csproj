@@ -24,6 +24,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Localization\AdminForms\InscriptionsAdmin.en.Designer.cs">
+      <DependentUpon>InscriptionsAdmin.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\AdminForms\InscriptionsAdmin.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsAdmin.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Localization\ChooseOneForm\InscriptionsFavorites.en.Designer.cs">
+      <DependentUpon>InscriptionsFavorites.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\ChooseOneForm\InscriptionsFavorites.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsFavorites.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Localization\EditingForms\InscriptionsEditing.en.Designer.cs">
       <DependentUpon>InscriptionsEditing.en.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -33,6 +53,26 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>InscriptionsEditing.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Localization\FilterForm\InscriptionsFilter.en.Designer.cs">
+      <DependentUpon>InscriptionsFilter.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\FilterForm\InscriptionsFilter.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsFilter.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.en.Designer.cs">
+      <DependentUpon>InscriptionsPhotoUser.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsPhotoUser.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\Localization\RegistrForm\InscriptionsSignUp.en.Designer.cs">
       <DependentUpon>InscriptionsSignUp.en.resx</DependentUpon>
@@ -44,15 +84,25 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Resources\Localization\Inscriptions.en.Designer.cs">
+    <Compile Update="Resources\Localization\AuthorForm\Inscriptions.en.Designer.cs">
       <DependentUpon>Inscriptions.en.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Resources\Localization\Inscriptions.Designer.cs">
+    <Compile Update="Resources\Localization\AuthorForm\Inscriptions.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Inscriptions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Localization\UserProfileForm\InscriptionsUserProfile.en.Designer.cs">
+      <DependentUpon>InscriptionsUserProfile.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\UserProfileForm\InscriptionsUserProfile.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsUserProfile.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -60,6 +110,22 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\AdminForms\InscriptionsAdmin.en.resx">
+      <LastGenOutput>InscriptionsAdmin.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\AdminForms\InscriptionsAdmin.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsAdmin.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\ChooseOneForm\InscriptionsFavorites.en.resx">
+      <LastGenOutput>InscriptionsFavorites.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\ChooseOneForm\InscriptionsFavorites.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsFavorites.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Localization\EditingForms\InscriptionsEditing.en.resx">
       <LastGenOutput>InscriptionsEditing.en.Designer.cs</LastGenOutput>
@@ -69,6 +135,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>InscriptionsEditing.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\FilterForm\InscriptionsFilter.en.resx">
+      <LastGenOutput>InscriptionsFilter.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\FilterForm\InscriptionsFilter.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsFilter.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.en.resx">
+      <LastGenOutput>InscriptionsPhotoUser.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsPhotoUser.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Localization\RegistrForm\InscriptionsSignUp.en.resx">
       <LastGenOutput>InscriptionsSignUp.en.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,13 +159,21 @@
       <LastGenOutput>InscriptionsSignUp.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Localization\Inscriptions.en.resx">
+    <EmbeddedResource Update="Resources\Localization\AuthorForm\Inscriptions.en.resx">
       <LastGenOutput>Inscriptions.en.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Localization\Inscriptions.resx">
+    <EmbeddedResource Update="Resources\Localization\AuthorForm\Inscriptions.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Inscriptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\UserProfileForm\InscriptionsUserProfile.en.resx">
+      <LastGenOutput>InscriptionsUserProfile.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\UserProfileForm\InscriptionsUserProfile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsUserProfile.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

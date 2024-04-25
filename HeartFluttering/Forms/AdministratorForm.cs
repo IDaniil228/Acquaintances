@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using HeartFluttering.Classes;
 using User = HeartFluttering.Classes.User;
 using NLog;
+using HeartFluttering.Resources.Localization.AdminForms;
 
 namespace HeartFluttering
 {
@@ -18,7 +19,15 @@ namespace HeartFluttering
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private int position = 1;
-        private string warning = "Такого пользователя не существует";
+        private string warning = InscriptionsAdmin.Warning;
+        private DataTable GetDataTable()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add(InscriptionsAdmin.Number, typeof(int));
+            table.Columns.Add(InscriptionsAdmin.Name, typeof(string));
+            table.Columns.Add(InscriptionsAdmin.Surname, typeof(string));
+            return table;
+        }
         public AdministratorForm()
         {
             InitializeComponent();
@@ -54,7 +63,7 @@ namespace HeartFluttering
             using (var context = new AcquaintanceSqlContext())
             {
                 var users = context.Users;
-                DataTable table = AdministratorTable.GetDataTable();
+                DataTable table = GetDataTable();
                 foreach (var user in users)
                 {
                     table.Rows.Add((position), user.Name, user.Surname);
@@ -93,11 +102,11 @@ namespace HeartFluttering
                     cityField.Text = selectedUser.City;
                     if (selectedUser.Sex == 1)
                     {
-                        sexField.Text = "Мужской";
+                        sexField.Text = InscriptionsAdmin.Man;
                     }
                     if (selectedUser.Sex == 0)
                     {
-                        sexField.Text = "Женский";
+                        sexField.Text = InscriptionsAdmin.Women;
                     }
                     emailField.Text = selectedUser.Mail;
                     numberField.Text = selectedUser.Number;
@@ -121,7 +130,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void searchLine_TextChanged(object sender, EventArgs e)
         {
-            DataTable table = AdministratorTable.GetDataTable();
+            DataTable table = GetDataTable();
             using (var context = new AcquaintanceSqlContext())
             {
                 string usersNames = searchLine.Text;
@@ -187,7 +196,7 @@ namespace HeartFluttering
             }
         }
         /// <summary>
-        /// Конпка для удалении пользователя
+        /// Конопка для удалении пользователя
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -212,7 +221,7 @@ namespace HeartFluttering
                     context.Remove(user);
                     context.Remove(account);
                     context.SaveChanges();
-                    MessageBox.Show("Данный пользователь был удалён");
+                    MessageBox.Show(InscriptionsAdmin.Delete);
                 }
                 else
                 {
@@ -220,7 +229,7 @@ namespace HeartFluttering
                     return;
                 }
                 var users = context.Users;
-                DataTable table = AdministratorTable.GetDataTable();
+                DataTable table = GetDataTable();
                 foreach (var user in users)
                 {
                     table.Rows.Add((position), user.Name, user.Surname);

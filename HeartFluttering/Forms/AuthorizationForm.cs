@@ -1,5 +1,6 @@
 using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization;
+using HeartFluttering.Resources.Localization.AuthorForm;
 using NLog;
 using System.Drawing.Text;
 

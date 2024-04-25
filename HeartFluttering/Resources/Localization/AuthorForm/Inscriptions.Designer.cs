@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HeartFluttering.Resources.Localization {
+namespace HeartFluttering.Resources.Localization.AuthorForm {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace HeartFluttering.Resources.Localization {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HeartFluttering.Resources.Localization.Inscriptions", typeof(Inscriptions).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HeartFluttering.Resources.Localization.AuthorForm.Inscriptions", typeof(Inscriptions).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

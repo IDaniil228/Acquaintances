@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization.PhotoUserForm;
 
 namespace HeartFluttering
 {
@@ -37,7 +38,7 @@ namespace HeartFluttering
         {
             if (currentUsers.Count == 0)
             {
-                MessageBox.Show("Пользователей с такими фильтрами нет, попробуйте поменять фильтры");
+                MessageBox.Show(InscriptionsPhotoUser.ChangeFilter);
                 return;
             }
             likeAccount.Enabled = true;
@@ -74,7 +75,7 @@ namespace HeartFluttering
             }
             else
             {
-                MessageBox.Show("Пользователей с такими фильтрами больше нет");
+                MessageBox.Show(InscriptionsPhotoUser.IsEnd);
                 return;
             }
         }
@@ -91,18 +92,18 @@ namespace HeartFluttering
                     {
                         if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
                         {
-                            MessageBox.Show("Этот пользователь уже был оценён вами");
+                            MessageBox.Show(InscriptionsPhotoUser.AlreadyLiked);
                             return;
                         }
                     }
                     if(currUsers == null)
                     {
-                        MessageBox.Show("Ошибка в добавлении пользователя");
+                        MessageBox.Show(InscriptionsPhotoUser.Error);
                         return;
                     }
                     if(anotherUser == null)
                     {
-                        MessageBox.Show("Ошибка в добавлении пользователя");
+                        MessageBox.Show(InscriptionsPhotoUser.Error);
                         return;
                     }
                     if(currUsers.AnotherAccounts == null)
@@ -141,15 +142,14 @@ namespace HeartFluttering
                     }
                     else
                     {
-                        MessageBox.Show("Данный пользователь добавлен успешно" + 
-                            "\nБольше пользователей нет, поменяйте фильтры");
+                        MessageBox.Show(InscriptionsPhotoUser.ChangeFilter);
                         return;
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Пользователей с такими фильтрами больше нет");
+                MessageBox.Show(InscriptionsPhotoUser.IsEnd);
                 return;
             }
         }

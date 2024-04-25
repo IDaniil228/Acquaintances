@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization.ChooseOneForm;
+using HeartFluttering.Resources.Localization.UserProfileForm;
 
 namespace HeartFluttering
 {
@@ -36,10 +38,10 @@ namespace HeartFluttering
                 var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
                 CurrentUsers.currentUsers = sortedUsers;
                 DataTable table = new DataTable();
-                table.Columns.Add("Место", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
-                table.Columns.Add("Лайки", typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                 for (int i = 0; i < sortedUsers.Count; i++)
                 {
                     table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
@@ -68,10 +70,10 @@ namespace HeartFluttering
                 }
                 CurrentUsers.currentUsers = anotherUsers;
                 DataTable table = new DataTable();
-                table.Columns.Add("Номер", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
-                table.Columns.Add("Лайки", typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                 for (int i = 0; i < anotherUsers.Count; i++)
                 {
                     table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
@@ -100,10 +102,10 @@ namespace HeartFluttering
                 }
                 CurrentUsers.currentUsers = anotherUsers;
                 DataTable table = new DataTable();
-                table.Columns.Add("Номер", typeof(int));
-                table.Columns.Add("Имя", typeof(string));
-                table.Columns.Add("Фамилия", typeof(string));
-                table.Columns.Add("Лайки", typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                 for (int i = 0; i < anotherUsers.Count; i++)
                 {
                     table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
@@ -124,18 +126,18 @@ namespace HeartFluttering
                 {
                     if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
                     {
-                        MessageBox.Show("Этот пользователь уже был оценён вами");
+                        MessageBox.Show(InscriptionsUserProfile.AlreadyLike);
                         return;
                     }
                 }
                 if (currUsers == null)
                 {
-                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    MessageBox.Show(InscriptionsUserProfile.Error);
                     return;
                 }
                 if (anotherUser == null)
                 {
-                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    MessageBox.Show(InscriptionsUserProfile.Error);
                     return;
                 }
                 if (currUsers.AnotherAccounts == null)
@@ -157,7 +159,7 @@ namespace HeartFluttering
                 anotherUser.Likes++;
                 CurrentUser.currentUser = currUsers;
                 context.SaveChanges();
-                MessageBox.Show("Данный пользователь был добавлен в избранное");
+                MessageBox.Show(InscriptionsUserProfile.AlreadyAdded);
             }
         }
         private void likeAccount2_Click(object sender, EventArgs e)
@@ -170,18 +172,18 @@ namespace HeartFluttering
                 {
                     if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
                     {
-                        MessageBox.Show("Этот пользователь уже был оценён вами");
+                        MessageBox.Show(InscriptionsUserProfile.AlreadyLike);
                         return;
                     }
                 }
                 if (currUsers == null)
                 {
-                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    MessageBox.Show(InscriptionsUserProfile.Error);
                     return;
                 }
                 if (anotherUser == null)
                 {
-                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    MessageBox.Show(InscriptionsUserProfile.Error);
                     return;
                 }
                 if (currUsers.AnotherAccounts == null)
@@ -203,7 +205,7 @@ namespace HeartFluttering
                 anotherUser.Likes++;
                 CurrentUser.currentUser = currUsers;
                 context.SaveChanges();
-                MessageBox.Show("Данный пользователь был добавлен в избранное");
+                MessageBox.Show(InscriptionsUserProfile.AlreadyAdded);
             }
         }
         private void UserProfileForm_Load(object sender, EventArgs e)
@@ -214,11 +216,11 @@ namespace HeartFluttering
             cityField.Text = thisUsers.City;
             if (thisUsers.Sex == 1)
             {
-                selField.Text = "Мужской";
+                selField.Text = InscriptionsUserProfile.Man;
             }
             else
             {
-                selField.Text = "Женский";
+                selField.Text = InscriptionsUserProfile.Women;
             }
             mailField.Text = thisUsers.Mail;
             numberField.Text = thisUsers.Number;
@@ -237,12 +239,12 @@ namespace HeartFluttering
                 var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
                 if (currUsers == null)
                 {
-                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    MessageBox.Show(InscriptionsUserProfile.Error);
                     return;
                 }
                 if (anotherUser == null)
                 {
-                    MessageBox.Show("Ошибка в добавлении пользователя");
+                    MessageBox.Show(InscriptionsUserProfile.Error);
                     return;
                 }
                 if (currUsers.AnotherAccounts != null)
@@ -270,7 +272,7 @@ namespace HeartFluttering
                 anotherUser.Likes--;
                 CurrentUser.currentUser = currUsers;
                 context.SaveChanges();
-                MessageBox.Show("Данный пользователь удалён");
+                MessageBox.Show(InscriptionsUserProfile.Delete);
             }
         }
     }

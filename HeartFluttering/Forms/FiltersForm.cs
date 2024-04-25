@@ -1,4 +1,5 @@
 ﻿using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization.FilterForm;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -45,12 +46,12 @@ namespace HeartFluttering
         {
             if (InitialAgeField.Text == string.Empty)
             {
-                MessageBox.Show("Заполните поле для фильтрации возраста");
+                MessageBox.Show(InscriptionsFilter.Age);
                 return;
             }
             if (FinalAgeField.Text == string.Empty)
             {
-                MessageBox.Show("Заполните поле для фильтрации возраста");
+                MessageBox.Show(InscriptionsFilter.Age);
                 return;
             }
             if (InitialAgeField.Text != null)
@@ -59,7 +60,7 @@ namespace HeartFluttering
                 {
                     if (!Char.IsNumber(symbol))
                     {
-                        MessageBox.Show("В поле для возраста должны быть только числа");
+                        MessageBox.Show(InscriptionsFilter.OnlyNumb);
                         return;
                     }
                 }
@@ -69,7 +70,7 @@ namespace HeartFluttering
             {
                 if (!Char.IsNumber(symbol))
                 {
-                    MessageBox.Show("В поле для возраста должны быть только числа");
+                    MessageBox.Show(InscriptionsFilter.OnlyNumb);
                     return;
                 }
             }
@@ -79,19 +80,19 @@ namespace HeartFluttering
             {
                 if (!allCities.getCities().Contains(cityField.Text.ToLower()))
                 {
-                    MessageBox.Show("Такого города не сущеcтвует");
+                    MessageBox.Show(InscriptionsFilter.CityExist);
                     return;
                 }
             }
             int age = FinalAge - InitialAge;
             if (age < 0)
             {
-                MessageBox.Show("Возраст не может быть отрицательным");
+                MessageBox.Show(InscriptionsFilter.AgeРositive);
                 return;
             }
             if (sexMenButton.Checked == false && sexWomenButton.Checked == false)
             {
-                MessageBox.Show("Выберите пол");
+                MessageBox.Show(InscriptionsFilter.Sex);
                 return;
             }
             //string city = cityField.Text.ToLower();
@@ -272,9 +273,6 @@ namespace HeartFluttering
             }
         }
 
-        private void FiltersForm_Load(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }

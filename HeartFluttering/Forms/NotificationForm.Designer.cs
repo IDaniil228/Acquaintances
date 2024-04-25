@@ -43,109 +43,75 @@
             // 
             // girlPhoto
             // 
+            resources.ApplyResources(girlPhoto, "girlPhoto");
             girlPhoto.BackColor = Color.Fuchsia;
-            girlPhoto.Image = (Image)resources.GetObject("girlPhoto.Image");
-            girlPhoto.Location = new Point(348, 30);
             girlPhoto.Name = "girlPhoto";
-            girlPhoto.Size = new Size(63, 58);
-            girlPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
-            girlPhoto.TabIndex = 45;
             girlPhoto.TabStop = false;
             // 
             // boyPhoto
             // 
+            resources.ApplyResources(boyPhoto, "boyPhoto");
             boyPhoto.BackColor = Color.Fuchsia;
-            boyPhoto.Image = (Image)resources.GetObject("boyPhoto.Image");
-            boyPhoto.Location = new Point(12, 30);
             boyPhoto.Name = "boyPhoto";
-            boyPhoto.Size = new Size(63, 58);
-            boyPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
-            boyPhoto.TabIndex = 44;
             boyPhoto.TabStop = false;
             // 
             // CollapseButton
             // 
-            CollapseButton.Anchor = AnchorStyles.Bottom;
+            resources.ApplyResources(CollapseButton, "CollapseButton");
             CollapseButton.BackColor = Color.Fuchsia;
             CollapseButton.FlatAppearance.BorderSize = 0;
             CollapseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
             CollapseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
-            CollapseButton.FlatStyle = FlatStyle.Flat;
-            CollapseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CollapseButton.ForeColor = Color.White;
-            CollapseButton.Location = new Point(355, 0);
             CollapseButton.Name = "CollapseButton";
-            CollapseButton.Size = new Size(35, 23);
-            CollapseButton.TabIndex = 43;
-            CollapseButton.Text = "—";
             CollapseButton.UseVisualStyleBackColor = false;
             CollapseButton.Click += CollapseButton_Click;
             // 
             // CloseButton
             // 
+            resources.ApplyResources(CloseButton, "CloseButton");
             CloseButton.BackColor = Color.Fuchsia;
             CloseButton.FlatAppearance.BorderSize = 0;
             CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
             CloseButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
-            CloseButton.FlatStyle = FlatStyle.Flat;
-            CloseButton.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             CloseButton.ForeColor = Color.White;
-            CloseButton.Location = new Point(388, 0);
             CloseButton.Name = "CloseButton";
-            CloseButton.Size = new Size(35, 23);
-            CloseButton.TabIndex = 42;
-            CloseButton.Text = "X";
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += CloseButton_Click;
             // 
             // entryLabel
             // 
+            resources.ApplyResources(entryLabel, "entryLabel");
             entryLabel.BackColor = Color.Magenta;
-            entryLabel.Dock = DockStyle.Top;
-            entryLabel.Font = new Font("Segoe Print", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
-            entryLabel.Location = new Point(0, 0);
             entryLabel.Name = "entryLabel";
-            entryLabel.Size = new Size(423, 88);
-            entryLabel.TabIndex = 41;
-            entryLabel.Text = "Уведомления";
-            entryLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // backButton
             // 
+            resources.ApplyResources(backButton, "backButton");
             backButton.BackColor = Color.Fuchsia;
-            backButton.BackgroundImageLayout = ImageLayout.None;
             backButton.FlatAppearance.BorderSize = 0;
             backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
             backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
-            backButton.FlatStyle = FlatStyle.Flat;
-            backButton.Font = new Font("Segoe Print", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             backButton.ForeColor = Color.White;
-            backButton.Location = new Point(143, 440);
             backButton.Name = "backButton";
-            backButton.Size = new Size(130, 34);
-            backButton.TabIndex = 57;
-            backButton.Text = "Назад";
             backButton.UseVisualStyleBackColor = false;
             backButton.Click += backButton_Click;
             // 
             // listUsers
             // 
+            resources.ApplyResources(listUsers, "listUsers");
             listUsers.AllowUserToAddRows = false;
             listUsers.BackgroundColor = Color.White;
             listUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            listUsers.Location = new Point(0, 91);
             listUsers.Name = "listUsers";
-            listUsers.Size = new Size(423, 351);
-            listUsers.TabIndex = 58;
             listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
             // NotificationForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(423, 474);
             Controls.Add(listUsers);
             Controls.Add(backButton);
             Controls.Add(girlPhoto);
@@ -155,7 +121,6 @@
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "NotificationForm";
-            Text = "RegistrForm2";
             Load += NotificationForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();

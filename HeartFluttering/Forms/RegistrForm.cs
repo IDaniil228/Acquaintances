@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization;
+using HeartFluttering.Resources.Localization.AuthorForm;
 using HeartFluttering.Resources.Localization.RegistrForm;
 
 namespace HeartFluttering
