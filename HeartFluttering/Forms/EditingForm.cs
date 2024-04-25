@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization;
+using HeartFluttering.Resources.Localization.EditingForms;
 
 namespace HeartFluttering
 {
@@ -43,7 +45,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void nameField_Enter(object sender, EventArgs e)
         {
-            if (nameField.Text.Equals("Не заполнено..."))
+            if (nameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
             {
                 nameField.Text = string.Empty;
                 nameField.ForeColor = Color.Black;
@@ -59,7 +61,7 @@ namespace HeartFluttering
             if (nameField.Text.Equals(string.Empty))
             {
                 nameField.ForeColor = Color.Gray;
-                nameField.Text = "Не заполнено...";
+                nameField.Text = InscriptionsEditing.StringIsEmpty;
             }
         }
         /// <summary>
@@ -69,7 +71,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void surnameField_Enter(object sender, EventArgs e)
         {
-            if (surnameField.Text.Equals("Не заполнено..."))
+            if (surnameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
             {
                 surnameField.Text = string.Empty;
                 surnameField.ForeColor = Color.Black;
@@ -85,7 +87,7 @@ namespace HeartFluttering
             if (surnameField.Text.Equals(string.Empty))
             {
                 surnameField.ForeColor = Color.Gray;
-                surnameField.Text = "Не заполнено...";
+                surnameField.Text = InscriptionsEditing.StringIsEmpty;
             }
         }
         /// <summary>
@@ -95,7 +97,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void birhdayField_Enter(object sender, EventArgs e)
         {
-            if (birhdayField.Text.Equals("Не заполнено..."))
+            if (birhdayField.Text.Equals(InscriptionsEditing.StringIsEmpty))
             {
                 birhdayField.Text = string.Empty;
                 birhdayField.ForeColor = Color.Black;
@@ -111,7 +113,7 @@ namespace HeartFluttering
             if (birhdayField.Text.Equals(string.Empty))
             {
                 birhdayField.ForeColor = Color.Gray;
-                birhdayField.Text = "Не заполнено...";
+                birhdayField.Text = InscriptionsEditing.StringIsEmpty;
             }
         }
         /// <summary>
@@ -121,7 +123,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void cityField_Enter(object sender, EventArgs e)
         {
-            if (cityField.Text.Equals("Не заполнено..."))
+            if (cityField.Text.Equals(InscriptionsEditing.StringIsEmpty))
             {
                 cityField.Text = string.Empty;
                 cityField.ForeColor = Color.Black;
@@ -137,7 +139,7 @@ namespace HeartFluttering
             if (cityField.Text.Equals(string.Empty))
             {
                 cityField.ForeColor = Color.Gray;
-                cityField.Text = "Не заполнено...";
+                cityField.Text = InscriptionsEditing.StringIsEmpty;
             }
         }
         /// <summary>
@@ -147,7 +149,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void emailField_Enter(object sender, EventArgs e)
         {
-            if (emailField.Text.Equals("Не заполнено..."))
+            if (emailField.Text.Equals(InscriptionsEditing.StringIsEmpty))
             {
                 emailField.Text = string.Empty;
                 emailField.ForeColor = Color.Black;
@@ -163,7 +165,7 @@ namespace HeartFluttering
             if (emailField.Text.Equals(string.Empty))
             {
                 emailField.ForeColor = Color.Gray;
-                emailField.Text = "Не заполнено...";
+                emailField.Text = InscriptionsEditing.StringIsEmpty;
             }
         }
         /// <summary>
@@ -173,7 +175,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void numberField_Enter(object sender, EventArgs e)
         {
-            if (numberField.Text.Equals("Не заполнено..."))
+            if (numberField.Text.Equals(InscriptionsEditing.StringIsEmpty))
             {
                 numberField.Text = string.Empty;
                 numberField.ForeColor = Color.Black;
@@ -189,7 +191,7 @@ namespace HeartFluttering
             if (numberField.Text.Equals(string.Empty))
             {
                 numberField.ForeColor = Color.Gray;
-                numberField.Text = "Не заполнено...";
+                numberField.Text = InscriptionsEditing.StringIsEmpty;
             }
         }
         /// <summary>
@@ -277,24 +279,24 @@ namespace HeartFluttering
                 var person = context.Users.FirstOrDefault(r => r.Id.Equals(user.Id));
                 if (person == null)
                 {
-                    MessageBox.Show("Пользователь не найден");
+                    MessageBox.Show(InscriptionsEditing.UserNotFound);
                     return;
                 }
-                if (nameField.Text == string.Empty && nameField.Text.Equals("Не заполнено..."))
+                if (nameField.Text == string.Empty && nameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                 {
-                    MessageBox.Show("Поле для имени должно быть заполнено");
+                    MessageBox.Show(InscriptionsEditing.Name);
                     return;
                 }
-                if (surnameField.Text == string.Empty && surnameField.Text.Equals("Не заполнено..."))
+                if (surnameField.Text == string.Empty && surnameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                 {
-                    MessageBox.Show("Поле для фамилии должно быть заполнено");
+                    MessageBox.Show(InscriptionsEditing.Surname);
                 }
 
                 foreach (char letter in nameField.Text)
                 {
                     if (!Char.IsLetter(letter))
                     {
-                        MessageBox.Show("Вашем имени должны быть только буквы");
+                        MessageBox.Show(InscriptionsEditing.LetterInName);
                         return;
                     }
                 }
@@ -303,7 +305,7 @@ namespace HeartFluttering
                 {
                     if (!Char.IsLetter(letter))
                     {
-                        MessageBox.Show("Вашей фамилии должны быть только буквы");
+                        MessageBox.Show(InscriptionsEditing.LetterInSurname);
                         return;
                     }
                 }
@@ -313,24 +315,24 @@ namespace HeartFluttering
                 int yearNow = DateTime.Now.Year;
                 if ((yearNow - yearOld) < 18)
                 {
-                    MessageBox.Show("Вы ещё слишком молоды");
+                    MessageBox.Show(InscriptionsEditing.Youth);
                     return;
                 }
-                if ((yearNow - yearOld) > 100)
+                if ((yearNow - yearOld) > 120)
                 {
-                    MessageBox.Show("Вам не может быть столько много лет");
+                    MessageBox.Show(InscriptionsEditing.Old);
                     return;
                 }
                 DateTime birth = new DateTime(time.Year, time.Month, time.Day);
                 person.DateOfBirth = birth.ToString();
-                if(cityField.Text == string.Empty && cityField.Text.Equals("Не заполнено..."))
+                if(cityField.Text == string.Empty && cityField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                 {
-                    MessageBox.Show("Поле для города должно быть заполнено");
+                    MessageBox.Show(InscriptionsEditing.City);
                 }
                 AllCities Allcities = new AllCities();
                 if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
                 {
-                    MessageBox.Show("Такого города не существует");
+                    MessageBox.Show(InscriptionsEditing.CityNotExist);
                     return;
                 }
                
@@ -344,7 +346,7 @@ namespace HeartFluttering
                 {
                     person.Sex = 0;
                 }
-                if(emailField.Text == string.Empty && emailField.Text.Equals("Не заполнено..."))
+                if(emailField.Text == string.Empty && emailField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                 {
                     person.Mail = null;
                 }
@@ -356,7 +358,7 @@ namespace HeartFluttering
                     {
                         if (!Char.IsNumber(numb))
                         {
-                            MessageBox.Show("В номере телефона не должно быть букв");
+                            MessageBox.Show(InscriptionsEditing.NumsInPhone);
                             return;
                         }
                     }

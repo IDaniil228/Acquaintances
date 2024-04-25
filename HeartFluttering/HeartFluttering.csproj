@@ -24,6 +24,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Localization\EditingForms\InscriptionsEditing.en.Designer.cs">
+      <DependentUpon>InscriptionsEditing.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\EditingForms\InscriptionsEditing.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsEditing.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Localization\RegistrForm\InscriptionsSignUp.en.Designer.cs">
       <DependentUpon>InscriptionsSignUp.en.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -50,6 +60,14 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\EditingForms\InscriptionsEditing.en.resx">
+      <LastGenOutput>InscriptionsEditing.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\EditingForms\InscriptionsEditing.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsEditing.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Localization\RegistrForm\InscriptionsSignUp.en.resx">
       <LastGenOutput>InscriptionsSignUp.en.Designer.cs</LastGenOutput>
