@@ -100,6 +100,7 @@ namespace HeartFluttering
                 editingForm.numberField.ForeColor = Color.Black;
             }
             editingForm.user = CurrentUser.currentUser;
+            logger.Trace("Открытие формы редактирования");
             editingForm.ShowDialog();
         }
         /// <summary>
@@ -151,22 +152,31 @@ namespace HeartFluttering
                 }
             }
             byte[] imageBytes;
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                var person = context.Users.FirstOrDefault(r => r.Id.Equals(CurrentUser.currentUser.Id));
-                if (person == null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    MessageBox.Show("Пользователь не найден");
-                    return;
+                    var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    logger.Warn("Получение текущего пользователя по");
+                    if (person == null)
+                    {
+                        MessageBox.Show("Пользователь не найден");
+                        return;
+                    }
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        photoField.Image.Save(ms, photoField.Image.RawFormat);
+                        imageBytes = ms.ToArray();
+                    }
+                    CurrentUser.currentUser.Photo = imageBytes;
+                    person.Photo = CurrentUser.currentUser.Photo;
+                    context.SaveChanges();
                 }
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    photoField.Image.Save(ms, photoField.Image.RawFormat);
-                    imageBytes = ms.ToArray();
-                }
-                CurrentUser.currentUser.Photo = imageBytes;
-                person.Photo = CurrentUser.currentUser.Photo;
-                context.SaveChanges();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключении к базе данных");
             }
         }
         /// <summary>
@@ -176,6 +186,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void searchButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Открытие формы для фильтров");
             this.Hide();
             FiltersForm filtersForm = new FiltersForm();
             filtersForm.ShowDialog();
@@ -187,25 +198,37 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void recommendButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
-                var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
-                CurrentUsers.currentUsers = sortedUsers;
-                DataTable table = new DataTable();
-                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
-                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
-                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
-                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
-                for (int i = 0; i < sortedUsers.Count; i++)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
+                    var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    logger.Info("Получение всех пользователей, кроме текущего пользователя");
+                    var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
+                    logger.Info("Сортировка всех пользователей по лайкам");
+                    CurrentUsers.currentUsers = sortedUsers;
+                    DataTable table = new DataTable();
+                    table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                    table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
+                    for (int i = 0; i < sortedUsers.Count; i++)
+                    {
+                        table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
+                    }
+                    RecommenForm recommenForm = new RecommenForm();
+                    recommenForm.listUsers.DataSource = table;
+                    logger.Info("Создание таблицы для формы рекомендации");
+                    RecommenTable.thisTable = table;
+                    logger.Trace("Открытие формы рекомендации");
+                    this.Hide();
+                    recommenForm.Show();
                 }
-                RecommenForm recommenForm = new RecommenForm();
-                recommenForm.listUsers.DataSource = table;
-                RecommenTable.thisTable = table;
-                this.Hide();
-                recommenForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключение к базе данных");
             }
         }
         /// <summary>
@@ -215,35 +238,45 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void favoritesButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                List<User> anotherUsers = new List<User>();
-                if (CurrentUser.currentUser.AnotherAccounts != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    foreach (string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                    List<User> anotherUsers = new List<User>();
+                    if (CurrentUser.currentUser.AnotherAccounts != null)
                     {
-                        var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
-                        if (favoritesUsers != null)
+                        foreach (string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
                         {
-                            anotherUsers.Add(favoritesUsers);
+                            var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
+                            if (favoritesUsers != null)
+                            {
+                                anotherUsers.Add(favoritesUsers);
+                            }
                         }
                     }
+                    CurrentUsers.currentUsers = anotherUsers;
+                    DataTable table = new DataTable();
+                    table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                    table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
+                    for (int i = 0; i < anotherUsers.Count; i++)
+                    {
+                        table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                    }
+                    ChosenOneForm chosenOneForm = new ChosenOneForm();
+                    logger.Info("Создание таблицы для формы избранное");
+                    chosenOneForm.listUsers.DataSource = table;
+                    FavoritesTable.favoritTable = table;
+                    logger.Trace("Открытие формы избранное");
+                    this.Hide();
+                    chosenOneForm.Show();
                 }
-                CurrentUsers.currentUsers = anotherUsers;
-                DataTable table = new DataTable();
-                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
-                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
-                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
-                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
-                for (int i = 0; i < anotherUsers.Count; i++)
-                {
-                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
-                }
-                ChosenOneForm chosenOneForm = new ChosenOneForm();
-                chosenOneForm.listUsers.DataSource = table;
-                FavoritesTable.favoritTable = table;
-                this.Hide();
-                chosenOneForm.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключение к базе данных");
             }
         }
         /// <summary>
@@ -253,35 +286,45 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void notificationButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                List<User> anotherUsers = new List<User>();
-                if (CurrentUser.currentUser.Notifications != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    foreach (string idUser in CurrentUser.currentUser.Notifications.Split(','))
+                    List<User> anotherUsers = new List<User>();
+                    if (CurrentUser.currentUser.Notifications != null)
                     {
-                        var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
-                        if (favoritesUsers != null)
+                        foreach (string idUser in CurrentUser.currentUser.Notifications.Split(','))
                         {
-                            anotherUsers.Add(favoritesUsers);
+                            var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
+                            if (favoritesUsers != null)
+                            {
+                                anotherUsers.Add(favoritesUsers);
+                            }
                         }
                     }
+                    CurrentUsers.currentUsers = anotherUsers;
+                    DataTable table = new DataTable();
+                    table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
+                    table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
+                    for (int i = 0; i < anotherUsers.Count; i++)
+                    {
+                        table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                    }
+                    NotificationForm notificationForm = new NotificationForm();
+                    notificationForm.listUsers.DataSource = table;
+                    logger.Info("Создание таблицы для формы уведомления");
+                    NotificationTable.notificationTable = table;
+                    logger.Trace("Открытие формы уведомления");
+                    this.Hide();
+                    notificationForm.Show();
                 }
-                CurrentUsers.currentUsers = anotherUsers;
-                DataTable table = new DataTable();
-                table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
-                table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
-                table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
-                table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
-                for (int i = 0; i < anotherUsers.Count; i++)
-                {
-                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
-                }
-                NotificationForm notificationForm = new NotificationForm();
-                notificationForm.listUsers.DataSource = table;
-                NotificationTable.notificationTable = table;
-                this.Hide();
-                notificationForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключение к базе данных");
             }
         }
 
