@@ -238,7 +238,7 @@ namespace HeartFluttering
                 context.Accounts.Add(account);
                 User user = new User();
                 user.IdUsers = Guid.NewGuid().ToString();
-                foreach (char letter in nameField.Text)
+                foreach (char letter in nameField.Text)//
                 {
                     if (!Char.IsLetter(letter))
                     {
@@ -248,7 +248,7 @@ namespace HeartFluttering
                 }
                 user.Name = nameField.Text;
 
-                foreach (char letter in surnameField.Text)
+                foreach (char letter in surnameField.Text)//
                 {
                     if (!Char.IsLetter(letter))
                     {
@@ -272,11 +272,11 @@ namespace HeartFluttering
                     MessageBox.Show(InscriptionsSignUp.Old);
                     return;
                 }
-                DateTime birth = new DateTime(time.Year, time.Month, time.Day);
-                user.DateOfBirth = birth.ToString();
+                string birth = time.ToString("dd.MM.yyyy");
+                user.DateOfBirth = birth;
 
                 AllCities Allcities = new AllCities();
-                if (cityField.Text != string.Empty)
+                if (cityField.Text != string.Empty)//
                 {
                     if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
                     {

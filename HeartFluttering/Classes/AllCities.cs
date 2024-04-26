@@ -1150,7 +1150,10 @@ namespace HeartFluttering.Classes
 "ярцево",
 "ясногорск",
 "ясный",
-"яхрома" };
+"яхрома",
+"москва",
+"московская область"};
+
 
         public List<string> getCities()
         {

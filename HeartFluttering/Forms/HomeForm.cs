@@ -10,15 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
+using NLog;
 
 
 namespace HeartFluttering
 {
     public partial class HomeForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public HomeForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
         /// <summary>
         /// Кнопка для закрытия приложения
@@ -27,6 +30,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Закрытие приложения");
             Application.Exit();
         }
         /// <summary>
@@ -36,6 +40,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачение приложения");
             this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
@@ -45,6 +50,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void closeAccount_Click(object sender, EventArgs e)
         {
+            logger.Trace("Переход в форму входа");
             this.Hide();
             AuthorizationForm form = new AuthorizationForm();
             form.Show();
@@ -103,6 +109,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void HomeForm_Load(object sender, EventArgs e)
         {
+            logger.Info("Загрузка данных в главной формы");
             nameField.Text = CurrentUser.currentUser.Name;
             surnameField.Text = CurrentUser.currentUser.Surname;
             BirhdayField.Text = CurrentUser.currentUser.DateOfBirth;

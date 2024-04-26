@@ -60,17 +60,26 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void AdministratorForm_Load(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                var users = context.Users;
-                DataTable table = GetDataTable();
-                foreach (var user in users)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    table.Rows.Add((position), user.Name, user.Surname);
-                    position++;
+                    var users = context.Users;
+                    logger.Info("Получение всех пользователей из базы данных");
+                    DataTable table = GetDataTable();
+                    foreach (var user in users)
+                    {
+                        table.Rows.Add((position), user.Name, user.Surname);
+                        position++;
+                    }
+                    CurrentUsers.currentUsers = users.ToList();
+                    listUsers.DataSource = table;
                 }
-                CurrentUsers.currentUsers = users.ToList();
-                listUsers.DataSource = table;
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
             }
         }
         /// <summary>
@@ -94,6 +103,7 @@ namespace HeartFluttering
                     MessageBox.Show(warning);
                     return;
                 }
+                logger.Info($"Получение пользователя по {position} позиции");
                 if (selectedUser != null)
                 {
                     nameField.Text = selectedUser.Name;
@@ -131,28 +141,36 @@ namespace HeartFluttering
         private void searchLine_TextChanged(object sender, EventArgs e)
         {
             DataTable table = GetDataTable();
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                string usersNames = searchLine.Text;
-                var users = context.Users.ToList();
-                if (users != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    for (int i = 0; i < users.Count; i++)
+                    string usersNames = searchLine.Text;
+                    var users = context.Users.ToList();
+                    if (users != null)
                     {
-                        if (users[i].Name != null && users[i].Surname != null)
+                        for (int i = 0; i < users.Count; i++)
                         {
-                            if (users[i].Name.StartsWith(usersNames))
+                            if (users[i].Name != null && users[i].Surname != null)
                             {
-                                table.Rows.Add((i + 1), users[i].Name, users[i].Surname);
-                            }
-                            else if (users[i].Surname.StartsWith(usersNames))
-                            {
-                                table.Rows.Add((i + 1), users[i].Name, users[i].Surname);
+                                if (users[i].Name.StartsWith(usersNames))
+                                {
+                                    table.Rows.Add((i + 1), users[i].Name, users[i].Surname);
+                                }
+                                else if (users[i].Surname.StartsWith(usersNames))
+                                {
+                                    table.Rows.Add((i + 1), users[i].Name, users[i].Surname);
+                                }
                             }
                         }
                     }
+                    listUsers.DataSource = table;
                 }
-                listUsers.DataSource = table;
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
             }
         }
         /// <summary>
@@ -162,17 +180,26 @@ namespace HeartFluttering
         /// <returns></returns>
         private User GettingUserById(string idUser)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                if(CurrentUser.currentUser != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    var user = context.Users.FirstOrDefault(r => idUser.Equals(r.IdUsers));
-                    return user;
+                    if (CurrentUser.currentUser != null)
+                    {
+                        var user = context.Users.FirstOrDefault(r => idUser.Equals(r.IdUsers));
+                        return user;
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
-                else
-                {
-                    return null;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
+                return null;
             }
         }
         /// <summary>
@@ -182,17 +209,26 @@ namespace HeartFluttering
         /// <returns></returns>
         private Account GettingAccountById(User user)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                if(CurrentUser.currentUser != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    var account = context.Accounts.FirstOrDefault(r => r.Id.Equals(user.Id));
-                    return account;
+                    if (CurrentUser.currentUser != null)
+                    {
+                        var account = context.Accounts.FirstOrDefault(r => r.Id.Equals(user.Id));
+                        return account;
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
-                else
-                {
-                    return null;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
+                return null;
             }
         }
         /// <summary>
@@ -202,41 +238,51 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void deleteAccountButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                if(CurrentUser.currentUser != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    var user = GettingUserById(CurrentUser.currentUser.IdUsers);
-                    if (user == null)
+                    if (CurrentUser.currentUser != null)
+                    {
+                        var user = GettingUserById(CurrentUser.currentUser.IdUsers);
+                        if (user == null)
+                        {
+                            MessageBox.Show(warning);
+                            return;
+                        }
+                        var account = GettingAccountById(user);
+                        if (account == null)
+                        {
+                            MessageBox.Show(warning);
+                            return;
+                        }
+                        logger.Debug($"Удален пользователь по Id: {user.IdUsers}");
+                        context.Remove(user);
+                        context.Remove(account);
+                        context.SaveChanges();
+                        MessageBox.Show(InscriptionsAdmin.Delete);
+                    }
+                    else
                     {
                         MessageBox.Show(warning);
                         return;
                     }
-                    var account = GettingAccountById(user);
-                    if (account == null)
+                    var users = context.Users;
+                    logger.Info("Получение всех пользователей из базы данных");
+                    DataTable table = GetDataTable();
+                    foreach (var user in users)
                     {
-                        MessageBox.Show(warning);
-                        return;
+                        table.Rows.Add((position), user.Name, user.Surname);
+                        position++;
                     }
-                    context.Remove(user);
-                    context.Remove(account);
-                    context.SaveChanges();
-                    MessageBox.Show(InscriptionsAdmin.Delete);
+                    CurrentUsers.currentUsers = users.ToList();
+                    listUsers.DataSource = table;
                 }
-                else
-                {
-                    MessageBox.Show(warning);
-                    return;
-                }
-                var users = context.Users;
-                DataTable table = GetDataTable();
-                foreach (var user in users)
-                {
-                    table.Rows.Add((position), user.Name, user.Surname);
-                    position++;
-                }
-                CurrentUsers.currentUsers = users.ToList();
-                listUsers.DataSource = table;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
             }
         }
     }

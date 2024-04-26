@@ -1,11 +1,13 @@
 ﻿using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.FilterForm;
 using Microsoft.VisualBasic;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +17,11 @@ namespace HeartFluttering
 {
     public partial class FiltersForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public FiltersForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
         /// <summary>
         /// Кнопка закрытия приложения
@@ -26,6 +30,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Закрытие приложения");
             Application.Exit();
         }
         /// <summary>
@@ -35,6 +40,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачивание приложения");
             this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
@@ -65,6 +71,7 @@ namespace HeartFluttering
                     }
                 }
             }
+            logger.Warn("Проверка на корректный возраст");
             int InitialAge = Convert.ToInt32(InitialAgeField.Text);
             foreach (char symbol in FinalAgeField.Text)
             {
@@ -74,6 +81,7 @@ namespace HeartFluttering
                     return;
                 }
             }
+            logger.Warn("Проверка на корректный возраст");
             int FinalAge = Convert.ToInt32(FinalAgeField.Text);
             AllCities allCities = new AllCities();
             if (cityField.Text != string.Empty)
@@ -83,6 +91,19 @@ namespace HeartFluttering
                     MessageBox.Show(InscriptionsFilter.CityExist);
                     return;
                 }
+            }
+            logger.Warn("Проверка на существующий город");
+            if(InitialAge < 18)
+            {
+                // Для Дани, доделать локализацию
+                MessageBox.Show("Нельзя найти такого молодого пользователя");
+                return;
+            }
+            if(FinalAge > 115)
+            {
+                // Для Дани, доделать локализацию
+                MessageBox.Show("Нельзя найти такого старого пользователя");
+                return;
             }
             int age = FinalAge - InitialAge;
             if (age < 0)
@@ -101,178 +122,228 @@ namespace HeartFluttering
             PhotoUserForm photoUserForm = new PhotoUserForm();
             if (cityField.Text == string.Empty && sexMenButton.Checked == true)
             {
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var users = context.Users.Where(r => r.Sex == 1);
-                    foreach (User user in users)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        try
+                        var users = context.Users.Where(r => r.Sex == 1);
+                        foreach (User user in users)
                         {
-                            if(CurrentUser.currentUser.AnotherAccounts == null)
+                            DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                            provider.ShortDatePattern = "dd.MM.yyyy";
+                            try
                             {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                if (CurrentUser.currentUser.AnotherAccounts == null)
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
-                            }
-                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
-                            {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
+                                logger.Warn("Получение пользователей по установленным фильтрам");
+                            }
+                            catch (Exception ex)
+                            {
+                                logger.Error("Ошибка расшифровки даты");
+                                MessageBox.Show(ex.Message);
+                                return;
                             }
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                            return;
-                        }
+                        photoUserForm.currentUsers = currentUsers;
+                        logger.Trace("Открытие формы для поиска пользователей по установленным фильтрам");
+                        this.Hide();
+                        photoUserForm.Show();
                     }
-                    photoUserForm.currentUsers = currentUsers;
-                    this.Hide();
-                    photoUserForm.Show();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключение к базе данных");
                 }
             }
             if (cityField.Text == string.Empty && sexWomenButton.Checked == true)
             {
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var users = context.Users.Where(r => r.Sex == 0);
-                    foreach (User user in users)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        try
+                        var users = context.Users.Where(r => r.Sex == 0);
+                        foreach (User user in users)
                         {
-                            if (CurrentUser.currentUser.AnotherAccounts == null)
+                            DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                            provider.ShortDatePattern = "dd.MM.yyyy";
+                            try
                             {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                if (CurrentUser.currentUser.AnotherAccounts == null)
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                     (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                         (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
-                            }
-                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
-                            {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                     (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                         (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
+                                logger.Warn("Получение пользователей по установленным фильтрам");
+                            }
+                            catch (Exception ex)
+                            {
+                                logger.Error("Ошибка расшифровки даты");
+                                MessageBox.Show(ex.Message);
+                                return;
                             }
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                            return;
-                        }
+                        logger.Trace("Открытие формы для поиска пользователей по установленным фильтрам");
+                        photoUserForm.currentUsers = currentUsers;
+                        this.Hide();
+                        photoUserForm.Show();
                     }
-                    photoUserForm.currentUsers = currentUsers;
-                    this.Hide();
-                    photoUserForm.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключение к базе данных");
                 }
             }
             if (cityField.Text != string.Empty && sexMenButton.Checked == true)
             {
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var users = context.Users.Where(r => r.Sex == 1 && r.City.Equals(cityField.Text));
-                    foreach (User user in users)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        try
+                        var users = context.Users.Where(r => r.Sex == 1 && r.City.Equals(cityField.Text));
+                        foreach (User user in users)
                         {
-                            if (CurrentUser.currentUser.AnotherAccounts == null)
+                            DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                            provider.ShortDatePattern = "dd.MM.yyyy";
+                            try
                             {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                if (CurrentUser.currentUser.AnotherAccounts == null)
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
-                            }
-                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
-                            {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
+                                logger.Warn("Получение пользователей по установленным фильтрам");
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                            return;
+                            catch (Exception ex)
+                            {
+                                logger.Error("Ошибка расшифровки даты");
+                                MessageBox.Show(ex.Message);
+                                return;
+                            }
                         }
                     }
+                    logger.Trace("Открытие формы для поиска пользователей по установленным фильтрам");
+                    photoUserForm.currentUsers = currentUsers;
+                    this.Hide();
+                    photoUserForm.Show();
                 }
-                photoUserForm.currentUsers = currentUsers;
-                this.Hide();
-                photoUserForm.Show();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключение к базе данных");
+                }
             }
             if (cityField.Text != string.Empty && sexWomenButton.Checked == true)
             {
-                using (var context = new AcquaintanceSqlContext())
+                try
                 {
-                    var users = context.Users.Where(r => r.Sex == 0 && r.City.Equals(cityField.Text));
-                    foreach (User user in users)
+                    using (var context = new AcquaintanceSqlContext())
                     {
-                        try
+                        var users = context.Users.Where(r => r.Sex == 0 && r.City.Equals(cityField.Text));
+                        foreach (User user in users)
                         {
-                            if (CurrentUser.currentUser.AnotherAccounts == null)
+                            DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                            provider.ShortDatePattern = "dd.MM.yyyy";
+                            try
                             {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                if (CurrentUser.currentUser.AnotherAccounts == null)
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
-                            }
-                            else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
-                            {
-                                if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
+                                else if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(user.IdUsers))
                                 {
-                                    if ((DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) >= InitialAge &&
-                                (DateTime.Now.Year - DateTime.Parse(user.DateOfBirth).Year) <= FinalAge)
+                                    if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        currentUsers.Add(user);
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        {
+                                            currentUsers.Add(user);
+                                        }
                                     }
                                 }
+                                logger.Warn("Получение пользователей по установленным фильтрам");
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                            return;
+                            catch (Exception ex)
+                            {
+                                logger.Error("Ошибка расшифровки даты");
+                                MessageBox.Show(ex.Message);
+                                return;
+                            }
                         }
                     }
+                    logger.Trace("Открытие формы для поиска пользователей по установленным фильтрам");
+                    photoUserForm.currentUsers = currentUsers;
+                    this.Hide();
+                    photoUserForm.Show();
                 }
-                photoUserForm.currentUsers = currentUsers;
-                this.Hide();
-                photoUserForm.Show();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключение к базе данных");
+                }
             }
         }
-
-
     }
 }

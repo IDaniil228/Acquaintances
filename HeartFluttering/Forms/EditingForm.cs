@@ -10,15 +10,18 @@ using System.Windows.Forms;
 using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization;
 using HeartFluttering.Resources.Localization.EditingForms;
+using NLog;
 
 namespace HeartFluttering
 {
     public partial class EditingForm : Form
     {
         public User user;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public EditingForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
         /// <summary>
         /// Кнопка для закрытия приложения
@@ -27,6 +30,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Закрытие приложения");
             Application.Exit();
         }
         /// <summary>
@@ -36,6 +40,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачивание приложения");
             this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
@@ -202,70 +207,10 @@ namespace HeartFluttering
         private void backButton_Click(object sender, EventArgs e)
         {
             CurrentUser.currentUser = user;
+            logger.Trace("Переход в главную форму");
             this.Hide();
             HomeForm homeForm = new HomeForm();
             homeForm.ShowDialog();
-            /*
-            if (user.Name != null)
-            {
-                homeForm.nameField.Text = user.Name;
-                homeForm.nameField.ForeColor = Color.Black;
-            }
-
-            if (user.Surname != null)
-            {
-                homeForm.surnameField.Text = user.Surname;
-                homeForm.surnameField.ForeColor = Color.Black;
-            }
-
-            if (user.DateOfBirth != null)
-            {
-                homeForm.BirhdayField.Text = user.DateOfBirth.ToString();
-                homeForm.BirhdayField.ForeColor = Color.Black;
-            }
-
-            if (user.City != null)
-            {
-                homeForm.cityField.Text = user.City;
-                homeForm.cityField.ForeColor = Color.Black;
-            }
-
-            if (user.Sex != null)
-            {
-                if (user.Sex == 1)
-                {
-                    homeForm.sexField.Text = "Мужской";
-                    homeForm.sexField.ForeColor = Color.Black;
-                }
-                else
-                {
-                    homeForm.sexField.Text = "Женский";
-                    homeForm.sexField.ForeColor = Color.Black;
-                }
-            }
-
-            if (user.Mail != null)
-            {
-                homeForm.emailField.Text = user.Mail;
-                homeForm.emailField.ForeColor = Color.Black;
-            }
-
-            if (user.Number != null)
-            {
-                homeForm.numberField.Text = user.Number;
-                homeForm.numberField.ForeColor = Color.Black;
-            }
-            else
-            {
-                homeForm.numberField.Text = user.Number;
-            }
-
-            if (user.Photo != null)
-            {
-                MemoryStream memoryStream = new MemoryStream(user.Photo);
-                homeForm.photoField.Image = Image.FromStream(memoryStream);
-            }
-            */
         }
         /// <summary>
         /// Кнопка для редактирования пользователя
@@ -274,105 +219,120 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void redactionButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                var person = context.Users.FirstOrDefault(r => r.Id.Equals(user.Id));
-                if (person == null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    MessageBox.Show(InscriptionsEditing.UserNotFound);
-                    return;
-                }
-                if (nameField.Text == string.Empty && nameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
-                {
-                    MessageBox.Show(InscriptionsEditing.Name);
-                    return;
-                }
-                if (surnameField.Text == string.Empty && surnameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
-                {
-                    MessageBox.Show(InscriptionsEditing.Surname);
-                }
-
-                foreach (char letter in nameField.Text)
-                {
-                    if (!Char.IsLetter(letter))
+                    var person = context.Users.FirstOrDefault(r => r.Id.Equals(user.Id));
+                    logger.Info("Получение текущего пользователя из базы данных");
+                    if (person == null)
                     {
-                        MessageBox.Show(InscriptionsEditing.LetterInName);
+                        MessageBox.Show(InscriptionsEditing.UserNotFound);
                         return;
                     }
-                }
-                person.Name = nameField.Text;
-                foreach (char letter in surnameField.Text)
-                {
-                    if (!Char.IsLetter(letter))
+                    if (nameField.Text == string.Empty && nameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                     {
-                        MessageBox.Show(InscriptionsEditing.LetterInSurname);
+                        MessageBox.Show(InscriptionsEditing.Name);
                         return;
                     }
-                }
-                person.Surname = surnameField.Text;
-                DateTime time = birhdayField.Value;
-                int yearOld = time.Year;
-                int yearNow = DateTime.Now.Year;
-                if ((yearNow - yearOld) < 18)
-                {
-                    MessageBox.Show(InscriptionsEditing.Youth);
-                    return;
-                }
-                if ((yearNow - yearOld) > 120)
-                {
-                    MessageBox.Show(InscriptionsEditing.Old);
-                    return;
-                }
-                DateTime birth = new DateTime(time.Year, time.Month, time.Day);
-                person.DateOfBirth = birth.ToString();
-                if(cityField.Text == string.Empty && cityField.Text.Equals(InscriptionsEditing.StringIsEmpty))
-                {
-                    MessageBox.Show(InscriptionsEditing.City);
-                }
-                AllCities Allcities = new AllCities();
-                if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
-                {
-                    MessageBox.Show(InscriptionsEditing.CityNotExist);
-                    return;
-                }
-               
-                person.City = cityField.Text;
-
-                if (sexMenButton.Checked)
-                {
-                    person.Sex = 1;
-                }
-                if (sexWomenButton.Checked)
-                {
-                    person.Sex = 0;
-                }
-                if(emailField.Text == string.Empty && emailField.Text.Equals(InscriptionsEditing.StringIsEmpty))
-                {
-                    person.Mail = null;
-                }
-                person.Mail = emailField.Text;
-                string number = numberField.Text;
-                if (number != string.Empty)
-                {
-                    foreach (char numb in number)
+                    if (surnameField.Text == string.Empty && surnameField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                     {
-                        if (!Char.IsNumber(numb))
+                        MessageBox.Show(InscriptionsEditing.Surname);
+                    }
+
+                    foreach (char letter in nameField.Text)
+                    {
+                        if (!Char.IsLetter(letter))
                         {
-                            MessageBox.Show(InscriptionsEditing.NumsInPhone);
+                            MessageBox.Show(InscriptionsEditing.LetterInName);
                             return;
                         }
                     }
+                    logger.Warn("Проверка имени на корректные символы");
+                    person.Name = nameField.Text;
+                    foreach (char letter in surnameField.Text)
+                    {
+                        if (!Char.IsLetter(letter))
+                        {
+                            MessageBox.Show(InscriptionsEditing.LetterInSurname);
+                            return;
+                        }
+                    }
+                    logger.Warn("Проверка фамилии на корректные символы");
+                    person.Surname = surnameField.Text;
+                    DateTime time = birhdayField.Value;
+                    int yearOld = time.Year;
+                    int yearNow = DateTime.Now.Year;
+                    if ((yearNow - yearOld) < 18)
+                    {
+                        MessageBox.Show(InscriptionsEditing.Youth);
+                        return;
+                    }
+                    if ((yearNow - yearOld) > 120)
+                    {
+                        MessageBox.Show(InscriptionsEditing.Old);
+                        return;
+                    }
+                    logger.Info("Проверка на корректный возраст");
+                    DateTime birth = new DateTime(time.Year, time.Month, time.Day);
+                    person.DateOfBirth = birth.ToString();
+                    if (cityField.Text == string.Empty && cityField.Text.Equals(InscriptionsEditing.StringIsEmpty))
+                    {
+                        MessageBox.Show(InscriptionsEditing.City);
+                    }
+                    AllCities Allcities = new AllCities();
+                    if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
+                    {
+                        MessageBox.Show(InscriptionsEditing.CityNotExist);
+                        return;
+                    }
+                    logger.Warn("Проверка на существующий город");
+                    person.City = cityField.Text;
+
+                    if (sexMenButton.Checked)
+                    {
+                        person.Sex = 1;
+                    }
+                    if (sexWomenButton.Checked)
+                    {
+                        person.Sex = 0;
+                    }
+                    if (emailField.Text == string.Empty && emailField.Text.Equals(InscriptionsEditing.StringIsEmpty))
+                    {
+                        person.Mail = null;
+                    }
+                    person.Mail = emailField.Text;
+                    string number = numberField.Text;
+                    if (number != string.Empty)
+                    {
+                        foreach (char numb in number)
+                        {
+                            if (!Char.IsNumber(numb))
+                            {
+                                MessageBox.Show(InscriptionsEditing.NumsInPhone);
+                                return;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        person.Number = null;
+                    }
+                    logger.Warn("Проверка номера на корректный номер");
+                    person.Number = number;
+                    HomeForm homeForm = new HomeForm();
+                    CurrentUser.currentUser = person;
+                    logger.Debug("Изменение текущего пользователя в базу данных после изменение полей");
+                    context.SaveChanges();
+                    logger.Trace("Открытие главной формы");
+                    this.Hide();
+                    homeForm.ShowDialog();
                 }
-                else
-                {
-                    person.Number = null;
-                }
-                person.Number = number;
-                HomeForm homeForm = new HomeForm();
-                CurrentUser.currentUser = person;
-                context.SaveChanges();
-                this.Hide();
-                homeForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключении к базе данных");
             }
         }
     }
