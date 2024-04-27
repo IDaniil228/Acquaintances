@@ -19,20 +19,28 @@ namespace HeartFluttering.Classes
             }
             return true;
         }
-        public static bool CheckNumber(string number)
+        public static bool CheckNumber(string numbers)
         {
-            foreach (char letter in letters)
+            foreach (char number in numbers)
             {
-                if (!Char.IsLetter(letter))
+                if (!Char.IsLetter(number))
                 {
                     return false;
                 }
             }
             return true;
         }
-        public static bool CheckCity(string city)
+        public static bool CheckCity(string cities)
         {
-
+            AllCities Allcities = new AllCities();
+            if (!Allcities.getCities().Contains(cities.ToLower()))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

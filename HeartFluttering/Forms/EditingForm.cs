@@ -239,24 +239,17 @@ namespace HeartFluttering
                     {
                         MessageBox.Show(InscriptionsEditing.Surname);
                     }
-
-                    foreach (char letter in nameField.Text)
+                    if (!Examination.CheckLatter(nameField.Text))
                     {
-                        if (!Char.IsLetter(letter))
-                        {
-                            MessageBox.Show(InscriptionsEditing.LetterInName);
-                            return;
-                        }
+                        MessageBox.Show(InscriptionsEditing.LetterInName);
+                        return;
                     }
                     logger.Warn("Проверка имени на корректные символы");
                     person.Name = nameField.Text;
-                    foreach (char letter in surnameField.Text)
+                    if (!Examination.CheckLatter(surnameField.Text))
                     {
-                        if (!Char.IsLetter(letter))
-                        {
-                            MessageBox.Show(InscriptionsEditing.LetterInSurname);
-                            return;
-                        }
+                        MessageBox.Show(InscriptionsEditing.LetterInName);
+                        return;
                     }
                     logger.Warn("Проверка фамилии на корректные символы");
                     person.Surname = surnameField.Text;
@@ -281,7 +274,7 @@ namespace HeartFluttering
                         MessageBox.Show(InscriptionsEditing.City);
                     }
                     AllCities Allcities = new AllCities();
-                    if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
+                    if (!Examination.CheckCity(cityField.Text))
                     {
                         MessageBox.Show(InscriptionsEditing.CityNotExist);
                         return;
@@ -305,13 +298,10 @@ namespace HeartFluttering
                     string number = numberField.Text;
                     if (number != string.Empty)
                     {
-                        foreach (char numb in number)
+                        if (Examination.CheckNumber(numberField.Text))
                         {
-                            if (!Char.IsNumber(numb))
-                            {
-                                MessageBox.Show(InscriptionsEditing.NumsInPhone);
-                                return;
-                            }
+                            MessageBox.Show(InscriptionsEditing.NumsInPhone);
+                            return;
                         }
                     }
                     else

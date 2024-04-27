@@ -10,32 +10,52 @@ using System.Windows.Forms;
 using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
 using HeartFluttering.Resources.Localization.UserProfileForm;
+using NLog;
 
 namespace HeartFluttering
 {
     public partial class UserProfileForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public UserProfileForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
         public User thisUsers;
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Закрытие приложения");
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачивание приложения");
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Кнопка для перехода в таблицу рекомендаций
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
             {
                 var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                logger.Info("Получение всех пользователей, кроме текущего");
                 var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
+                logger.Info("Сортировка пользователей по количеству лайков");
                 CurrentUsers.currentUsers = sortedUsers;
                 DataTable table = new DataTable();
                 table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
@@ -48,10 +68,16 @@ namespace HeartFluttering
                 }
                 RecommenForm recommenForm = new RecommenForm();
                 RecommenTable.thisTable = table;
+                logger.Trace("Открытие формы рекомендации");
                 this.Hide();
                 recommenForm.Show();
             }
         }
+        /// <summary>
+        /// Кнопка для перехода в таблицу избранное
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton2_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -80,10 +106,16 @@ namespace HeartFluttering
                 }
                 ChosenOneForm chosenOneForm = new ChosenOneForm();
                 FavoritesTable.favoritTable = table;
+                logger.Trace("Открытие формы избранное");
                 this.Hide();
                 chosenOneForm.Show();
             }
         }
+        /// <summary>
+        /// Кнопка для перехода в таблицу уведомления
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton3_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
@@ -112,16 +144,24 @@ namespace HeartFluttering
                 }
                 NotificationForm notificationForm = new NotificationForm();
                 NotificationTable.notificationTable = table;
+                logger.Trace("Открытие формы уведомления");
                 this.Hide();
                 notificationForm.Show();
             }
         }
+        /// <summary>
+        /// Кнопка для добавления аккаунта в избранное
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void likeAccount_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
             {
                 var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                logger.Info("Получение текущего пользователя");
                 var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
+                logger.Info("Получение выбранного пользователя");
                 if (currUsers.AnotherAccounts != null)
                 {
                     if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
@@ -158,16 +198,24 @@ namespace HeartFluttering
                 }
                 anotherUser.Likes++;
                 CurrentUser.currentUser = currUsers;
+                logger.Debug("Сохранение изменений в базу данных");
                 context.SaveChanges();
                 MessageBox.Show(InscriptionsUserProfile.AlreadyAdded);
             }
         }
+        /// <summary>
+        /// Кнопка для добавления аккаунта в избранное 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void likeAccount2_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
             {
                 var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                logger.Info("Получение текущего пользователя");
                 var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
+                logger.Info("Получение выбранного пользователя");
                 if (currUsers.AnotherAccounts != null)
                 {
                     if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
@@ -204,10 +252,16 @@ namespace HeartFluttering
                 }
                 anotherUser.Likes++;
                 CurrentUser.currentUser = currUsers;
+                logger.Debug("Сохранение изменений в базу данных");
                 context.SaveChanges();
                 MessageBox.Show(InscriptionsUserProfile.AlreadyAdded);
             }
         }
+        /// <summary>
+        /// Загрузка данных в профиль выбранного пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UserProfileForm_Load(object sender, EventArgs e)
         {
             nameField.Text = thisUsers.Name;
@@ -230,13 +284,19 @@ namespace HeartFluttering
                 Photo.Image = Image.FromStream(memoryStream);
             }
         }
-
+        /// <summary>
+        /// Кнопка удаления аккаунта из избранного
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void deleteButton_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
             {
                 var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                logger.Info("Получение текущего пользователя");
                 var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(thisUsers.IdUsers));
+                logger.Info("Получение выбранного пользователя");
                 if (currUsers == null)
                 {
                     MessageBox.Show(InscriptionsUserProfile.Error);
@@ -271,6 +331,7 @@ namespace HeartFluttering
                 }
                 anotherUser.Likes--;
                 CurrentUser.currentUser = currUsers;
+                logger.Debug("Сохранение изменений в базу данных");
                 context.SaveChanges();
                 MessageBox.Show(InscriptionsUserProfile.Delete);
             }

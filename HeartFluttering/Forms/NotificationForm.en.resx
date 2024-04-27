@@ -1143,6 +1143,12 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 30</value>
+  </data>
+  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 58</value>
+  </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2025,10 +2031,49 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 58</value>
+  </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 0</value>
+  </data>
+  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 0</value>
+  </data>
+  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 88</value>
+  </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Notifications</value>
   </data>
+  <data name="backButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 440</value>
+  </data>
+  <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 34</value>
+  </data>
   <data name="backButton.Text" xml:space="preserve">
     <value>Back</value>
+  </data>
+  <data name="listUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 91</value>
+  </data>
+  <data name="listUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 351</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>423, 474</value>
   </data>
 </root>

@@ -9,31 +9,49 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.PhotoUserForm;
+using NLog;
 
 namespace HeartFluttering
 {
     public partial class PhotoUserForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public PhotoUserForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
         public List<User> currentUsers;
         private int count = 0;
+        /// <summary>
+        /// Кнопка, которая переводит пользователя в главную форму
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void homeButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Переход в главную форму");
             this.Hide();
             HomeForm homeForm = new HomeForm();
             homeForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Кнопка, которая позволяет пользователю перейти к фильтрам
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void changeFiltersButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Открытие форму с фильтрами");
             this.Hide();
             FiltersForm filtersForm = new FiltersForm();
             filtersForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Конпка запуска поиска других пользователей
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startButton_Click(object sender, EventArgs e)
         {
             if (currentUsers.Count == 0)
@@ -55,7 +73,11 @@ namespace HeartFluttering
                 photoField.Image = Image.FromStream(memoryStream);
             }
         }
-
+        /// <summary>
+        /// Кнопка, который показывает слудующий аккаунт
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextAccount_Click(object sender, EventArgs e)
         {
             if (currentUsers.Count - 1 > count)
@@ -79,7 +101,11 @@ namespace HeartFluttering
                 return;
             }
         }
-
+        /// <summary>
+        /// Кнопка, которая добавляет аккаунт другого пользователя в избранное
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void likeAccount_Click(object sender, EventArgs e)
         {
             if(currentUsers.Count > count)
@@ -87,7 +113,9 @@ namespace HeartFluttering
                 using(var context = new AcquaintanceSqlContext())
                 {
                     var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    logger.Info("Получение текущего пользователя");
                     var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(currentUsers[count].IdUsers));
+                    logger.Info("Получения пользователя, который удовлетворяет фильтрам");
                     if(currUsers.AnotherAccounts != null)
                     {
                         if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
@@ -124,6 +152,7 @@ namespace HeartFluttering
                     }
                     anotherUser.Likes++;
                     CurrentUser.currentUser = currUsers;
+                    logger.Debug("Сохранение изменений в базу данных");
                     context.SaveChanges();
                     if (currentUsers.Count - 1 > count)
                     {

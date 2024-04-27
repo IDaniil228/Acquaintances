@@ -11,27 +11,43 @@ using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization;
 using HeartFluttering.Resources.Localization.AuthorForm;
 using HeartFluttering.Resources.Localization.RegistrForm;
+using NLog;
 
 namespace HeartFluttering
 {
     public partial class RegistrForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public RegistrForm()
         {
             InitializeComponent();
+            logger.Info("Инициализация данных");
         }
-
-        //public Account account;
-
+        /// <summary>
+        /// Кнопка для закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Закрытие приложения");
             Application.Exit();
         }
-
+        /// <summary>
+        /// Кнопка для сворачивания приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CollapseButton_Click(object sender, EventArgs e)
         {
+            logger.Trace("Сворачивание приложения");
             this.WindowState = FormWindowState.Minimized;
         }
+        /// <summary>
+        /// При нажатии строку логина, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginField_Enter(object sender, EventArgs e)
         {
             if (LoginField.Text.Equals(Inscriptions.Login))
@@ -40,7 +56,11 @@ namespace HeartFluttering
                 LoginField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки логина, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginField_Leave(object sender, EventArgs e)
         {
             if (LoginField.Text.Equals(string.Empty))
@@ -49,7 +69,11 @@ namespace HeartFluttering
                 LoginField.Text = Inscriptions.Login;
             }
         }
-
+        /// <summary>
+        /// При нажатии строку пароля, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void passwordField_Enter(object sender, EventArgs e)
         {
             if (passwordField.Text.Equals(Inscriptions.Password))
@@ -58,7 +82,11 @@ namespace HeartFluttering
                 passwordField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки пароля, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void passwordField_Leave(object sender, EventArgs e)
         {
             if (passwordField.Text.Equals(string.Empty))
@@ -67,7 +95,11 @@ namespace HeartFluttering
                 passwordField.Text = Inscriptions.Password;
             }
         }
-
+        /// <summary>
+        /// При нажатии строку повторного пароля, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void password2Field_Enter(object sender, EventArgs e)
         {
             if (password2Field.Text.Equals(Inscriptions.Repeat_password))
@@ -76,7 +108,11 @@ namespace HeartFluttering
                 password2Field.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки повторного пароля, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void password2Field_Leave(object sender, EventArgs e)
         {
             if (password2Field.Text.Equals(string.Empty))
@@ -85,6 +121,11 @@ namespace HeartFluttering
                 password2Field.Text = Inscriptions.Repeat_password;
             }
         }
+        /// <summary>
+        /// При нажатии строку имени, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nameField_Enter(object sender, EventArgs e)
         {
             if (nameField.Text.Equals(Inscriptions.Name))
@@ -93,7 +134,11 @@ namespace HeartFluttering
                 nameField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки имени, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nameField_Leave(object sender, EventArgs e)
         {
             if (nameField.Text.Equals(string.Empty))
@@ -102,7 +147,11 @@ namespace HeartFluttering
                 nameField.Text = Inscriptions.Name;
             }
         }
-
+        /// <summary>
+        /// При нажатии строку фамилии, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void surnameField_Enter(object sender, EventArgs e)
         {
             if (surnameField.Text.Equals(Inscriptions.Surname))
@@ -111,7 +160,11 @@ namespace HeartFluttering
                 surnameField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки фамилии, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void surnameField_Leave(object sender, EventArgs e)
         {
             if (surnameField.Text.Equals(string.Empty))
@@ -120,7 +173,11 @@ namespace HeartFluttering
                 surnameField.Text = Inscriptions.Surname;
             }
         }
-
+        /// <summary>
+        /// При нажатии строку даты рождения, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BirhdayFields_Enter(object sender, EventArgs e)
         {
             if (BirhdayFields.Text.Equals(Inscriptions.Birthday))
@@ -129,7 +186,11 @@ namespace HeartFluttering
                 BirhdayFields.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки даты рождения, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BirhdayFields_Leave(object sender, EventArgs e)
         {
             if (BirhdayFields.Text.Equals(string.Empty))
@@ -138,7 +199,11 @@ namespace HeartFluttering
                 BirhdayFields.Text = Inscriptions.Birthday;
             }
         }
-
+        /// <summary>
+        /// При нажатии строку города, подсказка убирает
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cityField_Enter(object sender, EventArgs e)
         {
             if (cityField.Text.Equals(Inscriptions.City))
@@ -147,7 +212,11 @@ namespace HeartFluttering
                 cityField.ForeColor = Color.Black;
             }
         }
-
+        /// <summary>
+        /// При отжатии строки города, появляется подсказка, если строка была пустой
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cityField_Leave(object sender, EventArgs e)
         {
             if (cityField.Text.Equals(string.Empty))
@@ -156,7 +225,12 @@ namespace HeartFluttering
                 cityField.Text = Inscriptions.City;
             }
         }
-
+        /// <summary>
+        /// Метод, который создает аккаунт по логина и паролю
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         private Account dataAuthorization(string login, string password)
         {
             Hash hash = new Hash();
@@ -213,6 +287,7 @@ namespace HeartFluttering
             using (var context = new AcquaintanceSqlContext())
             {
                 var accounts = context.Accounts;
+                logger.Info("Получение всех аккаунтов");
                 foreach (var login in accounts)
                 {
                     if (LoginField.Text.Equals(login.Login))
@@ -238,24 +313,19 @@ namespace HeartFluttering
                 context.Accounts.Add(account);
                 User user = new User();
                 user.IdUsers = Guid.NewGuid().ToString();
-                foreach (char letter in nameField.Text)//
+                if (!Examination.CheckLatter(nameField.Text))
                 {
-                    if (!Char.IsLetter(letter))
-                    {
-                        MessageBox.Show(InscriptionsSignUp.LettersInName);
-                        return;
-                    }
+                    MessageBox.Show(InscriptionsSignUp.LettersInName);
+                    return;
                 }
+                logger.Warn("Проверка имени на корректные символы");
                 user.Name = nameField.Text;
-
-                foreach (char letter in surnameField.Text)//
+                if (!Examination.CheckLatter(surnameField.Text))
                 {
-                    if (!Char.IsLetter(letter))
-                    {
-                        MessageBox.Show(InscriptionsSignUp.LettersInSurname);
-                        return;
-                    }
+                    MessageBox.Show(InscriptionsSignUp.LettersInSurname);
+                    return;
                 }
+                logger.Warn("Проверка фамилия на корректные символы");
                 user.Surname = surnameField.Text;
 
                 DateTime time = BirhdayFields.Value;
@@ -267,24 +337,21 @@ namespace HeartFluttering
                     MessageBox.Show(InscriptionsSignUp.Youth);
                     return;
                 }
-                if ((yearNow - yearOld) > 120)
+                if ((yearNow - yearOld) > 115)
                 {
                     MessageBox.Show(InscriptionsSignUp.Old);
                     return;
                 }
+                logger.Warn("Проверка на корректный возраст пользователя");
                 string birth = time.ToString("dd.MM.yyyy");
                 user.DateOfBirth = birth;
 
                 AllCities Allcities = new AllCities();
-                if (cityField.Text != string.Empty)//
+                if (!Examination.CheckCity(cityField.Text))
                 {
-                    if (!Allcities.getCities().Contains(cityField.Text.ToLower()))
-                    {
-                        MessageBox.Show(InscriptionsSignUp.CityIsNotExists);
-                        return;
-                    }
+                    MessageBox.Show(InscriptionsSignUp.CityIsNotExists);
+                    return;
                 }
-
                 user.City = cityField.Text;
                 if (sexMenButton.Checked)
                 {
@@ -298,6 +365,7 @@ namespace HeartFluttering
                 context.Users.Add(user);
                 context.SaveChanges();
                 MessageBox.Show(InscriptionsSignUp.Done);
+                logger.Trace("Открытие формы входа");
                 this.Hide();
                 AuthorizationForm form = new AuthorizationForm();
                 form.Show();
