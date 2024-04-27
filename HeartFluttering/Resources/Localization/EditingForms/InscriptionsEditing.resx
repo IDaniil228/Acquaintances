@@ -133,7 +133,7 @@
     <value>Поле для имени должно быть заполнено</value>
   </data>
   <data name="NumsInPhone" xml:space="preserve">
-    <value>В номере телефона не должно быть букв</value>
+    <value>Некорректный номер</value>
   </data>
   <data name="Old" xml:space="preserve">
     <value>Вам не может быть столько много лет</value>

@@ -314,14 +314,14 @@ namespace HeartFluttering
                 context.Accounts.Add(account);
                 User user = new User();
                 user.IdUsers = Guid.NewGuid().ToString();
-                if (!Examination.CheckLatter(nameField.Text))
+                if (!Examination.CheckLetter(nameField.Text))
                 {
                     MessageBox.Show(InscriptionsSignUp.LettersInName);
                     return;
                 }
                 logger.Warn("Проверка имени на корректные символы");
                 user.Name = nameField.Text;
-                if (!Examination.CheckLatter(surnameField.Text))
+                if (!Examination.CheckLetter(surnameField.Text))
                 {
                     MessageBox.Show(InscriptionsSignUp.LettersInSurname);
                     return;

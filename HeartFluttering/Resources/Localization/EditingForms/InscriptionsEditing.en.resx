@@ -133,7 +133,7 @@
     <value>The name field must be filled in</value>
   </data>
   <data name="NumsInPhone" xml:space="preserve">
-    <value>There should be no letters in the phone number</value>
+    <value>Incorrect number</value>
   </data>
   <data name="Old" xml:space="preserve">
     <value>You can't be that old</value>

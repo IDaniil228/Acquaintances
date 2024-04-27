@@ -239,14 +239,14 @@ namespace HeartFluttering
                     {
                         MessageBox.Show(InscriptionsEditing.Surname);
                     }
-                    if (!Examination.CheckLatter(nameField.Text))
+                    if (!Examination.CheckLetter(nameField.Text))
                     {
                         MessageBox.Show(InscriptionsEditing.LetterInName);
                         return;
                     }
                     logger.Warn("Проверка имени на корректные символы");
                     person.Name = nameField.Text;
-                    if (!Examination.CheckLatter(surnameField.Text))
+                    if (!Examination.CheckLetter(surnameField.Text))
                     {
                         MessageBox.Show(InscriptionsEditing.LetterInName);
                         return;
@@ -298,7 +298,7 @@ namespace HeartFluttering
                     string number = numberField.Text;
                     if (number != string.Empty)
                     {
-                        if (Examination.CheckNumber(numberField.Text))
+                        if (!Examination.CheckNumber(numberField.Text))
                         {
                             MessageBox.Show(InscriptionsEditing.NumsInPhone);
                             return;

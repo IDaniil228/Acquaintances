@@ -106,7 +106,7 @@ namespace HeartFluttering.Resources.Localization.EditingForms {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to В номере телефона не должно быть букв.
+        ///   Looks up a localized string similar to Некорректный номер.
         /// </summary>
         internal static string NumsInPhone {
             get {

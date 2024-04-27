@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HeartFluttering.Classes
 {
     public static class Examination
     {
-        public static bool CheckLatter(string letters)
+        public static bool CheckLetter(string letters)
         {
             foreach(char letter in letters)
             {
@@ -21,14 +22,26 @@ namespace HeartFluttering.Classes
         }
         public static bool CheckNumber(string numbers)
         {
-            foreach (char number in numbers)
+            if (!numbers.StartsWith("+7") && !numbers.StartsWith("8"))
             {
-                if (!Char.IsLetter(number))
-                {
-                    return false;
-                }
+                return false;
             }
-            return true;
+            if ((numbers.StartsWith("+7") && numbers.Length == 12) || (numbers.StartsWith("8") && numbers.Length == 11))
+            {
+                if (Char.IsNumber(numbers[0]) || numbers[0] == '+')
+                {
+                    for (int i = 1; i < numbers.Length; i++)
+                    {
+                        if (!Char.IsNumber(numbers[i]))
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            }            
+            return false;
+
         }
         public static bool CheckCity(string cities)
         {
