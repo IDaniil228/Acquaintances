@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HeartFluttering.Classes;
+namespace HeartFluttering;
 
 public partial class User
 {
@@ -23,7 +23,7 @@ public partial class User
 
     public byte[]? Photo { get; set; }
 
-    public string? Favorites { get; set; }
+    public int? Blocker { get; set; }
 
     public int? Likes { get; set; }
 

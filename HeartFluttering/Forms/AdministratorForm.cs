@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
-using User = HeartFluttering.Classes.User;
+
 using NLog;
 using HeartFluttering.Resources.Localization.AdminForms;
 

@@ -136,8 +136,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -147,8 +147,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -192,8 +192,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                         (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                         (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -203,8 +203,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                         (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                         (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -248,8 +248,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -259,8 +259,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -304,8 +304,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }
@@ -315,8 +315,8 @@ namespace HeartFluttering
                                 {
                                     if (!user.IdUsers.Equals(CurrentUser.currentUser.IdUsers))
                                     {
-                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) >= InitialAge &&
-                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy H:mm:ss", provider).Year) <= FinalAge)
+                                        if ((DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) >= InitialAge &&
+                                    (DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth, "dd.MM.yyyy", provider).Year) <= FinalAge)
                                         {
                                             currentUsers.Add(user);
                                         }

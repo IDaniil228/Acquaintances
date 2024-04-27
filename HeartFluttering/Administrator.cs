@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HeartFluttering.Classes;
+namespace HeartFluttering;
 
 public partial class Administrator
 {
@@ -12,6 +12,8 @@ public partial class Administrator
     public string Surname { get; set; } = null!;
 
     public string Id { get; set; } = null!;
+
+    public int? Blocker { get; set; }
 
     public virtual Account IdNavigation { get; set; } = null!;
 }

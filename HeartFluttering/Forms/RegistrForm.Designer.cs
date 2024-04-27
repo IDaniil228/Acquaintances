@@ -250,6 +250,7 @@
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "RegistrForm";
+            FormClosed += RegistrForm_FormClosed;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ResumeLayout(false);

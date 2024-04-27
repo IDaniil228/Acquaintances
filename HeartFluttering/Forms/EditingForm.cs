@@ -261,14 +261,14 @@ namespace HeartFluttering
                         MessageBox.Show(InscriptionsEditing.Youth);
                         return;
                     }
-                    if ((yearNow - yearOld) > 120)
+                    if ((yearNow - yearOld) > 115)
                     {
                         MessageBox.Show(InscriptionsEditing.Old);
                         return;
                     }
                     logger.Info("Проверка на корректный возраст");
-                    DateTime birth = new DateTime(time.Year, time.Month, time.Day);
-                    person.DateOfBirth = birth.ToString();
+                    string birth = time.ToString("dd.MM.yyyy");
+                    person.DateOfBirth = birth;
                     if (cityField.Text == string.Empty && cityField.Text.Equals(InscriptionsEditing.StringIsEmpty))
                     {
                         MessageBox.Show(InscriptionsEditing.City);

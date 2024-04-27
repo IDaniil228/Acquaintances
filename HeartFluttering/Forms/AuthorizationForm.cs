@@ -143,6 +143,13 @@ namespace HeartFluttering
                                     MessageBox.Show(Inscriptions.MessageCantEnterLikeUser);
                                     return;
                                 }
+
+                                if(person.Blocker == 1)
+                                {
+                                    MessageBox.Show("Форма входа занята, подождите пока пользователь пройдет регистрацию");
+                                    return;
+                                }
+
                                 this.Hide();
                                 HomeForm homeForm = new HomeForm();
                                 CurrentUser.currentUser = person;
@@ -186,6 +193,11 @@ namespace HeartFluttering
                                 MessageBox.Show(Inscriptions.MessageCantEnterLikeAdmin);
                                 return;
                             }
+                            if(admin.Blocker == 1)
+                            {
+                                MessageBox.Show("Форма входа занята, подождите пока пользователь пройдет регистрацию");
+                                return;
+                            }
                             this.Hide();
                             AdministratorForm administratorForm = new AdministratorForm();
                             administratorForm.Show();
@@ -212,6 +224,37 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void registrButton_Click(object sender, EventArgs e)
         {
+
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var users = context.Users.ToList();
+                var admins = context.Administrators.ToList();
+                foreach(var user in users)
+                {
+                    if(user.Blocker == 1)
+                    {
+                        MessageBox.Show("Форма регистрации занята");
+                        return;
+                    }
+                }
+                foreach(var admin in admins)
+                {
+                    if(admin.Blocker == 1)
+                    {
+                        MessageBox.Show("Форма регистрации занята");
+                        return;
+                    }
+                }
+                foreach (var user in users)
+                {
+                    user.Blocker = 1;
+                }
+                foreach (var admin in admins)
+                {
+                    admin.Blocker = 1;
+                }
+                context.SaveChanges();
+            }
             this.Hide();
             RegistrForm form = new RegistrForm();
             logger.Trace("Открытие формы регистрации");

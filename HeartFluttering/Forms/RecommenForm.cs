@@ -53,7 +53,7 @@ namespace HeartFluttering
                 DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
                 int position = (int)selectedRow.Cells["Место"].Value;
                 logger.Info($"Получение пользователя по {position} позиции");
-                Classes.User selectedUser = CurrentUsers.currentUsers[position - 1];
+                User selectedUser = CurrentUsers.currentUsers[position - 1];
                 UserProfileForm form = new UserProfileForm();
                 if (CurrentUser.currentUser.AnotherAccounts != null)
                 {

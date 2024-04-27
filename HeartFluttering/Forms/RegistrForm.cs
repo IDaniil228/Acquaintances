@@ -31,6 +31,29 @@ namespace HeartFluttering
         ///
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var users = context.Users.ToList();
+                var admins = context.Administrators.ToList();
+                /*
+                var bloking = context.BlockerForms.FirstOrDefault();
+                if(bloking == null)
+                {
+                    MessageBox.Show("Ошибка в подключении базы данных");
+                    return;
+                }
+                bloking.BlockerLogin = 0;
+                */
+                foreach (var user in users)
+                {
+                    user.Blocker = 0;
+                }
+                foreach (var admin in admins)
+                {
+                    admin.Blocker = 0;
+                }
+                context.SaveChanges();
+            }
             logger.Trace("Закрытие приложения");
             Application.Exit();
         }
@@ -363,13 +386,62 @@ namespace HeartFluttering
                     user.Sex = 0;
                 }
                 user.Id = guid.ToString();
+                user.Blocker = 0;
                 context.Users.Add(user);
                 context.SaveChanges();
+
+                using (var context2 = new AcquaintanceSqlContext())
+                {
+                    var users = context2.Users.ToList();
+                    var admins = context2.Administrators.ToList();
+                    var bloking = context2.BlockerForms.FirstOrDefault();
+                    if (bloking == null)
+                    {
+                        MessageBox.Show("Ошибка в подключении базы данных");
+                        return;
+                    }
+                    bloking.BlockerLogin = 0;
+                    foreach (var user1 in users)
+                    {
+                        user1.Blocker = 0;
+                    }
+                    foreach (var admin in admins)
+                    {
+                        admin.Blocker = 0;
+                    }
+                    context2.SaveChanges();
+                }
+
                 MessageBox.Show(InscriptionsSignUp.Done);
                 logger.Trace("Открытие формы входа");
                 this.Hide();
                 AuthorizationForm form = new AuthorizationForm();
                 form.Show();
+            }
+        }
+
+        private void RegistrForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var users = context.Users.ToList();
+                var admins = context.Administrators.ToList();
+                var bloking = context.BlockerForms.FirstOrDefault();
+                if (bloking == null)
+                {
+                    MessageBox.Show("Ошибка в подключении базы данных");
+                    return;
+                }
+                bloking.BlockerLogin = 0;
+                foreach (var user1 in users)
+                {
+                    user1.Blocker = 0;
+                }
+                foreach (var admin in admins)
+                {
+                    admin.Blocker = 0;
+                }
+                context.SaveChanges();
             }
         }
     }

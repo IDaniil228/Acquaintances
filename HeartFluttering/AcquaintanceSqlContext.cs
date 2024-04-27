@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace HeartFluttering.Classes;
+namespace HeartFluttering;
 
 public partial class AcquaintanceSqlContext : DbContext
 {
@@ -19,6 +19,8 @@ public partial class AcquaintanceSqlContext : DbContext
 
     public virtual DbSet<Administrator> Administrators { get; set; }
 
+    public virtual DbSet<BlockerForm> BlockerForms { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -34,13 +36,31 @@ public partial class AcquaintanceSqlContext : DbContext
 
         modelBuilder.Entity<Administrator>(entity =>
         {
+            entity.Property(e => e.Blocker)
+                .HasColumnType("INTEGER (0, 1)")
+                .HasColumnName("blocker");
+
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Administrator)
                 .HasForeignKey<Administrator>(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });
 
+        modelBuilder.Entity<BlockerForm>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToTable("BlockerForm");
+
+            entity.Property(e => e.BlockerLogin)
+                .HasColumnType("INTEGER (0, 1)")
+                .HasColumnName("blockerLogin");
+        });
+
         modelBuilder.Entity<User>(entity =>
         {
+            entity.Property(e => e.Blocker)
+                .HasColumnType("INTEGER (0, 1)")
+                .HasColumnName("blocker");
             entity.Property(e => e.Sex).HasColumnType("INTEGER (0, 1)");
             entity.Property(e => e.Status).HasColumnType("INTEGER (0, 1)");
 
