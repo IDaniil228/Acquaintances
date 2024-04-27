@@ -116,7 +116,6 @@ namespace HeartFluttering
                 MessageBox.Show(InscriptionsFilter.Sex);
                 return;
             }
-            //string city = cityField.Text.ToLower();
             List<User> currentUsers = new List<User>();
 
             PhotoUserForm photoUserForm = new PhotoUserForm();

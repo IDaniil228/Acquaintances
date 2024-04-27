@@ -50,17 +50,6 @@ namespace HeartFluttering
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
-                /*
-                int position = 0;
-                if(selectedRow.Cells["Номер"].Value == null)
-                {
-                    position = (int)selectedRow.Cells["Number"].Value;
-                }
-                if(selectedRow.Cells["Number"].Value == null)
-                {
-                    position = (int)selectedRow.Cells["Номер"].Value;
-                }
-                */
                 int position = 0;
                 position = (int)selectedRow.Cells["Номер"].Value;
                 logger.Info($"Получении пользователя по {position} позиции в таблице");

@@ -178,7 +178,7 @@ namespace HeartFluttering
         /// </summary>
         /// <param name="idUser"></param>
         /// <returns></returns>
-        private User GettingUserById(string idUser)
+        private User GettingUserById(string idUser) // Для тестирования
         {
             try
             {
@@ -207,7 +207,7 @@ namespace HeartFluttering
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        private Account GettingAccountById(User user)
+        private Account GettingAccountById(User user) // Для тестирования
         {
             try
             {
