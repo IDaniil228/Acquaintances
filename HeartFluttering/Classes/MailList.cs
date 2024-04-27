@@ -8,6 +8,9 @@ namespace HeartFluttering.Classes
 {
     internal class MailList
     {
+        /// <summary>
+        /// Коллекция окончаний почт
+        /// </summary>
         private List<string> AllMail = new List<string>()
     {
         "@yandex.ru",
@@ -20,6 +23,10 @@ namespace HeartFluttering.Classes
         "@furmail.ru",
         "@list.ru"
     };
+        /// <summary>
+        /// Метод, который возвращает окончания почт
+        /// </summary>
+        /// <returns></returns>
         public List<string> getMail()
         {
             return AllMail;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartFluttering.Classes;
+using HeartFluttering.Resources.Localization.ChooseOneForm;
 using NLog;
 
 namespace HeartFluttering
@@ -51,7 +52,7 @@ namespace HeartFluttering
             {
                 DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
                 int position = 0;
-                position = (int)selectedRow.Cells["Номер"].Value;
+                position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
                 logger.Info($"Получении пользователя по {position} позиции в таблице");
                 User selectedUser = CurrentUsers.currentUsers[position - 1];
                 UserProfileForm form = new UserProfileForm();

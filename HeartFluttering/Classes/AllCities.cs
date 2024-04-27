@@ -9,31 +9,9 @@ namespace HeartFluttering.Classes
 {
     public class AllCities
     {
-        /*
-        public List<string> getCities()
-        {
-            List<string> cities = new List<string>();
-            string filepath = "C:\\c#\\Heart\\HeartFluttering\\bin\\Debug\\aaaaa.txt";
-            try
-            {
-                using (StreamReader sr = new StreamReader(filepath))
-                {
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        cities.Add(line.Trim()); // Добавляем каждый город из файла в коллекцию List
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error reading file: " + ex.Message);
-            }
-
-            return cities;
-        }
-        */
-
+        /// <summary>
+        /// Все города России
+        /// </summary>
         List<string> cities = new List<string>() {"абаза",
 "абакан",
 "абдулино",

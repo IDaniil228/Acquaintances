@@ -123,6 +123,15 @@
   <data name="CityNotExist" xml:space="preserve">
     <value>Такого города не существует</value>
   </data>
+  <data name="Incorr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IncorrentMail" xml:space="preserve">
+    <value>Некорректная почта</value>
+  </data>
+  <data name="IncorrentPhone" xml:space="preserve">
+    <value>Некорректный номер</value>
+  </data>
   <data name="LetterInName" xml:space="preserve">
     <value>Вашем имени должны быть только буквы</value>
   </data>

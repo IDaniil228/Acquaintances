@@ -250,7 +250,7 @@ namespace HeartFluttering
                 {
                     anotherUser.Notifications += "," + currUsers.IdUsers;
                 }
-                anotherUser.Likes++;
+                anotherUser.Likes += 1;
                 CurrentUser.currentUser = currUsers;
                 logger.Debug("Сохранение изменений в базу данных");
                 context.SaveChanges();

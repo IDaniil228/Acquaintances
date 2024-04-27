@@ -9,6 +9,11 @@ namespace HeartFluttering.Classes
 {
     internal class Hash
     {
+        /// <summary>
+        /// Метод для хеширования пароля
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public string CalculateMD5Hash(string input)
         {
             using (MD5 md5 = MD5.Create())

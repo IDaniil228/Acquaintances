@@ -123,6 +123,12 @@
   <data name="CityNotExist" xml:space="preserve">
     <value>There is no such city</value>
   </data>
+  <data name="IncorrentMail" xml:space="preserve">
+    <value>Incorrent mail</value>
+  </data>
+  <data name="IncorrentPhone" xml:space="preserve">
+    <value>Incorrent number</value>
+  </data>
   <data name="LetterInName" xml:space="preserve">
     <value>Your name should only have letters</value>
   </data>

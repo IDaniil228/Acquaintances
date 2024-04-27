@@ -294,10 +294,13 @@ namespace HeartFluttering
                     {
                         person.Mail = null;
                     }
-                    if (!Examination.CheckFormatMail(emailField.Text))
+                    else
                     {
-                        MessageBox.Show("Некорректная почта");
-                        return;
+                        if (!Examination.CheckFormatMail(emailField.Text))
+                        {
+                            MessageBox.Show(InscriptionsEditing.IncorrentMail);
+                            return;
+                        }
                     }
                     person.Mail = emailField.Text;
                     string number = numberField.Text;

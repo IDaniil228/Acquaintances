@@ -47,5 +47,12 @@ namespace UnitTestsHeartFluttering
             bool actual = Examination.CheckCity("Не Ижевск");
             Assert.IsFalse(actual);
         }
+
+        [TestMethod]
+        public void Check()
+        {
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            Assert.IsNull(authorizationForm.UserAuthorization("Vlad", "1234a"));
+        }
     }
 }

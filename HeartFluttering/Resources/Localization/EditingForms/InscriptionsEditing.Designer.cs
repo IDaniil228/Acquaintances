@@ -79,6 +79,33 @@ namespace HeartFluttering.Resources.Localization.EditingForms {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Incorr {
+            get {
+                return ResourceManager.GetString("Incorr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Некорректная почта.
+        /// </summary>
+        internal static string IncorrentMail {
+            get {
+                return ResourceManager.GetString("IncorrentMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Некорректный номер.
+        /// </summary>
+        internal static string IncorrentPhone {
+            get {
+                return ResourceManager.GetString("IncorrentPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Вашем имени должны быть только буквы.
         /// </summary>
         internal static string LetterInName {

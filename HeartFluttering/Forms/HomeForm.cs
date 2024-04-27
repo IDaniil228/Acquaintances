@@ -262,7 +262,7 @@ namespace HeartFluttering
                     table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                     for (int i = 0; i < anotherUsers.Count; i++)
                     {
-                        table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                        table.Rows.Add(i + 1, anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
                     }
                     ChosenOneForm chosenOneForm = new ChosenOneForm();
                     logger.Info("Создание таблицы для формы избранное");

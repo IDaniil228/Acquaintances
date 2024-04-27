@@ -387,6 +387,7 @@ namespace HeartFluttering
                 }
                 user.Id = guid.ToString();
                 user.Blocker = 0;
+                user.Likes = 0;
                 context.Users.Add(user);
                 context.SaveChanges();
 

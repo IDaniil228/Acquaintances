@@ -9,6 +9,11 @@ namespace HeartFluttering.Classes
 {
     public static class Examination
     {
+        /// <summary>
+        /// Проверка на наличие других символов кроме букв
+        /// </summary>
+        /// <param name="letters"></param>
+        /// <returns></returns>
         public static bool CheckLetter(string letters)
         {
             foreach(char letter in letters)
@@ -20,6 +25,11 @@ namespace HeartFluttering.Classes
             }
             return true;
         }
+        /// <summary>
+        /// Проверка на наличие других символов кроме цифр
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
         public static bool CheckNumber(string numbers)
         {
             if (!numbers.StartsWith("+7") && !numbers.StartsWith("8"))
@@ -43,6 +53,11 @@ namespace HeartFluttering.Classes
             return false;
 
         }
+        /// <summary>
+        /// Проврка на существующий город
+        /// </summary>
+        /// <param name="cities"></param>
+        /// <returns></returns>
         public static bool CheckCity(string cities)
         {
             AllCities Allcities = new AllCities();
@@ -55,6 +70,11 @@ namespace HeartFluttering.Classes
                 return true;
             }
         }
+        /// <summary>
+        /// Проверка на корректную почту
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns></returns>
         public static bool CheckFormatMail(string mail)
         {
             MailList emailList = new MailList();
