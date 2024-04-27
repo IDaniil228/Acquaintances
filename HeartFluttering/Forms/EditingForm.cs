@@ -294,6 +294,11 @@ namespace HeartFluttering
                     {
                         person.Mail = null;
                     }
+                    if (!Examination.CheckFormatMail(emailField.Text))
+                    {
+                        MessageBox.Show("Некорректная почта");
+                        return;
+                    }
                     person.Mail = emailField.Text;
                     string number = numberField.Text;
                     if (number != string.Empty)

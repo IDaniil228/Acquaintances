@@ -55,5 +55,17 @@ namespace HeartFluttering.Classes
                 return true;
             }
         }
+        public static bool CheckFormatMail(string mail)
+        {
+            MailList emailList = new MailList();
+            foreach (string email in emailList.getMail())
+            {
+                if (mail.EndsWith(email))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

@@ -18,7 +18,6 @@ namespace HeartFluttering
     public partial class AdministratorForm : Form
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        private int position = 1;
         private string warning = InscriptionsAdmin.Warning;
         private DataTable GetDataTable()
         {
@@ -60,6 +59,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void AdministratorForm_Load(object sender, EventArgs e)
         {
+            int position = 1;
             try
             {
                 using (var context = new AcquaintanceSqlContext())
@@ -238,6 +238,7 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void deleteAccountButton_Click(object sender, EventArgs e)
         {
+            int position = 1;
             try
             {
                 using (var context = new AcquaintanceSqlContext())
