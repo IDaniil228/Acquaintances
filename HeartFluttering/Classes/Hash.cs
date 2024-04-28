@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeartFluttering.Classes
 {
-    internal class Hash
+    public class Hash
     {
         /// <summary>
         /// Метод для хеширования пароля

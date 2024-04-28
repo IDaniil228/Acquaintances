@@ -1,5 +1,6 @@
 using HeartFluttering;
 using HeartFluttering.Classes;
+using System.Security.Policy;
 
 namespace UnitTestsHeartFluttering
 {
@@ -64,6 +65,13 @@ namespace UnitTestsHeartFluttering
         public void EditingTheLineWith()
         {
             Assert.AreEqual("Èæåâñê",Examination.GetCity("èÆÅÂÑÊ"));
+        }
+
+        [TestMethod]
+        public void CheckHashingPassword()
+        {
+            HeartFluttering.Classes.Hash hash = new HeartFluttering.Classes.Hash();
+            Assert.AreEqual("050248cd2efad770e194ca0e12d44264", hash.CalculateMD5Hash("1234a"));
         }
     }
 }
