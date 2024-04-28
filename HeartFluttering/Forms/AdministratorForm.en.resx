@@ -118,12 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 87</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 342</value>
-  </data>
   <data name="girlPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
@@ -1150,10 +1144,11 @@
 </value>
   </data>
   <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>671, 12</value>
+    <value>767, 16</value>
   </data>
-  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 66</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2038,156 +2033,104 @@
 </value>
   </data>
   <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 12</value>
+    <value>163, 16</value>
   </data>
-  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 66</value>
+  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>828, 0</value>
+  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>860, 0</value>
-  </data>
-  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>895, 87</value>
+  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Heart fluttering
 </value>
   </data>
   <data name="usersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 87</value>
+    <value>105, 116</value>
   </data>
   <data name="usersLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 50</value>
+    <value>126, 64</value>
   </data>
   <data name="usersLabel.Text" xml:space="preserve">
     <value>Users</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AdminPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 116</value>
+  </data>
   <data name="AdminPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="AdminPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>596, 342</value>
+    <value>681, 456</value>
   </data>
-  <data name="deleteAccountButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 308</value>
-  </data>
-  <data name="deleteAccountButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 34</value>
+  <data name="deleteAccountButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="deleteAccountButton.Text" xml:space="preserve">
     <value>Block account</value>
   </data>
   <data name="numberLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 280</value>
+    <value>306, 373</value>
   </data>
   <data name="numberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 24</value>
+    <value>87, 31</value>
   </data>
   <data name="numberLabel.Text" xml:space="preserve">
     <value>Phone</value>
   </data>
   <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 242</value>
+    <value>325, 323</value>
   </data>
   <data name="emailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 24</value>
+    <value>69, 31</value>
   </data>
   <data name="emailLabel.Text" xml:space="preserve">
     <value>Mail</value>
   </data>
-  <data name="numberField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 281</value>
-  </data>
-  <data name="numberField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
-  <data name="emailField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 243</value>
-  </data>
-  <data name="emailField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
-  <data name="sexField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 207</value>
-  </data>
-  <data name="sexField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
-  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 171</value>
-  </data>
-  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
-  <data name="birhdayField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 135</value>
-  </data>
-  <data name="birhdayField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
-  <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 100</value>
-  </data>
-  <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
-  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 65</value>
-  </data>
-  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 24</value>
-  </data>
   <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 206</value>
+    <value>339, 275</value>
   </data>
   <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 24</value>
+    <value>54, 31</value>
   </data>
   <data name="sexLabel.Text" xml:space="preserve">
     <value>Sex</value>
   </data>
   <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 170</value>
+    <value>329, 227</value>
   </data>
   <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 24</value>
+    <value>64, 31</value>
   </data>
   <data name="cityLabel.Text" xml:space="preserve">
     <value>City</value>
   </data>
   <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>272, 64</value>
+    <value>311, 85</value>
   </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 24</value>
+    <value>82, 31</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="birhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 134</value>
+    <value>275, 179</value>
   </data>
   <data name="birhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>118, 31</value>
   </data>
   <data name="birhdayLabel.Text" xml:space="preserve">
     <value>Birthday</value>
   </data>
   <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 100</value>
+    <value>274, 133</value>
   </data>
   <data name="surnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 24</value>
+    <value>119, 31</value>
   </data>
   <data name="surnameLabel.Text" xml:space="preserve">
     <value>Surname</value>
@@ -2726,37 +2669,25 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Photo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 69</value>
-  </data>
-  <data name="Photo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 149</value>
+  <data name="Photo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="profileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 0</value>
+    <value>249, 0</value>
   </data>
   <data name="profileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 64</value>
+    <value>188, 82</value>
   </data>
   <data name="profileLabel.Text" xml:space="preserve">
     <value>Profile</value>
   </data>
-  <data name="searchLine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 143</value>
+  <data name="searchLine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="searchLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 29</value>
+  <data name="listUsers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="listUsers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 173</value>
-  </data>
-  <data name="listUsers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 256</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>895, 428</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
 </root>

@@ -1143,11 +1143,9 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 21</value>
-  </data>
-  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 58</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2031,100 +2029,68 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 21</value>
+  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 58</value>
+  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 0</value>
+  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
+  <data name="FiltersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 0</value>
+  <data name="FinalAgeField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
-  </data>
-  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 98</value>
-  </data>
-  <data name="FullterPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 320</value>
-  </data>
-  <data name="FiltersButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 268</value>
-  </data>
-  <data name="FiltersButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 49</value>
-  </data>
-  <data name="FinalAgeField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 64</value>
-  </data>
-  <data name="FinalAgeField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 29</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 64</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 24</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 64</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 24</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sexWomenButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 206</value>
+    <value>362, 275</value>
   </data>
-  <data name="sexWomenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 27</value>
+  <data name="sexWomenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="sexWomenButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="sexMenButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 206</value>
+    <value>291, 275</value>
   </data>
-  <data name="sexMenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 27</value>
+  <data name="sexMenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 208</value>
+  <data name="sexMenButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 24</value>
+  <data name="label3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 150</value>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 29</value>
+  <data name="cityField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 107</value>
+  <data name="InitialAgeField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
+  <data name="FullterPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 121</value>
   </data>
-  <data name="passwondLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 24</value>
+  <data name="FullterPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
-  <data name="passwondLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 24</value>
+  <data name="FullterPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>539, 427</value>
   </data>
-  <data name="InitialAgeField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 64</value>
-  </data>
-  <data name="InitialAgeField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 29</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>472, 411</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
 </root>

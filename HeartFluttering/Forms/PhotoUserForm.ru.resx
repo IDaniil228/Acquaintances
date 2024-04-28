@@ -652,6 +652,12 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="PanelInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 407</value>
+  </data>
+  <data name="PanelInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 126</value>
+  </data>
   <data name="likeAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
@@ -1146,5 +1152,11 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUDt/7
         3v8F51vhA+714IkAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="FunctionalPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 550</value>
+  </data>
+  <data name="FunctionalPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 153</value>
   </data>
 </root>

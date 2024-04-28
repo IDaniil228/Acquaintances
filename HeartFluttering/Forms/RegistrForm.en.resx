@@ -1144,10 +1144,11 @@
 </value>
   </data>
   <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 19</value>
+    <value>605, 25</value>
   </data>
-  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 69</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2032,189 +2033,132 @@
 </value>
   </data>
   <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 19</value>
+    <value>221, 25</value>
   </data>
-  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 69</value>
+  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>745, 0</value>
+  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
-  </data>
-  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>776, 0</value>
-  </data>
-  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
-  </data>
-  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 88</value>
+  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Sign up</value>
   </data>
-  <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 130</value>
-  </data>
   <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 26</value>
+    <value>89, 35</value>
   </data>
   <data name="loginLabel.Text" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="LoginField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 159</value>
-  </data>
-  <data name="LoginField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 32</value>
+  <data name="LoginField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="LoginField.Text" xml:space="preserve">
     <value>Enter login</value>
   </data>
-  <data name="passwordLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 280</value>
-  </data>
   <data name="passwordLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
+    <value>232, 35</value>
   </data>
   <data name="passwordLabel2.Text" xml:space="preserve">
     <value>Repeat password</value>
   </data>
-  <data name="password2Field.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 309</value>
-  </data>
-  <data name="password2Field.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 32</value>
+  <data name="password2Field.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="password2Field.Text" xml:space="preserve">
     <value>Repeat password</value>
   </data>
-  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 206</value>
-  </data>
   <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 26</value>
+    <value>137, 35</value>
   </data>
   <data name="passwordLabel.Text" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 235</value>
-  </data>
-  <data name="passwordField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 32</value>
+  <data name="passwordField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="passwordField.Text" xml:space="preserve">
     <value>Enter password</value>
   </data>
-  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 394</value>
-  </data>
-  <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 44</value>
+  <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="loginButton.Text" xml:space="preserve">
     <value>Sign up</value>
   </data>
   <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>712, 343</value>
+    <value>814, 457</value>
+  </data>
+  <data name="sexWomenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="sexWomenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 27</value>
+    <value>67, 35</value>
   </data>
   <data name="sexWomenButton.Text" xml:space="preserve">
     <value> W</value>
   </data>
   <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 343</value>
+    <value>743, 457</value>
   </data>
-  <data name="sexMenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 27</value>
-  </data>
-  <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 343</value>
+  <data name="sexMenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 24</value>
+    <value>207, 31</value>
   </data>
   <data name="sexLabel.Text" xml:space="preserve">
     <value>Сhoose a gender</value>
   </data>
-  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 307</value>
-  </data>
-  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 29</value>
+  <data name="cityField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="cityField.Text" xml:space="preserve">
     <value>Enter city (in Russian)</value>
   </data>
-  <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 280</value>
-  </data>
   <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 24</value>
+    <value>64, 31</value>
   </data>
   <data name="cityLabel.Text" xml:space="preserve">
     <value>City</value>
   </data>
-  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 103</value>
-  </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 24</value>
+    <value>82, 31</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 130</value>
-  </data>
-  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 29</value>
+  <data name="nameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="nameField.Text" xml:space="preserve">
     <value>Enter name</value>
   </data>
-  <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 221</value>
-  </data>
   <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>118, 31</value>
   </data>
   <data name="BirhdayLabel.Text" xml:space="preserve">
     <value>Birthday</value>
   </data>
-  <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 162</value>
-  </data>
   <data name="surnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 24</value>
+    <value>119, 31</value>
   </data>
   <data name="surnameLabel.Text" xml:space="preserve">
     <value>Surname</value>
   </data>
-  <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 189</value>
-  </data>
-  <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 29</value>
+  <data name="surnameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="surnameField.Text" xml:space="preserve">
     <value>Enter surname</value>
   </data>
-  <data name="BirhdayFields.Location" type="System.Drawing.Point, System.Drawing">
-    <value>467, 248</value>
+  <data name="BirhdayFields.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="BirhdayFields.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 23</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>811, 450</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
 </root>

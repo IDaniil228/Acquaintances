@@ -117,119 +117,449 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;homeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BirhdayField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 80</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="startButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe Print, 12pt</value>
-  </data>
-  <data name="changeFiltersButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe Print, 12pt</value>
-  </data>
-  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 23</value>
-  </data>
-  <data name="startButton.Text" xml:space="preserve">
-    <value>Начать</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BirhdayLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nextAccount.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="photoField.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
+  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
   </data>
-  <data name="homeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="photoField.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="nameField.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt</value>
-  </data>
-  <data name="likeAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="changeFiltersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="&gt;&gt;changeFiltersButton.Parent" xml:space="preserve">
     <value>FunctionalPanel</value>
   </data>
-  <data name="&gt;&gt;BirhdayField.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;changeFiltersButton.Name" xml:space="preserve">
-    <value>changeFiltersButton</value>
-  </data>
-  <data name="likeAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="&gt;&gt;photoField.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="changeFiltersButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>473, 700</value>
-  </data>
-  <data name="nextAccount.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="homeButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 13</value>
+  <data name="nameField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt</value>
   </data>
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="likeAccount.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="photoField.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nextAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 400</value>
+  </data>
+  <data name="&gt;&gt;PanelInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 32</value>
+  </data>
+  <data name="&gt;&gt;nextAccount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="photoField.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="photoField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="&gt;&gt;nameField.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="changeFiltersButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 47</value>
+  </data>
+  <data name="&gt;&gt;photoField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nextAccount.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FunctionalPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 402</value>
+  </data>
+  <data name="&gt;&gt;BirhdayField.Parent" xml:space="preserve">
+    <value>PanelInfo</value>
+  </data>
+  <data name="&gt;&gt;photoField.Name" xml:space="preserve">
+    <value>photoField</value>
+  </data>
+  <data name="likeAccount.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="changeFiltersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="homeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 536</value>
+  </data>
+  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
+    <value>PanelInfo</value>
+  </data>
+  <data name="&gt;&gt;likeAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nextAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 37</value>
+  </data>
+  <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
+    <value>FunctionalPanel</value>
+  </data>
+  <data name="homeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 117</value>
+  </data>
+  <data name="nextAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 96</value>
   </data>
-  <data name="BirhdayLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;photoField.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="PanelInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Начать</value>
   </data>
-  <data name="changeFiltersButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 63</value>
+  <data name="BirhdayField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 80</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 35</value>
+  </data>
+  <data name="&gt;&gt;nameField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
+    <value>startButton</value>
+  </data>
+  <data name="&gt;&gt;BirhdayField.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 13</value>
+  </data>
+  <data name="&gt;&gt;changeFiltersButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 77</value>
+  </data>
+  <data name="BirhdayField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt</value>
   </data>
   <data name="homeButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe Print, 12pt</value>
   </data>
-  <data name="&gt;&gt;BirhdayLabel.Name" xml:space="preserve">
-    <value>BirhdayLabel</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 133</value>
   </data>
-  <data name="&gt;&gt;homeButton.Name" xml:space="preserve">
-    <value>homeButton</value>
+  <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 35</value>
   </data>
-  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="changeFiltersButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 12pt</value>
+  </data>
+  <data name="&gt;&gt;likeAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="homeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="likeAccount.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 20</value>
   </data>
-  <data name="&gt;&gt;nextAccount.Parent" xml:space="preserve">
+  <data name="&gt;&gt;likeAccount.Parent" xml:space="preserve">
     <value>FunctionalPanel</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changeFiltersButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nextAccount.Name" xml:space="preserve">
+    <value>nextAccount</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="BirhdayLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="likeAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AACQstYO/x92QOpeKMM45wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="nextAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;BirhdayField.Name" xml:space="preserve">
+    <value>BirhdayField</value>
+  </data>
+  <data name="likeAccount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 163</value>
+  </data>
+  <data name="likeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 96</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="nameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="changeFiltersButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="BirhdayField.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="changeFiltersButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 63</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
+    <value>nameLabel</value>
+  </data>
+  <data name="&gt;&gt;BirhdayLabel.Parent" xml:space="preserve">
+    <value>PanelInfo</value>
+  </data>
+  <data name="likeAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;PanelInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BirhdayLabel.Name" xml:space="preserve">
+    <value>BirhdayLabel</value>
+  </data>
+  <data name="photoField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 399</value>
+  </data>
+  <data name="likeAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="startButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="photoField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="startButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="nextAccount.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>473, 700</value>
+  </data>
+  <data name="nextAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BirhdayLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="photoField.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -765,17 +1095,62 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="BirhdayLabel.Text" xml:space="preserve">
+    <value>Возраст </value>
+  </data>
+  <data name="FunctionalPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="PanelInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;nameField.Parent" xml:space="preserve">
+    <value>PanelInfo</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FunctionalPanel.Name" xml:space="preserve">
+    <value>FunctionalPanel</value>
+  </data>
+  <data name="&gt;&gt;photoField.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FunctionalPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="homeButton.Text" xml:space="preserve">
+    <value>Мой профиль</value>
+  </data>
   <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 41</value>
   </data>
-  <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BirhdayLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PhotoUserForm</value>
+  </data>
+  <data name="BirhdayField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 32</value>
+  </data>
+  <data name="&gt;&gt;changeFiltersButton.Name" xml:space="preserve">
+    <value>changeFiltersButton</value>
+  </data>
+  <data name="&gt;&gt;homeButton.Name" xml:space="preserve">
+    <value>homeButton</value>
+  </data>
+  <data name="&gt;&gt;PanelInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;homeButton.Parent" xml:space="preserve">
     <value>FunctionalPanel</value>
   </data>
-  <data name="homeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 117</value>
-  </data>
-  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 32</value>
+  <data name="nameField.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
   </data>
   <data name="nextAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1096,481 +1471,106 @@
         3v8F51vhA+714IkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;nextAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="changeFiltersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="startButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="likeAccount.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="nextAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BirhdayField.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="likeAccount.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="BirhdayLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;PanelInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nameField.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;likeAccount.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
-    <value>startButton</value>
-  </data>
-  <data name="&gt;&gt;BirhdayLabel.Parent" xml:space="preserve">
-    <value>PanelInfo</value>
-  </data>
-  <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 77</value>
-  </data>
-  <data name="&gt;&gt;FunctionalPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;photoField.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;nameField.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 35</value>
-  </data>
-  <data name="likeAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        AACQstYO/x92QOpeKMM45wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;nameField.Parent" xml:space="preserve">
-    <value>PanelInfo</value>
-  </data>
-  <data name="&gt;&gt;PanelInfo.Name" xml:space="preserve">
-    <value>PanelInfo</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BirhdayLabel.Text" xml:space="preserve">
-    <value>Возраст </value>
-  </data>
-  <data name="&gt;&gt;nameField.Name" xml:space="preserve">
-    <value>nameField</value>
-  </data>
-  <data name="nameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
-    <value>PanelInfo</value>
-  </data>
-  <data name="startButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="photoField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="&gt;&gt;FunctionalPanel.Name" xml:space="preserve">
+  <data name="&gt;&gt;nextAccount.Parent" xml:space="preserve">
     <value>FunctionalPanel</value>
-  </data>
-  <data name="startButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;nameField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>PhotoUserForm</value>
-  </data>
-  <data name="BirhdayField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 32</value>
-  </data>
-  <data name="nextAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 37</value>
-  </data>
-  <data name="&gt;&gt;FunctionalPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 400</value>
-  </data>
-  <data name="likeAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="photoField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 399</value>
-  </data>
-  <data name="photoField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="nextAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;photoField.Name" xml:space="preserve">
-    <value>photoField</value>
-  </data>
-  <data name="&gt;&gt;BirhdayLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="likeAccount.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="homeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="BirhdayField.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt</value>
-  </data>
-  <data name="&gt;&gt;homeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;changeFiltersButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 163</value>
-  </data>
-  <data name="&gt;&gt;FunctionalPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;photoField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 25</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PhotoUserForm</value>
-  </data>
-  <data name="&gt;&gt;changeFiltersButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 35</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
-    <value>nameLabel</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PanelInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 300</value>
-  </data>
-  <data name="homeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 41</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;BirhdayField.Parent" xml:space="preserve">
-    <value>PanelInfo</value>
-  </data>
-  <data name="&gt;&gt;BirhdayField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;homeButton.Parent" xml:space="preserve">
-    <value>FunctionalPanel</value>
-  </data>
-  <data name="&gt;&gt;nextAccount.Name" xml:space="preserve">
-    <value>nextAccount</value>
-  </data>
-  <data name="nameLabel.Text" xml:space="preserve">
-    <value>Имя</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="nextAccount.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;PanelInfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BirhdayField.Name" xml:space="preserve">
-    <value>BirhdayField</value>
-  </data>
-  <data name="nextAccount.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;likeAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="changeFiltersButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 47</value>
-  </data>
-  <data name="FunctionalPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 402</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="&gt;&gt;likeAccount.Parent" xml:space="preserve">
-    <value>FunctionalPanel</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 536</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
   </data>
   <data name="&gt;&gt;likeAccount.Name" xml:space="preserve">
     <value>likeAccount</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 133</value>
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
-  <data name="FunctionalPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="changeFiltersButton.Text" xml:space="preserve">
-    <value>Изменить фильтры</value>
-  </data>
-  <data name="homeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PhotoUserForm</value>
   </data>
   <data name="BirhdayLabel.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
-  <data name="nextAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 96</value>
+  <data name="&gt;&gt;homeButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;PanelInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="homeButton.Text" xml:space="preserve">
-    <value>Мой профиль</value>
+  <data name="likeAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="nextAccount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="changeFiltersButton.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;BirhdayLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="changeFiltersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="startButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="changeFiltersButton.Text" xml:space="preserve">
+    <value>Изменить фильтры</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;nameField.Name" xml:space="preserve">
+    <value>nameField</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="&gt;&gt;PanelInfo.Name" xml:space="preserve">
+    <value>PanelInfo</value>
+  </data>
+  <data name="changeFiltersButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;FunctionalPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;homeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="PanelInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 300</value>
+  </data>
+  <data name="homeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="&gt;&gt;FunctionalPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="homeButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;BirhdayField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="homeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 41</value>
+  </data>
+  <data name="startButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 12pt</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
+  </metadata>
+  <metadata name="nextAccount.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="likeAccount.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="nextAccount.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>en</value>
   </metadata>
 </root>

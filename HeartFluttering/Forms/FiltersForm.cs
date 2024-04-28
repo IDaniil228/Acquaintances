@@ -118,10 +118,19 @@ namespace HeartFluttering
                 MessageBox.Show(InscriptionsFilter.AgeРositive);
                 return;
             }
-            if (sexMenButton.Checked == false && sexWomenButton.Checked == false)
+            if (CurrentUser.currentUser != null)
             {
-                MessageBox.Show(InscriptionsFilter.Sex);
-                return;
+                if (CurrentUser.currentUser.Sex == 1)
+                {
+                    sexWomenButton.Checked = true;
+                }
+            }
+            if (CurrentUser.currentUser != null)
+            {
+                if (CurrentUser.currentUser.Sex == 0)
+                {
+                    sexMenButton.Checked = true;
+                }
             }
             List<User> currentUsers = new List<User>();
 

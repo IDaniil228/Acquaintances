@@ -2911,4 +2911,10 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="ProfilePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 120</value>
+  </data>
+  <data name="ProfilePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>664, 497</value>
+  </data>
 </root>

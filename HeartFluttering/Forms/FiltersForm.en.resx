@@ -2052,6 +2052,10 @@
   <data name="label1.Text" xml:space="preserve">
     <value>From</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sexWomenButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>387, 277</value>
   </data>
@@ -2061,14 +2065,29 @@
   <data name="sexWomenButton.Text" xml:space="preserve">
     <value>W</value>
   </data>
+  <data name="sexWomenButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="sexMenButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>316, 277</value>
+  </data>
+  <data name="sexMenButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 31</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Choose a gender</value>
+  </data>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 165</value>
@@ -2087,5 +2106,11 @@
   </data>
   <data name="passwondLabel.Text" xml:space="preserve">
     <value>Age</value>
+  </data>
+  <data name="FullterPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 134</value>
+  </data>
+  <data name="FullterPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>539, 424</value>
   </data>
 </root>

@@ -200,7 +200,7 @@ namespace HeartFluttering
             {
                 using (var context = new AcquaintanceSqlContext())
                 {
-                    var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers) && r.Sex != CurrentUser.currentUser.Sex);
                     logger.Info("Получение всех пользователей, кроме текущего пользователя");
                     var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
                     logger.Info("Сортировка всех пользователей по лайкам");
