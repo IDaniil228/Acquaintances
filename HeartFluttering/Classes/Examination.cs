@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +87,22 @@ namespace HeartFluttering.Classes
                 }
             }
             return false;
+        }
+        public static string GetCity(string city)
+        {
+            string correctCity = null;
+            for(int i = 0; i < city.Length; i++)
+            {
+                if(i == 0)
+                {
+                    correctCity += Char.ToUpper(city[i]);
+                }
+                else
+                {
+                    correctCity += Char.ToLower(city[i]);
+                }
+            }
+            return correctCity;
         }
     }
 }

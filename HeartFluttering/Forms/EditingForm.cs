@@ -270,7 +270,8 @@ namespace HeartFluttering
                         return;
                     }
                     logger.Warn("Проверка на существующий город");
-                    person.City = cityField.Text;
+                    string city = Examination.GetCity(cityField.Text);
+                    person.City = city;
 
                     if (sexMenButton.Checked)
                     {

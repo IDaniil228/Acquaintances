@@ -54,10 +54,16 @@ namespace UnitTestsHeartFluttering
             Assert.IsFalse(Examination.CheckFormatMail("w34sdtfffhv@maiiiiiil.ruuuuu"));
         }
 
-        [TestMethod]
+        [TestMethod] 
         public void CheckCorrectMail()
         {
             Assert.IsTrue(Examination.CheckFormatMail("bukden12@email.ru"));
+        }
+
+        [TestMethod] 
+        public void EditingTheLineWith()
+        {
+            Assert.AreEqual("Èæåâñê",Examination.GetCity("èÆÅÂÑÊ"));
         }
     }
 }

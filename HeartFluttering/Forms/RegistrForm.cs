@@ -376,7 +376,8 @@ namespace HeartFluttering
                     MessageBox.Show(InscriptionsSignUp.CityIsNotExists);
                     return;
                 }
-                user.City = cityField.Text;
+                string city = Examination.GetCity(cityField.Text);
+                user.City = city;
                 if (sexMenButton.Checked)
                 {
                     user.Sex = 1;
