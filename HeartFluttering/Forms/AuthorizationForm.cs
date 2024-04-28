@@ -8,8 +8,15 @@ namespace HeartFluttering
 {
     public partial class AuthorizationForm : Form
     {
+        /// <summary>
+        /// Местоположении формы авторизации
+        /// </summary>
+        private Point lastPoint;
         private bool flag = false;
         private int currentIndex;
+        /// <summary>
+        /// Создаем экземпляр класса для логирования
+        /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
         public AuthorizationForm()
         {
@@ -115,7 +122,7 @@ namespace HeartFluttering
                     MessageBox.Show(Inscriptions.MessageEmptyPassword);
                     return;
                 }
-                
+
                 try
                 {
                     using (var context = new AcquaintanceSqlContext())
@@ -144,7 +151,7 @@ namespace HeartFluttering
                                     return;
                                 }
 
-                                if(person.Blocker == 1)
+                                if (person.Blocker == 1)
                                 {
                                     MessageBox.Show("Форма входа занята, подождите пока пользователь пройдет регистрацию");
                                     return;
@@ -164,7 +171,7 @@ namespace HeartFluttering
                         }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     logger.Fatal("Ошибка подключения к базе данных");
@@ -193,7 +200,7 @@ namespace HeartFluttering
                                 MessageBox.Show(Inscriptions.MessageCantEnterLikeAdmin);
                                 return;
                             }
-                            if(admin.Blocker == 1)
+                            if (admin.Blocker == 1)
                             {
                                 MessageBox.Show("Форма входа занята, подождите пока пользователь пройдет регистрацию");
                                 return;
@@ -224,41 +231,48 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void registrButton_Click(object sender, EventArgs e)
         {
-
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                var users = context.Users.ToList();
-                var admins = context.Administrators.ToList();
-                foreach(var user in users)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    if(user.Blocker == 1)
+                    var users = context.Users.ToList();
+                    var admins = context.Administrators.ToList();
+                    foreach (var user in users)
                     {
-                        MessageBox.Show("Форма регистрации занята");
-                        return;
+                        if (user.Blocker == 1)
+                        {
+                            MessageBox.Show("Форма регистрации занята");
+                            return;
+                        }
                     }
-                }
-                foreach(var admin in admins)
-                {
-                    if(admin.Blocker == 1)
+                    foreach (var admin in admins)
                     {
-                        MessageBox.Show("Форма регистрации занята");
-                        return;
+                        if (admin.Blocker == 1)
+                        {
+                            MessageBox.Show("Форма регистрации занята");
+                            return;
+                        }
                     }
+                    foreach (var user in users)
+                    {
+                        user.Blocker = 1;
+                    }
+                    foreach (var admin in admins)
+                    {
+                        admin.Blocker = 1;
+                    }
+                    context.SaveChanges();
                 }
-                foreach (var user in users)
-                {
-                    user.Blocker = 1;
-                }
-                foreach (var admin in admins)
-                {
-                    admin.Blocker = 1;
-                }
-                context.SaveChanges();
+                this.Hide();
+                RegistrForm form = new RegistrForm();
+                logger.Trace("Открытие формы регистрации");
+                form.Show();
             }
-            this.Hide();
-            RegistrForm form = new RegistrForm();
-            logger.Trace("Открытие формы регистрации");
-            form.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка подключения к базе данных");
+            }
         }
         /// <summary>
         /// Сворачивание приложения
@@ -297,11 +311,11 @@ namespace HeartFluttering
             {
                 LanguageComboBox.SelectedIndex = 1;
             }
-            else 
+            else
             {
                 LanguageComboBox.SelectedIndex = 0;
             }
-            
+
 
         }
 
@@ -310,7 +324,7 @@ namespace HeartFluttering
             if (!flag)
             {
                 flag = true;
-                return;            
+                return;
             }
             if (LanguageComboBox.SelectedIndex == 0)
             {
@@ -331,6 +345,94 @@ namespace HeartFluttering
             choice.Items.Clear();
             choice.Items.Add(Inscriptions.User);
             choice.Items.Add(Inscriptions.Admin);
+        }
+        /// <summary>
+        /// Устанавливаем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void entryLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Происваиваем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void entryLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AuthorizationForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Происваиваем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AuthorizationForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void girlPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Происваиваем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void girlPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void boyPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Происваиваем новое местоположение для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

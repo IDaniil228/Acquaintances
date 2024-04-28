@@ -15,6 +15,13 @@ namespace HeartFluttering
 {
     public partial class PhotoUserForm : Form
     {
+        /// <summary>
+        /// Местоположение формы
+        /// </summary>
+        private Point lastPoint;
+        /// <summary>
+        /// Создаём экземпляр класса для логирования
+        /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
         public PhotoUserForm()
         {
@@ -108,15 +115,15 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void likeAccount_Click(object sender, EventArgs e)
         {
-            if(currentUsers.Count > count)
+            if (currentUsers.Count > count)
             {
-                using(var context = new AcquaintanceSqlContext())
+                using (var context = new AcquaintanceSqlContext())
                 {
                     var currUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
                     logger.Info("Получение текущего пользователя");
                     var anotherUser = context.Users.FirstOrDefault(r => r.IdUsers.Equals(currentUsers[count].IdUsers));
                     logger.Info("Получения пользователя, который удовлетворяет фильтрам");
-                    if(currUsers.AnotherAccounts != null)
+                    if (currUsers.AnotherAccounts != null)
                     {
                         if (currUsers.AnotherAccounts.Split(',').Contains(anotherUser.IdUsers))
                         {
@@ -124,17 +131,17 @@ namespace HeartFluttering
                             return;
                         }
                     }
-                    if(currUsers == null)
+                    if (currUsers == null)
                     {
                         MessageBox.Show(InscriptionsPhotoUser.Error);
                         return;
                     }
-                    if(anotherUser == null)
+                    if (anotherUser == null)
                     {
                         MessageBox.Show(InscriptionsPhotoUser.Error);
                         return;
                     }
-                    if(currUsers.AnotherAccounts == null)
+                    if (currUsers.AnotherAccounts == null)
                     {
                         currUsers.AnotherAccounts = anotherUser.IdUsers;
                     }
@@ -142,7 +149,7 @@ namespace HeartFluttering
                     {
                         currUsers.AnotherAccounts += "," + anotherUser.IdUsers;
                     }
-                    if(anotherUser.Notifications == null)
+                    if (anotherUser.Notifications == null)
                     {
                         anotherUser.Notifications = currUsers.IdUsers;
                     }
@@ -181,6 +188,72 @@ namespace HeartFluttering
                 MessageBox.Show(InscriptionsPhotoUser.IsEnd);
                 return;
             }
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void photoField_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void photoField_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelInfo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelInfo_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FunctionalPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FunctionalPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

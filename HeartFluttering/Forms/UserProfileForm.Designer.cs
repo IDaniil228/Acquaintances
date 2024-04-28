@@ -34,7 +34,7 @@
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
-            panel1 = new Panel();
+            ProfilePanel = new Panel();
             likeAccount2 = new PictureBox();
             backButton3 = new Button();
             backButton2 = new Button();
@@ -59,7 +59,7 @@
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
-            panel1.SuspendLayout();
+            ProfilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)likeAccount2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
@@ -71,6 +71,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // boyPhoto
             // 
@@ -78,6 +80,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // CollapseButton
             // 
@@ -109,33 +113,37 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
-            // panel1
+            // ProfilePanel
             // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Controls.Add(likeAccount2);
-            panel1.Controls.Add(backButton3);
-            panel1.Controls.Add(backButton2);
-            panel1.Controls.Add(deleteButton);
-            panel1.Controls.Add(likeAccount);
-            panel1.Controls.Add(backButton);
-            panel1.Controls.Add(label14);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(numberField);
-            panel1.Controls.Add(mailField);
-            panel1.Controls.Add(selField);
-            panel1.Controls.Add(cityField);
-            panel1.Controls.Add(birthdayField);
-            panel1.Controls.Add(surnameField);
-            panel1.Controls.Add(nameField);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(passwondLabel);
-            panel1.Controls.Add(loginLabel);
-            panel1.Controls.Add(Photo);
-            panel1.Controls.Add(label1);
-            panel1.Name = "panel1";
+            resources.ApplyResources(ProfilePanel, "ProfilePanel");
+            ProfilePanel.Controls.Add(likeAccount2);
+            ProfilePanel.Controls.Add(backButton3);
+            ProfilePanel.Controls.Add(backButton2);
+            ProfilePanel.Controls.Add(deleteButton);
+            ProfilePanel.Controls.Add(likeAccount);
+            ProfilePanel.Controls.Add(backButton);
+            ProfilePanel.Controls.Add(label14);
+            ProfilePanel.Controls.Add(label13);
+            ProfilePanel.Controls.Add(numberField);
+            ProfilePanel.Controls.Add(mailField);
+            ProfilePanel.Controls.Add(selField);
+            ProfilePanel.Controls.Add(cityField);
+            ProfilePanel.Controls.Add(birthdayField);
+            ProfilePanel.Controls.Add(surnameField);
+            ProfilePanel.Controls.Add(nameField);
+            ProfilePanel.Controls.Add(label3);
+            ProfilePanel.Controls.Add(label4);
+            ProfilePanel.Controls.Add(label5);
+            ProfilePanel.Controls.Add(passwondLabel);
+            ProfilePanel.Controls.Add(loginLabel);
+            ProfilePanel.Controls.Add(Photo);
+            ProfilePanel.Controls.Add(label1);
+            ProfilePanel.Name = "ProfilePanel";
+            ProfilePanel.MouseDown += ProfilePanel_MouseDown;
+            ProfilePanel.MouseMove += ProfilePanel_MouseMove;
             // 
             // likeAccount2
             // 
@@ -299,7 +307,7 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panel1);
+            Controls.Add(ProfilePanel);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
@@ -310,8 +318,8 @@
             Load += UserProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            ProfilePanel.ResumeLayout(false);
+            ProfilePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)likeAccount2).EndInit();
             ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
@@ -325,7 +333,7 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
-        private Panel panel1;
+        private Panel ProfilePanel;
         private Label label14;
         private Label label13;
         private Label numberField;

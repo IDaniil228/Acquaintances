@@ -53,6 +53,8 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
             // CloseButton
             // 
@@ -155,6 +157,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // girlPhoto
             // 
@@ -162,6 +166,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // AuthorizationForm
             // 
@@ -185,6 +191,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "AuthorizationForm";
             Load += AuthorizationForm_Load;
+            MouseDown += AuthorizationForm_MouseDown;
+            MouseMove += AuthorizationForm_MouseMove;
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ResumeLayout(false);

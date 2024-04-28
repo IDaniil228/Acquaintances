@@ -36,7 +36,7 @@
             CloseButton = new Button();
             entryLabel = new Label();
             usersLabel = new Label();
-            panel1 = new Panel();
+            AdminPanel = new Panel();
             deleteAccountButton = new Button();
             numberLabel = new Label();
             emailLabel = new Label();
@@ -58,7 +58,7 @@
             listUsers = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
-            panel1.SuspendLayout();
+            AdminPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
             SuspendLayout();
@@ -75,6 +75,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // boyPhoto
             // 
@@ -82,6 +84,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // CollapseButton
             // 
@@ -113,33 +117,37 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
             // usersLabel
             // 
             resources.ApplyResources(usersLabel, "usersLabel");
             usersLabel.Name = "usersLabel";
             // 
-            // panel1
+            // AdminPanel
             // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Controls.Add(deleteAccountButton);
-            panel1.Controls.Add(numberLabel);
-            panel1.Controls.Add(emailLabel);
-            panel1.Controls.Add(numberField);
-            panel1.Controls.Add(emailField);
-            panel1.Controls.Add(sexField);
-            panel1.Controls.Add(cityField);
-            panel1.Controls.Add(birhdayField);
-            panel1.Controls.Add(surnameField);
-            panel1.Controls.Add(nameField);
-            panel1.Controls.Add(sexLabel);
-            panel1.Controls.Add(cityLabel);
-            panel1.Controls.Add(nameLabel);
-            panel1.Controls.Add(birhdayLabel);
-            panel1.Controls.Add(surnameLabel);
-            panel1.Controls.Add(Photo);
-            panel1.Controls.Add(profileLabel);
-            panel1.Name = "panel1";
+            resources.ApplyResources(AdminPanel, "AdminPanel");
+            AdminPanel.Controls.Add(deleteAccountButton);
+            AdminPanel.Controls.Add(numberLabel);
+            AdminPanel.Controls.Add(emailLabel);
+            AdminPanel.Controls.Add(numberField);
+            AdminPanel.Controls.Add(emailField);
+            AdminPanel.Controls.Add(sexField);
+            AdminPanel.Controls.Add(cityField);
+            AdminPanel.Controls.Add(birhdayField);
+            AdminPanel.Controls.Add(surnameField);
+            AdminPanel.Controls.Add(nameField);
+            AdminPanel.Controls.Add(sexLabel);
+            AdminPanel.Controls.Add(cityLabel);
+            AdminPanel.Controls.Add(nameLabel);
+            AdminPanel.Controls.Add(birhdayLabel);
+            AdminPanel.Controls.Add(surnameLabel);
+            AdminPanel.Controls.Add(Photo);
+            AdminPanel.Controls.Add(profileLabel);
+            AdminPanel.Name = "AdminPanel";
+            AdminPanel.MouseDown += AdminPanel_MouseDown;
+            AdminPanel.MouseMove += AdminPanel_MouseMove;
             // 
             // deleteAccountButton
             // 
@@ -271,7 +279,7 @@
             BackColor = Color.White;
             Controls.Add(listUsers);
             Controls.Add(searchLine);
-            Controls.Add(panel1);
+            Controls.Add(AdminPanel);
             Controls.Add(usersLabel);
             Controls.Add(label2);
             Controls.Add(girlPhoto);
@@ -282,10 +290,12 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdministratorForm";
             Load += AdministratorForm_Load;
+            MouseDown += AdministratorForm_MouseDown;
+            MouseMove += AdministratorForm_MouseMove;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            AdminPanel.ResumeLayout(false);
+            AdminPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();
             ResumeLayout(false);
@@ -301,7 +311,7 @@
         private Button CloseButton;
         private Label entryLabel;
         private Label usersLabel;
-        private Panel panel1;
+        private Panel AdminPanel;
         private Button deleteAccountButton;
         private Label numberLabel;
         private Label emailLabel;

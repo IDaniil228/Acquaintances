@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhotoUserForm));
             photoField = new PictureBox();
-            panel1 = new Panel();
+            PanelInfo = new Panel();
             BirhdayField = new Label();
             BirhdayLabel = new Label();
             nameField = new Label();
             nameLabel = new Label();
-            panel2 = new Panel();
+            FunctionalPanel = new Panel();
             likeAccount = new PictureBox();
             startButton = new Button();
             homeButton = new Button();
             changeFiltersButton = new Button();
             nextAccount = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)photoField).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            PanelInfo.SuspendLayout();
+            FunctionalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)likeAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nextAccount).BeginInit();
             SuspendLayout();
@@ -53,16 +53,20 @@
             resources.ApplyResources(photoField, "photoField");
             photoField.Name = "photoField";
             photoField.TabStop = false;
+            photoField.MouseDown += photoField_MouseDown;
+            photoField.MouseMove += photoField_MouseMove;
             // 
-            // panel1
+            // PanelInfo
             // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(BirhdayField);
-            panel1.Controls.Add(BirhdayLabel);
-            panel1.Controls.Add(nameField);
-            panel1.Controls.Add(nameLabel);
-            panel1.Name = "panel1";
+            resources.ApplyResources(PanelInfo, "PanelInfo");
+            PanelInfo.BackColor = Color.White;
+            PanelInfo.Controls.Add(BirhdayField);
+            PanelInfo.Controls.Add(BirhdayLabel);
+            PanelInfo.Controls.Add(nameField);
+            PanelInfo.Controls.Add(nameLabel);
+            PanelInfo.Name = "PanelInfo";
+            PanelInfo.MouseDown += PanelInfo_MouseDown;
+            PanelInfo.MouseMove += PanelInfo_MouseMove;
             // 
             // BirhdayField
             // 
@@ -88,15 +92,17 @@
             resources.ApplyResources(nameLabel, "nameLabel");
             nameLabel.Name = "nameLabel";
             // 
-            // panel2
+            // FunctionalPanel
             // 
-            resources.ApplyResources(panel2, "panel2");
-            panel2.Controls.Add(likeAccount);
-            panel2.Controls.Add(startButton);
-            panel2.Controls.Add(homeButton);
-            panel2.Controls.Add(changeFiltersButton);
-            panel2.Controls.Add(nextAccount);
-            panel2.Name = "panel2";
+            resources.ApplyResources(FunctionalPanel, "FunctionalPanel");
+            FunctionalPanel.Controls.Add(likeAccount);
+            FunctionalPanel.Controls.Add(startButton);
+            FunctionalPanel.Controls.Add(homeButton);
+            FunctionalPanel.Controls.Add(changeFiltersButton);
+            FunctionalPanel.Controls.Add(nextAccount);
+            FunctionalPanel.Name = "FunctionalPanel";
+            FunctionalPanel.MouseDown += FunctionalPanel_MouseDown;
+            FunctionalPanel.MouseMove += FunctionalPanel_MouseMove;
             // 
             // likeAccount
             // 
@@ -153,15 +159,15 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(FunctionalPanel);
+            Controls.Add(PanelInfo);
             Controls.Add(photoField);
             FormBorderStyle = FormBorderStyle.None;
             Name = "PhotoUserForm";
             ((System.ComponentModel.ISupportInitialize)photoField).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
+            PanelInfo.ResumeLayout(false);
+            PanelInfo.PerformLayout();
+            FunctionalPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)likeAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)nextAccount).EndInit();
             ResumeLayout(false);
@@ -170,12 +176,12 @@
         #endregion
 
         private PictureBox photoField;
-        private Panel panel1;
+        private Panel PanelInfo;
         private Label BirhdayField;
         private Label BirhdayLabel;
         private Label nameField;
         private Label nameLabel;
-        private Panel panel2;
+        private Panel FunctionalPanel;
         private Button homeButton;
         private Button changeFiltersButton;
         private PictureBox nextAccount;

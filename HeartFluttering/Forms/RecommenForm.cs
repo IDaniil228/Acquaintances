@@ -16,6 +16,13 @@ namespace HeartFluttering
 {
     public partial class RecommenForm : Form
     {
+        /// <summary>
+        /// Местоположение формы
+        /// </summary>
+        private Point lastPoint;
+        /// <summary>
+        /// Создаём экземпляр класса для логирования
+        /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
         public RecommenForm()
         {
@@ -51,33 +58,41 @@ namespace HeartFluttering
         {
             using (var context = new AcquaintanceSqlContext())
             {
-                var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
-                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                try
                 {
-                    DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
-                    int position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
-                    logger.Info($"Получение пользователя по {position} позиции");
-                    User selectedUser = CurrentUsers.currentUsers[position - 1];
-                    UserProfileForm form = new UserProfileForm();
-                    if (person.AnotherAccounts != null)
+                    var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                     {
-                        if (!person.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
+                        DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
+                        int position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
+                        logger.Info($"Получение пользователя по {position} позиции");
+                        User selectedUser = CurrentUsers.currentUsers[position - 1];
+                        UserProfileForm form = new UserProfileForm();
+                        if (person.AnotherAccounts != null)
+                        {
+                            if (!person.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
+                            {
+                                form.likeAccount.Enabled = true;
+                                form.likeAccount.Visible = true;
+                            }
+                        }
+                        if (person.AnotherAccounts == null)
                         {
                             form.likeAccount.Enabled = true;
                             form.likeAccount.Visible = true;
                         }
+                        form.thisUsers = selectedUser;
+                        form.backButton.Enabled = true;
+                        form.backButton.Visible = true;
+                        logger.Trace("Открытие профиля выбранного пользователя");
+                        this.Hide();
+                        form.ShowDialog();
                     }
-                    if (person.AnotherAccounts == null)
-                    {
-                        form.likeAccount.Enabled = true;
-                        form.likeAccount.Visible = true;
-                    }
-                    form.thisUsers = selectedUser;
-                    form.backButton.Enabled = true;
-                    form.backButton.Visible = true;
-                    logger.Trace("Открытие профиля выбранного пользователя");
-                    this.Hide();
-                    form.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключении к базе данных");
                 }
             }
         }
@@ -102,6 +117,94 @@ namespace HeartFluttering
             this.Hide();
             HomeForm homeForm = new HomeForm();
             homeForm.ShowDialog();
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RecommenForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RecommenForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void entryLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void entryLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void girlPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void girlPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void boyPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

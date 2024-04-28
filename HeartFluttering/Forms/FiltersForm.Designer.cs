@@ -34,7 +34,7 @@
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
-            panel1 = new Panel();
+            FullterPanel = new Panel();
             FiltersButton = new Button();
             FinalAgeField = new TextBox();
             label4 = new Label();
@@ -48,7 +48,7 @@
             InitialAgeField = new TextBox();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
-            panel1.SuspendLayout();
+            FullterPanel.SuspendLayout();
             SuspendLayout();
             // 
             // girlPhoto
@@ -57,6 +57,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // boyPhoto
             // 
@@ -64,6 +66,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // CollapseButton
             // 
@@ -95,22 +99,26 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
-            // panel1
+            // FullterPanel
             // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Controls.Add(FiltersButton);
-            panel1.Controls.Add(FinalAgeField);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(sexWomenButton);
-            panel1.Controls.Add(sexMenButton);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(cityField);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(passwondLabel);
-            panel1.Controls.Add(InitialAgeField);
-            panel1.Name = "panel1";
+            resources.ApplyResources(FullterPanel, "FullterPanel");
+            FullterPanel.Controls.Add(FiltersButton);
+            FullterPanel.Controls.Add(FinalAgeField);
+            FullterPanel.Controls.Add(label4);
+            FullterPanel.Controls.Add(label1);
+            FullterPanel.Controls.Add(sexWomenButton);
+            FullterPanel.Controls.Add(sexMenButton);
+            FullterPanel.Controls.Add(label3);
+            FullterPanel.Controls.Add(cityField);
+            FullterPanel.Controls.Add(label2);
+            FullterPanel.Controls.Add(passwondLabel);
+            FullterPanel.Controls.Add(InitialAgeField);
+            FullterPanel.Name = "FullterPanel";
+            FullterPanel.MouseDown += FullterPanel_MouseDown;
+            FullterPanel.MouseMove += FullterPanel_MouseMove;
             // 
             // FiltersButton
             // 
@@ -183,7 +191,7 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panel1);
+            Controls.Add(FullterPanel);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
@@ -193,8 +201,8 @@
             Name = "FiltersForm";
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            FullterPanel.ResumeLayout(false);
+            FullterPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -205,7 +213,7 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
-        private Panel panel1;
+        private Panel FullterPanel;
         private Button FiltersButton;
         private TextBox FinalAgeField;
         private Label label4;

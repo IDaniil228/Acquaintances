@@ -62,6 +62,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // boyPhoto
             // 
@@ -69,6 +71,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // CollapseButton
             // 
@@ -100,6 +104,8 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
             // loginLabel
             // 
@@ -251,6 +257,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "RegistrForm";
             FormClosed += RegistrForm_FormClosed;
+            MouseDown += RegistrForm_MouseDown;
+            MouseMove += RegistrForm_MouseMove;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ResumeLayout(false);

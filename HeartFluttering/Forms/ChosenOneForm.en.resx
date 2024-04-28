@@ -1143,6 +1143,12 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 29</value>
+  </data>
+  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 58</value>
+  </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2025,10 +2031,49 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 29</value>
+  </data>
+  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 58</value>
+  </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 0</value>
+  </data>
+  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 0</value>
+  </data>
+  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 88</value>
+  </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Favorites</value>
   </data>
+  <data name="listUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 83</value>
+  </data>
+  <data name="listUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 358</value>
+  </data>
+  <data name="backButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 439</value>
+  </data>
+  <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 34</value>
+  </data>
   <data name="backButton.Text" xml:space="preserve">
     <value>Back</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>402, 472</value>
   </data>
 </root>
