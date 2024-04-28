@@ -49,10 +49,15 @@ namespace UnitTestsHeartFluttering
         }
 
         [TestMethod]
-        public void Check()
+        public void CheckIncorrectMail()
         {
-            AuthorizationForm authorizationForm = new AuthorizationForm();
-            Assert.IsNull(authorizationForm.UserAuthorization("Vlad", "1234a"));
+            Assert.IsFalse(Examination.CheckFormatMail("w34sdtfffhv@maiiiiiil.ruuuuu"));
+        }
+
+        [TestMethod]
+        public void CheckCorrectMail()
+        {
+            Assert.IsTrue(Examination.CheckFormatMail("bukden12@email.ru"));
         }
     }
 }

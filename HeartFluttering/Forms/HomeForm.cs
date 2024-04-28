@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using HeartFluttering.Classes;
+﻿using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
 using NLog;
+using System.Data;
 
 
 namespace HeartFluttering
@@ -173,7 +164,7 @@ namespace HeartFluttering
                     context.SaveChanges();
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 logger.Fatal("Ошибка в подключении к базе данных");
@@ -273,7 +264,7 @@ namespace HeartFluttering
                     chosenOneForm.Show();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 logger.Fatal("Ошибка в подключение к базе данных");
