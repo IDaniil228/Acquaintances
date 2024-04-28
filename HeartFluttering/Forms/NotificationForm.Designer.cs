@@ -47,6 +47,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // boyPhoto
             // 
@@ -54,6 +56,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // CollapseButton
             // 
@@ -85,6 +89,8 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
             // backButton
             // 
@@ -122,6 +128,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "NotificationForm";
             Load += NotificationForm_Load;
+            MouseDown += NotificationForm_MouseDown;
+            MouseMove += NotificationForm_MouseMove;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();

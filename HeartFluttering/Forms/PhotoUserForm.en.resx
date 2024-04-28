@@ -652,20 +652,45 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="photoField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 299</value>
+  </data>
+  <data name="PanelInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 300</value>
+  </data>
+  <data name="PanelInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 100</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PanelInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="BirhdayField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 60</value>
+  </data>
+  <data name="BirhdayField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
   <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 77</value>
+    <value>69, 58</value>
   </data>
   <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 35</value>
+    <value>52, 26</value>
   </data>
   <data name="BirhdayLabel.Text" xml:space="preserve">
     <value>Age</value>
   </data>
+  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 19</value>
+  </data>
+  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
   <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 25</value>
+    <value>48, 19</value>
   </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 35</value>
+    <value>71, 26</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Name</value>
@@ -846,11 +871,35 @@
         AACQstYO/x92QOpeKMM45wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="likeAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="likeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 72</value>
+  </data>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 10</value>
+  </data>
+  <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 31</value>
+  </data>
   <data name="startButton.Text" xml:space="preserve">
     <value>Start</value>
   </data>
+  <data name="homeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 88</value>
+  </data>
+  <data name="homeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 31</value>
+  </data>
   <data name="homeButton.Text" xml:space="preserve">
     <value>My profile</value>
+  </data>
+  <data name="changeFiltersButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 47</value>
+  </data>
+  <data name="changeFiltersButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
   </data>
   <data name="changeFiltersButton.Text" xml:space="preserve">
     <value>Change filters</value>
@@ -1173,5 +1222,26 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUDt/7
         3v8F51vhA+714IkAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="nextAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 28</value>
+  </data>
+  <data name="nextAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 72</value>
+  </data>
+  <data name="FunctionalPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 402</value>
+  </data>
+  <data name="FunctionalPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 122</value>
+  </data>
+  <data name="FunctionalPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>414, 525</value>
   </data>
 </root>

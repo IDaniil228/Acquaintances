@@ -1144,7 +1144,10 @@
 </value>
   </data>
   <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>729, 24</value>
+    <value>638, 18</value>
+  </data>
+  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 69</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2029,10 +2032,40 @@
 </value>
   </data>
   <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 24</value>
+    <value>89, 18</value>
+  </data>
+  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 69</value>
+  </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>734, 0</value>
+  </data>
+  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>761, 0</value>
+  </data>
+  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>805, 90</value>
   </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Heart fluttering</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 88</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 363</value>
+  </data>
+  <data name="favoritesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 120</value>
+  </data>
+  <data name="favoritesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 43</value>
   </data>
   <data name="favoritesButton.Text" xml:space="preserve">
     <value>Favorites</value>
@@ -2044,17 +2077,57 @@
   <data name="recommendButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="recommendButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 183</value>
+  </data>
+  <data name="recommendButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 43</value>
+  </data>
   <data name="recommendButton.Text" xml:space="preserve">
     <value>recommendation</value>
+  </data>
+  <data name="searchButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 243</value>
+  </data>
+  <data name="searchButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 43</value>
   </data>
   <data name="searchButton.Text" xml:space="preserve">
     <value>Pair search</value>
   </data>
+  <data name="notificationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 304</value>
+  </data>
+  <data name="notificationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 43</value>
+  </data>
   <data name="notificationButton.Text" xml:space="preserve">
     <value>Notifications</value>
   </data>
+  <data name="closeAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 421</value>
+  </data>
+  <data name="closeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 30</value>
+  </data>
   <data name="closeAccount.Text" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 88</value>
+  </data>
+  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>577, 363</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HomePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="redactionPhotoButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 224</value>
+  </data>
+  <data name="redactionPhotoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 30</value>
   </data>
   <data name="redactionPhotoButton.Text" xml:space="preserve">
     <value>Сhange</value>
@@ -2593,82 +2666,139 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="photoField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 69</value>
+  </data>
+  <data name="photoField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 149</value>
+  </data>
   <data name="redactionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 429</value>
+    <value>382, 322</value>
   </data>
   <data name="redactionButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 51</value>
+    <value>192, 38</value>
   </data>
   <data name="redactionButton.Text" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="numberLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 367</value>
+    <value>247, 275</value>
   </data>
   <data name="numberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 31</value>
+    <value>67, 24</value>
   </data>
   <data name="numberLabel.Text" xml:space="preserve">
     <value>Phone</value>
   </data>
   <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 318</value>
+    <value>262, 238</value>
   </data>
   <data name="emailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 31</value>
+    <value>50, 24</value>
   </data>
   <data name="emailLabel.Text" xml:space="preserve">
     <value>Мail</value>
   </data>
+  <data name="numberField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 276</value>
+  </data>
+  <data name="numberField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="emailField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 238</value>
+  </data>
+  <data name="emailField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="sexField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 202</value>
+  </data>
+  <data name="sexField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 166</value>
+  </data>
+  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="BirhdayField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 130</value>
+  </data>
+  <data name="BirhdayField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 95</value>
+  </data>
+  <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
+  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 60</value>
+  </data>
+  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 24</value>
+  </data>
   <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 268</value>
+    <value>276, 201</value>
   </data>
   <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 31</value>
+    <value>42, 24</value>
   </data>
   <data name="sexLabel.Text" xml:space="preserve">
     <value>Sex</value>
   </data>
   <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 220</value>
+    <value>267, 165</value>
   </data>
   <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 31</value>
+    <value>47, 24</value>
   </data>
   <data name="cityLabel.Text" xml:space="preserve">
     <value>City</value>
   </data>
   <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 80</value>
+    <value>256, 60</value>
   </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 31</value>
+    <value>63, 24</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="BirhdayButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 172</value>
+    <value>224, 129</value>
   </data>
   <data name="BirhdayButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 31</value>
+    <value>88, 24</value>
   </data>
   <data name="BirhdayButton.Text" xml:space="preserve">
     <value>Birthday</value>
   </data>
   <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 127</value>
+    <value>224, 95</value>
   </data>
   <data name="surnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 31</value>
+    <value>90, 24</value>
   </data>
   <data name="surnameLabel.Text" xml:space="preserve">
     <value>Surname</value>
   </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 2</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 82</value>
+    <value>218, 64</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>My profile</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>805, 451</value>
   </data>
 </root>

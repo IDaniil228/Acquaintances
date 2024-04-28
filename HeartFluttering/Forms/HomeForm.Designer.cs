@@ -40,7 +40,7 @@
             searchButton = new Button();
             notificationButton = new Button();
             closeAccount = new Button();
-            panel1 = new Panel();
+            HomePanel = new Panel();
             redactionPhotoButton = new Button();
             photoField = new PictureBox();
             redactionButton = new Button();
@@ -61,7 +61,7 @@
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
-            panel1.SuspendLayout();
+            HomePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)photoField).BeginInit();
             SuspendLayout();
             // 
@@ -71,6 +71,8 @@
             girlPhoto.BackColor = Color.Fuchsia;
             girlPhoto.Name = "girlPhoto";
             girlPhoto.TabStop = false;
+            girlPhoto.MouseDown += girlPhoto_MouseDown;
+            girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
             // boyPhoto
             // 
@@ -78,6 +80,8 @@
             boyPhoto.BackColor = Color.Fuchsia;
             boyPhoto.Name = "boyPhoto";
             boyPhoto.TabStop = false;
+            boyPhoto.MouseDown += boyPhoto_MouseDown;
+            boyPhoto.MouseMove += boyPhoto_MouseMove;
             // 
             // CollapseButton
             // 
@@ -109,6 +113,8 @@
             entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
+            entryLabel.MouseDown += entryLabel_MouseDown;
+            entryLabel.MouseMove += entryLabel_MouseMove;
             // 
             // label2
             // 
@@ -176,28 +182,30 @@
             closeAccount.UseVisualStyleBackColor = false;
             closeAccount.Click += closeAccount_Click;
             // 
-            // panel1
+            // HomePanel
             // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Controls.Add(redactionPhotoButton);
-            panel1.Controls.Add(photoField);
-            panel1.Controls.Add(redactionButton);
-            panel1.Controls.Add(numberLabel);
-            panel1.Controls.Add(emailLabel);
-            panel1.Controls.Add(numberField);
-            panel1.Controls.Add(emailField);
-            panel1.Controls.Add(sexField);
-            panel1.Controls.Add(cityField);
-            panel1.Controls.Add(BirhdayField);
-            panel1.Controls.Add(surnameField);
-            panel1.Controls.Add(nameField);
-            panel1.Controls.Add(sexLabel);
-            panel1.Controls.Add(cityLabel);
-            panel1.Controls.Add(nameLabel);
-            panel1.Controls.Add(BirhdayButton);
-            panel1.Controls.Add(surnameLabel);
-            panel1.Controls.Add(label1);
-            panel1.Name = "panel1";
+            resources.ApplyResources(HomePanel, "HomePanel");
+            HomePanel.Controls.Add(redactionPhotoButton);
+            HomePanel.Controls.Add(photoField);
+            HomePanel.Controls.Add(redactionButton);
+            HomePanel.Controls.Add(numberLabel);
+            HomePanel.Controls.Add(emailLabel);
+            HomePanel.Controls.Add(numberField);
+            HomePanel.Controls.Add(emailField);
+            HomePanel.Controls.Add(sexField);
+            HomePanel.Controls.Add(cityField);
+            HomePanel.Controls.Add(BirhdayField);
+            HomePanel.Controls.Add(surnameField);
+            HomePanel.Controls.Add(nameField);
+            HomePanel.Controls.Add(sexLabel);
+            HomePanel.Controls.Add(cityLabel);
+            HomePanel.Controls.Add(nameLabel);
+            HomePanel.Controls.Add(BirhdayButton);
+            HomePanel.Controls.Add(surnameLabel);
+            HomePanel.Controls.Add(label1);
+            HomePanel.Name = "HomePanel";
+            HomePanel.MouseDown += HomePanel_MouseDown;
+            HomePanel.MouseMove += HomePanel_MouseMove;
             // 
             // redactionPhotoButton
             // 
@@ -302,7 +310,6 @@
             // 
             resources.ApplyResources(nameLabel, "nameLabel");
             nameLabel.Name = "nameLabel";
-            nameLabel.Click += nameLabel_Click;
             // 
             // BirhdayButton
             // 
@@ -324,7 +331,7 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panel1);
+            Controls.Add(HomePanel);
             Controls.Add(closeAccount);
             Controls.Add(notificationButton);
             Controls.Add(searchButton);
@@ -339,10 +346,12 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeForm";
             Load += HomeForm_Load;
+            MouseDown += HomeForm_MouseDown;
+            MouseMove += HomeForm_MouseMove;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            HomePanel.ResumeLayout(false);
+            HomePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)photoField).EndInit();
             ResumeLayout(false);
         }
@@ -360,7 +369,7 @@
         private Button searchButton;
         private Button notificationButton;
         private Button closeAccount;
-        private Panel panel1;
+        private Panel HomePanel;
         private Label numberLabel;
         private Label emailLabel;
         public Label numberField;

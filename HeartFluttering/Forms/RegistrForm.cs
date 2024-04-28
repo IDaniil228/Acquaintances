@@ -17,6 +17,13 @@ namespace HeartFluttering
 {
     public partial class RegistrForm : Form
     {
+        /// <summary>
+        /// Местоположение формы
+        /// </summary>
+        private Point lastPoint;
+        /// <summary>
+        /// Создаём экземпляр класса для логирования
+        /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
         public RegistrForm()
         {
@@ -31,31 +38,30 @@ namespace HeartFluttering
         ///
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            try
             {
-                var users = context.Users.ToList();
-                var admins = context.Administrators.ToList();
-                /*
-                var bloking = context.BlockerForms.FirstOrDefault();
-                if(bloking == null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    MessageBox.Show("Ошибка в подключении базы данных");
-                    return;
+                    var users = context.Users.ToList();
+                    var admins = context.Administrators.ToList();
+                    foreach (var user in users)
+                    {
+                        user.Blocker = 0;
+                    }
+                    foreach (var admin in admins)
+                    {
+                        admin.Blocker = 0;
+                    }
+                    context.SaveChanges();
                 }
-                bloking.BlockerLogin = 0;
-                */
-                foreach (var user in users)
-                {
-                    user.Blocker = 0;
-                }
-                foreach (var admin in admins)
-                {
-                    admin.Blocker = 0;
-                }
-                context.SaveChanges();
+                logger.Trace("Закрытие приложения");
+                Application.Exit();
             }
-            logger.Trace("Закрытие приложения");
-            Application.Exit();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключении к базе данных");
+            }
         }
         /// <summary>
         /// Кнопка для сворачивания приложения
@@ -391,12 +397,53 @@ namespace HeartFluttering
                 user.Likes = 0;
                 context.Users.Add(user);
                 context.SaveChanges();
-
-                using (var context2 = new AcquaintanceSqlContext())
+                try
                 {
-                    var users = context2.Users.ToList();
-                    var admins = context2.Administrators.ToList();
-                    var bloking = context2.BlockerForms.FirstOrDefault();
+                    using (var context2 = new AcquaintanceSqlContext())
+                    {
+                        var users = context2.Users.ToList();
+                        var admins = context2.Administrators.ToList();
+                        var bloking = context2.BlockerForms.FirstOrDefault();
+                        if (bloking == null)
+                        {
+                            MessageBox.Show("Ошибка в подключении базы данных");
+                            return;
+                        }
+                        bloking.BlockerLogin = 0;
+                        foreach (var user1 in users)
+                        {
+                            user1.Blocker = 0;
+                        }
+                        foreach (var admin in admins)
+                        {
+                            admin.Blocker = 0;
+                        }
+                        context2.SaveChanges();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    logger.Fatal("Ошибка в подключении к базе данных");
+                }
+
+                MessageBox.Show(InscriptionsSignUp.Done);
+                logger.Trace("Открытие формы входа");
+                this.Hide();
+                AuthorizationForm form = new AuthorizationForm();
+                form.Show();
+            }
+        }
+
+        private void RegistrForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                using (var context = new AcquaintanceSqlContext())
+                {
+                    var users = context.Users.ToList();
+                    var admins = context.Administrators.ToList();
+                    var bloking = context.BlockerForms.FirstOrDefault();
                     if (bloking == null)
                     {
                         MessageBox.Show("Ошибка в подключении базы данных");
@@ -411,40 +458,102 @@ namespace HeartFluttering
                     {
                         admin.Blocker = 0;
                     }
-                    context2.SaveChanges();
+                    context.SaveChanges();
                 }
-
-                MessageBox.Show(InscriptionsSignUp.Done);
-                logger.Trace("Открытие формы входа");
-                this.Hide();
-                AuthorizationForm form = new AuthorizationForm();
-                form.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                logger.Fatal("Ошибка в подключении к базе данных");
             }
         }
-
-        private void RegistrForm_FormClosed(object sender, FormClosedEventArgs e)
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RegistrForm_MouseMove(object sender, MouseEventArgs e)
         {
-            using (var context = new AcquaintanceSqlContext())
+            if (e.Button == MouseButtons.Left)
             {
-                var users = context.Users.ToList();
-                var admins = context.Administrators.ToList();
-                var bloking = context.BlockerForms.FirstOrDefault();
-                if (bloking == null)
-                {
-                    MessageBox.Show("Ошибка в подключении базы данных");
-                    return;
-                }
-                bloking.BlockerLogin = 0;
-                foreach (var user1 in users)
-                {
-                    user1.Blocker = 0;
-                }
-                foreach (var admin in admins)
-                {
-                    admin.Blocker = 0;
-                }
-                context.SaveChanges();
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
             }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RegistrForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void entryLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void entryLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void girlPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void girlPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        /// <summary>
+        /// Устанавливаем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void boyPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        /// <summary>
+        /// Присваиваем новое значение положения для формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
