@@ -49,32 +49,36 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void listUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            using (var context = new AcquaintanceSqlContext())
             {
-                DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
-                int position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
-                logger.Info($"Получение пользователя по {position} позиции");
-                User selectedUser = CurrentUsers.currentUsers[position - 1];
-                UserProfileForm form = new UserProfileForm();
-                if (CurrentUser.currentUser.AnotherAccounts != null)
+                var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
-                    if (!CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
+                    DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
+                    int position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
+                    logger.Info($"Получение пользователя по {position} позиции");
+                    User selectedUser = CurrentUsers.currentUsers[position - 1];
+                    UserProfileForm form = new UserProfileForm();
+                    if (person.AnotherAccounts != null)
+                    {
+                        if (!person.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
+                        {
+                            form.likeAccount.Enabled = true;
+                            form.likeAccount.Visible = true;
+                        }
+                    }
+                    if (person.AnotherAccounts == null)
                     {
                         form.likeAccount.Enabled = true;
                         form.likeAccount.Visible = true;
                     }
+                    form.thisUsers = selectedUser;
+                    form.backButton.Enabled = true;
+                    form.backButton.Visible = true;
+                    logger.Trace("Открытие профиля выбранного пользователя");
+                    this.Hide();
+                    form.ShowDialog();
                 }
-                if (CurrentUser.currentUser.AnotherAccounts == null)
-                {
-                    form.likeAccount.Enabled = true;
-                    form.likeAccount.Visible = true;
-                }
-                form.thisUsers = selectedUser;
-                form.backButton.Enabled = true;
-                form.backButton.Visible = true;
-                logger.Trace("Открытие профиля выбранного пользователя");
-                this.Hide();
-                form.ShowDialog();
             }
         }
         /// <summary>

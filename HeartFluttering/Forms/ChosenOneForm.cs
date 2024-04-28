@@ -48,28 +48,32 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void listUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            using (var context = new AcquaintanceSqlContext())
             {
-                DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
-                int position = 0;
-                position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
-                logger.Info($"Получении пользователя по {position} позиции в таблице");
-                User selectedUser = CurrentUsers.currentUsers[position - 1];
-                UserProfileForm form = new UserProfileForm();
-                if (CurrentUser.currentUser.AnotherAccounts != null)
+                var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
-                    if (CurrentUser.currentUser.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
+                    DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
+                    int position = 0;
+                    position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
+                    logger.Info($"Получении пользователя по {position} позиции в таблице");
+                    User selectedUser = CurrentUsers.currentUsers[position - 1];
+                    UserProfileForm form = new UserProfileForm();
+                    if (person.AnotherAccounts != null)
                     {
-                        form.deleteButton.Enabled = true;
-                        form.deleteButton.Visible = true;
+                        if (person.AnotherAccounts.Split(',').Contains(selectedUser.IdUsers))
+                        {
+                            form.deleteButton.Enabled = true;
+                            form.deleteButton.Visible = true;
+                        }
                     }
+                    form.backButton2.Enabled = true;
+                    form.backButton2.Visible = true;
+                    form.thisUsers = selectedUser;
+                    this.Hide();
+                    logger.Trace("Открытие карточки пользователя");
+                    form.ShowDialog();
                 }
-                form.backButton2.Enabled = true;
-                form.backButton2.Visible = true;
-                form.thisUsers = selectedUser;
-                this.Hide();
-                logger.Trace("Открытие карточки пользователя");
-                form.ShowDialog();
             }
         }
         /// <summary>

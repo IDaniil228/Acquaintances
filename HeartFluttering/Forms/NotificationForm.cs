@@ -51,39 +51,43 @@ namespace HeartFluttering
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
-                int position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
-                logger.Info($"Получение пользователя по {position} позиции");
-                User selectedUser = CurrentUsers.currentUsers[position - 1];
-                UserProfileForm form = new UserProfileForm();
-                if (CurrentUser.currentUser.Notifications != null)
+                using (var context = new AcquaintanceSqlContext())
                 {
-                    if (CurrentUser.currentUser.Notifications.Split(',').Contains(selectedUser.IdUsers))
+                    var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    DataGridViewRow selectedRow = listUsers.Rows[e.RowIndex];
+                    int position = (int)selectedRow.Cells[InscriptionsFavorites.Number].Value;
+                    logger.Info($"Получение пользователя по {position} позиции");
+                    User selectedUser = CurrentUsers.currentUsers[position - 1];
+                    UserProfileForm form = new UserProfileForm();
+                    if (person.Notifications != null)
                     {
-                        if (CurrentUser.currentUser.AnotherAccounts != null)
+                        if (person.Notifications.Split(',').Contains(selectedUser.IdUsers))
                         {
-                            foreach (string anotheracc in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                            if (person.AnotherAccounts != null)
                             {
-                                if (!CurrentUser.currentUser.Notifications.Equals(anotheracc))
+                                foreach (string anotheracc in CurrentUser.currentUser.AnotherAccounts.Split(','))
                                 {
-                                    form.likeAccount2.Enabled = true;
-                                    form.likeAccount2.Visible = true;
+                                    if (!person.Notifications.Equals(anotheracc))
+                                    {
+                                        form.likeAccount2.Enabled = true;
+                                        form.likeAccount2.Visible = true;
+                                    }
                                 }
                             }
-                        }
-                        else
-                        {
-                            form.likeAccount2.Enabled = true;
-                            form.likeAccount2.Visible = true;
+                            else
+                            {
+                                form.likeAccount2.Enabled = true;
+                                form.likeAccount2.Visible = true;
+                            }
                         }
                     }
+                    form.thisUsers = selectedUser;
+                    form.backButton3.Enabled = true;
+                    form.backButton3.Visible = true;
+                    logger.Trace("Открытие профиля выбранного пользователя");
+                    this.Hide();
+                    form.ShowDialog();
                 }
-                form.thisUsers = selectedUser;
-                form.backButton3.Enabled = true;
-                form.backButton3.Visible = true;
-                logger.Trace("Открытие профиля выбранного пользователя");
-                this.Hide();
-                form.ShowDialog();
             }
         }
         /// <summary>

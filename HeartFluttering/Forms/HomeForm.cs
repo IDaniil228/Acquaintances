@@ -234,9 +234,10 @@ namespace HeartFluttering
                 using (var context = new AcquaintanceSqlContext())
                 {
                     List<User> anotherUsers = new List<User>();
+                    var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
                     if (CurrentUser.currentUser.AnotherAccounts != null)
                     {
-                        foreach (string idUser in CurrentUser.currentUser.AnotherAccounts.Split(','))
+                        foreach (string idUser in person.AnotherAccounts.Split(','))
                         {
                             var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
                             if (favoritesUsers != null)
@@ -282,9 +283,10 @@ namespace HeartFluttering
                 using (var context = new AcquaintanceSqlContext())
                 {
                     List<User> anotherUsers = new List<User>();
-                    if (CurrentUser.currentUser.Notifications != null)
+                    var person = context.Users.FirstOrDefault(r => r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                    if (person.Notifications != null)
                     {
-                        foreach (string idUser in CurrentUser.currentUser.Notifications.Split(','))
+                        foreach (string idUser in person.Notifications.Split(','))
                         {
                             var favoritesUsers = context.Users.FirstOrDefault(r => r.IdUsers.Equals(idUser));
                             if (favoritesUsers != null)
