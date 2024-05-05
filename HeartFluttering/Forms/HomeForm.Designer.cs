@@ -59,10 +59,12 @@
             BirhdayButton = new Label();
             surnameLabel = new Label();
             label1 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             HomePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)photoField).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // girlPhoto
@@ -326,24 +328,29 @@
             resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
+            tableLayoutPanel1.Controls.Add(favoritesButton, 0, 0);
+            tableLayoutPanel1.Controls.Add(recommendButton, 0, 1);
+            tableLayoutPanel1.Controls.Add(searchButton, 0, 2);
+            tableLayoutPanel1.Controls.Add(notificationButton, 0, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // HomeForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(HomePanel);
             Controls.Add(closeAccount);
-            Controls.Add(notificationButton);
-            Controls.Add(searchButton);
-            Controls.Add(recommendButton);
-            Controls.Add(favoritesButton);
             Controls.Add(label2);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
             Controls.Add(CloseButton);
             Controls.Add(entryLabel);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "HomeForm";
             Load += HomeForm_Load;
             MouseDown += HomeForm_MouseDown;
@@ -353,6 +360,7 @@
             HomePanel.ResumeLayout(false);
             HomePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)photoField).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -388,5 +396,6 @@
         private Button redactionPhotoButton;
         private Button redactionButton;
         public PictureBox photoField;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
