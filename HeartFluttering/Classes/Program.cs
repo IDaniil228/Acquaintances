@@ -1,5 +1,5 @@
-using NLog.Config;
 using NLog;
+using NLog.Config;
 
 namespace HeartFluttering.Classes
 {

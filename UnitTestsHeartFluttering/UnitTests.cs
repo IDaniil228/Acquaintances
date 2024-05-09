@@ -1,6 +1,4 @@
-using HeartFluttering;
 using HeartFluttering.Classes;
-using System.Security.Policy;
 
 namespace UnitTestsHeartFluttering
 {
@@ -55,16 +53,16 @@ namespace UnitTestsHeartFluttering
             Assert.IsFalse(Examination.CheckFormatMail("w34sdtfffhv@maiiiiiil.ruuuuu"));
         }
 
-        [TestMethod] 
+        [TestMethod]
         public void CheckCorrectMail()
         {
             Assert.IsTrue(Examination.CheckFormatMail("bukden12@email.ru"));
         }
 
-        [TestMethod] 
+        [TestMethod]
         public void EditingTheLineWith()
         {
-            Assert.AreEqual("Èæåâñê",Examination.GetCity("èÆÅÂÑÊ"));
+            Assert.AreEqual("Èæåâñê", Examination.GetCity("èÆÅÂÑÊ"));
         }
 
         [TestMethod]

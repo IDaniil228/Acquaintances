@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using HeartFluttering.Classes;
+﻿using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
 using HeartFluttering.Resources.Localization.UserProfileForm;
 using NLog;
+using System.Data;
 
 namespace HeartFluttering
 {

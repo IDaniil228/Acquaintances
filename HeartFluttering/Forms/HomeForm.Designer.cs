@@ -60,6 +60,7 @@
             surnameLabel = new Label();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+            BtnSize = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             HomePanel.SuspendLayout();
@@ -337,11 +338,24 @@
             tableLayoutPanel1.Controls.Add(notificationButton, 0, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
+            // BtnSize
+            // 
+            resources.ApplyResources(BtnSize, "BtnSize");
+            BtnSize.BackColor = Color.Fuchsia;
+            BtnSize.FlatAppearance.BorderSize = 0;
+            BtnSize.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnSize.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnSize.ForeColor = Color.White;
+            BtnSize.Name = "BtnSize";
+            BtnSize.UseVisualStyleBackColor = false;
+            BtnSize.Click += BtnSize_Click;
+            // 
             // HomeForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnSize);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(HomePanel);
             Controls.Add(closeAccount);
@@ -351,6 +365,7 @@
             Controls.Add(CollapseButton);
             Controls.Add(CloseButton);
             Controls.Add(entryLabel);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "HomeForm";
             Load += HomeForm_Load;
             MouseDown += HomeForm_MouseDown;
@@ -397,5 +412,6 @@
         private Button redactionButton;
         public PictureBox photoField;
         private TableLayoutPanel tableLayoutPanel1;
+        private Button BtnSize;
     }
 }

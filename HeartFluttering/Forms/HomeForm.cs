@@ -8,6 +8,7 @@ namespace HeartFluttering
 {
     public partial class HomeForm : Form
     {
+        bool maximize = false;
         /// <summary>
         /// Местоположение формы
         /// </summary>
@@ -436,6 +437,20 @@ namespace HeartFluttering
         private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void BtnSize_Click(object sender, EventArgs e)
+        {
+            if (!maximize)
+            {
+                WindowState = FormWindowState.Maximized;
+                maximize = true;
+            }
+            else 
+            {
+                WindowState = FormWindowState.Minimized;
+                maximize = false;
+            }
         }
     }
 }

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace HeartFluttering.Classes
+﻿namespace HeartFluttering.Classes
 {
     public static class Examination
     {
@@ -17,7 +9,7 @@ namespace HeartFluttering.Classes
         /// <returns></returns>
         public static bool CheckLetter(string letters)
         {
-            foreach(char letter in letters)
+            foreach (char letter in letters)
             {
                 if (!Char.IsLetter(letter))
                 {
@@ -50,7 +42,7 @@ namespace HeartFluttering.Classes
                     }
                     return true;
                 }
-            }            
+            }
             return false;
 
         }
@@ -91,9 +83,9 @@ namespace HeartFluttering.Classes
         public static string GetCity(string city)
         {
             string correctCity = null;
-            for(int i = 0; i < city.Length; i++)
+            for (int i = 0; i < city.Length; i++)
             {
-                if(i == 0)
+                if (i == 0)
                 {
                     correctCity += Char.ToUpper(city[i]);
                 }
