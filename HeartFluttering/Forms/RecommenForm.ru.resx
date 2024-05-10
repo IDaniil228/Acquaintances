@@ -1143,11 +1143,9 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 30</value>
-  </data>
-  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 58</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2031,43 +2029,54 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 30</value>
+  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 58</value>
+  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 0</value>
+  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
-  </data>
-  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 0</value>
-  </data>
-  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
-  </data>
-  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 88</value>
-  </data>
-  <data name="listUsers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 91</value>
+  <data name="listUsers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
   <data name="listUsers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 343</value>
+    <value>483, 365</value>
   </data>
-  <data name="backButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 433</value>
+  <data name="backButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
-  <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 34</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnSendEmail.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+  <data name="BtnSendEmail.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>423, 465</value>
+  <data name="BtnSendEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 14.25pt</value>
+  </data>
+  <data name="BtnSendEmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnSendEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 496</value>
+  </data>
+  <data name="BtnSendEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="BtnSendEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>332, 45</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnSendEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="BtnSendEmail.Text" xml:space="preserve">
+    <value>Отправить на почту</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
   </data>
 </root>

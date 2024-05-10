@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HeartFluttering.Resources.Localization.ChooseOneForm {
+namespace HeartFluttering.Resources.Localization.ReccommenForm {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace HeartFluttering.Resources.Localization.ChooseOneForm {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class InscriptionsFavorites {
+    internal class InscriptionsReccommendForm {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal InscriptionsFavorites() {
+        internal InscriptionsReccommendForm() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace HeartFluttering.Resources.Localization.ChooseOneForm {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HeartFluttering.Resources.Localization.ChooseOneForm.InscriptionsFavorites", typeof(InscriptionsFavorites).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HeartFluttering.Resources.Localization.ReccommenForm.InscriptionsReccommendForm", typeof(InscriptionsReccommendForm).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,20 @@ namespace HeartFluttering.Resources.Localization.ChooseOneForm {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Возраст.
+        ///   Looks up a localized string similar to Рекомендации отправлены на почту.
         /// </summary>
-        internal static string Age {
+        internal static string Mail {
             get {
-                return ResourceManager.GetString("Age", resourceCulture);
+                return ResourceManager.GetString("Mail", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Лайки.
+        ///   Looks up a localized string similar to У вас не указана почта в профиле.
         /// </summary>
-        internal static string Likes {
+        internal static string NotMail {
             get {
-                return ResourceManager.GetString("Likes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Имя.
-        /// </summary>
-        internal static string Name {
-            get {
-                return ResourceManager.GetString("Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Номер.
-        /// </summary>
-        internal static string Number {
-            get {
-                return ResourceManager.GetString("Number", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Фамилия.
-        /// </summary>
-        internal static string Surname {
-            get {
-                return ResourceManager.GetString("Surname", resourceCulture);
+                return ResourceManager.GetString("NotMail", resourceCulture);
             }
         }
     }

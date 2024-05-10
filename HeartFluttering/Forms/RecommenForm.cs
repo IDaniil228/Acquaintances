@@ -1,6 +1,14 @@
 ﻿using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
+using HeartFluttering.Resources.Localization.ReccommenForm;
+using Microsoft.VisualBasic.Devices;
 using NLog;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Http;
+using System.Net.Mail;
+using System.Text;
+using System.Windows.Forms;
 
 namespace HeartFluttering
 {
@@ -195,6 +203,39 @@ namespace HeartFluttering
         private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void BtnSendEmail_Click(object sender, EventArgs e)
+        {
+            if (CurrentUser.currentUser.Mail == null)
+            {
+                MessageBox.Show(InscriptionsReccommendForm.NotMail);
+                return;
+            }
+            var rows = listUsers.Rows;
+            var names = new StringBuilder();
+            foreach (DataGridViewRow row in listUsers.Rows)
+            {
+                names.AppendLine($"{row.Cells[InscriptionsFavorites.Surname].Value}" +
+                    $" {row.Cells[InscriptionsFavorites.Name].Value} - {row.Cells[InscriptionsFavorites.Age].Value} лет");
+            }
+            using (var message = new MailMessage())
+            {
+                message.From = new MailAddress("testikovich77@mail.ru", "My app");
+                message.To.Add(CurrentUser.currentUser.Mail);
+                message.Body = names.ToString();
+                message.Subject = "Список рекомендаций";
+                message.IsBodyHtml = true;
+                using (var smtpClient = new SmtpClient("smtp.mail.com", 587))
+                {
+                    smtpClient.EnableSsl = true;
+                    smtpClient.UseDefaultCredentials = false;
+                    smtpClient.Credentials = new NetworkCredential("testikovich77@mail.ru", "SS9rxQxQp63Yhi1jgXvx");
+                    smtpClient.Send(message);
+                }
+                MessageBox.Show(InscriptionsReccommendForm.Mail);
+            }
+
         }
     }
 }

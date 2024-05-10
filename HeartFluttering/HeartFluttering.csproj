@@ -77,6 +77,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>InscriptionsPhotoUser.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Localization\ReccommenForm\InscriptionsReccommendForm.en.Designer.cs">
+      <DependentUpon>InscriptionsReccommendForm.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\ReccommenForm\InscriptionsReccommendForm.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsReccommendForm.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Localization\RegistrForm\InscriptionsSignUp.en.Designer.cs">
       <DependentUpon>InscriptionsSignUp.en.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -153,6 +163,14 @@
     <EmbeddedResource Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>InscriptionsPhotoUser.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\ReccommenForm\InscriptionsReccommendForm.en.resx">
+      <LastGenOutput>InscriptionsReccommendForm.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\ReccommenForm\InscriptionsReccommendForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsReccommendForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Localization\RegistrForm\InscriptionsSignUp.en.resx">
       <LastGenOutput>InscriptionsSignUp.en.Designer.cs</LastGenOutput>

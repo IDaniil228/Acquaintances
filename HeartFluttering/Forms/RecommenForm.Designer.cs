@@ -36,6 +36,7 @@
             entryLabel = new Label();
             listUsers = new DataGridView();
             backButton = new Button();
+            BtnSendEmail = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
@@ -113,11 +114,24 @@
             backButton.UseVisualStyleBackColor = false;
             backButton.Click += backButton_Click;
             // 
+            // BtnSendEmail
+            // 
+            resources.ApplyResources(BtnSendEmail, "BtnSendEmail");
+            BtnSendEmail.BackColor = Color.Fuchsia;
+            BtnSendEmail.FlatAppearance.BorderSize = 0;
+            BtnSendEmail.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnSendEmail.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnSendEmail.ForeColor = Color.White;
+            BtnSendEmail.Name = "BtnSendEmail";
+            BtnSendEmail.UseVisualStyleBackColor = false;
+            BtnSendEmail.Click += BtnSendEmail_Click;
+            // 
             // RecommenForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnSendEmail);
             Controls.Add(backButton);
             Controls.Add(listUsers);
             Controls.Add(girlPhoto);
@@ -145,5 +159,6 @@
         private Label entryLabel;
         public DataGridView listUsers;
         private Button backButton;
+        private Button BtnSendEmail;
     }
 }

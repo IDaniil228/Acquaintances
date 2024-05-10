@@ -1,7 +1,9 @@
 ﻿using HeartFluttering.Classes;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
+using Microsoft.VisualBasic.ApplicationServices;
 using NLog;
 using System.Data;
+using System.Globalization;
 
 
 namespace HeartFluttering
@@ -210,10 +212,18 @@ namespace HeartFluttering
                     table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
                     table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
                     table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                    table.Columns.Add(InscriptionsFavorites.Age, typeof(int));
                     table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                     for (int i = 0; i < sortedUsers.Count; i++)
                     {
-                        table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
+                        DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                        provider.ShortDatePattern = "dd.MM.yyyy";
+                        int age = DateTime.Now.Year - DateTime.ParseExact(sortedUsers[i].DateOfBirth, "dd.MM.yyyy", provider).Year;
+                        table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, age, sortedUsers[i].Likes);
+                        if (i == 5)
+                        {
+                            break;
+                        }
                     }
                     RecommenForm recommenForm = new RecommenForm();
                     recommenForm.listUsers.DataSource = table;

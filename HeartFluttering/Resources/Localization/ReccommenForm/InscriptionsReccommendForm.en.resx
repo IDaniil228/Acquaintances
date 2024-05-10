@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Age" xml:space="preserve">
-    <value>Возраст</value>
+  <data name="Mail" xml:space="preserve">
+    <value>Recommendations have been sent to the mail</value>
   </data>
-  <data name="Likes" xml:space="preserve">
-    <value>Лайки</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Имя</value>
-  </data>
-  <data name="Number" xml:space="preserve">
-    <value>Номер</value>
-  </data>
-  <data name="Surname" xml:space="preserve">
-    <value>Фамилия</value>
+  <data name="NotMail" xml:space="preserve">
+    <value>You don't have an email address listed in your profile</value>
   </data>
 </root>
