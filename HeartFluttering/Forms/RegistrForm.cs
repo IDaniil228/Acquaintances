@@ -7,6 +7,7 @@ namespace HeartFluttering
 {
     public partial class RegistrForm : Form
     {
+        private bool maximize = false;
         /// <summary>
         /// Местоположение формы
         /// </summary>
@@ -45,7 +46,9 @@ namespace HeartFluttering
                     context.SaveChanges();
                 }
                 logger.Trace("Закрытие приложения");
-                Application.Exit();
+                AuthorizationForm authorizationForm = new AuthorizationForm();
+                Hide();
+                authorizationForm.Show();
             }
             catch (Exception ex)
             {
@@ -544,6 +547,20 @@ namespace HeartFluttering
         private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void BtnSize_Click(object sender, EventArgs e)
+        {
+            if (!maximize)
+            {
+                WindowState = FormWindowState.Maximized;
+                maximize = true;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                maximize = false;
+            }
         }
     }
 }

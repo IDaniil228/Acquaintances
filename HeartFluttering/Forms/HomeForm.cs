@@ -458,7 +458,7 @@ namespace HeartFluttering
             }
             else 
             {
-                WindowState = FormWindowState.Minimized;
+                WindowState = FormWindowState.Normal;
                 maximize = false;
             }
         }

@@ -2041,13 +2041,43 @@
   <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 58</value>
   </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, -31</value>
+  </data>
   <data name="entryLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe Print, 20pt</value>
   </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Recommendations</value>
   </data>
+  <data name="listUsers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="listUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 117</value>
+  </data>
+  <data name="listUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 350</value>
+  </data>
   <data name="backButton.Text" xml:space="preserve">
     <value>Back</value>
+  </data>
+  <data name="BtnSendEmail.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="BtnSendEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 18pt</value>
+  </data>
+  <data name="BtnSendEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 478</value>
+  </data>
+  <data name="BtnSendEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 57</value>
+  </data>
+  <data name="BtnSendEmail.Text" xml:space="preserve">
+    <value>Send by email</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>483, 589</value>
   </data>
 </root>

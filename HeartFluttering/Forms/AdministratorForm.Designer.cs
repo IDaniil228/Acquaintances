@@ -56,6 +56,7 @@
             profileLabel = new Label();
             searchLine = new TextBox();
             listUsers = new DataGridView();
+            BtnSize = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             AdminPanel.SuspendLayout();
@@ -272,11 +273,24 @@
             listUsers.ReadOnly = true;
             listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
+            // BtnSize
+            // 
+            resources.ApplyResources(BtnSize, "BtnSize");
+            BtnSize.BackColor = Color.Fuchsia;
+            BtnSize.FlatAppearance.BorderSize = 0;
+            BtnSize.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnSize.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnSize.ForeColor = Color.White;
+            BtnSize.Name = "BtnSize";
+            BtnSize.UseVisualStyleBackColor = false;
+            BtnSize.Click += BtnSize_Click;
+            // 
             // AdministratorForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnSize);
             Controls.Add(listUsers);
             Controls.Add(searchLine);
             Controls.Add(AdminPanel);
@@ -331,5 +345,6 @@
         private Label profileLabel;
         private TextBox searchLine;
         public DataGridView listUsers;
+        private Button BtnSize;
     }
 }

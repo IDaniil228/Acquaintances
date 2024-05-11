@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="girlPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="girlPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2025,28 +2029,278 @@
         BUDX/ylOyGOP/Q/g/pQt1SNcYgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>811, 0</value>
+  </data>
+  <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="loginButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 513</value>
+  </data>
+  <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 57</value>
+  </data>
+  <data name="BtnSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BtnSize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="BtnSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="BtnSize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 35</value>
+  </data>
+  <data name="BtnSize.Text" xml:space="preserve">
+    <value>▭</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="loginLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="loginLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 46</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="loginLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="LoginField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="LoginField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 85</value>
+  </data>
+  <data name="LoginField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 38</value>
+  </data>
+  <data name="LoginField.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
   <data name="LoginField.Text" xml:space="preserve">
     <value>Введите логин</value>
+  </data>
+  <data name="passwordLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="passwordLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="passwordLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 246</value>
+  </data>
+  <data name="passwordLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="password2Field.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="password2Field.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 285</value>
+  </data>
+  <data name="password2Field.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 38</value>
+  </data>
+  <data name="password2Field.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
   </data>
   <data name="password2Field.Text" xml:space="preserve">
     <value>Повторите пароль</value>
   </data>
+  <data name="passwordLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="passwordLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 148</value>
+  </data>
+  <data name="passwordLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="passwordField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 186</value>
+  </data>
+  <data name="passwordField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 38</value>
+  </data>
+  <data name="passwordField.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
   <data name="passwordField.Text" xml:space="preserve">
     <value>Введите пароль</value>
   </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 370</value>
+  </data>
+  <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="BirhdayFields.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="BirhdayFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 208</value>
+  </data>
+  <data name="BirhdayFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 27</value>
+  </data>
+  <data name="BirhdayFields.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="sexWomenButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="sexWomenButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>792, 457</value>
+    <value>307, 334</value>
+  </data>
+  <data name="sexWomenButton.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="sexMenButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="sexMenButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>721, 457</value>
+    <value>236, 334</value>
+  </data>
+  <data name="sexMenButton.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="sexLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="sexLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 334</value>
+  </data>
+  <data name="sexLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="cityField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 286</value>
+  </data>
+  <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 35</value>
+  </data>
+  <data name="cityField.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
   </data>
   <data name="cityField.Text" xml:space="preserve">
     <value>Введите город</value>
   </data>
+  <data name="cityLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="cityLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 250</value>
+  </data>
+  <data name="cityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="nameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="nameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 14</value>
+  </data>
+  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="nameField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 50</value>
+  </data>
+  <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 35</value>
+  </data>
+  <data name="nameField.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
   <data name="nameField.Text" xml:space="preserve">
     <value>Введите имя</value>
   </data>
+  <data name="BirhdayLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="BirhdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 172</value>
+  </data>
+  <data name="BirhdayLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="surnameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="surnameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 93</value>
+  </data>
+  <data name="surnameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="surnameField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 129</value>
+  </data>
+  <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 35</value>
+  </data>
+  <data name="surnameField.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
   <data name="surnameField.Text" xml:space="preserve">
     <value>Введите фамилию</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 120</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>437, 370</value>
   </data>
 </root>

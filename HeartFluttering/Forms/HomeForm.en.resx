@@ -2135,9 +2135,6 @@
   <data name="closeAccount.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="HomePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="redactionPhotoButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
@@ -2685,7 +2682,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="redactionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>449, 429</value>
+    <value>200, 432</value>
   </data>
   <data name="redactionButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2724,43 +2721,43 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="numberField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="emailField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="emailField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="sexField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="sexField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="cityField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="cityField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="BirhdayField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="BirhdayField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="surnameField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="surnameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="nameField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="nameField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="sexLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>

@@ -2060,18 +2060,11 @@
   <data name="BtnSendEmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BtnSendEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 496</value>
-  </data>
   <data name="BtnSendEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="BtnSendEmail.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 45</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BtnSendEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
   </data>
   <data name="BtnSendEmail.Text" xml:space="preserve">
     <value>Отправить на почту</value>

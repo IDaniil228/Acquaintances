@@ -117,6 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EnterLike.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -137,6 +144,9 @@
   </data>
   <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 28</value>
+  </data>
+  <data name="registrButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 593</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2044,6 +2054,34 @@
         8sgYQK4XXHACACFChNheBgPy9/ECIMSJBL06/wD8DuiH/0GITSQEqADeAVbjfxAiCdam2AT8DTgPoJ6E
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="BtnYandex.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 10pt</value>
+  </data>
+  <data name="BtnYandex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 551</value>
+  </data>
+  <data name="BtnYandex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 47</value>
+  </data>
+  <data name="BtnYandex.Text" xml:space="preserve">
+    <value>Войти через яндекс
+</value>
+  </data>
+  <data name="BtnVK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 10pt</value>
+  </data>
+  <data name="BtnVK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 551</value>
+  </data>
+  <data name="BtnVK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 47</value>
+  </data>
+  <data name="BtnVK.Text" xml:space="preserve">
+    <value>Войти через ВК</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>483, 646</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Вход</value>

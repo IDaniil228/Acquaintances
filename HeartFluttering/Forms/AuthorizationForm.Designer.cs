@@ -43,6 +43,8 @@
             registrButton = new Button();
             boyPhoto = new PictureBox();
             girlPhoto = new PictureBox();
+            BtnYandex = new Button();
+            BtnVK = new Button();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             SuspendLayout();
@@ -169,11 +171,35 @@
             girlPhoto.MouseDown += girlPhoto_MouseDown;
             girlPhoto.MouseMove += girlPhoto_MouseMove;
             // 
+            // BtnYandex
+            // 
+            resources.ApplyResources(BtnYandex, "BtnYandex");
+            BtnYandex.BackColor = Color.Red;
+            BtnYandex.FlatAppearance.BorderSize = 0;
+            BtnYandex.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnYandex.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnYandex.ForeColor = Color.White;
+            BtnYandex.Name = "BtnYandex";
+            BtnYandex.UseVisualStyleBackColor = false;
+            // 
+            // BtnVK
+            // 
+            resources.ApplyResources(BtnVK, "BtnVK");
+            BtnVK.BackColor = Color.DodgerBlue;
+            BtnVK.FlatAppearance.BorderSize = 0;
+            BtnVK.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnVK.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnVK.ForeColor = Color.White;
+            BtnVK.Name = "BtnVK";
+            BtnVK.UseVisualStyleBackColor = false;
+            // 
             // AuthorizationForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnVK);
+            Controls.Add(BtnYandex);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(registrButton);
@@ -215,5 +241,7 @@
         private Button registrButton;
         private PictureBox boyPhoto;
         private PictureBox girlPhoto;
+        private Button BtnYandex;
+        private Button BtnVK;
     }
 }

@@ -7,6 +7,7 @@ namespace HeartFluttering
 {
     public partial class AdministratorForm : Form
     {
+        private bool maximize = false;
         /// <summary>
         /// создаем экземпляр для логирования
         /// </summary>
@@ -395,6 +396,20 @@ namespace HeartFluttering
         private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void BtnSize_Click(object sender, EventArgs e)
+        {
+            if (!maximize)
+            {
+                WindowState = FormWindowState.Maximized;
+                maximize = true;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                maximize = false;
+            }
         }
     }
 }

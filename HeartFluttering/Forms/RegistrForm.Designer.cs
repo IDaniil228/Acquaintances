@@ -34,13 +34,17 @@
             CollapseButton = new Button();
             CloseButton = new Button();
             entryLabel = new Label();
+            loginButton = new Button();
+            BtnSize = new Button();
+            panel1 = new Panel();
             loginLabel = new Label();
             LoginField = new TextBox();
             passwordLabel2 = new Label();
             password2Field = new TextBox();
             passwordLabel = new Label();
             passwordField = new TextBox();
-            loginButton = new Button();
+            panel2 = new Panel();
+            BirhdayFields = new DateTimePicker();
             sexWomenButton = new RadioButton();
             sexMenButton = new RadioButton();
             sexLabel = new Label();
@@ -51,9 +55,10 @@
             BirhdayLabel = new Label();
             surnameLabel = new Label();
             surnameField = new TextBox();
-            BirhdayFields = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // girlPhoto
@@ -107,6 +112,41 @@
             entryLabel.MouseDown += entryLabel_MouseDown;
             entryLabel.MouseMove += entryLabel_MouseMove;
             // 
+            // loginButton
+            // 
+            resources.ApplyResources(loginButton, "loginButton");
+            loginButton.BackColor = Color.Fuchsia;
+            loginButton.FlatAppearance.BorderSize = 0;
+            loginButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            loginButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            loginButton.ForeColor = Color.White;
+            loginButton.Name = "loginButton";
+            loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginButton_Click;
+            // 
+            // BtnSize
+            // 
+            resources.ApplyResources(BtnSize, "BtnSize");
+            BtnSize.BackColor = Color.Fuchsia;
+            BtnSize.FlatAppearance.BorderSize = 0;
+            BtnSize.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnSize.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnSize.ForeColor = Color.White;
+            BtnSize.Name = "BtnSize";
+            BtnSize.UseVisualStyleBackColor = false;
+            BtnSize.Click += BtnSize_Click;
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(panel1, "panel1");
+            panel1.Controls.Add(loginLabel);
+            panel1.Controls.Add(LoginField);
+            panel1.Controls.Add(passwordLabel2);
+            panel1.Controls.Add(password2Field);
+            panel1.Controls.Add(passwordLabel);
+            panel1.Controls.Add(passwordField);
+            panel1.Name = "panel1";
+            // 
             // loginLabel
             // 
             resources.ApplyResources(loginLabel, "loginLabel");
@@ -146,17 +186,28 @@
             passwordField.Enter += passwordField_Enter;
             passwordField.Leave += passwordField_Leave;
             // 
-            // loginButton
+            // panel2
             // 
-            resources.ApplyResources(loginButton, "loginButton");
-            loginButton.BackColor = Color.Fuchsia;
-            loginButton.FlatAppearance.BorderSize = 0;
-            loginButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
-            loginButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
-            loginButton.ForeColor = Color.White;
-            loginButton.Name = "loginButton";
-            loginButton.UseVisualStyleBackColor = false;
-            loginButton.Click += loginButton_Click;
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Controls.Add(BirhdayFields);
+            panel2.Controls.Add(sexWomenButton);
+            panel2.Controls.Add(sexMenButton);
+            panel2.Controls.Add(sexLabel);
+            panel2.Controls.Add(cityField);
+            panel2.Controls.Add(cityLabel);
+            panel2.Controls.Add(nameLabel);
+            panel2.Controls.Add(nameField);
+            panel2.Controls.Add(BirhdayLabel);
+            panel2.Controls.Add(surnameLabel);
+            panel2.Controls.Add(surnameField);
+            panel2.Name = "panel2";
+            // 
+            // BirhdayFields
+            // 
+            resources.ApplyResources(BirhdayFields, "BirhdayFields");
+            BirhdayFields.Name = "BirhdayFields";
+            BirhdayFields.Enter += BirhdayFields_Enter;
+            BirhdayFields.Leave += BirhdayFields_Leave;
             // 
             // sexWomenButton
             // 
@@ -221,34 +272,15 @@
             surnameField.Enter += surnameField_Enter;
             surnameField.Leave += surnameField_Leave;
             // 
-            // BirhdayFields
-            // 
-            resources.ApplyResources(BirhdayFields, "BirhdayFields");
-            BirhdayFields.Name = "BirhdayFields";
-            // 
             // RegistrForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(BirhdayFields);
-            Controls.Add(sexWomenButton);
-            Controls.Add(sexMenButton);
-            Controls.Add(sexLabel);
-            Controls.Add(cityField);
-            Controls.Add(cityLabel);
-            Controls.Add(nameLabel);
-            Controls.Add(nameField);
-            Controls.Add(BirhdayLabel);
-            Controls.Add(surnameLabel);
-            Controls.Add(surnameField);
             Controls.Add(loginButton);
-            Controls.Add(loginLabel);
-            Controls.Add(LoginField);
-            Controls.Add(passwordLabel2);
-            Controls.Add(password2Field);
-            Controls.Add(passwordLabel);
-            Controls.Add(passwordField);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(BtnSize);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
@@ -261,8 +293,11 @@
             MouseMove += RegistrForm_MouseMove;
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -272,13 +307,17 @@
         private Button CollapseButton;
         private Button CloseButton;
         private Label entryLabel;
+        private Button loginButton;
+        private Button BtnSize;
+        private Panel panel1;
         private Label loginLabel;
         private TextBox LoginField;
         private Label passwordLabel2;
         private TextBox password2Field;
         private Label passwordLabel;
         private TextBox passwordField;
-        private Button loginButton;
+        private Panel panel2;
+        public DateTimePicker BirhdayFields;
         private RadioButton sexWomenButton;
         private RadioButton sexMenButton;
         private Label sexLabel;
@@ -289,6 +328,5 @@
         private Label BirhdayLabel;
         private Label surnameLabel;
         private TextBox surnameField;
-        public DateTimePicker BirhdayFields;
     }
 }
