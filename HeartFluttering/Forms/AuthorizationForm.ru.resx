@@ -146,7 +146,7 @@
     <value>141, 28</value>
   </data>
   <data name="registrButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 593</value>
+    <value>119, 605</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2081,7 +2081,7 @@
     <value>Войти через ВК</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>483, 646</value>
+    <value>483, 652</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Вход</value>

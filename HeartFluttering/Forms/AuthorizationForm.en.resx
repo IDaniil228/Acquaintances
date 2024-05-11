@@ -120,17 +120,21 @@
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Log in</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 39</value>
+  <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="EnterLike.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 18pt, style=Bold</value>
   </data>
@@ -2116,7 +2120,6 @@
   <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnYandex.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -2129,18 +2132,11 @@
   <data name="BtnYandex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BtnYandex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 539</value>
-  </data>
   <data name="BtnYandex.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="BtnYandex.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 49</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BtnYandex.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
   </data>
   <data name="BtnYandex.Text" xml:space="preserve">
     <value>log in using Yandex</value>
@@ -2157,17 +2153,11 @@
   <data name="BtnVK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BtnVK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 539</value>
-  </data>
   <data name="BtnVK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="BtnVK.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 49</value>
-  </data>
-  <data name="BtnVK.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
   </data>
   <data name="BtnVK.Text" xml:space="preserve">
     <value>log in using VK</value>
