@@ -2057,19 +2057,19 @@
     <value>215, 60</value>
   </data>
   <data name="recommendButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 102</value>
+    <value>3, 82</value>
   </data>
   <data name="recommendButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
   </data>
   <data name="searchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 200</value>
+    <value>3, 160</value>
   </data>
   <data name="searchButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
   </data>
   <data name="notificationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 298</value>
+    <value>3, 238</value>
   </data>
   <data name="notificationButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
@@ -2699,8 +2699,36 @@
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="button1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 13pt</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 316</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 61</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Друзья</value>
+  </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 394</value>
@@ -2718,9 +2746,8 @@
     <value>NoControl</value>
   </data>
   <data name="BtnSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>856, -3</value>
+    <value>856, -5</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>

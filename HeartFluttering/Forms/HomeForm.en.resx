@@ -2085,7 +2085,7 @@
     <value>NoControl</value>
   </data>
   <data name="recommendButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 94</value>
+    <value>3, 92</value>
   </data>
   <data name="recommendButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2097,7 +2097,7 @@
     <value>recommendation</value>
   </data>
   <data name="searchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 183</value>
+    <value>3, 179</value>
   </data>
   <data name="searchButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2109,7 +2109,7 @@
     <value>Pair search</value>
   </data>
   <data name="notificationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 272</value>
+    <value>3, 266</value>
   </data>
   <data name="notificationButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2137,6 +2137,15 @@
   </data>
   <data name="HomePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 124</value>
+  </data>
+  <data name="HomePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>671, 484</value>
   </data>
   <data name="redactionPhotoButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2862,20 +2871,11 @@
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 124</value>
-  </data>
-  <data name="HomePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>671, 484</value>
-  </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 133</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 356</value>
+    <value>221, 350</value>
   </data>
   <data name="BtnSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>

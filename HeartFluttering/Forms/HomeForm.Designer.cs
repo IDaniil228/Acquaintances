@@ -60,6 +60,7 @@
             surnameLabel = new Label();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+            button1 = new Button();
             BtnSize = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
@@ -332,11 +333,23 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
+            tableLayoutPanel1.Controls.Add(button1, 0, 4);
             tableLayoutPanel1.Controls.Add(favoritesButton, 0, 0);
             tableLayoutPanel1.Controls.Add(recommendButton, 0, 1);
             tableLayoutPanel1.Controls.Add(searchButton, 0, 2);
             tableLayoutPanel1.Controls.Add(notificationButton, 0, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            button1.BackColor = Color.Fuchsia;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            button1.ForeColor = Color.White;
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = false;
             // 
             // BtnSize
             // 
@@ -413,5 +426,6 @@
         public PictureBox photoField;
         private TableLayoutPanel tableLayoutPanel1;
         private Button BtnSize;
+        private Button button1;
     }
 }

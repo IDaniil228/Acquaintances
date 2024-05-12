@@ -3,11 +3,13 @@ using HeartFluttering.Resources.Localization.ChooseOneForm;
 using HeartFluttering.Resources.Localization.UserProfileForm;
 using NLog;
 using System.Data;
+using System.Globalization;
 
 namespace HeartFluttering
 {
     public partial class UserProfileForm : Form
     {
+        private bool maximize = false;
         /// <summary>
         /// Местоположение формы
         /// </summary>
@@ -51,7 +53,7 @@ namespace HeartFluttering
         {
             using (var context = new AcquaintanceSqlContext())
             {
-                var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers));
+                var users = context.Users.Where(r => !r.IdUsers.Equals(CurrentUser.currentUser.IdUsers) && r.Sex != CurrentUser.currentUser.Sex);
                 logger.Info("Получение всех пользователей, кроме текущего");
                 var sortedUsers = users.OrderByDescending(u => u.Likes).ToList();
                 logger.Info("Сортировка пользователей по количеству лайков");
@@ -60,10 +62,18 @@ namespace HeartFluttering
                 table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
                 table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
                 table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Age, typeof(int));
                 table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
+                DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                provider.ShortDatePattern = "dd.MM.yyyy";
                 for (int i = 0; i < sortedUsers.Count; i++)
                 {
-                    table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, sortedUsers[i].Likes);
+                    int age = DateTime.Now.Year - DateTime.ParseExact(sortedUsers[i].DateOfBirth, "dd.MM.yyyy", provider).Year;
+                    table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, age, sortedUsers[i].Likes);
+                    if (i == 5)
+                    {
+                        break;
+                    }
                 }
                 RecommenForm recommenForm = new RecommenForm();
                 RecommenTable.thisTable = table;
@@ -136,10 +146,14 @@ namespace HeartFluttering
                 table.Columns.Add(InscriptionsFavorites.Number, typeof(int));
                 table.Columns.Add(InscriptionsFavorites.Name, typeof(string));
                 table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
+                table.Columns.Add(InscriptionsFavorites.Age, typeof(int));
                 table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
+                DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                provider.ShortDatePattern = "dd.MM.yyyy";
                 for (int i = 0; i < anotherUsers.Count; i++)
                 {
-                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, anotherUsers[i].Likes);
+                    int age = DateTime.Now.Year - DateTime.ParseExact(anotherUsers[i].DateOfBirth, "dd.MM.yyyy", provider).Year;
+                    table.Rows.Add((i + 1), anotherUsers[i].Name, anotherUsers[i].Surname, age, anotherUsers[i].Likes);
                 }
                 NotificationForm notificationForm = new NotificationForm();
                 NotificationTable.notificationTable = table;
@@ -422,6 +436,20 @@ namespace HeartFluttering
         private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void BtnSize_Click(object sender, EventArgs e)
+        {
+            if (!maximize)
+            {
+                WindowState = FormWindowState.Maximized;
+                maximize = true;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                maximize = false;
+            }
         }
     }
 }

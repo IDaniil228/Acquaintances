@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="girlPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="girlPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2032,8 +2036,17 @@
   <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
+  <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>564, -2</value>
+  </data>
   <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
+  </data>
+  <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2041,14 +2054,8 @@
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Heart fluttering</value>
   </data>
-  <data name="ProfilePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 121</value>
-  </data>
-  <data name="ProfilePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="ProfilePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>664, 496</value>
+  <data name="likeAccount2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="likeAccount2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2229,20 +2236,41 @@
   <data name="likeAccount2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
+  <data name="backButton3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="backButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 443</value>
+  </data>
   <data name="backButton3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="backButton3.Text" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="backButton2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="backButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 443</value>
+  </data>
   <data name="backButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
+  </data>
+  <data name="backButton2.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="deleteButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="deleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="deleteButton.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="likeAccount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="likeAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2423,8 +2451,20 @@
   <data name="likeAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
+  <data name="backButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="backButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 444</value>
+  </data>
   <data name="backButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
+  </data>
+  <data name="backButton.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="label14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 372</value>
@@ -2435,6 +2475,9 @@
   <data name="label14.Text" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="label13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
     <value>317, 323</value>
   </data>
@@ -2443,6 +2486,30 @@
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Mail</value>
+  </data>
+  <data name="numberField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="mailField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="selField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cityField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="birthdayField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="surnameField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="nameField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 276</value>
@@ -2453,6 +2520,9 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Sex</value>
   </data>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>322, 227</value>
   </data>
@@ -2461,6 +2531,9 @@
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>City</value>
+  </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>304, 85</value>
@@ -2471,6 +2544,9 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="passwondLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="passwondLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 179</value>
   </data>
@@ -2479,6 +2555,9 @@
   </data>
   <data name="passwondLabel.Text" xml:space="preserve">
     <value>Birthday</value>
+  </data>
+  <data name="loginLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 132</value>
@@ -3026,14 +3105,54 @@
   <data name="Photo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 82</value>
+    <value>664, 82</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Profile</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="ProfilePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ProfilePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 117</value>
+  </data>
+  <data name="ProfilePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ProfilePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>664, 500</value>
+  </data>
+  <data name="BtnSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BtnSize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="BtnSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="BtnSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 0</value>
+  </data>
+  <data name="BtnSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 27</value>
+  </data>
+  <data name="BtnSize.Text" xml:space="preserve">
+    <value>▭</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>

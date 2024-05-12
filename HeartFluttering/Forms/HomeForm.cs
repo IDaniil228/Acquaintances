@@ -214,10 +214,10 @@ namespace HeartFluttering
                     table.Columns.Add(InscriptionsFavorites.Surname, typeof(string));
                     table.Columns.Add(InscriptionsFavorites.Age, typeof(int));
                     table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
+                    DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                    provider.ShortDatePattern = "dd.MM.yyyy";
                     for (int i = 0; i < sortedUsers.Count; i++)
                     {
-                        DateTimeFormatInfo provider = new DateTimeFormatInfo();
-                        provider.ShortDatePattern = "dd.MM.yyyy";
                         int age = DateTime.Now.Year - DateTime.ParseExact(sortedUsers[i].DateOfBirth, "dd.MM.yyyy", provider).Year;
                         table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, age, sortedUsers[i].Likes);
                         if (i == 5)
@@ -456,11 +456,11 @@ namespace HeartFluttering
                 WindowState = FormWindowState.Maximized;
                 maximize = true;
             }
-            else 
+            else
             {
                 WindowState = FormWindowState.Normal;
                 maximize = false;
             }
         }
-    }
+    } 
 }
