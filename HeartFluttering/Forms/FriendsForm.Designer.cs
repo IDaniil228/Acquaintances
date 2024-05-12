@@ -1,6 +1,6 @@
 ﻿namespace HeartFluttering.Forms
 {
-    partial class Friends
+    partial class FriendsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -113,20 +113,20 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label3.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label3.Location = new Point(39, 338);
+            label3.Location = new Point(0, 335);
             label3.Name = "label3";
-            label3.Size = new Size(76, 43);
+            label3.Size = new Size(223, 48);
             label3.TabIndex = 47;
-            label3.Text = "Имя";
+            label3.Text = "Фамилия и имя";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label4.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label4.Location = new Point(30, 379);
+            label4.Location = new Point(71, 375);
             label4.Name = "label4";
             label4.Size = new Size(137, 43);
             label4.TabIndex = 48;
@@ -136,19 +136,21 @@
             // SearchNameTextBox
             // 
             SearchNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            SearchNameTextBox.Location = new Point(175, 349);
+            SearchNameTextBox.Location = new Point(214, 349);
             SearchNameTextBox.Name = "SearchNameTextBox";
-            SearchNameTextBox.Size = new Size(347, 27);
+            SearchNameTextBox.Size = new Size(308, 27);
             SearchNameTextBox.TabIndex = 49;
+            SearchNameTextBox.TextChanged += SearchNameTextBox_TextChanged;
             // 
             // AgeTextBox
             // 
             AgeTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AgeTextBox.Location = new Point(175, 390);
+            AgeTextBox.Location = new Point(214, 386);
             AgeTextBox.MaxLength = 3;
             AgeTextBox.Name = "AgeTextBox";
             AgeTextBox.Size = new Size(78, 27);
             AgeTextBox.TabIndex = 50;
+            AgeTextBox.TextChanged += this.AgeTextBox_TextChanged;
             // 
             // SearchFriendsDataGridView
             // 
@@ -156,7 +158,7 @@
             SearchFriendsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             SearchFriendsDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_2, Age_2 });
             SearchFriendsDataGridView.Dock = DockStyle.Bottom;
-            SearchFriendsDataGridView.Location = new Point(0, 425);
+            SearchFriendsDataGridView.Location = new Point(0, 437);
             SearchFriendsDataGridView.Name = "SearchFriendsDataGridView";
             SearchFriendsDataGridView.RowHeadersWidth = 51;
             SearchFriendsDataGridView.Size = new Size(534, 186);
@@ -236,12 +238,12 @@
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += CloseButton_Click;
             // 
-            // Friends
+            // FriendsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(534, 611);
+            ClientSize = new Size(534, 623);
             Controls.Add(BtnSize);
             Controls.Add(CollapseButton);
             Controls.Add(CloseButton);
@@ -255,7 +257,7 @@
             Controls.Add(label1);
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Friends";
+            Name = "FriendsForm";
             Text = "Friends";
             Load += Friends_Load;
             ((System.ComponentModel.ISupportInitialize)CurrentFriendDataGridView).EndInit();

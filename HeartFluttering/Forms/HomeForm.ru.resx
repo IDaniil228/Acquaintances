@@ -2053,6 +2053,9 @@
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 513</value>
+  </data>
   <data name="favoritesButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
   </data>
@@ -2081,7 +2084,7 @@
     <value>NoControl</value>
   </data>
   <data name="closeAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 558</value>
+    <value>12, 587</value>
   </data>
   <data name="closeAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 39</value>
@@ -2627,7 +2630,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="redactionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 429</value>
+    <value>423, 458</value>
   </data>
   <data name="redactionButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 51</value>
@@ -2694,37 +2697,31 @@
     <value>250, 117</value>
   </data>
   <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>670, 491</value>
+    <value>670, 520</value>
   </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="button1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="BtnFriend.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="BtnFriend.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BtnFriend.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe Print, 13pt</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BtnFriend.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 316</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="BtnFriend.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BtnFriend.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 61</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="BtnFriend.Text" xml:space="preserve">
     <value>Друзья</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
@@ -2756,5 +2753,8 @@
   </data>
   <data name="BtnSize.Text" xml:space="preserve">
     <value>▭</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>920, 630</value>
   </data>
 </root>

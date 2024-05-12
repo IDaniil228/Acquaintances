@@ -1,4 +1,5 @@
 ﻿using HeartFluttering.Classes;
+using HeartFluttering.Forms;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
 using Microsoft.VisualBasic.ApplicationServices;
 using NLog;
@@ -462,5 +463,11 @@ namespace HeartFluttering
                 maximize = false;
             }
         }
-    } 
+
+        private void BtnFriend_Click(object sender, EventArgs e)
+        {
+            FriendsForm friendsForm = new FriendsForm();
+            friendsForm.Show();
+        }
+    }
 }
