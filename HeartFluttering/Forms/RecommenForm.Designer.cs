@@ -124,7 +124,7 @@
             BtnSendEmail.ForeColor = Color.White;
             BtnSendEmail.Name = "BtnSendEmail";
             BtnSendEmail.UseVisualStyleBackColor = false;
-            BtnSendEmail.Click += BtnSendEmail_Click;
+            BtnSendEmail.Click += BtnSendEmail_ClickAsync;
             // 
             // RecommenForm
             // 

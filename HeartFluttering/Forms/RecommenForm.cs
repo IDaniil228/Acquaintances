@@ -205,36 +205,47 @@ namespace HeartFluttering
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void BtnSendEmail_Click(object sender, EventArgs e)
+        private void BtnSendEmail_ClickAsync(object sender, EventArgs e)
         {
-            if (CurrentUser.currentUser.Mail == null)
+            var mail = CurrentUser.currentUser.Mail;
+            if (mail == null)
             {
                 MessageBox.Show(InscriptionsReccommendForm.NotMail);
                 return;
             }
-            var rows = listUsers.Rows;
             var names = new StringBuilder();
             foreach (DataGridViewRow row in listUsers.Rows)
             {
                 names.AppendLine($"{row.Cells[InscriptionsFavorites.Surname].Value}" +
                     $" {row.Cells[InscriptionsFavorites.Name].Value} - {row.Cells[InscriptionsFavorites.Age].Value} лет");
             }
-            using (var message = new MailMessage())
-            {
-                message.From = new MailAddress("testikovich77@mail.ru", "My app");
-                message.To.Add(CurrentUser.currentUser.Mail);
-                message.Body = names.ToString();
-                message.Subject = "Список рекомендаций";
-                message.IsBodyHtml = true;
-                using (var smtpClient = new SmtpClient("smtp.mail.com", 587))
-                {
-                    smtpClient.EnableSsl = true;
-                    smtpClient.UseDefaultCredentials = false;
-                    smtpClient.Credentials = new NetworkCredential("testikovich77@mail.ru", "SS9rxQxQp63Yhi1jgXvx");
-                    smtpClient.Send(message);
-                }
-                MessageBox.Show(InscriptionsReccommendForm.Mail);
-            }
+
+            var from = new MailAddress("heartfluttering@inbox.ru", "HeartFluttering");
+            var to = new MailAddress(mail);
+            var msg = new MailMessage(from, to);
+            msg.Subject = "Рекомендации";
+            msg.Body = names.ToString();
+            var smtp = new SmtpClient("smtp.inbox.ru", 587);
+            smtp.Credentials = new NetworkCredential("heartfluttering@inbox.ru", "uaH1kbiw8geeFpwFJLAq\r\n");
+            smtp.EnableSsl = true;
+            smtp.Send(msg);
+            MessageBox.Show(InscriptionsReccommendForm.Mail);
+            //using (var message = new MailMessage())
+            //{
+            //    message.From = new MailAddress("testikovich77@mail.ru", "My app");
+            //    message.To.Add(CurrentUser.currentUser.Mail);
+            //    message.Body = names.ToString();
+            //    message.Subject = "Список рекомендаций";
+            //    message.IsBodyHtml = true;
+            //    using (var smtpClient = new SmtpClient("smtp.mail.com", 587))
+            //    {
+            //        smtpClient.EnableSsl = true;
+            //        smtpClient.UseDefaultCredentials = false;
+            //        smtpClient.Credentials = new NetworkCredential("testikovich77@mail.ru", "SS9rxQxQp63Yhi1jgXvx");
+            //        smtpClient.Send(message);
+            //    }
+            //   
+            //}
 
         }
     }

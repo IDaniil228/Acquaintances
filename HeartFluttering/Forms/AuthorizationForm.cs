@@ -432,5 +432,10 @@ namespace HeartFluttering
         {
             lastPoint = new Point(e.X, e.Y);
         }
+
+        private void BtnYandex_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

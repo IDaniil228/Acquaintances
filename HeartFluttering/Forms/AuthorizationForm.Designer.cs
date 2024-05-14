@@ -181,6 +181,7 @@
             BtnYandex.ForeColor = Color.White;
             BtnYandex.Name = "BtnYandex";
             BtnYandex.UseVisualStyleBackColor = false;
+            BtnYandex.Click += BtnYandex_Click;
             // 
             // BtnVK
             // 

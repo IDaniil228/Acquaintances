@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="entryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 88</value>
+  </data>
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Log in</value>
   </data>
@@ -124,79 +128,99 @@
   <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CloseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 0</value>
+  </data>
+  <data name="CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
   </data>
   <data name="CollapseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="CollapseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="CollapseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CollapseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
   <data name="EnterLike.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 18pt, style=Bold</value>
   </data>
+  <data name="EnterLike.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 118</value>
+  </data>
   <data name="EnterLike.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 35</value>
+    <value>120, 26</value>
   </data>
   <data name="EnterLike.Text" xml:space="preserve">
     <value>Log in as</value>
   </data>
-  <data name="choice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="choice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 147</value>
+  </data>
+  <data name="choice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 31</value>
   </data>
   <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 120</value>
+    <value>299, 90</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LanguageComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 28</value>
+    <value>123, 23</value>
+  </data>
+  <data name="passwondLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 278</value>
   </data>
   <data name="passwondLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 35</value>
+    <value>110, 26</value>
   </data>
   <data name="passwondLabel.Text" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="passwordField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 307</value>
+  </data>
+  <data name="passwordField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 32</value>
   </data>
   <data name="passwordField.Text" xml:space="preserve">
     <value>Enter password...</value>
   </data>
+  <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 200</value>
+  </data>
   <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 35</value>
+    <value>72, 26</value>
   </data>
   <data name="loginLabel.Text" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="loginField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="loginField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 229</value>
+  </data>
+  <data name="loginField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 32</value>
   </data>
   <data name="loginField.Text" xml:space="preserve">
     <value>Enter login...</value>
   </data>
   <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 468</value>
-  </data>
-  <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+    <value>103, 351</value>
   </data>
   <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 61</value>
+    <value>203, 46</value>
   </data>
   <data name="loginButton.Text" xml:space="preserve">
     <value>Log in </value>
   </data>
   <data name="registrButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 598</value>
-  </data>
-  <data name="registrButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+    <value>103, 448</value>
   </data>
   <data name="registrButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 40</value>
+    <value>203, 30</value>
   </data>
   <data name="registrButton.Text" xml:space="preserve">
     <value>Sign up</value>
@@ -1084,10 +1108,10 @@
 </value>
   </data>
   <data name="boyPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 28</value>
+    <value>61, 21</value>
   </data>
-  <data name="boyPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="boyPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 58</value>
   </data>
   <data name="girlPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2115,10 +2139,10 @@
 </value>
   </data>
   <data name="girlPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 28</value>
+    <value>299, 21</value>
   </data>
-  <data name="girlPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="girlPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 58</value>
   </data>
   <data name="BtnYandex.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -2132,11 +2156,14 @@
   <data name="BtnYandex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="BtnYandex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 404</value>
+  </data>
   <data name="BtnYandex.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="BtnYandex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 49</value>
+    <value>174, 37</value>
   </data>
   <data name="BtnYandex.Text" xml:space="preserve">
     <value>log in using Yandex</value>
@@ -2153,19 +2180,22 @@
   <data name="BtnVK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="BtnVK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 404</value>
+  </data>
   <data name="BtnVK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="BtnVK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 49</value>
+    <value>168, 37</value>
   </data>
   <data name="BtnVK.Text" xml:space="preserve">
     <value>log in using VK</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>483, 639</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>423, 479</value>
   </data>
 </root>
