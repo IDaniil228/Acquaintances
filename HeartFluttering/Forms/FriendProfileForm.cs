@@ -111,7 +111,7 @@ namespace HeartFluttering.Forms
                 {
                     var currentUser = context.Users.FirstOrDefault(x => x.IdUsers == 
                     CurrentUser.currentUser.IdUsers);
-                    if (currentUser.Friends.Contains($"{User.IdUsers},"))
+                    if (currentUser.Friends.Contains($"{User.IdUsers}"))
                     {
                         MessageBox.Show(InscriptionsFriendProfile.AddFriendDone);
                     }
@@ -119,6 +119,9 @@ namespace HeartFluttering.Forms
                     {
                         currentUser.Friends += $"{User.IdUsers},";
                         currentUser.NotificationsFriend = currentUser.NotificationsFriend.Replace($"{User.IdUsers},", "");
+                        var user = context.Users.FirstOrDefault(x => x.IdUsers == User.IdUsers);
+                        user.NotificationsFriend = user.NotificationsFriend.Replace($"{currentUser.IdUsers},", "");
+                        user.Friends += $"{currentUser.IdUsers},";
                         MessageBox.Show(InscriptionsFriendProfile.AddFriendDone);
                         context.SaveChanges();
                     }

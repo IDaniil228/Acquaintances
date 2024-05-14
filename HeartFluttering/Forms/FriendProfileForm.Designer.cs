@@ -440,7 +440,7 @@
             BtnDelete.Font = new Font("Segoe Print", 12F);
             BtnDelete.ForeColor = Color.White;
             BtnDelete.ImeMode = ImeMode.NoControl;
-            BtnDelete.Location = new Point(508, 565);
+            BtnDelete.Location = new Point(510, 565);
             BtnDelete.Margin = new Padding(3, 4, 3, 4);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(154, 52);

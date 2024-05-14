@@ -88,14 +88,14 @@ namespace HeartFluttering.Forms
                 SearchFriendsDataGridView.Rows.Clear();
                 DateTimeFormatInfo provider = new DateTimeFormatInfo();
                 provider.ShortDatePattern = "dd.MM.yyyy";
-                var users = new List<User> ();
+                var users = new List<User>();
                 if (CurrentUser.currentUser.Friends != null)
                 {
                     string[] idFriends = CurrentUser.currentUser.Friends.Split(",");
                     users = context.Users.Where(x => x.Sex == CurrentUser.currentUser.Sex &&
                     !idFriends.Contains(x.IdUsers) && x.IdUsers != CurrentUser.currentUser.IdUsers).ToList();
                 }
-                else 
+                else
                 {
                     users = context.Users.Where(x => x.Sex == CurrentUser.currentUser.Sex &&
                     x.IdUsers != CurrentUser.currentUser.IdUsers).ToList();
@@ -192,6 +192,13 @@ namespace HeartFluttering.Forms
 
                 }
             }
+        }
+
+        private void BtnGeneral_Click(object sender, EventArgs e)
+        {
+            Hide();
+            GeneralForm from = new GeneralForm();
+            from.Show();
         }
     }
 }

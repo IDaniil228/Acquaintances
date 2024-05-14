@@ -2054,25 +2054,25 @@
     <value>Top, Bottom, Left</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 513</value>
+    <value>11, 546</value>
   </data>
   <data name="favoritesButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
   </data>
   <data name="recommendButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 82</value>
+    <value>3, 86</value>
   </data>
   <data name="recommendButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
   </data>
   <data name="searchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 160</value>
+    <value>3, 168</value>
   </data>
   <data name="searchButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
   </data>
   <data name="notificationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 238</value>
+    <value>3, 250</value>
   </data>
   <data name="notificationButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 60</value>
@@ -2084,7 +2084,7 @@
     <value>NoControl</value>
   </data>
   <data name="closeAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 587</value>
+    <value>12, 620</value>
   </data>
   <data name="closeAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 39</value>
@@ -2630,7 +2630,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="redactionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 458</value>
+    <value>423, 491</value>
   </data>
   <data name="redactionButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 51</value>
@@ -2697,7 +2697,7 @@
     <value>250, 117</value>
   </data>
   <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>670, 520</value>
+    <value>670, 553</value>
   </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2714,6 +2714,9 @@
   <data name="BtnFriend.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="BtnFriend.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 332</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnFriend.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -2728,7 +2731,7 @@
     <value>5</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 394</value>
+    <value>221, 412</value>
   </data>
   <data name="BtnSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2755,6 +2758,6 @@
     <value>▭</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>920, 630</value>
+    <value>920, 663</value>
   </data>
 </root>

@@ -31,6 +31,8 @@
             entryLabel = new Label();
             label1 = new Label();
             CurrentFriendDataGridView = new DataGridView();
+            Name_1 = new DataGridViewTextBoxColumn();
+            Age_1 = new DataGridViewTextBoxColumn();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -42,10 +44,11 @@
             BtnSize = new Button();
             CollapseButton = new Button();
             CloseButton = new Button();
-            Name_1 = new DataGridViewTextBoxColumn();
-            Age_1 = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            BtnGeneral = new Button();
             ((System.ComponentModel.ISupportInitialize)CurrentFriendDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SearchFriendsDataGridView).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // entryLabel
@@ -86,11 +89,26 @@
             CurrentFriendDataGridView.TabIndex = 45;
             CurrentFriendDataGridView.CellDoubleClick += CurrentFriendDataGridView_CellDoubleClick;
             // 
+            // Name_1
+            // 
+            Name_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Name_1.HeaderText = "Имя";
+            Name_1.MinimumWidth = 6;
+            Name_1.Name = "Name_1";
+            // 
+            // Age_1
+            // 
+            Age_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Age_1.HeaderText = "Возраст";
+            Age_1.MinimumWidth = 6;
+            Age_1.Name = "Age_1";
+            Age_1.Width = 125;
+            // 
             // label2
             // 
             label2.Dock = DockStyle.Top;
             label2.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label2.Location = new Point(0, 292);
+            label2.Location = new Point(0, 354);
             label2.Name = "label2";
             label2.Size = new Size(534, 43);
             label2.TabIndex = 46;
@@ -100,7 +118,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label3.Location = new Point(0, 335);
+            label3.Location = new Point(0, 398);
             label3.Name = "label3";
             label3.Size = new Size(223, 48);
             label3.TabIndex = 47;
@@ -110,7 +128,7 @@
             // label4
             // 
             label4.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label4.Location = new Point(71, 375);
+            label4.Location = new Point(71, 438);
             label4.Name = "label4";
             label4.Size = new Size(137, 43);
             label4.TabIndex = 48;
@@ -120,7 +138,7 @@
             // SearchNameTextBox
             // 
             SearchNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            SearchNameTextBox.Location = new Point(214, 349);
+            SearchNameTextBox.Location = new Point(214, 412);
             SearchNameTextBox.Name = "SearchNameTextBox";
             SearchNameTextBox.Size = new Size(308, 27);
             SearchNameTextBox.TabIndex = 49;
@@ -129,7 +147,7 @@
             // AgeTextBox
             // 
             AgeTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AgeTextBox.Location = new Point(214, 386);
+            AgeTextBox.Location = new Point(214, 449);
             AgeTextBox.MaxLength = 3;
             AgeTextBox.Name = "AgeTextBox";
             AgeTextBox.Size = new Size(78, 27);
@@ -142,7 +160,7 @@
             SearchFriendsDataGridView.BackgroundColor = Color.White;
             SearchFriendsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             SearchFriendsDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_2, Age_2 });
-            SearchFriendsDataGridView.Location = new Point(0, 437);
+            SearchFriendsDataGridView.Location = new Point(0, 484);
             SearchFriendsDataGridView.Name = "SearchFriendsDataGridView";
             SearchFriendsDataGridView.RowHeadersWidth = 51;
             SearchFriendsDataGridView.Size = new Size(534, 186);
@@ -223,27 +241,41 @@
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += CloseButton_Click;
             // 
-            // Name_1
+            // panel1
             // 
-            Name_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Name_1.HeaderText = "Имя";
-            Name_1.MinimumWidth = 6;
-            Name_1.Name = "Name_1";
+            panel1.Controls.Add(BtnGeneral);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 292);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(534, 62);
+            panel1.TabIndex = 55;
             // 
-            // Age_1
+            // BtnGeneral
             // 
-            Age_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Age_1.HeaderText = "Возраст";
-            Age_1.MinimumWidth = 6;
-            Age_1.Name = "Age_1";
-            Age_1.Width = 125;
+            BtnGeneral.BackColor = Color.Fuchsia;
+            BtnGeneral.BackgroundImageLayout = ImageLayout.None;
+            BtnGeneral.FlatAppearance.BorderSize = 0;
+            BtnGeneral.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnGeneral.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnGeneral.FlatStyle = FlatStyle.Flat;
+            BtnGeneral.Font = new Font("Segoe Print", 13F);
+            BtnGeneral.ForeColor = Color.White;
+            BtnGeneral.ImeMode = ImeMode.NoControl;
+            BtnGeneral.Location = new Point(160, 0);
+            BtnGeneral.Margin = new Padding(3, 4, 3, 4);
+            BtnGeneral.Name = "BtnGeneral";
+            BtnGeneral.Size = new Size(215, 61);
+            BtnGeneral.TabIndex = 47;
+            BtnGeneral.Text = "Общая подборка";
+            BtnGeneral.UseVisualStyleBackColor = false;
+            BtnGeneral.Click += BtnGeneral_Click;
             // 
             // FriendsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(534, 623);
+            ClientSize = new Size(534, 670);
             Controls.Add(BtnSize);
             Controls.Add(CollapseButton);
             Controls.Add(CloseButton);
@@ -253,6 +285,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(panel1);
             Controls.Add(CurrentFriendDataGridView);
             Controls.Add(label1);
             Controls.Add(entryLabel);
@@ -262,6 +295,7 @@
             Load += Friends_Load;
             ((System.ComponentModel.ISupportInitialize)CurrentFriendDataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)SearchFriendsDataGridView).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -284,5 +318,7 @@
         private DataGridViewTextBoxColumn Age_2;
         private DataGridViewTextBoxColumn Name_1;
         private DataGridViewTextBoxColumn Age_1;
+        private Panel panel1;
+        private Button BtnGeneral;
     }
 }

@@ -29,7 +29,7 @@ public partial class User
 
     public string Id { get; set; } = null!;
 
-    public string? AnotherAccounts { get; set; }
+    public string AnotherAccounts { get; set; } = null!;
 
     public int? Status { get; set; }
 
