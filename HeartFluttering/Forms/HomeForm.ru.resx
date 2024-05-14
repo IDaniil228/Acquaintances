@@ -2092,6 +2092,28 @@
   <data name="HomePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="VK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="VK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 15.75pt, style=Bold</value>
+  </data>
+  <data name="VK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="VK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 31</value>
+  </data>
+  <data name="VK.Text" xml:space="preserve">
+    <value>ВК аккаунт</value>
+  </data>
+  <data name="VK.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="photoField.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2677,7 +2699,6 @@
   <data name="surnameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>

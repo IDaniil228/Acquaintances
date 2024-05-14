@@ -140,7 +140,7 @@ namespace HeartFluttering.Forms
             int userAge = (int)SearchFriendsDataGridView.Rows[e.RowIndex].Cells["Age_2"].Value;
             using (var context = new AcquaintanceSqlContext())
             {
-                DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                var provider = new DateTimeFormatInfo();
                 provider.ShortDatePattern = "dd.MM.yyyy";
                 var user = context.Users.Where(x => x.Surname + " " + x.Name == userName).ToList();
                 if (user.Count != 0)

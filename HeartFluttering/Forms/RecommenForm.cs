@@ -4,6 +4,7 @@ using HeartFluttering.Resources.Localization.ReccommenForm;
 using Microsoft.VisualBasic.Devices;
 using NLog;
 using System.Diagnostics;
+using System.Globalization;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mail;
@@ -14,6 +15,7 @@ namespace HeartFluttering
 {
     public partial class RecommenForm : Form
     {
+        public List<User> users = new List<User>();
         /// <summary>
         /// Местоположение формы
         /// </summary>
@@ -214,10 +216,18 @@ namespace HeartFluttering
                 return;
             }
             var names = new StringBuilder();
-            foreach (DataGridViewRow row in listUsers.Rows)
+            using (var context = new AcquaintanceSqlContext())
             {
-                names.AppendLine($"{row.Cells[InscriptionsFavorites.Surname].Value}" +
-                    $" {row.Cells[InscriptionsFavorites.Name].Value} - {row.Cells[InscriptionsFavorites.Age].Value} лет");
+                foreach (var user in users)
+                {
+                    var uset_1 = context.Users.FirstOrDefault(x => x.IdUsers == user.IdUsers);
+                    var provider = new DateTimeFormatInfo();
+                    provider.ShortDatePattern = "dd.MM.yyyy";
+                    int age = DateTime.Now.Year - DateTime.ParseExact(user.DateOfBirth,
+                         "dd.MM.yyyy", provider).Year;
+                    names.AppendLine($"{uset_1.Surname}" +
+                        $"{uset_1.Name} - {age} лет  Почта - {user.Mail}");
+                }
             }
 
             var from = new MailAddress("heartfluttering@inbox.ru", "HeartFluttering");
@@ -230,23 +240,6 @@ namespace HeartFluttering
             smtp.EnableSsl = true;
             smtp.Send(msg);
             MessageBox.Show(InscriptionsReccommendForm.Mail);
-            //using (var message = new MailMessage())
-            //{
-            //    message.From = new MailAddress("testikovich77@mail.ru", "My app");
-            //    message.To.Add(CurrentUser.currentUser.Mail);
-            //    message.Body = names.ToString();
-            //    message.Subject = "Список рекомендаций";
-            //    message.IsBodyHtml = true;
-            //    using (var smtpClient = new SmtpClient("smtp.mail.com", 587))
-            //    {
-            //        smtpClient.EnableSsl = true;
-            //        smtpClient.UseDefaultCredentials = false;
-            //        smtpClient.Credentials = new NetworkCredential("testikovich77@mail.ru", "SS9rxQxQp63Yhi1jgXvx");
-            //        smtpClient.Send(message);
-            //    }
-            //   
-            //}
-
         }
     }
 }

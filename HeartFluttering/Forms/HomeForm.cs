@@ -217,16 +217,18 @@ namespace HeartFluttering
                     table.Columns.Add(InscriptionsFavorites.Likes, typeof(int));
                     DateTimeFormatInfo provider = new DateTimeFormatInfo();
                     provider.ShortDatePattern = "dd.MM.yyyy";
+                    RecommenForm recommenForm = new RecommenForm();
+                    recommenForm.users.Clear();
                     for (int i = 0; i < sortedUsers.Count; i++)
                     {
                         int age = DateTime.Now.Year - DateTime.ParseExact(sortedUsers[i].DateOfBirth, "dd.MM.yyyy", provider).Year;
                         table.Rows.Add((i + 1), sortedUsers[i].Name, sortedUsers[i].Surname, age, sortedUsers[i].Likes);
+                        recommenForm.users.Add(sortedUsers[i]);
                         if (i == 5)
                         {
                             break;
                         }
-                    }
-                    RecommenForm recommenForm = new RecommenForm();
+                    }                    
                     recommenForm.listUsers.DataSource = table;
                     logger.Info("Создание таблицы для формы рекомендации");
                     RecommenTable.thisTable = table;

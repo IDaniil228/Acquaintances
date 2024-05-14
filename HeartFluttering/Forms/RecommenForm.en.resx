@@ -2065,6 +2065,9 @@
   <data name="BtnSendEmail.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="BtnSendEmail.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="BtnSendEmail.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe Print, 18pt</value>
   </data>

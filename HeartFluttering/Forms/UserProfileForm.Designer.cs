@@ -35,6 +35,7 @@
             CloseButton = new Button();
             entryLabel = new Label();
             ProfilePanel = new Panel();
+            VK = new Label();
             likeAccount2 = new PictureBox();
             backButton3 = new Button();
             backButton2 = new Button();
@@ -120,6 +121,7 @@
             // ProfilePanel
             // 
             resources.ApplyResources(ProfilePanel, "ProfilePanel");
+            ProfilePanel.Controls.Add(VK);
             ProfilePanel.Controls.Add(likeAccount2);
             ProfilePanel.Controls.Add(backButton3);
             ProfilePanel.Controls.Add(backButton2);
@@ -145,6 +147,12 @@
             ProfilePanel.Name = "ProfilePanel";
             ProfilePanel.MouseDown += ProfilePanel_MouseDown;
             ProfilePanel.MouseMove += ProfilePanel_MouseMove;
+            // 
+            // VK
+            // 
+            resources.ApplyResources(VK, "VK");
+            VK.ForeColor = Color.Gray;
+            VK.Name = "VK";
             // 
             // likeAccount2
             // 
@@ -373,5 +381,6 @@
         public PictureBox likeAccount2;
         public Button backButton3;
         private Button BtnSize;
+        private Label VK;
     }
 }

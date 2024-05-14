@@ -37,10 +37,10 @@
             backButton = new Button();
             listUsers = new DataGridView();
             label1 = new Label();
-            label2 = new Label();
             FriendDataGridView = new DataGridView();
             Name_1 = new DataGridViewTextBoxColumn();
             Age_1 = new DataGridViewTextBoxColumn();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
@@ -122,12 +122,8 @@
             // label1
             // 
             resources.ApplyResources(label1, "label1");
+            label1.ForeColor = Color.Black;
             label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(label2, "label2");
-            label2.Name = "label2";
             // 
             // FriendDataGridView
             // 
@@ -150,20 +146,25 @@
             resources.ApplyResources(Age_1, "Age_1");
             Age_1.Name = "Age_1";
             // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            // 
             // NotificationForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(FriendDataGridView);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(listUsers);
             Controls.Add(backButton);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
             Controls.Add(CollapseButton);
             Controls.Add(CloseButton);
+            Controls.Add(FriendDataGridView);
+            Controls.Add(label2);
+            Controls.Add(listUsers);
+            Controls.Add(label1);
             Controls.Add(entryLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "NotificationForm";
@@ -187,9 +188,9 @@
         private Button backButton;
         public DataGridView listUsers;
         private Label label1;
-        private Label label2;
         public DataGridView FriendDataGridView;
         private DataGridViewTextBoxColumn Name_1;
         private DataGridViewTextBoxColumn Age_1;
+        private Label label2;
     }
 }

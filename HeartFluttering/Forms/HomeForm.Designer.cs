@@ -41,6 +41,7 @@
             notificationButton = new Button();
             closeAccount = new Button();
             HomePanel = new Panel();
+            VK = new Label();
             redactionPhotoButton = new Button();
             photoField = new PictureBox();
             redactionButton = new Button();
@@ -189,6 +190,7 @@
             // HomePanel
             // 
             resources.ApplyResources(HomePanel, "HomePanel");
+            HomePanel.Controls.Add(VK);
             HomePanel.Controls.Add(redactionPhotoButton);
             HomePanel.Controls.Add(photoField);
             HomePanel.Controls.Add(redactionButton);
@@ -210,6 +212,12 @@
             HomePanel.Name = "HomePanel";
             HomePanel.MouseDown += HomePanel_MouseDown;
             HomePanel.MouseMove += HomePanel_MouseMove;
+            // 
+            // VK
+            // 
+            resources.ApplyResources(VK, "VK");
+            VK.ForeColor = Color.Gray;
+            VK.Name = "VK";
             // 
             // redactionPhotoButton
             // 
@@ -428,5 +436,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Button BtnSize;
         private Button BtnFriend;
+        private Label VK;
     }
 }

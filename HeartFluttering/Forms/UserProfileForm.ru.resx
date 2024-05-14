@@ -2038,6 +2038,21 @@
   <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="VK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 12pt</value>
+  </data>
+  <data name="VK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 460</value>
+  </data>
+  <data name="VK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 31</value>
+  </data>
+  <data name="VK.Text" xml:space="preserve">
+    <value>ВК аккаунт</value>
+  </data>
+  <data name="VK.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
   <data name="likeAccount2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>

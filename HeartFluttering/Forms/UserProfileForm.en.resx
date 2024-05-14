@@ -2054,6 +2054,18 @@
   <data name="entryLabel.Text" xml:space="preserve">
     <value>Heart fluttering</value>
   </data>
+  <data name="ProfilePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ProfilePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 117</value>
+  </data>
+  <data name="ProfilePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ProfilePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>664, 500</value>
+  </data>
   <data name="likeAccount2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -3124,18 +3136,6 @@
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="ProfilePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ProfilePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 117</value>
-  </data>
-  <data name="ProfilePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="ProfilePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>664, 500</value>
-  </data>
   <data name="BtnSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -3153,6 +3153,33 @@
   </data>
   <data name="BtnSize.Text" xml:space="preserve">
     <value>▭</value>
+  </data>
+  <data name="VK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="VK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 13.8pt</value>
+  </data>
+  <data name="VK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="VK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 454</value>
+  </data>
+  <data name="VK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 34</value>
+  </data>
+  <data name="VK.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="VK.Text" xml:space="preserve">
+    <value>VK account</value>
+  </data>
+  <data name="VK.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="VK.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>

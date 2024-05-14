@@ -2047,8 +2047,76 @@
   <data name="backButton.Text" xml:space="preserve">
     <value>Back</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="listUsers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="listUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 155</value>
+  </data>
   <data name="listUsers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
+  </data>
+  <data name="listUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 161</value>
+  </data>
+  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 13.8pt</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 38</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Likes</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="Name_1.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Name_1.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Age_1.HeaderText" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="Age_1.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="FriendDataGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="FriendDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 358</value>
+  </data>
+  <data name="FriendDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 206</value>
+  </data>
+  <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 14pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 316</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 42</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
