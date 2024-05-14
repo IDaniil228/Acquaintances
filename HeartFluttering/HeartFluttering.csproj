@@ -67,6 +67,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>InscriptionsFilter.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Localization\FriendProfileForm\InscriptionsFriendProfile.en.Designer.cs">
+      <DependentUpon>InscriptionsFriendProfile.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\FriendProfileForm\InscriptionsFriendProfile.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsFriendProfile.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.en.Designer.cs">
       <DependentUpon>InscriptionsPhotoUser.en.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -155,6 +165,14 @@
     <EmbeddedResource Update="Resources\Localization\FilterForm\InscriptionsFilter.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>InscriptionsFilter.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\FriendProfileForm\InscriptionsFriendProfile.en.resx">
+      <LastGenOutput>InscriptionsFriendProfile.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\FriendProfileForm\InscriptionsFriendProfile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsFriendProfile.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Localization\PhotoUserForm\InscriptionsPhotoUser.en.resx">
       <LastGenOutput>InscriptionsPhotoUser.en.Designer.cs</LastGenOutput>

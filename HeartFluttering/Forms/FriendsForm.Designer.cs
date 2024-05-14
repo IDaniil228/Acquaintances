@@ -31,8 +31,6 @@
             entryLabel = new Label();
             label1 = new Label();
             CurrentFriendDataGridView = new DataGridView();
-            Name_1 = new DataGridViewTextBoxColumn();
-            Age = new DataGridViewTextBoxColumn();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -44,6 +42,8 @@
             BtnSize = new Button();
             CollapseButton = new Button();
             CloseButton = new Button();
+            Name_1 = new DataGridViewTextBoxColumn();
+            Age_1 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)CurrentFriendDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SearchFriendsDataGridView).BeginInit();
             SuspendLayout();
@@ -77,28 +77,14 @@
             // 
             CurrentFriendDataGridView.BackgroundColor = Color.White;
             CurrentFriendDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CurrentFriendDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_1, Age });
+            CurrentFriendDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_1, Age_1 });
             CurrentFriendDataGridView.Dock = DockStyle.Top;
             CurrentFriendDataGridView.Location = new Point(0, 159);
             CurrentFriendDataGridView.Name = "CurrentFriendDataGridView";
             CurrentFriendDataGridView.RowHeadersWidth = 51;
             CurrentFriendDataGridView.Size = new Size(534, 133);
             CurrentFriendDataGridView.TabIndex = 45;
-            // 
-            // Name_1
-            // 
-            Name_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Name_1.HeaderText = "Имя";
-            Name_1.MinimumWidth = 6;
-            Name_1.Name = "Name_1";
-            // 
-            // Age
-            // 
-            Age.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Age.HeaderText = "Возраст";
-            Age.MinimumWidth = 6;
-            Age.Name = "Age";
-            Age.Width = 125;
+            CurrentFriendDataGridView.CellDoubleClick += CurrentFriendDataGridView_CellDoubleClick;
             // 
             // label2
             // 
@@ -113,7 +99,6 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label3.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label3.Location = new Point(0, 335);
             label3.Name = "label3";
@@ -124,7 +109,6 @@
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label4.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label4.Location = new Point(71, 375);
             label4.Name = "label4";
@@ -150,19 +134,20 @@
             AgeTextBox.Name = "AgeTextBox";
             AgeTextBox.Size = new Size(78, 27);
             AgeTextBox.TabIndex = 50;
-            AgeTextBox.TextChanged += this.AgeTextBox_TextChanged;
+            AgeTextBox.TextChanged += AgeTextBox_TextChanged;
             // 
             // SearchFriendsDataGridView
             // 
+            SearchFriendsDataGridView.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SearchFriendsDataGridView.BackgroundColor = Color.White;
             SearchFriendsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             SearchFriendsDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_2, Age_2 });
-            SearchFriendsDataGridView.Dock = DockStyle.Bottom;
             SearchFriendsDataGridView.Location = new Point(0, 437);
             SearchFriendsDataGridView.Name = "SearchFriendsDataGridView";
             SearchFriendsDataGridView.RowHeadersWidth = 51;
             SearchFriendsDataGridView.Size = new Size(534, 186);
             SearchFriendsDataGridView.TabIndex = 51;
+            SearchFriendsDataGridView.CellDoubleClick += SearchFriendsDataGridView_CellDoubleClick;
             // 
             // Name_2
             // 
@@ -238,6 +223,21 @@
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += CloseButton_Click;
             // 
+            // Name_1
+            // 
+            Name_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Name_1.HeaderText = "Имя";
+            Name_1.MinimumWidth = 6;
+            Name_1.Name = "Name_1";
+            // 
+            // Age_1
+            // 
+            Age_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Age_1.HeaderText = "Возраст";
+            Age_1.MinimumWidth = 6;
+            Age_1.Name = "Age_1";
+            Age_1.Width = 125;
+            // 
             // FriendsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -280,9 +280,9 @@
         private Button BtnSize;
         private Button CollapseButton;
         private Button CloseButton;
-        private DataGridViewTextBoxColumn Name_1;
-        private DataGridViewTextBoxColumn Age;
         private DataGridViewTextBoxColumn Name_2;
         private DataGridViewTextBoxColumn Age_2;
+        private DataGridViewTextBoxColumn Name_1;
+        private DataGridViewTextBoxColumn Age_1;
     }
 }

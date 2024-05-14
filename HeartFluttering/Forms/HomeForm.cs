@@ -467,6 +467,7 @@ namespace HeartFluttering
         private void BtnFriend_Click(object sender, EventArgs e)
         {
             FriendsForm friendsForm = new FriendsForm();
+            Hide();
             friendsForm.Show();
         }
     }

@@ -35,7 +35,9 @@ public partial class User
 
     public string? Notifications { get; set; }
 
-    public string? Friends { get; set; }
+    public string NotificationsFriend { get; set; } = null!;
+
+    public string Friends { get; set; } = null!;
 
     public virtual Account IdNavigation { get; set; } = null!;
 }
