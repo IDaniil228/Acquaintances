@@ -19,6 +19,7 @@ namespace HeartFluttering.Forms
     public partial class FriendProfileForm : Form
     {
         public User User;
+        public bool fromNotification = false;
         public FriendProfileForm()
         {
             InitializeComponent();
@@ -31,9 +32,18 @@ namespace HeartFluttering.Forms
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            FriendsForm friendsForm = new FriendsForm();
-            Hide();
-            friendsForm.Show();
+            if (!fromNotification)
+            {
+                Hide();
+                FriendsForm form = new FriendsForm();
+                form.Show();
+            }
+            else
+            {
+                Hide();
+                NotificationForm form = new NotificationForm();
+                form.Show();
+            }
         }
 
         private void FriendProfileForm_Load(object sender, EventArgs e)
@@ -61,29 +71,58 @@ namespace HeartFluttering.Forms
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            FriendsForm form = new FriendsForm();
-            form.Show();
+            if (!fromNotification)
+            {
+                Hide();
+                FriendsForm form = new FriendsForm();
+                form.Show();
+            }
+            else 
+            {
+                Hide();
+                NotificationForm form = new NotificationForm();
+                form.Show();
+            }
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             using (var context = new AcquaintanceSqlContext())
             {
-                var thisUser = context.Users.FirstOrDefault(x => x.IdUsers == User.IdUsers);
-                if (thisUser != null)
+                if (!fromNotification)
                 {
-                    if (thisUser.NotificationsFriend != null && 
-                        thisUser.NotificationsFriend.Contains(CurrentUser.currentUser.IdUsers))
+                    var thisUser = context.Users.FirstOrDefault(x => x.IdUsers == User.IdUsers);
+                    if (thisUser != null)
                     {
-                        MessageBox.Show(InscriptionsFriendProfile.AddFriend);
+                        if (thisUser.NotificationsFriend != null &&
+                            thisUser.NotificationsFriend.Contains(CurrentUser.currentUser.IdUsers))
+                        {
+                            MessageBox.Show(InscriptionsFriendProfile.AddFriend);
+                        }
+                        else
+                        {
+                            thisUser.NotificationsFriend += $"{CurrentUser.currentUser.IdUsers},";
+                            MessageBox.Show(InscriptionsFriendProfile.AddFriend);
+                            context.SaveChanges();
+                        }
                     }
-                    else
+                }
+                else 
+                {
+                    var currentUser = context.Users.FirstOrDefault(x => x.IdUsers == 
+                    CurrentUser.currentUser.IdUsers);
+                    if (currentUser.Friends.Contains($"{User.IdUsers},"))
                     {
-                        thisUser.NotificationsFriend += $"{CurrentUser.currentUser.IdUsers},";
-                        MessageBox.Show(InscriptionsFriendProfile.AddFriend);
+                        MessageBox.Show(InscriptionsFriendProfile.AddFriendDone);
+                    }
+                    else 
+                    {
+                        currentUser.Friends += $"{User.IdUsers},";
+                        currentUser.NotificationsFriend = currentUser.NotificationsFriend.Replace($"{User.IdUsers},", "");
+                        MessageBox.Show(InscriptionsFriendProfile.AddFriendDone);
                         context.SaveChanges();
                     }
+
                 }
             }
         }

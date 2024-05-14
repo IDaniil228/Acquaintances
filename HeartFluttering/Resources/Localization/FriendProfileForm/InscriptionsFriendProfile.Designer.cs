@@ -71,6 +71,15 @@ namespace HeartFluttering.Resources.Localization.FriendProfileForm {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Друг добавлен.
+        /// </summary>
+        internal static string AddFriendDone {
+            get {
+                return ResourceManager.GetString("AddFriendDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Пользователь был удален из друзей.
         /// </summary>
         internal static string DeleteFriend {

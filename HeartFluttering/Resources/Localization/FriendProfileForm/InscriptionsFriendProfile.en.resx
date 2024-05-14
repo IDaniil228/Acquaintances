@@ -120,6 +120,9 @@
   <data name="AddFriend" xml:space="preserve">
     <value>The friend request has been sent</value>
   </data>
+  <data name="AddFriendDone" xml:space="preserve">
+    <value>The friend is added</value>
+  </data>
   <data name="DeleteFriend" xml:space="preserve">
     <value>The user has been removed from friends</value>
   </data>

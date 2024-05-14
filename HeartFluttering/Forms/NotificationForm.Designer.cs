@@ -36,9 +36,15 @@
             entryLabel = new Label();
             backButton = new Button();
             listUsers = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
+            FriendDataGridView = new DataGridView();
+            Name_1 = new DataGridViewTextBoxColumn();
+            Age_1 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FriendDataGridView).BeginInit();
             SuspendLayout();
             // 
             // girlPhoto
@@ -113,11 +119,45 @@
             listUsers.Name = "listUsers";
             listUsers.CellDoubleClick += listUsers_CellDoubleClick;
             // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            // 
+            // FriendDataGridView
+            // 
+            resources.ApplyResources(FriendDataGridView, "FriendDataGridView");
+            FriendDataGridView.AllowUserToAddRows = false;
+            FriendDataGridView.BackgroundColor = Color.White;
+            FriendDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            FriendDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_1, Age_1 });
+            FriendDataGridView.Name = "FriendDataGridView";
+            FriendDataGridView.CellDoubleClick += FriendDataGridView_CellContentDoubleClick;
+            // 
+            // Name_1
+            // 
+            Name_1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(Name_1, "Name_1");
+            Name_1.Name = "Name_1";
+            // 
+            // Age_1
+            // 
+            resources.ApplyResources(Age_1, "Age_1");
+            Age_1.Name = "Age_1";
+            // 
             // NotificationForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(FriendDataGridView);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(listUsers);
             Controls.Add(backButton);
             Controls.Add(girlPhoto);
@@ -133,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)girlPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FriendDataGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -145,5 +186,10 @@
         private Label entryLabel;
         private Button backButton;
         public DataGridView listUsers;
+        private Label label1;
+        private Label label2;
+        public DataGridView FriendDataGridView;
+        private DataGridViewTextBoxColumn Name_1;
+        private DataGridViewTextBoxColumn Age_1;
     }
 }

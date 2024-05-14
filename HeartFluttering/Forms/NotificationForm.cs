@@ -1,6 +1,8 @@
 ﻿using HeartFluttering.Classes;
+using HeartFluttering.Forms;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
 using NLog;
+using System.Globalization;
 
 namespace HeartFluttering
 {
@@ -104,6 +106,24 @@ namespace HeartFluttering
         {
             logger.Trace("Обновлении таблицы с уведомлениями");
             listUsers.DataSource = NotificationTable.notificationTable;
+            using (var context = new AcquaintanceSqlContext())
+            {
+                var currentUser = context.Users.FirstOrDefault(x => x.IdUsers ==
+                CurrentUser.currentUser.IdUsers);
+                var idFriends = currentUser.NotificationsFriend.Split(",");
+                DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                provider.ShortDatePattern = "dd.MM.yyyy";
+                foreach (string id in idFriends)
+                {
+                    var friend = context.Users.FirstOrDefault(x => x.IdUsers == id);
+                    if (friend != null)
+                    {
+                        int age = DateTime.Now.Year - DateTime.ParseExact(friend.DateOfBirth, "dd.MM.yyyy", provider).Year;
+                        FriendDataGridView.Rows.Add($"{friend.Surname} {friend.Name}", age);
+                    }
+                }
+            }
+
         }
         /// <summary>
         /// Конпка для перехода в главную форму
@@ -204,6 +224,37 @@ namespace HeartFluttering
         private void boyPhoto_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void FriendDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string userName = FriendDataGridView.Rows[e.RowIndex].Cells["Name_1"].Value.ToString();
+            int userAge = (int)FriendDataGridView.Rows[e.RowIndex].Cells["Age_1"].Value;
+            using (var context = new AcquaintanceSqlContext())
+            {
+                DateTimeFormatInfo provider = new DateTimeFormatInfo();
+                provider.ShortDatePattern = "dd.MM.yyyy";
+                var user = context.Users.Where(x => x.Surname + " " + x.Name == userName).ToList();
+                if (user.Count != 0)
+                {
+                    foreach (var person in user)
+                    {
+                        if (DateTime.Now.Year - DateTime.ParseExact(person.DateOfBirth,
+                            "dd.MM.yyyy", provider).Year == userAge)
+                        {
+                            FriendProfileForm friendProfileForm = new FriendProfileForm();
+                            friendProfileForm.BtnAdd.Visible = true;
+                            friendProfileForm.BtnAdd.Enabled = true;
+                            friendProfileForm.fromNotification = true;
+                            friendProfileForm.User = person;
+                            friendProfileForm.Show();
+                            Hide();
+                            break;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

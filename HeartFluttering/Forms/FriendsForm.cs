@@ -28,7 +28,7 @@ namespace HeartFluttering.Forms
                 CurrentUser.currentUser.IdUsers);
                 if (currentUser.Friends != null)
                 {
-                    string[] idFriends = currentUser.Friends.Split(",");
+                    var idFriends = currentUser.Friends.Split(",");
                     DateTimeFormatInfo provider = new DateTimeFormatInfo();
                     provider.ShortDatePattern = "dd.MM.yyyy";
                     foreach (string id in idFriends)

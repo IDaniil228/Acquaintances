@@ -120,6 +120,9 @@
   <data name="AddFriend" xml:space="preserve">
     <value>Заявка в друзья отправлена </value>
   </data>
+  <data name="AddFriendDone" xml:space="preserve">
+    <value>Друг добавлен</value>
+  </data>
   <data name="DeleteFriend" xml:space="preserve">
     <value>Пользователь был удален из друзей</value>
   </data>
