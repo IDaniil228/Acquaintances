@@ -54,8 +54,8 @@
             // 
             // entryLabel
             // 
-            entryLabel.BackColor = Color.Magenta;
             resources.ApplyResources(entryLabel, "entryLabel");
+            entryLabel.BackColor = Color.Magenta;
             entryLabel.ForeColor = SystemColors.ButtonHighlight;
             entryLabel.Name = "entryLabel";
             // 
@@ -66,10 +66,10 @@
             // 
             // CurrentFriendDataGridView
             // 
+            resources.ApplyResources(CurrentFriendDataGridView, "CurrentFriendDataGridView");
             CurrentFriendDataGridView.BackgroundColor = Color.White;
             CurrentFriendDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CurrentFriendDataGridView.Columns.AddRange(new DataGridViewColumn[] { Name_1, Age_1 });
-            resources.ApplyResources(CurrentFriendDataGridView, "CurrentFriendDataGridView");
             CurrentFriendDataGridView.Name = "CurrentFriendDataGridView";
             CurrentFriendDataGridView.CellDoubleClick += CurrentFriendDataGridView_CellDoubleClick;
             // 
@@ -170,14 +170,14 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(BtnGeneral);
             resources.ApplyResources(panel1, "panel1");
+            panel1.Controls.Add(BtnGeneral);
             panel1.Name = "panel1";
             // 
             // BtnGeneral
             // 
-            BtnGeneral.BackColor = Color.Fuchsia;
             resources.ApplyResources(BtnGeneral, "BtnGeneral");
+            BtnGeneral.BackColor = Color.Fuchsia;
             BtnGeneral.FlatAppearance.BorderSize = 0;
             BtnGeneral.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
             BtnGeneral.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
@@ -228,11 +228,11 @@
         private Button BtnSize;
         private Button CollapseButton;
         private Button CloseButton;
-        private DataGridViewTextBoxColumn Name_2;
-        private DataGridViewTextBoxColumn Age_2;
-        private DataGridViewTextBoxColumn Name_1;
-        private DataGridViewTextBoxColumn Age_1;
         private Panel panel1;
         private Button BtnGeneral;
+        private DataGridViewTextBoxColumn Name_1;
+        private DataGridViewTextBoxColumn Age_1;
+        private DataGridViewTextBoxColumn Name_2;
+        private DataGridViewTextBoxColumn Age_2;
     }
 }

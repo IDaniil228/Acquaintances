@@ -2038,6 +2038,38 @@
   <data name="CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="BtnExitDefault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="BtnExitDefault.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnExitDefault.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BtnExitDefault.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="BtnExitDefault.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 12pt</value>
+  </data>
+  <data name="BtnExitDefault.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnExitDefault.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnExitDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 52</value>
+  </data>
+  <data name="BtnExitDefault.Text" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="BtnExitDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="VK.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe Print, 12pt</value>
   </data>
@@ -3017,7 +3049,6 @@
         MAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDBDD77PN/FohZ5iP9pNAAAAAASUVORK5CYII=
 </value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>

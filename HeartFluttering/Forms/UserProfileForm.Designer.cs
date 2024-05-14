@@ -35,6 +35,7 @@
             CloseButton = new Button();
             entryLabel = new Label();
             ProfilePanel = new Panel();
+            BtnExitDefault = new Button();
             VK = new Label();
             likeAccount2 = new PictureBox();
             backButton3 = new Button();
@@ -121,6 +122,7 @@
             // ProfilePanel
             // 
             resources.ApplyResources(ProfilePanel, "ProfilePanel");
+            ProfilePanel.Controls.Add(BtnExitDefault);
             ProfilePanel.Controls.Add(VK);
             ProfilePanel.Controls.Add(likeAccount2);
             ProfilePanel.Controls.Add(backButton3);
@@ -147,6 +149,18 @@
             ProfilePanel.Name = "ProfilePanel";
             ProfilePanel.MouseDown += ProfilePanel_MouseDown;
             ProfilePanel.MouseMove += ProfilePanel_MouseMove;
+            // 
+            // BtnExitDefault
+            // 
+            resources.ApplyResources(BtnExitDefault, "BtnExitDefault");
+            BtnExitDefault.BackColor = Color.Fuchsia;
+            BtnExitDefault.FlatAppearance.BorderSize = 0;
+            BtnExitDefault.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnExitDefault.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnExitDefault.ForeColor = Color.White;
+            BtnExitDefault.Name = "BtnExitDefault";
+            BtnExitDefault.UseVisualStyleBackColor = false;
+            BtnExitDefault.Click += BtnExitDefault_Click;
             // 
             // VK
             // 
@@ -382,5 +396,6 @@
         public Button backButton3;
         private Button BtnSize;
         private Label VK;
+        public Button BtnExitDefault;
     }
 }

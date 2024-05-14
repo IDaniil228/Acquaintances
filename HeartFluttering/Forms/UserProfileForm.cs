@@ -1,4 +1,5 @@
 ﻿using HeartFluttering.Classes;
+using HeartFluttering.Forms;
 using HeartFluttering.Resources.Localization.ChooseOneForm;
 using HeartFluttering.Resources.Localization.UserProfileForm;
 using NLog;
@@ -450,6 +451,13 @@ namespace HeartFluttering
                 WindowState = FormWindowState.Normal;
                 maximize = false;
             }
+        }
+
+        private void BtnExitDefault_Click(object sender, EventArgs e)
+        {
+            GeneralForm generalForm = new GeneralForm();
+            Hide();
+            generalForm.Show();
         }
     }
 }

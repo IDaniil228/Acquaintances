@@ -14,6 +14,7 @@ namespace HeartFluttering.Forms
 {
     public partial class GeneralForm : Form
     {
+        List<string> аddedId = new List<string>();
         bool maximize = false;
         public GeneralForm()
         {
@@ -50,8 +51,8 @@ namespace HeartFluttering.Forms
         {
             using (var context = new AcquaintanceSqlContext())
             {
-                var аddedId = new List<string>();
-                var currentUser = context.Users.FirstOrDefault(x => x.IdUsers == 
+                аddedId.Clear();
+                var currentUser = context.Users.FirstOrDefault(x => x.IdUsers ==
                 CurrentUser.currentUser.IdUsers);
                 var idFavorites = currentUser.AnotherAccounts.Split(',');
                 var idFriends = currentUser.Friends.Split(',');
@@ -109,6 +110,31 @@ namespace HeartFluttering.Forms
                             GeneralDataGridView.Rows.Add($"{user.Surname} {user.Name}", age, $"У {friend.Name}");
                             аddedId.Add(favoriteOfFriend);
                         }
+                    }
+                }
+            }
+        }
+
+        private void GeneralDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string userName = GeneralDataGridView.Rows[e.RowIndex].Cells["Name_1"].Value.ToString();
+            using (var context = new AcquaintanceSqlContext())
+            {
+                foreach (var id in аddedId)
+                {
+                    var user = context.Users.FirstOrDefault(x => x.IdUsers == id &&
+                    x.Surname + " " + x.Name == userName);
+                    if (user != null)
+                    {
+                        UserProfileForm form = new UserProfileForm();
+                        form.thisUsers = user;
+                        form.BtnExitDefault.Enabled = true;
+                        form.BtnExitDefault.Visible = true;
+                        form.deleteButton.Enabled = true;
+                        form.deleteButton.Visible = true;
+                        Hide();
+                        form.Show();
+                        break;
                     }
                 }
             }
