@@ -41,6 +41,7 @@
             Name_1 = new DataGridViewTextBoxColumn();
             Age_1 = new DataGridViewTextBoxColumn();
             label2 = new Label();
+            BtnSize = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listUsers).BeginInit();
@@ -151,11 +152,24 @@
             resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
             // 
+            // BtnSize
+            // 
+            resources.ApplyResources(BtnSize, "BtnSize");
+            BtnSize.BackColor = Color.Fuchsia;
+            BtnSize.FlatAppearance.BorderSize = 0;
+            BtnSize.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnSize.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnSize.ForeColor = Color.White;
+            BtnSize.Name = "BtnSize";
+            BtnSize.UseVisualStyleBackColor = false;
+            BtnSize.Click += BtnSize_Click;
+            // 
             // NotificationForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnSize);
             Controls.Add(backButton);
             Controls.Add(girlPhoto);
             Controls.Add(boyPhoto);
@@ -192,5 +206,6 @@
         private DataGridViewTextBoxColumn Name_1;
         private DataGridViewTextBoxColumn Age_1;
         private Label label2;
+        private Button BtnSize;
     }
 }

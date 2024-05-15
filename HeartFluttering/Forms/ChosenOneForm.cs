@@ -14,6 +14,8 @@ namespace HeartFluttering
         /// Создаём экземпляр класса для логирования
         /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
+        private bool maximize = false;
+
         public ChosenOneForm()
         {
             InitializeComponent();
@@ -191,6 +193,20 @@ namespace HeartFluttering
         private void ChosenOneForm_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void BtnSize_Click(object sender, EventArgs e)
+        {
+            if (!maximize)
+            {
+                WindowState = FormWindowState.Maximized;
+                maximize = true;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                maximize = false;
+            }
         }
     }
 }
