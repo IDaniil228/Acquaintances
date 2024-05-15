@@ -51,6 +51,7 @@
             birhdayField = new DateTimePicker();
             sexMenButton = new RadioButton();
             sexWomenButton = new RadioButton();
+            BtnSize = new Button();
             ((System.ComponentModel.ISupportInitialize)girlPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boyPhoto).BeginInit();
             SuspendLayout();
@@ -233,11 +234,24 @@
             sexWomenButton.TabStop = true;
             sexWomenButton.UseVisualStyleBackColor = false;
             // 
+            // BtnSize
+            // 
+            resources.ApplyResources(BtnSize, "BtnSize");
+            BtnSize.BackColor = Color.Fuchsia;
+            BtnSize.FlatAppearance.BorderSize = 0;
+            BtnSize.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 22, 207);
+            BtnSize.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 158, 246);
+            BtnSize.ForeColor = Color.White;
+            BtnSize.Name = "BtnSize";
+            BtnSize.UseVisualStyleBackColor = false;
+            BtnSize.Click += BtnSize_Click;
+            // 
             // EditingForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(BtnSize);
             Controls.Add(sexWomenButton);
             Controls.Add(sexMenButton);
             Controls.Add(birhdayField);
@@ -298,5 +312,6 @@
         private DateTimePicker dateTimePicker1;
         public RadioButton sexMenButton;
         public RadioButton sexWomenButton;
+        private Button BtnSize;
     }
 }

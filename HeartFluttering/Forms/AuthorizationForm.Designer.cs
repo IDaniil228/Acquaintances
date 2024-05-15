@@ -113,7 +113,7 @@
             // passwordField
             // 
             resources.ApplyResources(passwordField, "passwordField");
-            passwordField.ForeColor = Color.Gray;
+            passwordField.ForeColor = Color.Black;
             passwordField.Name = "passwordField";
             passwordField.UseSystemPasswordChar = true;
             // 
@@ -125,7 +125,7 @@
             // loginField
             // 
             resources.ApplyResources(loginField, "loginField");
-            loginField.ForeColor = Color.Gray;
+            loginField.ForeColor = Color.Black;
             loginField.Name = "loginField";
             // 
             // loginButton

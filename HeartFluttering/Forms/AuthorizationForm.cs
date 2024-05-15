@@ -20,8 +20,6 @@ namespace HeartFluttering
         public AuthorizationForm()
         {
             InitializeComponent();
-            loginField.ForeColor = Color.Gray;
-            passwordField.ForeColor = Color.Gray;
             logger.Info("Инициализация данных");
         }
 
@@ -250,6 +248,8 @@ namespace HeartFluttering
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
             logger.Debug("Загрузка данных");
+            loginField.Text = string.Empty;
+            passwordField.Text = string.Empty;
             choice.Items.Add(Inscriptions.User);
             choice.Items.Add(Inscriptions.Admin);
             flag = false;
@@ -267,6 +267,8 @@ namespace HeartFluttering
 
         private void LanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            loginField.Text = string.Empty;
+            passwordField.Text = string.Empty;
             if (!flag)
             {
                 flag = true;

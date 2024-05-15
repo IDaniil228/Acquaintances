@@ -157,6 +157,10 @@
   <data name="loginField.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 294</value>
   </data>
+  <data name="loginField.Text" xml:space="preserve">
+    <value>
+</value>
+  </data>
   <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 472</value>
   </data>

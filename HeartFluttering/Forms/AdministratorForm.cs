@@ -259,6 +259,14 @@ namespace HeartFluttering
                             return;
                         }
                         logger.Debug($"Удален пользователь по Id: {user.IdUsers}");
+                        var allUsers = context.Users.ToList();
+                        foreach (var otherUsers in allUsers)
+                        {
+                            otherUsers.Notifications = otherUsers.Notifications.Replace($"{user.IdUsers}", "");
+                            otherUsers.NotificationsFriend = otherUsers.NotificationsFriend.Replace($"{user.IdUsers}", "");
+                            otherUsers.AnotherAccounts = otherUsers.AnotherAccounts.Replace($"{user.IdUsers}", "");
+                            otherUsers.Friends = otherUsers.Friends.Replace($"{user.IdUsers}", "");
+                        }
                         context.Remove(user);
                         context.Remove(account);
                         context.SaveChanges();
