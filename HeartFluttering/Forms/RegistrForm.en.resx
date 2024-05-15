@@ -2061,7 +2061,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 532</value>
+    <value>149, 532</value>
   </data>
   <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2087,11 +2087,14 @@
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 404</value>
+  </data>
   <data name="loginLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 20</value>
+    <value>36, 10</value>
   </data>
   <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 35</value>
@@ -2103,7 +2106,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="LoginField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 59</value>
+    <value>36, 49</value>
   </data>
   <data name="LoginField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2115,7 +2118,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="passwordLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 220</value>
+    <value>36, 210</value>
   </data>
   <data name="passwordLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 35</value>
@@ -2127,7 +2130,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="password2Field.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 259</value>
+    <value>36, 249</value>
   </data>
   <data name="password2Field.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2139,7 +2142,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 122</value>
+    <value>36, 112</value>
   </data>
   <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 35</value>
@@ -2151,7 +2154,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 160</value>
+    <value>36, 150</value>
   </data>
   <data name="passwordField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2159,17 +2162,20 @@
   <data name="passwordField.Text" xml:space="preserve">
     <value>Enter password</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>453, 408</value>
-  </data>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 120</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 404</value>
   </data>
   <data name="BirhdayFields.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="BirhdayFields.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 214</value>
+    <value>67, 204</value>
   </data>
   <data name="BirhdayFields.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2178,7 +2184,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="sexWomenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 340</value>
+    <value>347, 330</value>
   </data>
   <data name="sexWomenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2193,7 +2199,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="sexMenButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 340</value>
+    <value>276, 330</value>
   </data>
   <data name="sexMenButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2202,7 +2208,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 340</value>
+    <value>67, 330</value>
   </data>
   <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 31</value>
@@ -2214,7 +2220,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="cityField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 292</value>
+    <value>67, 282</value>
   </data>
   <data name="cityField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2226,7 +2232,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="cityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 256</value>
+    <value>67, 246</value>
   </data>
   <data name="cityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 31</value>
@@ -2238,7 +2244,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 20</value>
+    <value>67, 10</value>
   </data>
   <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 31</value>
@@ -2250,7 +2256,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="nameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 56</value>
+    <value>67, 46</value>
   </data>
   <data name="nameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2262,7 +2268,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="BirhdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 178</value>
+    <value>67, 168</value>
   </data>
   <data name="BirhdayLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 31</value>
@@ -2274,7 +2280,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="surnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 99</value>
+    <value>67, 89</value>
   </data>
   <data name="surnameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 31</value>
@@ -2286,7 +2292,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="surnameField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 135</value>
+    <value>67, 125</value>
   </data>
   <data name="surnameField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -2294,11 +2300,30 @@
   <data name="surnameField.Text" xml:space="preserve">
     <value>Enter surname</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 120</value>
+  <data name="BtnVK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 408</value>
+  <data name="BtnVK.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="BtnVK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe Print, 15pt</value>
+  </data>
+  <data name="BtnVK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnVK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 532</value>
+  </data>
+  <data name="BtnVK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 59</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnVK.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="BtnVK.Text" xml:space="preserve">
+    <value>Log in via VK</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>

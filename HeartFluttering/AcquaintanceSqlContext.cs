@@ -63,6 +63,7 @@ public partial class AcquaintanceSqlContext : DbContext
                 .HasColumnName("blocker");
             entity.Property(e => e.Sex).HasColumnType("INTEGER (0, 1)");
             entity.Property(e => e.Status).HasColumnType("INTEGER (0, 1)");
+            entity.Property(e => e.Vk).HasColumnName("VK");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.User)
                 .HasForeignKey<User>(d => d.Id)

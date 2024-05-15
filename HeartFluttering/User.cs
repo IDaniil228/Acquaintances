@@ -39,5 +39,7 @@ public partial class User
 
     public string Friends { get; set; } = null!;
 
+    public int? Vk { get; set; }
+
     public virtual Account IdNavigation { get; set; } = null!;
 }

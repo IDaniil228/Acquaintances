@@ -278,6 +278,10 @@ namespace HeartFluttering
         /// <param name="e"></param>
         private void UserProfileForm_Load(object sender, EventArgs e)
         {
+            if (thisUsers.Vk == 1)
+            {
+                VK.Visible = true;
+            }
             nameField.Text = thisUsers.Name;
             surnameField.Text = thisUsers.Surname;
             birthdayField.Text = thisUsers.DateOfBirth;

@@ -1,4 +1,5 @@
 using HeartFluttering.Classes;
+using HeartFluttering.Forms;
 using HeartFluttering.Resources.Localization.AuthorForm;
 using NLog;
 
@@ -23,58 +24,7 @@ namespace HeartFluttering
             passwordField.ForeColor = Color.Gray;
             logger.Info("Инициализация данных");
         }
-        /// <summary>
-        /// При нажатии строку логина, подсказка убирает
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void loginField_Enter(object sender, EventArgs e)
-        {
-            if (loginField.Text.Equals(Inscriptions.Login))
-            {
-                loginField.Text = string.Empty;
-                loginField.ForeColor = Color.Black;
-            }
-        }
-        /// <summary>
-        /// При отжатии строки логина, появляется подсказка, если строка была пустой
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void loginField_Leave(object sender, EventArgs e)
-        {
-            if (loginField.Text.Equals(string.Empty))
-            {
-                loginField.ForeColor = Color.Gray;
-                loginField.Text = Inscriptions.Login;
-            }
-        }
-        /// <summary>
-        /// При нажатии строку пароля, подсказка убирает
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void passwordField_Enter(object sender, EventArgs e)
-        {
-            if (passwordField.Text.Equals(Inscriptions.Password))
-            {
-                passwordField.Text = string.Empty;
-                passwordField.ForeColor = Color.Black;
-            }
-        }
-        /// <summary>
-        /// При отжатии строки пароля, появляется подсказка, если строка была пустой
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void passwordField_Leave(object sender, EventArgs e)
-        {
-            if (passwordField.Text.Equals(string.Empty))
-            {
-                passwordField.ForeColor = Color.Gray;
-                passwordField.Text = Inscriptions.Password;
-            }
-        }
+
         /// <summary>
         /// ÌМетод, который возвращает аккаунт по логину и паролю
         /// </summary>
@@ -302,8 +252,6 @@ namespace HeartFluttering
             logger.Debug("Загрузка данных");
             choice.Items.Add(Inscriptions.User);
             choice.Items.Add(Inscriptions.Admin);
-            loginField.Text = Inscriptions.Login;
-            passwordField.Text = Inscriptions.Password;
             flag = false;
             if (EnterLike.Text == "Log in as")
             {
@@ -338,8 +286,6 @@ namespace HeartFluttering
             InitializeComponent();
             flag = false;
             LanguageComboBox.SelectedIndex = currentIndex;
-            loginField.Text = Inscriptions.Login;
-            passwordField.Text = Inscriptions.Password;
             choice.Items.Clear();
             choice.Items.Add(Inscriptions.User);
             choice.Items.Add(Inscriptions.Admin);
@@ -433,9 +379,23 @@ namespace HeartFluttering
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void BtnYandex_Click(object sender, EventArgs e)
+        private void BtnVK_Click(object sender, EventArgs e)
         {
+            VkForm vkForm = new VkForm();
+            vkForm.Show();
+            Hide();
+        }
 
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked == true)
+            {
+                passwordField.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordField.UseSystemPasswordChar = true;
+            }
         }
     }
 }

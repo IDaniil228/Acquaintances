@@ -388,6 +388,7 @@ namespace HeartFluttering
                 user.Id = guid.ToString();
                 user.Blocker = 0;
                 user.Likes = 0;
+                user.Vk = 0;
                 context.Users.Add(user);
                 context.SaveChanges();
                 try
@@ -561,6 +562,22 @@ namespace HeartFluttering
                 WindowState = FormWindowState.Normal;
                 maximize = false;
             }
+        }
+
+        private void BtnVK_Click(object sender, EventArgs e)
+        {
+            //ulong appId = 51924473;
+            //var vkApi = new VkNet.VkApi();
+            //vkApi.Authorize(new ApiAuthParams
+            //{
+            //    ApplicationId = appId,
+            //    Login = loginField.Text,
+            //    Password = passwordField.Text,
+            //});
+            //string accessToken = vkApi.Token;
+            //var user = vkApi.Users.Get(new long[] { vkApi.UserId.Value }, ProfileFields.Photo50).FirstOrDefault();
+            //MessageBox.Show(user.FirstName);
+            //MessageBox.Show(user.LastName);
         }
     }
 }

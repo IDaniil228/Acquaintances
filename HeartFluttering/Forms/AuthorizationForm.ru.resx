@@ -145,8 +145,23 @@
   <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 28</value>
   </data>
+  <data name="passwondLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 357</value>
+  </data>
+  <data name="passwordField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 396</value>
+  </data>
+  <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 256</value>
+  </data>
+  <data name="loginField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 294</value>
+  </data>
+  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 472</value>
+  </data>
   <data name="registrButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 605</value>
+    <value>141, 606</value>
   </data>
   <data name="boyPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2055,30 +2070,44 @@
         CBFSf1IM4Pt4BWiB/6H+5JFH/h9Y4uERiFc1UwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BtnYandex.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe Print, 10pt</value>
+  <data name="BtnVK.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="BtnYandex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 551</value>
-  </data>
-  <data name="BtnYandex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 47</value>
-  </data>
-  <data name="BtnYandex.Text" xml:space="preserve">
-    <value>Войти через яндекс
-</value>
+  <data name="BtnVK.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="BtnVK.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe Print, 10pt</value>
   </data>
+  <data name="BtnVK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="BtnVK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 551</value>
+    <value>94, 557</value>
+  </data>
+  <data name="BtnVK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="BtnVK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 47</value>
+    <value>303, 41</value>
+  </data>
+  <data name="BtnVK.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
   </data>
   <data name="BtnVK.Text" xml:space="preserve">
-    <value>Войти через ВК</value>
+    <value>Зарегестрироваться через ВК</value>
+  </data>
+  <data name="ShowPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ShowPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ShowPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 24</value>
+  </data>
+  <data name="ShowPassword.Text" xml:space="preserve">
+    <value>Показать пароль</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>483, 652</value>

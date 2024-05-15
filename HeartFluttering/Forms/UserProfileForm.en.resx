@@ -2075,6 +2075,9 @@
   <data name="VK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="VK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 457</value>
+  </data>
   <data name="VK.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 34</value>
   </data>

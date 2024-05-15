@@ -113,6 +113,10 @@ namespace HeartFluttering
         private void HomeForm_Load(object sender, EventArgs e)
         {
             logger.Info("Загрузка данных в главной формы");
+            if (CurrentUser.currentUser.Vk == 1)
+            {
+                VK.Visible = true;
+            }
             nameField.Text = CurrentUser.currentUser.Name;
             surnameField.Text = CurrentUser.currentUser.Surname;
             BirhdayField.Text = CurrentUser.currentUser.DateOfBirth;

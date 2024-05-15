@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
     <PackageReference Include="NLog" Version="5.2.8" />
     <PackageReference Include="NLog.Config" Version="4.7.15" />
+    <PackageReference Include="VkNet" Version="1.78.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -127,6 +128,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>InscriptionsUserProfile.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Localization\VKForm\InscriptionsVk.en.Designer.cs">
+      <DependentUpon>InscriptionsVk.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\VKForm\InscriptionsVk.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InscriptionsVk.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -213,6 +224,14 @@
     <EmbeddedResource Update="Resources\Localization\UserProfileForm\InscriptionsUserProfile.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>InscriptionsUserProfile.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\VKForm\InscriptionsVk.en.resx">
+      <LastGenOutput>InscriptionsVk.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\VKForm\InscriptionsVk.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InscriptionsVk.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
