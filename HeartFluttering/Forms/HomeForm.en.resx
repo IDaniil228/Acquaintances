@@ -2073,7 +2073,7 @@
     <value>3, 5, 3, 5</value>
   </data>
   <data name="favoritesButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 53</value>
+    <value>215, 59</value>
   </data>
   <data name="favoritesButton.Text" xml:space="preserve">
     <value>Favorites</value>
@@ -2085,37 +2085,37 @@
     <value>NoControl</value>
   </data>
   <data name="recommendButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 75</value>
+    <value>3, 80</value>
   </data>
   <data name="recommendButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="recommendButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 49</value>
+    <value>215, 59</value>
   </data>
   <data name="recommendButton.Text" xml:space="preserve">
     <value>recommendation</value>
   </data>
   <data name="searchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 145</value>
+    <value>3, 155</value>
   </data>
   <data name="searchButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="searchButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 54</value>
+    <value>215, 59</value>
   </data>
   <data name="searchButton.Text" xml:space="preserve">
     <value>Pair search</value>
   </data>
   <data name="notificationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 215</value>
+    <value>3, 230</value>
   </data>
   <data name="notificationButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="notificationButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 60</value>
+    <value>215, 59</value>
   </data>
   <data name="notificationButton.Text" xml:space="preserve">
     <value>Notifications</value>
@@ -2899,10 +2899,10 @@
     <value>Segoe Print, 13.8pt</value>
   </data>
   <data name="BtnFriend.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 283</value>
+    <value>3, 303</value>
   </data>
   <data name="BtnFriend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 64</value>
+    <value>215, 59</value>
   </data>
   <data name="BtnFriend.Text" xml:space="preserve">
     <value>Friends</value>
@@ -2911,7 +2911,7 @@
     <value>12, 133</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 350</value>
+    <value>221, 378</value>
   </data>
   <data name="BtnSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
